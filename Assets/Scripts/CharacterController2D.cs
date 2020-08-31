@@ -51,9 +51,10 @@ public class CharacterController2D : MonoBehaviour {
 			return;
 		}
 
-
-		Debug.Log($"vel {rigidBody.velocity.x}");
-		var walk = Mathf.Clamp(Mathf.Abs(rigidBody.velocity.x / horizontalSpeed), 0, 1);
+		var walk = Mathf.Abs(rigidBody.velocity.x / horizontalSpeed);
+		if (walk > 0) {
+			walk = Mathf.Clamp(walk, 0.25f, 1f);
+		}
 		animator.SetFloat("Walk", walk);
 	}
 
@@ -73,7 +74,7 @@ public class CharacterController2D : MonoBehaviour {
 
 		Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, groundCheckRadius, groundMask);
 		foreach (Collider2D collider in colliders) {
-			if (collider.gameObject != gameObject) {
+			if (collider.gameObject != gameObject && !collider.isTrigger) {
 				isGrounded = true;
 				break;
 			}

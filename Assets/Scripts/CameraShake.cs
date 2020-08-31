@@ -4,9 +4,9 @@ using System.Collections;
 public class CameraShake : MonoBehaviour {
 
 	[SerializeField] private float duration = 0.25f;
+	[SerializeField] private float magnitude = 1f;
 
 	private float timeLeft = 0.0f;
-	private float magnitude = 0.7f;
 	private Vector3 initialPosition;
 
 	void Update() {

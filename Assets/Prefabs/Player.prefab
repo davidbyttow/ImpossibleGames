@@ -191,7 +191,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6f0458015b225941aaaa01e6fb212e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathEffect: {fileID: 0}
+  deathEffect: {fileID: 6117035525600602517, guid: 60ad4945c155fb04582601ba7f5d2927, type: 3}
+  head: {fileID: 5864174489293604861, guid: b28c2d04029678b4982c17817a30fde8, type: 3}
 --- !u!50 &5977232724218740896
 Rigidbody2D:
   serializedVersion: 4
