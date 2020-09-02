@@ -27,15 +27,21 @@ public class BumperBlock : MonoBehaviour {
 	}
 
 	private void OnCollisionEnter2D(Collision2D collision) {
+		if (IsBumpCollision(collision)) {
+			Bump();
+		}
+	}
+
+	public static bool IsBumpCollision(Collision2D collision) {
 		if (collision.gameObject.tag == "Player") {
 			for (var i = 0; i < collision.contactCount; ++i) {
 				var contact = collision.GetContact(i);
 				if (contact.normal == Vector2.up) {
-					Bump();
-					break;
+					return true;
 				}
 			}
 		}
+		return false;
 	}
 
 	private void Bump() {
