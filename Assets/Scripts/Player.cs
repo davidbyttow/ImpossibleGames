@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(CharacterController2D))]
+[RequireComponent(typeof(CharacterController))]
 public class Player : MonoBehaviour {
 	
 	[SerializeField] private ParticleSystem deathEffect;
@@ -10,14 +10,18 @@ public class Player : MonoBehaviour {
 
 	private Rigidbody2D rigidBody;
 	private SpriteRenderer sprite;
-	private CharacterController2D controller;
-	public bool isDead { get; private set; }
-	public bool isJumping { get; private set; }
+	private CharacterController controller;
+	public bool isDead { get; private set; } = false;
+	public bool isJumping { get; private set; } = false;
+
+	private float horizontalInput = 0;
+	private bool jumpRequested = false;
+	private bool jumpCanceled = false;
 
 	void Awake() {
 		rigidBody = GetComponent<Rigidbody2D>();
 		sprite = GetComponent<SpriteRenderer>();
-		controller = GetComponent<CharacterController2D>();
+		controller = GetComponent<CharacterController>();
 	}
 
 	void Start() {
@@ -25,20 +29,29 @@ public class Player : MonoBehaviour {
 	}
 
 	void Update() {
-		bool jump = Input.GetButtonDown("Jump");
-		if (jump) {
-			isJumping = true;
-			controller.Jump();
+		horizontalInput = Input.GetAxis("Horizontal");
+		if (Input.GetButtonDown("Jump")) {
+			jumpRequested = true;
 		}
 		if (Input.GetButtonUp("Jump")) {
-			isJumping = false;
-			controller.CancelJump();
+			jumpCanceled = true;
 		}
 	}
 
 	void FixedUpdate() {
-		float horizontalInput = Input.GetAxis("Horizontal");
 		controller.Move(horizontalInput);
+
+		if (jumpRequested && controller.isGrounded) {
+			controller.Jump();
+			isJumping = true;
+			jumpRequested = false;
+		}
+
+		if (jumpCanceled && isJumping) {
+			controller.CancelJump();
+			isJumping = false;
+			jumpCanceled = false;
+		}
 	}
 
 	public void Die() {

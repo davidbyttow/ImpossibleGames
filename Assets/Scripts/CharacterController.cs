@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterController2D : MonoBehaviour {
+public class CharacterController : MonoBehaviour {
 
 
 	[SerializeField] private float horizontalSpeed = 10f;
@@ -10,22 +10,26 @@ public class CharacterController2D : MonoBehaviour {
 	[SerializeField] private float jumpForce = 400f;
 	[SerializeField] private float jumpingGravityScale = 3f;
 	[SerializeField] private float gravityScale = 4f;
-	[Range(0, 0.3f)] [SerializeField] private float movementSmoothing;
+	[Range(0, 0.3f)] [SerializeField] private float movementSmoothing = 0.05f;
 
 	[SerializeField] private LayerMask groundMask;
 	[SerializeField] private Transform groundCheck;
 	[SerializeField] private float groundCheckRadius = 0.2f;
 	[SerializeField] private Transform ceilingCheck;
 	[SerializeField] private float ceilingCheckRadius = 0.2f;
+	[SerializeField] private Transform wallCheck;
+	[SerializeField] private float wallCheckRadius = 0.2f;
 
-	private float inAirStartTime = 0;
+	public bool isGrounded { get; private set; }
+	public bool isFacingWall { get; private set; }
+
 	private Rigidbody2D rigidBody;
 	private CapsuleCollider2D capsule;
 	private Animator animator;
-	private SpriteRenderer spriteRenderer;
 
+	private bool facingRight = false;
+	private float inAirStartTime = 0;
 	private Vector3 velocity = Vector3.zero;
-	private bool isGrounded;
 
 	void Awake() {
 		rigidBody = GetComponent<Rigidbody2D>();
@@ -34,12 +38,12 @@ public class CharacterController2D : MonoBehaviour {
 		rigidBody.freezeRotation = true;
 
 		capsule = GetComponent<CapsuleCollider2D>();
-		spriteRenderer = GetComponent<SpriteRenderer>();
 		animator = GetComponent<Animator>();
 	}
 
 	void Start() {
 		inAirStartTime = Time.time;
+		facingRight = transform.localScale.x > 0;
 	}
 
 	void Update() {
@@ -68,15 +72,16 @@ public class CharacterController2D : MonoBehaviour {
 
 	private void CheckGround() {
 		bool wasGrounded = isGrounded;
+
 		isGrounded = false;
+		if (IsTouchingGroundOrWall(groundCheck.position, groundCheckRadius)) {
+			isGrounded = true;
+		}
 
-		// TODO: Sphere cast or something
-
-		Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, groundCheckRadius, groundMask);
-		foreach (Collider2D collider in colliders) {
-			if (collider.gameObject != gameObject && !collider.isTrigger) {
-				isGrounded = true;
-				break;
+		isFacingWall = false;
+		if (!isGrounded && !wasGrounded) {
+			if (IsTouchingGroundOrWall(wallCheck.position, wallCheckRadius)) {
+				isFacingWall = true;
 			}
 		}
 
@@ -92,13 +97,27 @@ public class CharacterController2D : MonoBehaviour {
 		}
 	}
 
+	private bool IsTouchingGroundOrWall(Vector3 position, float radius) {
+		Collider2D[] colliders = Physics2D.OverlapCircleAll(position, radius, groundMask);
+		foreach (Collider2D collider in colliders) {
+			if (collider.gameObject != gameObject && !collider.isTrigger) {
+				return true;
+			}
+		}
+		return false;
+	}
+
 	public void Move(float horizontalInput) {
 		var horizontalVelocity = horizontalInput * horizontalSpeed * (isGrounded ? 1f : inAirSpeedScale);
 		Vector3 targetVelocity = new Vector2(horizontalVelocity, rigidBody.velocity.y);
 		rigidBody.velocity = Vector3.SmoothDamp(rigidBody.velocity, targetVelocity, ref velocity, movementSmoothing);
 
-		if (horizontalInput != 0) {
-			spriteRenderer.flipX = horizontalInput < 0;
+		if ((horizontalInput > 0 && !facingRight) || (horizontalInput < 0 && facingRight)) {
+			Flip();
+		}
+
+		if (isFacingWall && !isGrounded) {
+			rigidBody.velocity = new Vector2(0, rigidBody.velocity.y);
 		}
 	}
 
@@ -110,6 +129,14 @@ public class CharacterController2D : MonoBehaviour {
 			rigidBody.gravityScale = jumpingGravityScale;
 			inAirStartTime = Time.time;
 		}
+	}
+
+	private void Flip() {
+		facingRight = !facingRight;
+
+		Vector3 scale = transform.localScale;
+		scale.x *= -1;
+		transform.localScale = scale;
 	}
 
 	public void CancelJump() {
@@ -129,6 +156,11 @@ public class CharacterController2D : MonoBehaviour {
 		if (ceilingCheck) {
 			Gizmos.color = Color.red;
 			Gizmos.DrawWireSphere(ceilingCheck.position, ceilingCheckRadius);
+		}
+
+		if (ceilingCheck) {
+			Gizmos.color = Color.red;
+			Gizmos.DrawWireSphere(wallCheck.position, wallCheckRadius);
 		}
 	}
 }
