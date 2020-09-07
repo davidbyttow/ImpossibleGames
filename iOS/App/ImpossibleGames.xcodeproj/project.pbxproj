@@ -1,0 +1,395 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		030343AE250327F7004994B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030343AD250327F7004994B2 /* AppDelegate.swift */; };
+		030343B0250327F7004994B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030343AF250327F7004994B2 /* SceneDelegate.swift */; };
+		030343B2250327F7004994B2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030343B1250327F7004994B2 /* ContentView.swift */; };
+		030343B4250327F9004994B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030343B3250327F9004994B2 /* Assets.xcassets */; };
+		030343B7250327F9004994B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030343B6250327F9004994B2 /* Preview Assets.xcassets */; };
+		030343BA250327F9004994B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030343B8250327F9004994B2 /* LaunchScreen.storyboard */; };
+		03EA476525043B7F00922885 /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03EA476325043B7F00922885 /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		03EA476D2504664200922885 /* AppViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 03EA476C2504664200922885 /* AppViewController.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		03EA476625043B7F00922885 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				03EA476525043B7F00922885 /* UnityFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		030343AA250327F7004994B2 /* ImpossibleGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImpossibleGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		030343AD250327F7004994B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		030343AF250327F7004994B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		030343B1250327F7004994B2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		030343B3250327F9004994B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		030343B6250327F9004994B2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		030343B9250327F9004994B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		030343BB250327F9004994B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03EA476325043B7F00922885 /* UnityFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UnityFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		03EA476B2504664200922885 /* ImpossibleGames-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImpossibleGames-Bridging-Header.h"; sourceTree = "<group>"; };
+		03EA476C2504664200922885 /* AppViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppViewController.mm; sourceTree = "<group>"; };
+		03EA476E250466D300922885 /* AppViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppViewController.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		030343A7250327F7004994B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		030343A1250327F7004994B2 = {
+			isa = PBXGroup;
+			children = (
+				030343AC250327F7004994B2 /* ImpossibleGames */,
+				030343AB250327F7004994B2 /* Products */,
+				03EA476225043B7F00922885 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		030343AB250327F7004994B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				030343AA250327F7004994B2 /* ImpossibleGames.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		030343AC250327F7004994B2 /* ImpossibleGames */ = {
+			isa = PBXGroup;
+			children = (
+				03EA476A2504660700922885 /* Bridge */,
+				030343AD250327F7004994B2 /* AppDelegate.swift */,
+				030343AF250327F7004994B2 /* SceneDelegate.swift */,
+				030343B1250327F7004994B2 /* ContentView.swift */,
+				030343B3250327F9004994B2 /* Assets.xcassets */,
+				030343B8250327F9004994B2 /* LaunchScreen.storyboard */,
+				030343BB250327F9004994B2 /* Info.plist */,
+				030343B5250327F9004994B2 /* Preview Content */,
+			);
+			path = ImpossibleGames;
+			sourceTree = "<group>";
+		};
+		030343B5250327F9004994B2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				030343B6250327F9004994B2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		03EA476225043B7F00922885 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03EA476325043B7F00922885 /* UnityFramework.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		03EA476A2504660700922885 /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				03EA476C2504664200922885 /* AppViewController.mm */,
+				03EA476B2504664200922885 /* ImpossibleGames-Bridging-Header.h */,
+				03EA476E250466D300922885 /* AppViewController.h */,
+			);
+			path = Bridge;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		030343A9250327F7004994B2 /* ImpossibleGames */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 030343BE250327F9004994B2 /* Build configuration list for PBXNativeTarget "ImpossibleGames" */;
+			buildPhases = (
+				030343A6250327F7004994B2 /* Sources */,
+				030343A7250327F7004994B2 /* Frameworks */,
+				030343A8250327F7004994B2 /* Resources */,
+				03EA476625043B7F00922885 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImpossibleGames;
+			productName = ImpossibleGames;
+			productReference = 030343AA250327F7004994B2 /* ImpossibleGames.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		030343A2250327F7004994B2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Simple Things LLC";
+				TargetAttributes = {
+					030343A9250327F7004994B2 = {
+						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
+					};
+				};
+			};
+			buildConfigurationList = 030343A5250327F7004994B2 /* Build configuration list for PBXProject "ImpossibleGames" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 030343A1250327F7004994B2;
+			productRefGroup = 030343AB250327F7004994B2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				030343A9250327F7004994B2 /* ImpossibleGames */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		030343A8250327F7004994B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				030343BA250327F9004994B2 /* LaunchScreen.storyboard in Resources */,
+				030343B7250327F9004994B2 /* Preview Assets.xcassets in Resources */,
+				030343B4250327F9004994B2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		030343A6250327F7004994B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03EA476D2504664200922885 /* AppViewController.mm in Sources */,
+				030343AE250327F7004994B2 /* AppDelegate.swift in Sources */,
+				030343B0250327F7004994B2 /* SceneDelegate.swift in Sources */,
+				030343B2250327F7004994B2 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		030343B8250327F9004994B2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				030343B9250327F9004994B2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		030343BC250327F9004994B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		030343BD250327F9004994B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		030343BF250327F9004994B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"ImpossibleGames/Preview Content\"";
+				DEVELOPMENT_TEAM = D5SNFUHVYJ;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = ImpossibleGames/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidbyttow.ImpossibleGames;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ImpossibleGames/Bridge/ImpossibleGames-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		030343C0250327F9004994B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"ImpossibleGames/Preview Content\"";
+				DEVELOPMENT_TEAM = D5SNFUHVYJ;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = ImpossibleGames/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidbyttow.ImpossibleGames;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ImpossibleGames/Bridge/ImpossibleGames-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		030343A5250327F7004994B2 /* Build configuration list for PBXProject "ImpossibleGames" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				030343BC250327F9004994B2 /* Debug */,
+				030343BD250327F9004994B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		030343BE250327F9004994B2 /* Build configuration list for PBXNativeTarget "ImpossibleGames" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				030343BF250327F9004994B2 /* Debug */,
+				030343C0250327F9004994B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 030343A2250327F7004994B2 /* Project object */;
+}
