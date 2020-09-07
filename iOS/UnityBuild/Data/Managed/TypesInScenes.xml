@@ -62,6 +62,7 @@
 		<type fullname="Mover" preserve="nothing"/>
 		<type fullname="Player" preserve="nothing"/>
 		<type fullname="SoundManager" preserve="nothing"/>
+		<type fullname="TouchControls" preserve="nothing"/>
 		<type fullname="Trigger" preserve="nothing"/>
 	</assembly>
 </linker>

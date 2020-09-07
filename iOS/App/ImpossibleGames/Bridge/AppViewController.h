@@ -6,22 +6,16 @@
 //  Copyright © 2020 Simple Things LLC. All rights reserved.
 //
 
-#ifndef APPVIEWCONTROLLER_H
-#define APPVIEWCONTROLLER_H
+#pragma once
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
 
-@interface AppViewController : UIViewController
-- (void)applicationWillResignActive:(UIApplication *)application;
-- (void)applicationDidEnterBackground:(UIApplication *)application;
-- (void)applicationWillEnterForeground:(UIApplication *)application;
-- (void)applicationDidBecomeActive:(UIApplication *)application;
-- (void)applicationWillTerminate:(UIApplication *)application;
-@end
+@class UIViewController;
+@class UIWindow;
 
 @interface EmbeddedUnity : NSObject
 @property UIViewController *viewController;
+@property UIWindow *window;
 
 - (void)run:(int)argc argv:(char**)argv;
 - (void)didBecomeActive;
@@ -29,5 +23,3 @@
 - (void)willEnterForeground;
 - (void)didEnterBackground;
 @end
-
-#endif

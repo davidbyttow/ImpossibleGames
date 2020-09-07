@@ -17,25 +17,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   var unity: EmbeddedUnity!
 
   func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-    // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-    // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-    // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-
-    self.unity = EmbeddedUnity()
-    unity.run(CommandLine.argc, argv:CommandLine.unsafeArgv)
-
-
-//    // Create the SwiftUI view that provides the window contents.
-//    let contentView = ContentView()
-//
-//    // Use a UIHostingController as window root view controller.
-//    if let windowScene = scene as? UIWindowScene {
-//      let window = UIWindow(windowScene: windowScene)
-//      window.rootViewController = UIHostingController(rootView: contentView)
-//      self.window = window
-//      window.makeKeyAndVisible()
-//    }
     
+    unity = EmbeddedUnity()
+    unity.run(CommandLine.argc, argv:CommandLine.unsafeArgv)
+    window = unity.window
+    
+//    let contentView = ContentView()
+//    let childView = UIHostingController(rootView: contentView)
+//    let unityViewController = unity.viewController!
+//    unityViewController.addChild(childView)
+//    childView.viewIfLoaded?.frame = unityViewController.view.frame
+//    let view = unityViewController.viewIfLoaded
+//    view?.addSubview(childView.view)
+//    childView.didMove(toParent: unityViewController)
+
+    if let windowScene = scene as? UIWindowScene {
+      window?.windowScene = windowScene
+      window?.makeKeyAndVisible()
+    }
   }
   
   func sceneDidDisconnect(_ scene: UIScene) {
@@ -72,8 +71,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 }
 
 
-struct SceneDelegate_Previews: PreviewProvider {
-  static var previews: some View {
-    /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
-  }
-}
+//struct SceneDelegate_Previews: PreviewProvider {
+//  static var previews: some View {
+//    /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+//  }
+//}

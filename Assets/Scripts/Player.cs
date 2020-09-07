@@ -4,81 +4,90 @@ using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
 public class Player : MonoBehaviour {
-	
-	[SerializeField] private ParticleSystem deathEffect;
-	[SerializeField] private Rigidbody2D head;
 
-	private Rigidbody2D rigidBody;
-	private SpriteRenderer sprite;
-	private CharacterController controller;
-	public bool isDead { get; private set; } = false;
-	public bool isJumping { get; private set; } = false;
+  [SerializeField] private ParticleSystem deathEffect;
+  [SerializeField] private Rigidbody2D head;
 
-	private float horizontalInput = 0;
-	private bool jumpRequested = false;
-	private bool jumpCanceled = false;
+  private Rigidbody2D rigidBody;
+  private SpriteRenderer sprite;
+  private CharacterController controller;
+  private TouchControls touchControls;
+  public bool isDead { get; private set; } = false;
+  public bool isJumping { get; private set; } = false;
 
-	void Awake() {
-		rigidBody = GetComponent<Rigidbody2D>();
-		sprite = GetComponent<SpriteRenderer>();
-		controller = GetComponent<CharacterController>();
-	}
+  private float horizontalInput = 0;
+  private bool jumpRequested = false;
+  private bool jumpCanceled = false;
 
-	void Start() {
-		SoundManager.inst.PlayDoorClose();
-	}
+  void Awake() {
+    rigidBody = GetComponent<Rigidbody2D>();
+    sprite = GetComponent<SpriteRenderer>();
+    controller = GetComponent<CharacterController>();
+    touchControls = GetComponent<TouchControls>();
+  }
 
-	void Update() {
-		horizontalInput = Input.GetAxis("Horizontal");
-		if (Input.GetButtonDown("Jump")) {
-			jumpRequested = true;
-		}
-		if (Input.GetButtonUp("Jump")) {
-			jumpCanceled = true;
-		}
-	}
+  void Start() {
+    SoundManager.inst.PlayDoorClose();
+  }
 
-	void FixedUpdate() {
-		controller.Move(horizontalInput);
+  void Update() {
+    horizontalInput = Input.GetAxis("Horizontal");
 
-		if (jumpRequested && controller.isGrounded) {
-			controller.Jump();
-			isJumping = true;
-			jumpRequested = false;
-		}
+    if (horizontalInput == 0) {
+      horizontalInput = touchControls.horizontal;
+    }
 
-		if (jumpCanceled && isJumping) {
-			controller.CancelJump();
-			isJumping = false;
-			jumpCanceled = false;
-		}
-	}
+    if (Input.GetButtonDown("Jump") || touchControls.jumpButtonDown) {
+      jumpRequested = true;
+      jumpCanceled = false;
+    }
+    if (Input.GetButtonUp("Jump") || touchControls.jumpButtonUp) {
+      jumpRequested = false;
+      jumpCanceled = true;
+    }
+  }
 
-	public void Die() {
-		if (isDead) {
-			return;
-		}
+  void FixedUpdate() {
+    controller.Move(horizontalInput);
 
-		if (Camera.main.TryGetComponent(out CameraShake shake)) {
-			shake.Shake();
-		}
+    if (jumpRequested && controller.isGrounded) {
+      controller.Jump();
+      isJumping = true;
+      jumpRequested = false;
+    }
 
-		if (deathEffect) {
-			var effect = Instantiate(deathEffect, transform.position, Quaternion.Euler(0, -90, 0));
-			effect.Play();
-		}
+    if (jumpCanceled && isJumping) {
+      controller.CancelJump();
+      isJumping = false;
+      jumpCanceled = false;
+    }
+  }
 
-		if (head) {
-			var spawnedHead = Instantiate(head, transform.position, Quaternion.identity);
-			spawnedHead.velocity = rigidBody.velocity;
-			var angularVelocity = 20f + Random.value * 180f;
-			spawnedHead.angularVelocity = rigidBody.velocity.x > 0 ? angularVelocity : -angularVelocity;
-		}
+  public void Die() {
+    if (isDead) {
+      return;
+    }
 
-		isDead = true;
-		SoundManager.inst.PlayDeath();
+    if (Camera.main.TryGetComponent(out CameraShake shake)) {
+      shake.Shake();
+    }
 
-		gameObject.SetActive(false);
-		GameManager.global.QueueRestart();
-	}
+    if (deathEffect) {
+      var effect = Instantiate(deathEffect, transform.position, Quaternion.Euler(0, -90, 0));
+      effect.Play();
+    }
+
+    if (head) {
+      var spawnedHead = Instantiate(head, transform.position, Quaternion.identity);
+      spawnedHead.velocity = rigidBody.velocity;
+      var angularVelocity = 20f + Random.value * 180f;
+      spawnedHead.angularVelocity = rigidBody.velocity.x > 0 ? angularVelocity : -angularVelocity;
+    }
+
+    isDead = true;
+    SoundManager.inst.PlayDeath();
+
+    gameObject.SetActive(false);
+    GameManager.global.QueueRestart();
+  }
 }

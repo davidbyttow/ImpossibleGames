@@ -126,6 +126,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Camera_get_eventMask();
 		Register_UnityEngine_Camera_get_eventMask();
 
+		//System.Int32 UnityEngine.Camera::get_pixelWidth()
+		void Register_UnityEngine_Camera_get_pixelWidth();
+		Register_UnityEngine_Camera_get_pixelWidth();
+
 		//System.Int32 UnityEngine.Camera::get_targetDisplay()
 		void Register_UnityEngine_Camera_get_targetDisplay();
 		Register_UnityEngine_Camera_get_targetDisplay();
@@ -422,6 +426,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Input_GetMouseButtonDown();
 		Register_UnityEngine_Input_GetMouseButtonDown();
 
+		//System.Int32 UnityEngine.Input::get_touchCount()
+		void Register_UnityEngine_Input_get_touchCount();
+		Register_UnityEngine_Input_get_touchCount();
+
 		//System.Single UnityEngine.Input::GetAxis(System.String)
 		void Register_UnityEngine_Input_GetAxis();
 		Register_UnityEngine_Input_GetAxis();
@@ -429,6 +437,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Single UnityEngine.Input::GetAxisRaw(System.String)
 		void Register_UnityEngine_Input_GetAxisRaw();
 		Register_UnityEngine_Input_GetAxisRaw();
+
+		//System.Void UnityEngine.Input::GetTouch_Injected(System.Int32,UnityEngine.Touch&)
+		void Register_UnityEngine_Input_GetTouch_Injected();
+		Register_UnityEngine_Input_GetTouch_Injected();
 
 		//System.Void UnityEngine.Input::get_mousePosition_Injected(UnityEngine.Vector3&)
 		void Register_UnityEngine_Input_get_mousePosition_Injected();
