@@ -5567,6 +5567,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Camera_get_aspect_mD0A1FC8F998473DA0886
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Exception__ctor_m8ECDE8ACA7F2E0EF1144BD1200FB5DB2870B5F11 (Exception_t * __this, String_t* ___message0, const RuntimeMethod* method);
 // System.Void GameManager::set_global(GameManager)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GameManager_set_global_m099B83525786FED23A1AA28D784EA9EE8D6606E5_inline (GameManager_t9013B33302D2B40A51D0E8059DEE0DC180218AA1 * ___value0, const RuntimeMethod* method);
+// System.Void UnityEngine.Application::set_targetFrameRate(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Application_set_targetFrameRate_m0F44C8D07060E17D9D44D176888D14DBABE0CBFC (int32_t ___value0, const RuntimeMethod* method);
 // System.Void GameManager::StartMusic()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_StartMusic_mDFDAFFAC7775E5026ED14C97237AB28AFDD895FD (GameManager_t9013B33302D2B40A51D0E8059DEE0DC180218AA1 * __this, const RuntimeMethod* method);
 // Music Music::get_inst()
@@ -10782,7 +10784,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_Awake_m22F42B2A82708B10F652C
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// if (global!= null) {
+		// if (global != null) {
 		GameManager_t9013B33302D2B40A51D0E8059DEE0DC180218AA1 * L_0 = GameManager_get_global_mDB65C375490CEAFCB69F8006D5E19353FD429974_inline(/*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
 		bool L_1 = Object_op_Inequality_mE1F187520BD83FB7D86A6D850710C4D42B864E90(L_0, (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A *)NULL, /*hidden argument*/NULL);
@@ -10802,6 +10804,8 @@ IL_0018:
 	{
 		// global = this;
 		GameManager_set_global_m099B83525786FED23A1AA28D784EA9EE8D6606E5_inline(__this, /*hidden argument*/NULL);
+		// Application.targetFrameRate = 60;
+		Application_set_targetFrameRate_m0F44C8D07060E17D9D44D176888D14DBABE0CBFC(((int32_t)60), /*hidden argument*/NULL);
 		// }
 		return;
 	}

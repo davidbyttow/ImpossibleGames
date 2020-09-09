@@ -56,6 +56,14 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.Animator
 
+	//Start Registrations for type : UnityEngine.Application
+
+		//System.Void UnityEngine.Application::set_targetFrameRate(System.Int32)
+		void Register_UnityEngine_Application_set_targetFrameRate();
+		Register_UnityEngine_Application_set_targetFrameRate();
+
+	//End Registrations for type : UnityEngine.Application
+
 	//Start Registrations for type : UnityEngine.AsyncOperation
 
 		//System.Void UnityEngine.AsyncOperation::InternalDestroy(System.IntPtr)

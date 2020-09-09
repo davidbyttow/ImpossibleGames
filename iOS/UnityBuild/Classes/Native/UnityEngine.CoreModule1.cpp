@@ -12712,6 +12712,148 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ThrowHelper_ThrowArgumentOutOfRangeExcep
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// Conversion methods for marshalling of: UnityEngine.Experimental.GlobalIllumination.SpotLight
+IL2CPP_EXTERN_C void SpotLight_tAE1210A6FAE3F41CA62CB63E9012C9BED625AC9D_marshal_pinvoke(const SpotLight_tAE1210A6FAE3F41CA62CB63E9012C9BED625AC9D& unmarshaled, SpotLight_tAE1210A6FAE3F41CA62CB63E9012C9BED625AC9D_marshaled_pinvoke& marshaled)
+{
+	marshaled.___instanceID_0 = unmarshaled.get_instanceID_0();
+	marshaled.___shadow_1 = static_cast<int32_t>(unmarshaled.get_shadow_1());
+	marshaled.___mode_2 = unmarshaled.get_mode_2();
+	marshaled.___position_3 = unmarshaled.get_position_3();
+	marshaled.___orientation_4 = unmarshaled.get_orientation_4();
+	marshaled.___color_5 = unmarshaled.get_color_5();
+	marshaled.___indirectColor_6 = unmarshaled.get_indirectColor_6();
+	marshaled.___range_7 = unmarshaled.get_range_7();
+	marshaled.___sphereRadius_8 = unmarshaled.get_sphereRadius_8();
+	marshaled.___coneAngle_9 = unmarshaled.get_coneAngle_9();
+	marshaled.___innerConeAngle_10 = unmarshaled.get_innerConeAngle_10();
+	marshaled.___falloff_11 = unmarshaled.get_falloff_11();
+	marshaled.___angularFalloff_12 = unmarshaled.get_angularFalloff_12();
+}
+IL2CPP_EXTERN_C void SpotLight_tAE1210A6FAE3F41CA62CB63E9012C9BED625AC9D_marshal_pinvoke_back(const SpotLight_tAE1210A6FAE3F41CA62CB63E9012C9BED625AC9D_marshaled_pinvoke& marshaled, SpotLight_tAE1210A6FAE3F41CA62CB63E9012C9BED625AC9D& unmarshaled)
+{
+	int32_t unmarshaled_instanceID_temp_0 = 0;
+	unmarshaled_instanceID_temp_0 = marshaled.___instanceID_0;
+	unmarshaled.set_instanceID_0(unmarshaled_instanceID_temp_0);
+	bool unmarshaled_shadow_temp_1 = false;
+	unmarshaled_shadow_temp_1 = static_cast<bool>(marshaled.___shadow_1);
+	unmarshaled.set_shadow_1(unmarshaled_shadow_temp_1);
+	uint8_t unmarshaled_mode_temp_2 = 0;
+	unmarshaled_mode_temp_2 = marshaled.___mode_2;
+	unmarshaled.set_mode_2(unmarshaled_mode_temp_2);
+	Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  unmarshaled_position_temp_3;
+	memset((&unmarshaled_position_temp_3), 0, sizeof(unmarshaled_position_temp_3));
+	unmarshaled_position_temp_3 = marshaled.___position_3;
+	unmarshaled.set_position_3(unmarshaled_position_temp_3);
+	Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  unmarshaled_orientation_temp_4;
+	memset((&unmarshaled_orientation_temp_4), 0, sizeof(unmarshaled_orientation_temp_4));
+	unmarshaled_orientation_temp_4 = marshaled.___orientation_4;
+	unmarshaled.set_orientation_4(unmarshaled_orientation_temp_4);
+	LinearColor_tB134EA090C61E6624DE36F52980CA7E2C893D5F2  unmarshaled_color_temp_5;
+	memset((&unmarshaled_color_temp_5), 0, sizeof(unmarshaled_color_temp_5));
+	unmarshaled_color_temp_5 = marshaled.___color_5;
+	unmarshaled.set_color_5(unmarshaled_color_temp_5);
+	LinearColor_tB134EA090C61E6624DE36F52980CA7E2C893D5F2  unmarshaled_indirectColor_temp_6;
+	memset((&unmarshaled_indirectColor_temp_6), 0, sizeof(unmarshaled_indirectColor_temp_6));
+	unmarshaled_indirectColor_temp_6 = marshaled.___indirectColor_6;
+	unmarshaled.set_indirectColor_6(unmarshaled_indirectColor_temp_6);
+	float unmarshaled_range_temp_7 = 0.0f;
+	unmarshaled_range_temp_7 = marshaled.___range_7;
+	unmarshaled.set_range_7(unmarshaled_range_temp_7);
+	float unmarshaled_sphereRadius_temp_8 = 0.0f;
+	unmarshaled_sphereRadius_temp_8 = marshaled.___sphereRadius_8;
+	unmarshaled.set_sphereRadius_8(unmarshaled_sphereRadius_temp_8);
+	float unmarshaled_coneAngle_temp_9 = 0.0f;
+	unmarshaled_coneAngle_temp_9 = marshaled.___coneAngle_9;
+	unmarshaled.set_coneAngle_9(unmarshaled_coneAngle_temp_9);
+	float unmarshaled_innerConeAngle_temp_10 = 0.0f;
+	unmarshaled_innerConeAngle_temp_10 = marshaled.___innerConeAngle_10;
+	unmarshaled.set_innerConeAngle_10(unmarshaled_innerConeAngle_temp_10);
+	uint8_t unmarshaled_falloff_temp_11 = 0;
+	unmarshaled_falloff_temp_11 = marshaled.___falloff_11;
+	unmarshaled.set_falloff_11(unmarshaled_falloff_temp_11);
+	uint8_t unmarshaled_angularFalloff_temp_12 = 0;
+	unmarshaled_angularFalloff_temp_12 = marshaled.___angularFalloff_12;
+	unmarshaled.set_angularFalloff_12(unmarshaled_angularFalloff_temp_12);
+}
+// Conversion method for clean up from marshalling of: UnityEngine.Experimental.GlobalIllumination.SpotLight
+IL2CPP_EXTERN_C void SpotLight_tAE1210A6FAE3F41CA62CB63E9012C9BED625AC9D_marshal_pinvoke_cleanup(SpotLight_tAE1210A6FAE3F41CA62CB63E9012C9BED625AC9D_marshaled_pinvoke& marshaled)
+{
+}
+// Conversion methods for marshalling of: UnityEngine.Experimental.GlobalIllumination.SpotLight
+IL2CPP_EXTERN_C void SpotLight_tAE1210A6FAE3F41CA62CB63E9012C9BED625AC9D_marshal_com(const SpotLight_tAE1210A6FAE3F41CA62CB63E9012C9BED625AC9D& unmarshaled, SpotLight_tAE1210A6FAE3F41CA62CB63E9012C9BED625AC9D_marshaled_com& marshaled)
+{
+	marshaled.___instanceID_0 = unmarshaled.get_instanceID_0();
+	marshaled.___shadow_1 = static_cast<int32_t>(unmarshaled.get_shadow_1());
+	marshaled.___mode_2 = unmarshaled.get_mode_2();
+	marshaled.___position_3 = unmarshaled.get_position_3();
+	marshaled.___orientation_4 = unmarshaled.get_orientation_4();
+	marshaled.___color_5 = unmarshaled.get_color_5();
+	marshaled.___indirectColor_6 = unmarshaled.get_indirectColor_6();
+	marshaled.___range_7 = unmarshaled.get_range_7();
+	marshaled.___sphereRadius_8 = unmarshaled.get_sphereRadius_8();
+	marshaled.___coneAngle_9 = unmarshaled.get_coneAngle_9();
+	marshaled.___innerConeAngle_10 = unmarshaled.get_innerConeAngle_10();
+	marshaled.___falloff_11 = unmarshaled.get_falloff_11();
+	marshaled.___angularFalloff_12 = unmarshaled.get_angularFalloff_12();
+}
+IL2CPP_EXTERN_C void SpotLight_tAE1210A6FAE3F41CA62CB63E9012C9BED625AC9D_marshal_com_back(const SpotLight_tAE1210A6FAE3F41CA62CB63E9012C9BED625AC9D_marshaled_com& marshaled, SpotLight_tAE1210A6FAE3F41CA62CB63E9012C9BED625AC9D& unmarshaled)
+{
+	int32_t unmarshaled_instanceID_temp_0 = 0;
+	unmarshaled_instanceID_temp_0 = marshaled.___instanceID_0;
+	unmarshaled.set_instanceID_0(unmarshaled_instanceID_temp_0);
+	bool unmarshaled_shadow_temp_1 = false;
+	unmarshaled_shadow_temp_1 = static_cast<bool>(marshaled.___shadow_1);
+	unmarshaled.set_shadow_1(unmarshaled_shadow_temp_1);
+	uint8_t unmarshaled_mode_temp_2 = 0;
+	unmarshaled_mode_temp_2 = marshaled.___mode_2;
+	unmarshaled.set_mode_2(unmarshaled_mode_temp_2);
+	Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  unmarshaled_position_temp_3;
+	memset((&unmarshaled_position_temp_3), 0, sizeof(unmarshaled_position_temp_3));
+	unmarshaled_position_temp_3 = marshaled.___position_3;
+	unmarshaled.set_position_3(unmarshaled_position_temp_3);
+	Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  unmarshaled_orientation_temp_4;
+	memset((&unmarshaled_orientation_temp_4), 0, sizeof(unmarshaled_orientation_temp_4));
+	unmarshaled_orientation_temp_4 = marshaled.___orientation_4;
+	unmarshaled.set_orientation_4(unmarshaled_orientation_temp_4);
+	LinearColor_tB134EA090C61E6624DE36F52980CA7E2C893D5F2  unmarshaled_color_temp_5;
+	memset((&unmarshaled_color_temp_5), 0, sizeof(unmarshaled_color_temp_5));
+	unmarshaled_color_temp_5 = marshaled.___color_5;
+	unmarshaled.set_color_5(unmarshaled_color_temp_5);
+	LinearColor_tB134EA090C61E6624DE36F52980CA7E2C893D5F2  unmarshaled_indirectColor_temp_6;
+	memset((&unmarshaled_indirectColor_temp_6), 0, sizeof(unmarshaled_indirectColor_temp_6));
+	unmarshaled_indirectColor_temp_6 = marshaled.___indirectColor_6;
+	unmarshaled.set_indirectColor_6(unmarshaled_indirectColor_temp_6);
+	float unmarshaled_range_temp_7 = 0.0f;
+	unmarshaled_range_temp_7 = marshaled.___range_7;
+	unmarshaled.set_range_7(unmarshaled_range_temp_7);
+	float unmarshaled_sphereRadius_temp_8 = 0.0f;
+	unmarshaled_sphereRadius_temp_8 = marshaled.___sphereRadius_8;
+	unmarshaled.set_sphereRadius_8(unmarshaled_sphereRadius_temp_8);
+	float unmarshaled_coneAngle_temp_9 = 0.0f;
+	unmarshaled_coneAngle_temp_9 = marshaled.___coneAngle_9;
+	unmarshaled.set_coneAngle_9(unmarshaled_coneAngle_temp_9);
+	float unmarshaled_innerConeAngle_temp_10 = 0.0f;
+	unmarshaled_innerConeAngle_temp_10 = marshaled.___innerConeAngle_10;
+	unmarshaled.set_innerConeAngle_10(unmarshaled_innerConeAngle_temp_10);
+	uint8_t unmarshaled_falloff_temp_11 = 0;
+	unmarshaled_falloff_temp_11 = marshaled.___falloff_11;
+	unmarshaled.set_falloff_11(unmarshaled_falloff_temp_11);
+	uint8_t unmarshaled_angularFalloff_temp_12 = 0;
+	unmarshaled_angularFalloff_temp_12 = marshaled.___angularFalloff_12;
+	unmarshaled.set_angularFalloff_12(unmarshaled_angularFalloff_temp_12);
+}
+// Conversion method for clean up from marshalling of: UnityEngine.Experimental.GlobalIllumination.SpotLight
+IL2CPP_EXTERN_C void SpotLight_tAE1210A6FAE3F41CA62CB63E9012C9BED625AC9D_marshal_com_cleanup(SpotLight_tAE1210A6FAE3F41CA62CB63E9012C9BED625AC9D_marshaled_com& marshaled)
+{
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 // System.Void UnityEngine.Sprite::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sprite__ctor_m121D88C6A901A2A2FA602306D01FDB8D7A0206F0 (Sprite_t5B10B1178EC2E6F53D33FFD77557F31C08A51ED9 * __this, const RuntimeMethod* method)
 {

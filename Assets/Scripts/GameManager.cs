@@ -3,50 +3,54 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class GameManager : MonoBehaviour {
-	
-	public static GameManager global { get; private set; }
 
-	[SerializeField] private AudioClip music;
-	private float restartDelay = 0;
+  public static GameManager global { get; private set; }
 
-	void Awake() {
-		if (global!= null) {
-			throw new System.Exception("More than one GameManager present in scene");
-		}
-		global = this;
-	}
+  [SerializeField] private AudioClip music;
+  private float restartDelay = 0;
 
-	void Start() {
-		StartMusic();
-	}
+  void Awake() {
+    if (global != null) {
+      throw new System.Exception("More than one GameManager present in scene");
+    }
+    global = this;
 
-	void StartMusic() {
-		if (music && Music.inst) {
-			Music.inst.MaybePlay(music);
-		}
-	}
+#if UNITY_IOS
+    Application.targetFrameRate = 60;
+#endif
+  }
 
-	void Update() {
-		if (restartDelay > 0) {
-			restartDelay -= Time.deltaTime;
-			if (restartDelay <= 0) {
-				Restart();
-			}
-		}
-		if (Input.GetKeyDown(KeyCode.Tab)) {
-			Restart();
-		}
-	}
+  void Start() {
+    StartMusic();
+  }
 
-	public void QueueRestart() {
-		restartDelay = 1.5f;
-	}
+  void StartMusic() {
+    if (music && Music.inst) {
+      Music.inst.MaybePlay(music);
+    }
+  }
 
-	private void Restart() {
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-	}
+  void Update() {
+    if (restartDelay > 0) {
+      restartDelay -= Time.deltaTime;
+      if (restartDelay <= 0) {
+        Restart();
+      }
+    }
+    if (Input.GetKeyDown(KeyCode.Tab)) {
+      Restart();
+    }
+  }
 
-	public void ExitLevel() {
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-	}
+  public void QueueRestart() {
+    restartDelay = 1.5f;
+  }
+
+  private void Restart() {
+    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+  }
+
+  public void ExitLevel() {
+    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+  }
 }
