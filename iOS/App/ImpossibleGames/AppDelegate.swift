@@ -10,8 +10,11 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
+   
+  static var appLaunchOptions: [UIApplication.LaunchOptionsKey: Any]?
+  
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    AppDelegate.appLaunchOptions = launchOptions
     return true
   }
     

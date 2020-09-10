@@ -15,7 +15,7 @@
 		030343BA250327F9004994B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030343B8250327F9004994B2 /* LaunchScreen.storyboard */; };
 		03069DE42509B34600B80CA2 /* UnityFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EA476325043B7F00922885 /* UnityFramework.framework */; };
 		03069DE52509B34600B80CA2 /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03EA476325043B7F00922885 /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		03EA476D2504664200922885 /* AppViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 03EA476C2504664200922885 /* AppViewController.mm */; };
+		03069DE8250A781C00B80CA2 /* UnityPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03069DE7250A781C00B80CA2 /* UnityPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,10 +41,8 @@
 		030343B6250327F9004994B2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		030343B9250327F9004994B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		030343BB250327F9004994B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03069DE7250A781C00B80CA2 /* UnityPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnityPlayer.swift; sourceTree = "<group>"; };
 		03EA476325043B7F00922885 /* UnityFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UnityFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		03EA476B2504664200922885 /* ImpossibleGames-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImpossibleGames-Bridging-Header.h"; sourceTree = "<group>"; };
-		03EA476C2504664200922885 /* AppViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppViewController.mm; sourceTree = "<group>"; };
-		03EA476E250466D300922885 /* AppViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +77,6 @@
 		030343AC250327F7004994B2 /* ImpossibleGames */ = {
 			isa = PBXGroup;
 			children = (
-				03EA476A2504660700922885 /* Bridge */,
 				030343AD250327F7004994B2 /* AppDelegate.swift */,
 				030343AF250327F7004994B2 /* SceneDelegate.swift */,
 				030343B1250327F7004994B2 /* ContentView.swift */,
@@ -87,6 +84,7 @@
 				030343B8250327F9004994B2 /* LaunchScreen.storyboard */,
 				030343BB250327F9004994B2 /* Info.plist */,
 				030343B5250327F9004994B2 /* Preview Content */,
+				03069DE7250A781C00B80CA2 /* UnityPlayer.swift */,
 			);
 			path = ImpossibleGames;
 			sourceTree = "<group>";
@@ -105,16 +103,6 @@
 				03EA476325043B7F00922885 /* UnityFramework.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		03EA476A2504660700922885 /* Bridge */ = {
-			isa = PBXGroup;
-			children = (
-				03EA476C2504664200922885 /* AppViewController.mm */,
-				03EA476B2504664200922885 /* ImpossibleGames-Bridging-Header.h */,
-				03EA476E250466D300922885 /* AppViewController.h */,
-			);
-			path = Bridge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,8 +178,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03EA476D2504664200922885 /* AppViewController.mm in Sources */,
 				030343AE250327F7004994B2 /* AppDelegate.swift in Sources */,
+				03069DE8250A781C00B80CA2 /* UnityPlayer.swift in Sources */,
 				030343B0250327F7004994B2 /* SceneDelegate.swift in Sources */,
 				030343B2250327F7004994B2 /* ContentView.swift in Sources */,
 			);
