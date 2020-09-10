@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import UnityFramework
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

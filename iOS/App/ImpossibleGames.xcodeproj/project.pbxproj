@@ -13,18 +13,19 @@
 		030343B4250327F9004994B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030343B3250327F9004994B2 /* Assets.xcassets */; };
 		030343B7250327F9004994B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030343B6250327F9004994B2 /* Preview Assets.xcassets */; };
 		030343BA250327F9004994B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030343B8250327F9004994B2 /* LaunchScreen.storyboard */; };
-		03EA476525043B7F00922885 /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03EA476325043B7F00922885 /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		03069DE42509B34600B80CA2 /* UnityFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EA476325043B7F00922885 /* UnityFramework.framework */; };
+		03069DE52509B34600B80CA2 /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03EA476325043B7F00922885 /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		03EA476D2504664200922885 /* AppViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 03EA476C2504664200922885 /* AppViewController.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		03EA476625043B7F00922885 /* Embed Frameworks */ = {
+		03069DE62509B34600B80CA2 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				03EA476525043B7F00922885 /* UnityFramework.framework in Embed Frameworks */,
+				03069DE52509B34600B80CA2 /* UnityFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03069DE42509B34600B80CA2 /* UnityFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,7 +127,7 @@
 				030343A6250327F7004994B2 /* Sources */,
 				030343A7250327F7004994B2 /* Frameworks */,
 				030343A8250327F7004994B2 /* Resources */,
-				03EA476625043B7F00922885 /* Embed Frameworks */,
+				03069DE62509B34600B80CA2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

@@ -76,3 +76,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //    /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
 //  }
 //}
+
+struct SceneDelegate_Previews: PreviewProvider {
+  static var previews: some View {
+    /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+  }
+}
