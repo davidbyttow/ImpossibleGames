@@ -11,8 +11,8 @@ import SwiftUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   
+  var window: UIWindow?
   var windowScene: UIWindowScene?
-  
   var unityPlayer: UnityPlayer?
     
   func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -20,6 +20,26 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     windowScene = scene as? UIWindowScene
     
     unityPlayer = UnityPlayer(withLaunchOptions: AppDelegate.appLaunchOptions)
+
+    // Attach content view to unity window view
+//    let contentView = ContentView()
+//    let childView = UIHostingController(rootView: contentView)
+//    let unityViewController = unity.viewController!
+//    unityViewController.addChild(childView)
+//    childView.viewIfLoaded?.frame = unityViewController.view.frame
+//    let view = unityViewController.viewIfLoaded
+//    view?.addSubview(childView.view)
+//    childView.didMove(toParent: unityViewController)
+    
+    if let windowScene = scene as? UIWindowScene {
+      let window = UIWindow(windowScene: windowScene)
+      let contentView = ContentView(play: {
+        self.unityPlayer!.play(windowScene)
+      });
+      window.rootViewController = UIHostingController(rootView: contentView)
+      self.window = window
+      window.makeKeyAndVisible()
+    }
   }
   
   func sceneDidDisconnect(_ scene: UIScene) {
@@ -32,8 +52,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   func sceneDidBecomeActive(_ scene: UIScene) {
     // Called when the scene has moved from an inactive state to an active state.
     // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
-//    self.unity.didBecomeActive()
-    unityPlayer!.play(windowScene!)
+    //unityPlayer!.play(windowScene!)
   }
   
   func sceneWillResignActive(_ scene: UIScene) {
@@ -53,15 +72,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   }
 }
 
-
+//#if DEBUG
 //struct SceneDelegate_Previews: PreviewProvider {
 //  static var previews: some View {
 //    /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
 //  }
 //}
-
-struct SceneDelegate_Previews: PreviewProvider {
-  static var previews: some View {
-    /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
-  }
-}
+//#endif

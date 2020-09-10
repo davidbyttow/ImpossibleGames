@@ -9,13 +9,29 @@
 import SwiftUI
 
 struct ContentView: View {
+
+  var play: () -> ()
+      
   var body: some View {
-    Text("Welcome")
+    VStack {
+      Text("IMPOSSIBLE")
+        .foregroundColor(Color.red)
+      Text("GAMES")
+      Button("Play", action: play)
+        .foregroundColor(/*@START_MENU_TOKEN@*/.green/*@END_MENU_TOKEN@*/)
+      Text("Code and Graphics")
+        .foregroundColor(Color.red)
+      Text("David Byttow")
+    }
+    .frame(width: nil)
   }
 }
 
+#if DEBUG
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    ContentView()
+    ContentView(play: { print("hi") })
   }
 }
+#endif
+
