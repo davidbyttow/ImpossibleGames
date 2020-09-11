@@ -16,7 +16,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   var unityPlayer: UnityPlayer?
     
   func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-    
     windowScene = scene as? UIWindowScene
     
     unityPlayer = UnityPlayer(withLaunchOptions: AppDelegate.appLaunchOptions)
@@ -35,13 +34,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       let window = UIWindow(windowScene: windowScene)
       let contentView = ContentView(play: {
         self.unityPlayer!.play(windowScene)
-      });
+      }).background(Color.black)
       window.rootViewController = UIHostingController(rootView: contentView)
       self.window = window
       window.makeKeyAndVisible()
     }
   }
-  
+    
   func sceneDidDisconnect(_ scene: UIScene) {
     // Called as the scene is being released by the system.
     // This occurs shortly after the scene enters the background, or when its session is discarded.

@@ -16,6 +16,7 @@
 		03069DE42509B34600B80CA2 /* UnityFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EA476325043B7F00922885 /* UnityFramework.framework */; };
 		03069DE52509B34600B80CA2 /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03EA476325043B7F00922885 /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		03069DE8250A781C00B80CA2 /* UnityPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03069DE7250A781C00B80CA2 /* UnityPlayer.swift */; };
+		03069DF4250AFD4200B80CA2 /* PressStart-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03069DF0250AC79700B80CA2 /* PressStart-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +43,7 @@
 		030343B9250327F9004994B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		030343BB250327F9004994B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03069DE7250A781C00B80CA2 /* UnityPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnityPlayer.swift; sourceTree = "<group>"; };
+		03069DF0250AC79700B80CA2 /* PressStart-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PressStart-Regular.ttf"; sourceTree = "<group>"; };
 		03EA476325043B7F00922885 /* UnityFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UnityFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -77,6 +79,7 @@
 		030343AC250327F7004994B2 /* ImpossibleGames */ = {
 			isa = PBXGroup;
 			children = (
+				03069DEB250AC4B800B80CA2 /* Fonts */,
 				030343AD250327F7004994B2 /* AppDelegate.swift */,
 				030343AF250327F7004994B2 /* SceneDelegate.swift */,
 				030343B1250327F7004994B2 /* ContentView.swift */,
@@ -95,6 +98,14 @@
 				030343B6250327F9004994B2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		03069DEB250AC4B800B80CA2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				03069DF0250AC79700B80CA2 /* PressStart-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		03EA476225043B7F00922885 /* Frameworks */ = {
@@ -165,6 +176,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03069DF4250AFD4200B80CA2 /* PressStart-Regular.ttf in Resources */,
 				030343BA250327F9004994B2 /* LaunchScreen.storyboard in Resources */,
 				030343B7250327F9004994B2 /* Preview Assets.xcassets in Resources */,
 				030343B4250327F9004994B2 /* Assets.xcassets in Resources */,
