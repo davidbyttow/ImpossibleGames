@@ -44,6 +44,8 @@ struct FollowCamera_tDC43B01F7C498FBA58AC6A8AC2897485C46FAC1A;
 struct GameManager_t9013B33302D2B40A51D0E8059DEE0DC180218AA1;
 // Grass
 struct Grass_t7401B7EBF8F6B7E9450928718932AF10F19090A7;
+// HostAPI
+struct HostAPI_tCCB29E8C436888458AFC7B27E303E2C34B697C00;
 // System.Collections.IDictionary
 struct IDictionary_t99871C56B8EC2452AC5C4CF3831695E617B89D3A;
 // InstantDeath
@@ -58,8 +60,6 @@ struct MemberFilter_t48D0AA10105D186AF42428FA532D4B4332CF8B81;
 struct Mover_t5B6A723BA6B2B18C1232ACF9FF77DDBF9455E689;
 // Music
 struct Music_t4EE39761E89D9F3B3BE1D1D903CB957E1EA3CC4F;
-// NativeAPI
-struct NativeAPI_tCF1B87942D24DC16E49B82348757D460312951F7;
 // UnityEngine.Events.PersistentCallGroup
 struct PersistentCallGroup_t9A1D83DA2BA3118C103FA87D93CE92557A956FDC;
 // Player
@@ -1115,8 +1115,8 @@ public:
 };
 
 
-// NativeAPI
-struct  NativeAPI_tCF1B87942D24DC16E49B82348757D460312951F7  : public RuntimeObject
+// HostAPI
+struct  HostAPI_tCCB29E8C436888458AFC7B27E303E2C34B697C00  : public RuntimeObject
 {
 public:
 
@@ -5714,8 +5714,8 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Music_t4EE39761E89D9F3B3BE1D1D903
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Music_MaybePlay_m6CA87AAC22E20BF7CE4E128FFCE8F5691A77CFD6 (Music_t4EE39761E89D9F3B3BE1D1D903CB957E1EA3CC4F * __this, AudioClip_t16D2E573E7CC1C5118D8EE0F0692D46866A1C0EE * ___clip0, const RuntimeMethod* method);
 // System.Void GameManager::Restart()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_Restart_m1E9741B5443E1FF65B0BE1A20A8F584C90394654 (GameManager_t9013B33302D2B40A51D0E8059DEE0DC180218AA1 * __this, const RuntimeMethod* method);
-// System.Void NativeAPI::unityLeaveGame()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeAPI_unityLeaveGame_m906E5AF5F23A7DAA0E403E872E3BAF59E525FDB0 (const RuntimeMethod* method);
+// System.Void HostAPI::hostLeaveGame()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HostAPI_hostLeaveGame_m1119FE34C09174E036514978591353D9514DB172 (const RuntimeMethod* method);
 // UnityEngine.SceneManagement.Scene UnityEngine.SceneManagement.SceneManager::GetActiveScene()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Scene_t5495AD2FDC587DB2E94D9BDE2B85868BFB9A92EE  SceneManager_GetActiveScene_mB9A5037FFB576B2432D0BFEF6A161B7C4C1921A4 (const RuntimeMethod* method);
 // System.Int32 UnityEngine.SceneManagement.Scene::get_buildIndex()
@@ -5724,6 +5724,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Scene_get_buildIndex_mE32CE766EA0790E
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneManager_LoadScene_m5550E6368A6D0E37DACEDA3C5E4BA331836BC3C5 (int32_t ___sceneBuildIndex0, const RuntimeMethod* method);
 // System.Void UnityEngine.Animator::Play(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Animator_Play_mE5E8B1753FFDF754EAD1ACEFF6C5B6ACA506363C (Animator_t9DD1D43680A61D65A3C98C6EFF559709DC9CE149 * __this, String_t* ___stateName0, const RuntimeMethod* method);
+// System.Void System.Object::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_m88880E0413421D13FD95325EDCE231707CE1F405 (RuntimeObject * __this, const RuntimeMethod* method);
 // UnityEngine.Collider2D UnityEngine.Collision2D::get_collider()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Collider2D_tDDBF081328B83D21D0BA3B5036D77B32528BA722 * Collision2D_get_collider_mA7687EDB0D47A2F211BFE8DB89266B9AA05CFDDD (Collision2D_t95B5FD331CE95276D3658140844190B485D26564 * __this, const RuntimeMethod* method);
 // System.Void InstantDeath::CheckCollision(UnityEngine.Collider2D)
@@ -5766,8 +5768,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSource_Stop_mADA564D223832A64F8CF3E
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSource_set_clip_mD1F50F7BA6EA3AF25B4922473352C5180CFF7B2B (AudioSource_tC4BF65AF8CDCAA63724BB3CA59A7A29249269E6B * __this, AudioClip_t16D2E573E7CC1C5118D8EE0F0692D46866A1C0EE * ___value0, const RuntimeMethod* method);
 // System.Void UnityEngine.AudioSource::Play()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSource_Play_mED16664B8F8F3E4D68785C8C00FC96C4DF053AE1 (AudioSource_tC4BF65AF8CDCAA63724BB3CA59A7A29249269E6B * __this, const RuntimeMethod* method);
-// System.Void System.Object::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_m88880E0413421D13FD95325EDCE231707CE1F405 (RuntimeObject * __this, const RuntimeMethod* method);
 // !!0 UnityEngine.Component::GetComponent<CharacterController>()
 inline CharacterController_t05F5FF47FAD01F995B6C7F57524F2DEC9E282FC6 * Component_GetComponent_TisCharacterController_t05F5FF47FAD01F995B6C7F57524F2DEC9E282FC6_m54BBFFB0C93A3A77A87E1A47EA0737DB342FA046 (Component_t62FBC8D2420DA4BE9037AFE430740F6B3EECA684 * __this, const RuntimeMethod* method)
 {
@@ -5900,7 +5900,7 @@ inline void UnityEvent_1__ctor_m55B3D17A5D50746ED6618952C2C745FB5A73BAA7 (UnityE
 }
 // System.Single UnityEngine.Mathf::Clamp01(System.Single)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Mathf_Clamp01_m2296D75F0F1292D5C8181C57007A1CA45F440C4C (float ___value0, const RuntimeMethod* method);
-IL2CPP_EXTERN_C void DEFAULT_CALL unityLeaveGame();
+IL2CPP_EXTERN_C void DEFAULT_CALL hostLeaveGame();
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -11097,8 +11097,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_QueueRestart_m089EC6C6461610
 	{
 		// restartDelay = 1.5f;
 		__this->set_restartDelay_6((1.5f));
-		// NativeAPI.unityLeaveGame();
-		NativeAPI_unityLeaveGame_m906E5AF5F23A7DAA0E403E872E3BAF59E525FDB0(/*hidden argument*/NULL);
+		// HostAPI.hostLeaveGame();
+		HostAPI_hostLeaveGame_m1119FE34C09174E036514978591353D9514DB172(/*hidden argument*/NULL);
 		// }
 		return;
 	}
@@ -11225,6 +11225,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Grass__ctor_m65E4591B9C67AE84E1E2EEE3B71
 {
 	{
 		MonoBehaviour__ctor_mC0995D847F6A95B1A553652636C38A2AA8B13BED(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void HostAPI::hostLeaveGame()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HostAPI_hostLeaveGame_m1119FE34C09174E036514978591353D9514DB172 (const RuntimeMethod* method)
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) ();
+
+	// Native function invocation
+	reinterpret_cast<PInvokeFunc>(hostLeaveGame)();
+
+}
+// System.Void HostAPI::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HostAPI__ctor_mECB893EDBEAE149E78A21FF5251E324F434F005E (HostAPI_tCCB29E8C436888458AFC7B27E303E2C34B697C00 * __this, const RuntimeMethod* method)
+{
+	{
+		Object__ctor_m88880E0413421D13FD95325EDCE231707CE1F405(__this, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -11717,31 +11742,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Music__ctor_mE05E2E4BBEA4524B1F2AABDE472
 {
 	{
 		MonoBehaviour__ctor_mC0995D847F6A95B1A553652636C38A2AA8B13BED(__this, /*hidden argument*/NULL);
-		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// System.Void NativeAPI::unityLeaveGame()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeAPI_unityLeaveGame_m906E5AF5F23A7DAA0E403E872E3BAF59E525FDB0 (const RuntimeMethod* method)
-{
-	typedef void (DEFAULT_CALL *PInvokeFunc) ();
-
-	// Native function invocation
-	reinterpret_cast<PInvokeFunc>(unityLeaveGame)();
-
-}
-// System.Void NativeAPI::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeAPI__ctor_m078F288AC03B02E77E2017CB3EBD3E42B9FED0E4 (NativeAPI_tCF1B87942D24DC16E49B82348757D460312951F7 * __this, const RuntimeMethod* method)
-{
-	{
-		Object__ctor_m88880E0413421D13FD95325EDCE231707CE1F405(__this, /*hidden argument*/NULL);
 		return;
 	}
 }

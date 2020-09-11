@@ -20,9 +20,7 @@ class UnityPlayer : UIResponder, UnityFrameworkListener, NativeCallsProtocol {
     unity = UnityPlayer.loadFramework()
     unity.setDataBundleId("com.unity3d.framework")
     unity.register(self)
-    if let cls = NSClassFromString("FrameworkLibAPI") as? FrameworkLibAPI {
-    }
-    //FrameworkLibAPI.registerAPIforNativeCalls(self)
+    UnityAPIBridge.registerAPIforNativeCalls(self)
   }
   
   func play(_ windowScene: UIWindowScene) {

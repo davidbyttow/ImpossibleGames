@@ -1265,8 +1265,8 @@ public:
 };
 
 
-// NativeAPI
-struct  NativeAPI_tCF1B87942D24DC16E49B82348757D460312951F7  : public RuntimeObject
+// HostAPI
+struct  HostAPI_tCCB29E8C436888458AFC7B27E303E2C34B697C00  : public RuntimeObject
 {
 public:
 
@@ -20726,7 +20726,7 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable2477[6] =
 	FollowCamera_tDC43B01F7C498FBA58AC6A8AC2897485C46FAC1A::get_offset_of_maxBound_9(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2478;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize2478 = { sizeof (NativeAPI_tCF1B87942D24DC16E49B82348757D460312951F7), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize2478 = { sizeof (HostAPI_tCCB29E8C436888458AFC7B27E303E2C34B697C00), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2479;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize2479 = { sizeof (GameManager_t9013B33302D2B40A51D0E8059DEE0DC180218AA1), -1, sizeof(GameManager_t9013B33302D2B40A51D0E8059DEE0DC180218AA1_StaticFields), 0 };
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable2479[3] = 

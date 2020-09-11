@@ -1,18 +1,17 @@
 #import <Foundation/Foundation.h>
 #import "NativeCallProxy.h"
 
-
 @implementation FrameworkLibAPI
 
-id<NativeCallsProtocol> api = NULL;
-+(void) registerAPIforNativeCalls:(id<NativeCallsProtocol>) aApi
-{
-    api = aApi;
-}
+id<NativeCallsProtocol> gApi = NULL;
 
++(void) registerAPIforNativeCalls:(id<NativeCallsProtocol>)api {
+  gApi = api;
+}
 @end
 
-
 extern "C" {
-  void unityLeaveGame() { return [api unityLeaveGame]; }
+  void hostLeaveGame() {
+    return [gApi unityLeaveGame];
+  }
 }

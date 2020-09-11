@@ -4,9 +4,9 @@ using System.Collections;
 using System.Runtime.InteropServices;
 
 #if UNITY_IOS
-public class NativeAPI {
+public class HostAPI {
   [DllImport("__Internal")]
-  public static extern void unityLeaveGame();
+  public static extern void hostLeaveGame();
 }
 #endif
 
@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour {
     restartDelay = 1.5f;
 
 #if UNITY_IOS
-    NativeAPI.unityLeaveGame();
+    HostAPI.hostLeaveGame();
 #endif
   }
 

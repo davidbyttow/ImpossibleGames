@@ -16,6 +16,7 @@
 		03069DE52509B34600B80CA2 /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03EA476325043B7F00922885 /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		03069DE8250A781C00B80CA2 /* UnityPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03069DE7250A781C00B80CA2 /* UnityPlayer.swift */; };
 		03069DF4250AFD4200B80CA2 /* PressStart-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03069DF0250AC79700B80CA2 /* PressStart-Regular.ttf */; };
+		03069DFE250C384B00B80CA2 /* UnityAPIBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 03069DFD250C384B00B80CA2 /* UnityAPIBridge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +45,7 @@
 		03069DE7250A781C00B80CA2 /* UnityPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnityPlayer.swift; sourceTree = "<group>"; };
 		03069DF0250AC79700B80CA2 /* PressStart-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PressStart-Regular.ttf"; sourceTree = "<group>"; };
 		03069DFC250BFF0600B80CA2 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		03069DFD250C384B00B80CA2 /* UnityAPIBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnityAPIBridge.m; sourceTree = "<group>"; };
 		03EA476325043B7F00922885 /* UnityFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UnityFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -88,6 +90,7 @@
 				030343BB250327F9004994B2 /* Info.plist */,
 				030343B5250327F9004994B2 /* Preview Content */,
 				03069DE7250A781C00B80CA2 /* UnityPlayer.swift */,
+				03069DFD250C384B00B80CA2 /* UnityAPIBridge.m */,
 			);
 			path = ImpossibleGames;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				030343AE250327F7004994B2 /* AppDelegate.swift in Sources */,
 				03069DE8250A781C00B80CA2 /* UnityPlayer.swift in Sources */,
 				030343B0250327F7004994B2 /* SceneDelegate.swift in Sources */,
+				03069DFE250C384B00B80CA2 /* UnityAPIBridge.m in Sources */,
 				030343B2250327F7004994B2 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

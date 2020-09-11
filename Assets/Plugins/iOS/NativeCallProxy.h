@@ -5,11 +5,11 @@
 
 @protocol NativeCallsProtocol
 @required
-- (void)unityOnLeaveGame;
+- (void)unityLeaveGame;
 @end
 
 __attribute__((visibility("default")))
 @interface FrameworkLibAPI : NSObject
 // call it any time after UnityFrameworkLoad to set object implementing NativeCallsProtocol methods
-+ (void)registerAPIforNativeCalls:(id<NativeCallsProtocol>)aApi;
++ (void)registerAPIforNativeCalls:(id<NativeCallsProtocol>)api;
 @end
