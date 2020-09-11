@@ -5,6 +5,8 @@ public class TouchControls : MonoBehaviour {
 
   private const float leftControlMaxDist = 140f;
 
+  [SerializeField] private RectTransform bounds;
+
   public float horizontal { get; private set; } = 0;
   public bool jumpButtonDown { get; private set; } = false;
   public bool jumpButtonUp { get; private set; } = false;
@@ -30,7 +32,6 @@ public class TouchControls : MonoBehaviour {
           HandleRightTouch(touch);
         }
       }
-      // Debug.Log($"Position: {touch.position} {screenWidth}");
     }
   }
 
@@ -39,16 +40,20 @@ public class TouchControls : MonoBehaviour {
       return;
     }
 
-    if (touch.phase == TouchPhase.Began) {
+    if (touch.phase == TouchPhase.Began && InsideTouchBounds(touch.position)) {
       leftTouchFinger = touch.fingerId;
       leftTouchOrigin = touch.position;
       horizontal = 0;
-    } else if (touch.phase == TouchPhase.Moved) {
-      var dist = touch.position.x - leftTouchOrigin.x;
-      horizontal = Mathf.Clamp(dist / leftControlMaxDist, -1f, 1f);
-    } else if (touch.phase == TouchPhase.Ended) {
-      leftTouchFinger = -1;
-      horizontal = 0;
+    }
+
+    if (leftTouchFinger >= 0) {
+      if (touch.phase == TouchPhase.Moved) {
+        var dist = touch.position.x - leftTouchOrigin.x;
+        horizontal = Mathf.Clamp(dist / leftControlMaxDist, -1f, 1f);
+      } else if (touch.phase == TouchPhase.Ended) {
+        leftTouchFinger = -1;
+        horizontal = 0;
+      }
     }
   }
 
@@ -57,12 +62,24 @@ public class TouchControls : MonoBehaviour {
       return;
     }
 
-    if (touch.phase == TouchPhase.Began) {
+    if (touch.phase == TouchPhase.Began && InsideTouchBounds(touch.position)) {
+      Debug.Log($"Touch right: {touch.fingerId}");
       rightTouchFinger = touch.fingerId;
       jumpButtonDown = true;
-    } else if (touch.phase == TouchPhase.Ended) {
-      rightTouchFinger = -1;
-      jumpButtonUp = true;
     }
+
+    if (rightTouchFinger >= 0) {
+      if (touch.phase == TouchPhase.Ended) {
+        rightTouchFinger = -1;
+        jumpButtonUp = true;
+      }
+    }
+  }
+
+  private bool InsideTouchBounds(Vector2 point) {
+    return !bounds || RectTransformUtility.RectangleContainsScreenPoint(bounds, point);
+    // var isInside = !bounds || bounds.rect.Contains(point);
+    // Debug.Log($"{bounds} {bounds.rect} {point} Contains={isInside}");
+    // return isInside;
   }
 }

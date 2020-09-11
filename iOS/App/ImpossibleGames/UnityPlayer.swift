@@ -9,18 +9,20 @@
 import Foundation
 import UnityFramework
 
-class UnityPlayer : UIResponder, UIApplicationDelegate, UnityFrameworkListener {
+class UnityPlayer : UIResponder, UnityFrameworkListener, NativeCallsProtocol {
   private var unity: UnityFramework!
   private var started = false
   private var launchOptions: [UIApplication.LaunchOptionsKey: Any]?
   
   init(withLaunchOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
     super.init()
-    
     self.launchOptions = launchOptions
     unity = UnityPlayer.loadFramework()
     unity.setDataBundleId("com.unity3d.framework")
     unity.register(self)
+    if let cls = NSClassFromString("FrameworkLibAPI") as? FrameworkLibAPI {
+    }
+    //FrameworkLibAPI.registerAPIforNativeCalls(self)
   }
   
   func play(_ windowScene: UIWindowScene) {
@@ -34,6 +36,14 @@ class UnityPlayer : UIResponder, UIApplicationDelegate, UnityFrameworkListener {
     unity.showUnityWindow()
   }
   
+  func unityLeaveGame() {
+    print("ON LEAVE GAME");
+  }
+  
+  func stop() {
+    unity.unloadApplication()
+  }
+    
   private func start() {
     if !started {
       unity.runEmbedded(withArgc: CommandLine.argc, argv: CommandLine.unsafeArgv, appLaunchOpts: launchOptions)

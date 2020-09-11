@@ -1,6 +1,14 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using System.Runtime.InteropServices;
+
+#if UNITY_IOS
+public class NativeAPI {
+  [DllImport("__Internal")]
+  public static extern void unityLeaveGame();
+}
+#endif
 
 public class GameManager : MonoBehaviour {
 
@@ -44,6 +52,10 @@ public class GameManager : MonoBehaviour {
 
   public void QueueRestart() {
     restartDelay = 1.5f;
+
+#if UNITY_IOS
+    NativeAPI.unityLeaveGame();
+#endif
   }
 
   private void Restart() {
