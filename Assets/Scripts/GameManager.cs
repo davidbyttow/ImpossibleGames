@@ -32,9 +32,7 @@ public class GameManager : MonoBehaviour {
 
   void Start() {
     StartMusic();
-    //TestLocalDLC();
     Debug.Log("Starting game manager");
-    StartCoroutine(TestRemoteDLC());
   }
 
   void StartMusic() {
@@ -57,46 +55,6 @@ public class GameManager : MonoBehaviour {
 
   public void QueueRestart() {
     restartDelay = 1.5f;
-  }
-
-  private void TestLocalDLC() {
-    // System.Environment.CommandLine
-    var bundle = AssetBundle.LoadFromFile(Path.Combine(Application.dataPath, "AssetBundles", "dlctest01"));
-    if (bundle == null) {
-      Debug.Log("Failed to load asset bundle");
-      return;
-    }
-    RunDLCScene(bundle);
-  }
-
-  IEnumerator TestRemoteDLC() {
-    if (SceneManager.GetActiveScene().name.Contains("DLC")) {
-      Debug.Log("Skipping");
-      yield return null;
-    }
-
-    var req = UnityWebRequestAssetBundle.GetAssetBundle("https://davidbyttow.com/impossiblegames/assetbundles/dlctest01");
-    Debug.Log("Sending web request");
-    yield return req.SendWebRequest();
-    if (req.result != UnityWebRequest.Result.Success) {
-      Debug.Log($"Error: {req.error}");
-    }
-
-    Debug.Log("Downloading bundle");
-    var bundle = DownloadHandlerAssetBundle.GetContent(req);
-    Debug.Log("Loaded bundle");
-    RunDLCScene(bundle);
-    yield return null;
-  }
-
-  private void RunDLCScene(AssetBundle bundle) {
-    Debug.Log("Running DLC Scene");
-    if (bundle.isStreamedSceneAssetBundle) {
-      var names = bundle.GetAllAssetNames();
-      var scenePaths = bundle.GetAllScenePaths();
-      var sceneName = System.IO.Path.GetFileNameWithoutExtension(scenePaths[0]);
-      SceneManager.LoadScene(sceneName);
-    }
   }
 
   public void LeaveGame() {
