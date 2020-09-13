@@ -17,6 +17,7 @@
 		03069DE8250A781C00B80CA2 /* UnityPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03069DE7250A781C00B80CA2 /* UnityPlayer.swift */; };
 		03069DF4250AFD4200B80CA2 /* PressStart-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03069DF0250AC79700B80CA2 /* PressStart-Regular.ttf */; };
 		03069DFE250C384B00B80CA2 /* UnityAPIBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 03069DFD250C384B00B80CA2 /* UnityAPIBridge.m */; };
+		03069E00250DAC0500B80CA2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03069DFF250DAC0500B80CA2 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +47,7 @@
 		03069DF0250AC79700B80CA2 /* PressStart-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PressStart-Regular.ttf"; sourceTree = "<group>"; };
 		03069DFC250BFF0600B80CA2 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		03069DFD250C384B00B80CA2 /* UnityAPIBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnityAPIBridge.m; sourceTree = "<group>"; };
+		03069DFF250DAC0500B80CA2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		03EA476325043B7F00922885 /* UnityFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UnityFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -91,6 +93,7 @@
 				030343B5250327F9004994B2 /* Preview Content */,
 				03069DE7250A781C00B80CA2 /* UnityPlayer.swift */,
 				03069DFD250C384B00B80CA2 /* UnityAPIBridge.m */,
+				03069DFF250DAC0500B80CA2 /* Extensions.swift */,
 			);
 			path = ImpossibleGames;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				030343AE250327F7004994B2 /* AppDelegate.swift in Sources */,
+				03069E00250DAC0500B80CA2 /* Extensions.swift in Sources */,
 				03069DE8250A781C00B80CA2 /* UnityPlayer.swift in Sources */,
 				030343B0250327F7004994B2 /* SceneDelegate.swift in Sources */,
 				03069DFE250C384B00B80CA2 /* UnityAPIBridge.m in Sources */,

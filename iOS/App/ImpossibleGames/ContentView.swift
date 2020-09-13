@@ -8,44 +8,60 @@
 
 import SwiftUI
 
+struct ComingSoonOverlay: View {
+  let purple = Color(red: 125, green: 0, blue: 168)
+
+  var body: some View {
+    Text("Coming Soon")
+      .foregroundColor(purple)
+      .font(.custom("PressStart2P", size: 14))
+  }
+}
+
 struct ContentView: View {
 
-  let green = Color(red: 0.2, green: 0.94, blue: 0)
+  let darkRed = Color(red: 168, green: 0, blue: 0)
+  let green = Color(red: 51, green: 239, blue: 0)
+  let gray = Color(red: 120, green: 120, blue: 120)
   
   var play: () -> ()
       
   var body: some View {
     ZStack {
       Color.black.edgesIgnoringSafeArea(.all)
-      GeometryReader { g in
-        VStack(alignment: .center) {
-          Text("IMPOSSIBLE")
-            .font(.custom("PressStart2P", size: 26))
-            .foregroundColor(Color.red)
-            .padding(EdgeInsets(top: 50, leading: 0, bottom: 0, trailing: 0))
-          Text("GAMES")
-            .foregroundColor(Color.white)
-            .font(.custom("PressStart2P", size: 52))
-            .padding(EdgeInsets(top: 6, leading: 0, bottom: 0, trailing: 0))
-          Spacer()
-          Button("PLAY", action: self.play)
-            .foregroundColor(self.green)
-            .font(.custom("PressStart2P", size: 48))
-          Spacer()
-          Text("Code and Graphics")
-            .foregroundColor(Color.red)
-            .font(.custom("PressStart2P", size: 14))
-          Text("David Byttow")
-            .foregroundColor(Color.white)
-            .padding(EdgeInsets(top: 6, leading: 0, bottom: 10, trailing: 0))
-            .font(.custom("PressStart2P", size: 14))
-        }.frame(
-          minWidth: 0,
-          maxWidth: .infinity,
-          minHeight: 0,
-          maxHeight: .infinity
-        )
-      }
+      VStack(alignment: .center) {
+        Text("IMPOSSIBLE")
+          .font(.custom("PressStart2P", size: 26))
+          .foregroundColor(darkRed)
+          .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 0))
+        Text("GAMES")
+          .foregroundColor(.white)
+          .font(.custom("PressStart2P", size: 52))
+          .padding(EdgeInsets(top: 6, leading: 0, bottom: 0, trailing: 0))
+        Spacer()
+        Button("PLAY", action: self.play)
+          .foregroundColor(green)
+          .font(.custom("PressStart2P", size: 42))
+        Spacer().frame(height: 20)
+        Text("BUILD")
+          .foregroundColor(gray)
+          .font(.custom("PressStart2P", size: 42))
+          .frame(height: 68)
+          .overlay(ComingSoonOverlay(), alignment: .bottomTrailing)
+        Spacer()
+        Text("Code and Graphics")
+          .foregroundColor(darkRed)
+          .font(.custom("PressStart2P", size: 14))
+        Text("David Byttow")
+          .foregroundColor(gray)
+          .padding(EdgeInsets(top: 6, leading: 0, bottom: 20, trailing: 0))
+          .font(.custom("PressStart2P", size: 14))
+      }.frame(
+        minWidth: 0,
+        maxWidth: .infinity,
+        minHeight: 0,
+        maxHeight: .infinity
+      )
     }
   }
 }
