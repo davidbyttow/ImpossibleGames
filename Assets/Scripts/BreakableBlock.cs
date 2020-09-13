@@ -1,32 +1,31 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using UnityEngine;
 
-[RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent (typeof (SpriteRenderer))]
 public class BreakableBlock : MonoBehaviour {
 
-	[SerializeField] private ParticleSystem breakEffect;
+  [SerializeField] private ParticleSystem breakEffect;
 
-	private SpriteRenderer spriteRenderer;
+  private SpriteRenderer spriteRenderer;
 
-	void Awake() {
-		spriteRenderer = GetComponent<SpriteRenderer>();
-	}
+  void Awake () {
+    spriteRenderer = GetComponent<SpriteRenderer> ();
+  }
 
-	void Update() {
-	}
+  void Update () { }
 
-	private void OnCollisionEnter2D(Collision2D collision) {
-		if (BumperBlock.IsBumpCollision(collision)) {
-			Bump();
-		}
-	}
+  private void OnCollisionEnter2D (Collision2D collision) {
+    if (BumperBlock.IsBumpCollision (collision)) {
+      Bump ();
+    }
+  }
 
-	private void Bump() {
-		// TODO: Set the sprite if given
-		var position = transform.position;
-		Destroy(gameObject);
-		if (breakEffect) {
-			Instantiate(breakEffect, position, Quaternion.identity);
-		}
-	}
+  private void Bump () {
+    // TODO: Set the sprite if given
+    var position = transform.position;
+    Destroy (gameObject);
+    if (breakEffect) {
+      Instantiate (breakEffect, position, Quaternion.identity);
+    }
+  }
 }
