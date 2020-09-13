@@ -2,6 +2,7 @@
 using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Runtime.InteropServices;
+using System.IO;
 
 #if UNITY_IOS
 public class HostAPI {
@@ -30,6 +31,7 @@ public class GameManager : MonoBehaviour {
 
   void Start() {
     StartMusic();
+    LoadDLCTest();
   }
 
   void StartMusic() {
@@ -52,6 +54,21 @@ public class GameManager : MonoBehaviour {
 
   public void QueueRestart() {
     restartDelay = 1.5f;
+  }
+
+  private void LoadDLCTest() {
+    // System.Environment.CommandLine
+    var bundle = AssetBundle.LoadFromFile(Path.Combine(Application.dataPath, "AssetBundles", "dlctest01"));
+    if (bundle == null) {
+      Debug.Log("Failed to load asset bundle");
+      return;
+    }
+    if (bundle.isStreamedSceneAssetBundle) {
+      var names = bundle.GetAllAssetNames();
+      var scenePaths = bundle.GetAllScenePaths();
+      var sceneName = System.IO.Path.GetFileNameWithoutExtension(scenePaths[0]);
+      SceneManager.LoadScene(sceneName);
+    }
   }
 
   public void LeaveGame() {
