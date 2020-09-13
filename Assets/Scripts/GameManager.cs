@@ -52,9 +52,13 @@ public class GameManager : MonoBehaviour {
 
   public void QueueRestart() {
     restartDelay = 1.5f;
+  }
 
+  public void LeaveGame() {
 #if UNITY_IOS
     HostAPI.hostLeaveGame();
+#else
+    Application.Quit();
 #endif
   }
 
@@ -62,7 +66,7 @@ public class GameManager : MonoBehaviour {
     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
   }
 
-  public void ExitLevel() {
+  public void NextLevel() {
     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
   }
 }

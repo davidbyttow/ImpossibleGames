@@ -1560,6 +1560,7 @@ IL2CPP_EXTERN_C const uint32_t Convert_ToChar_m08276F48AF6A73790B7A756200CED7905
 IL2CPP_EXTERN_C const uint32_t Convert_ToChar_m0C160282A8831A0BA4A9AD022E9F16FD33944D13_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t Convert_ToChar_m84E3CF47987D8B6F2D889D957CBFB5FD55F3DAEC_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t Convert_ToChar_mB9B9BB4A03C693ED2DA6C9FAA0190ED1CEAF76A2_MetadataUsageId;
+IL2CPP_EXTERN_C const uint32_t Convert_ToChar_mC70BDA16401A56AA014B84C16035328E533B9AF1_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t Convert_ToChar_mDE6BF41DD58769BB0A2DC6158166242FA62B08D7_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t Convert_ToChar_mE850C4BA279EC390A3266F9D56BA69591BBF9FB0_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t Convert_ToChar_mF31AAE59CB3C6C18373510193013FECFF2717F7A_MetadataUsageId;
@@ -17626,6 +17627,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Boolean_Parse_m97AFBD113AE4629041678100C
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Decimal_op_Inequality_m1524E424F030A184C95FA1AF24C76487E612E296 (Decimal_t2978B229CA86D3B7BA66A0AEEE014E0DE4F940D7  ___d10, Decimal_t2978B229CA86D3B7BA66A0AEEE014E0DE4F940D7  ___d21, const RuntimeMethod* method);
 // System.Void System.OverflowException::.ctor(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OverflowException__ctor_m93384109E3514E1EB7F97A50893B1B617D21F91E (OverflowException_tD1FBF4E54D81EC98EEF386B69344D336D1EC1AB9 * __this, String_t* ___message0, const RuntimeMethod* method);
+// System.Char System.Convert::ToChar(System.String,System.IFormatProvider)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Il2CppChar Convert_ToChar_mE850C4BA279EC390A3266F9D56BA69591BBF9FB0 (String_t* ___value0, RuntimeObject* ___provider1, const RuntimeMethod* method);
 // System.Int32 System.String::get_Length()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t String_get_Length_m129FC0ADA02FECBED3C0B1A809AE84A5AEE1CF09_inline (String_t* __this, const RuntimeMethod* method);
 // System.Void System.FormatException::.ctor(System.String)
@@ -24836,6 +24839,22 @@ IL_0019:
 	{
 		uint64_t L_3 = ___value0;
 		return (((int32_t)((uint16_t)L_3)));
+	}
+}
+// System.Char System.Convert::ToChar(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Il2CppChar Convert_ToChar_mC70BDA16401A56AA014B84C16035328E533B9AF1 (String_t* ___value0, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Convert_ToChar_mC70BDA16401A56AA014B84C16035328E533B9AF1_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___value0;
+		IL2CPP_RUNTIME_CLASS_INIT(Convert_tDA947A979C1DAB4F09C461FAFD94FE194743A671_il2cpp_TypeInfo_var);
+		Il2CppChar L_1 = Convert_ToChar_mE850C4BA279EC390A3266F9D56BA69591BBF9FB0(L_0, (RuntimeObject*)NULL, /*hidden argument*/NULL);
+		return L_1;
 	}
 }
 // System.Char System.Convert::ToChar(System.String,System.IFormatProvider)

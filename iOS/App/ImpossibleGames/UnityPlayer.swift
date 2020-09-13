@@ -13,6 +13,7 @@ class UnityPlayer : UIResponder, UnityFrameworkListener, NativeCallsProtocol {
   private var unity: UnityFramework!
   private var started = false
   private var launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+  private var prevWindow: UIWindow!;
   
   init(withLaunchOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
     super.init()
@@ -23,23 +24,29 @@ class UnityPlayer : UIResponder, UnityFrameworkListener, NativeCallsProtocol {
     UnityAPIBridge.registerAPIforNativeCalls(self)
   }
   
-  func play(_ windowScene: UIWindowScene) {
+  func play(_ window: UIWindow) {
     start()
 
-    if let window = unity.appController().window {
-      window.windowScene = windowScene
-      window.makeKeyAndVisible()
+    unity.appController().quitHandler = {
+      self.stop();
     }
 
-    unity.showUnityWindow()
+    prevWindow = window;
+    
+    let appController = unity.appController()!;
+    appController.window.windowScene = window.windowScene!
   }
   
   func unityLeaveGame() {
-    print("ON LEAVE GAME");
+    prevWindow?.makeKeyAndVisible();
+    stop();
   }
   
   func stop() {
-    unity.unloadApplication()
+    if started {
+      unity.unloadApplication()
+      started = false;
+    }
   }
     
   private func start() {

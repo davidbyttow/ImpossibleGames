@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Exit : MonoBehaviour {
 
-	public void ExitLevel() {
-		GameManager.global.ExitLevel();
-	}
+  public void ExitLevel() {
+    GameManager.global.NextLevel();
+  }
 }
