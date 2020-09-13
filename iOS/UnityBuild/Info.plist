@@ -42,6 +42,7 @@
     <key>UIRequiredDeviceCapabilities</key>
     <array>
       <string>arm64</string>
+      <string>metal</string>
     </array>
     <key>UIRequiresFullScreen</key>
     <true />

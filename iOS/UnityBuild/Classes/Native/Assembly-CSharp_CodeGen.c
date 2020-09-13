@@ -493,61 +493,99 @@ extern void Player_FixedUpdate_mD7447EDFC86F29A3E5FBDEF7E0139535BD4C5088 ();
 extern void Player_Die_m16A200929DBDF9FF88C8191A26327C2CCCC80C19 ();
 // 0x000000ED System.Void Player::.ctor()
 extern void Player__ctor_mDE8EB5B351975D4E7E24DE341B8B49B8A29CC2B7 ();
-// 0x000000EE SoundManager SoundManager::get_inst()
+// 0x000000EE System.Void SceneLauncher::Start()
+extern void SceneLauncher_Start_m74B535A51D9E0A067BE60DC6B7CD18A8BC7F8BDC ();
+// 0x000000EF System.Void SceneLauncher::Update()
+extern void SceneLauncher_Update_mBB5A2FE46D01E70005082689F9B3A76FC0FECD1F ();
+// 0x000000F0 System.String SceneLauncher::GetRequestedBundleUrl()
+extern void SceneLauncher_GetRequestedBundleUrl_m0658948785F82172B2DA0BE640AD6EA1A1CE9947 ();
+// 0x000000F1 System.Collections.IEnumerator SceneLauncher::LoadSceneAsync()
+extern void SceneLauncher_LoadSceneAsync_m7B31CBAF0C627FC32F22B671D8EAE6E6C841D2CA ();
+// 0x000000F2 System.Collections.IEnumerator SceneLauncher::WaitMinTime()
+extern void SceneLauncher_WaitMinTime_m82581EF5EDFD788FA3ACFB7187F88184AB51A73B ();
+// 0x000000F3 System.String SceneLauncher::GetFirstSceneInBundle(UnityEngine.AssetBundle)
+extern void SceneLauncher_GetFirstSceneInBundle_mADAA3A14111D680FAC507E0056EC534AC69EBE12 ();
+// 0x000000F4 System.Void SceneLauncher::.ctor()
+extern void SceneLauncher__ctor_mD6E9496F774DAB1B11BCC6764E5770D0A85FE250 ();
+// 0x000000F5 System.Void SceneLauncher_<LoadSceneAsync>d__4::.ctor(System.Int32)
+extern void U3CLoadSceneAsyncU3Ed__4__ctor_mE13F5AD5F7BFA543E8434B0BE155525841EC3C94 ();
+// 0x000000F6 System.Void SceneLauncher_<LoadSceneAsync>d__4::System.IDisposable.Dispose()
+extern void U3CLoadSceneAsyncU3Ed__4_System_IDisposable_Dispose_mBE5180492E2BD28FFFA38C5DAE588A407EE407AE ();
+// 0x000000F7 System.Boolean SceneLauncher_<LoadSceneAsync>d__4::MoveNext()
+extern void U3CLoadSceneAsyncU3Ed__4_MoveNext_m7D8E359692B45593EFE66F5B0E29104BD3841370 ();
+// 0x000000F8 System.Object SceneLauncher_<LoadSceneAsync>d__4::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CLoadSceneAsyncU3Ed__4_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m769614DA895647D410EBF1E7F0CC59BB680B6765 ();
+// 0x000000F9 System.Void SceneLauncher_<LoadSceneAsync>d__4::System.Collections.IEnumerator.Reset()
+extern void U3CLoadSceneAsyncU3Ed__4_System_Collections_IEnumerator_Reset_m60401D1F0F9316772C8866D962E0AAA18E8E2FD9 ();
+// 0x000000FA System.Object SceneLauncher_<LoadSceneAsync>d__4::System.Collections.IEnumerator.get_Current()
+extern void U3CLoadSceneAsyncU3Ed__4_System_Collections_IEnumerator_get_Current_m04A7F4FD734EE2B09195632485FC44B01E1DFF9D ();
+// 0x000000FB System.Void SceneLauncher_<WaitMinTime>d__5::.ctor(System.Int32)
+extern void U3CWaitMinTimeU3Ed__5__ctor_m0A1D56A7F2C4A790AF0C4A516EC31BE16526AA05 ();
+// 0x000000FC System.Void SceneLauncher_<WaitMinTime>d__5::System.IDisposable.Dispose()
+extern void U3CWaitMinTimeU3Ed__5_System_IDisposable_Dispose_m98384CDC5D774C445E7BFD271E02EC124CDF4E2A ();
+// 0x000000FD System.Boolean SceneLauncher_<WaitMinTime>d__5::MoveNext()
+extern void U3CWaitMinTimeU3Ed__5_MoveNext_m4A40C1EE85591968BA4D0B835DBBE315C937B6F7 ();
+// 0x000000FE System.Object SceneLauncher_<WaitMinTime>d__5::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CWaitMinTimeU3Ed__5_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m384B9B158D2E8CE6F56759843864DEF3B76063D3 ();
+// 0x000000FF System.Void SceneLauncher_<WaitMinTime>d__5::System.Collections.IEnumerator.Reset()
+extern void U3CWaitMinTimeU3Ed__5_System_Collections_IEnumerator_Reset_m386DD1A3B51619EC86A2A32ED6494F8D23B1C9F8 ();
+// 0x00000100 System.Object SceneLauncher_<WaitMinTime>d__5::System.Collections.IEnumerator.get_Current()
+extern void U3CWaitMinTimeU3Ed__5_System_Collections_IEnumerator_get_Current_mF7474F52B5B9DBB1982C6885BEED8E0D10384016 ();
+// 0x00000101 SoundManager SoundManager::get_inst()
 extern void SoundManager_get_inst_m22F564AEA6E92A072A019EF2C7171F995740DDF9 ();
-// 0x000000EF System.Void SoundManager::set_inst(SoundManager)
+// 0x00000102 System.Void SoundManager::set_inst(SoundManager)
 extern void SoundManager_set_inst_mB9BA8A2CAF8553E496ED742F2E0A3BEA4DA10A35 ();
-// 0x000000F0 System.Void SoundManager::Awake()
+// 0x00000103 System.Void SoundManager::Awake()
 extern void SoundManager_Awake_m78F953F39CFB3F539240E1226D04270B793B1A76 ();
-// 0x000000F1 System.Void SoundManager::PlayJump()
+// 0x00000104 System.Void SoundManager::PlayJump()
 extern void SoundManager_PlayJump_mF898766D296D6B4BC9B9F58C8C05AB8B23CA082B ();
-// 0x000000F2 System.Void SoundManager::PlayLand()
+// 0x00000105 System.Void SoundManager::PlayLand()
 extern void SoundManager_PlayLand_m5238052E69DDCEA1E3C0B7E9DD4EE46C482A4E67 ();
-// 0x000000F3 System.Void SoundManager::PlaySwoosh()
+// 0x00000106 System.Void SoundManager::PlaySwoosh()
 extern void SoundManager_PlaySwoosh_m43C3F8F2A1AF62B0322BBD47727CD566D336A62C ();
-// 0x000000F4 System.Void SoundManager::PlayDeath()
+// 0x00000107 System.Void SoundManager::PlayDeath()
 extern void SoundManager_PlayDeath_m3BD0FAC34B8AF0EE1F1459498A845028D8A27B8F ();
-// 0x000000F5 System.Void SoundManager::PlayDoorClose()
+// 0x00000108 System.Void SoundManager::PlayDoorClose()
 extern void SoundManager_PlayDoorClose_m39B1A59783940471990AA4D31355DC9A032DDA79 ();
-// 0x000000F6 UnityEngine.AudioClip SoundManager::Pick(UnityEngine.AudioClip[])
+// 0x00000109 UnityEngine.AudioClip SoundManager::Pick(UnityEngine.AudioClip[])
 extern void SoundManager_Pick_m1F7978756A3A4DAB31BE997FE37BBB5E41197CE4 ();
-// 0x000000F7 System.Void SoundManager::PlaySound(UnityEngine.AudioClip[])
+// 0x0000010A System.Void SoundManager::PlaySound(UnityEngine.AudioClip[])
 extern void SoundManager_PlaySound_mBE7707140CA2DE14C349B2243AC9CC095D755F2A ();
-// 0x000000F8 System.Void SoundManager::PlaySound(UnityEngine.AudioClip)
+// 0x0000010B System.Void SoundManager::PlaySound(UnityEngine.AudioClip)
 extern void SoundManager_PlaySound_mBE3D6660CDC2A024D30D6E97399F26F77C1A319F ();
-// 0x000000F9 System.Void SoundManager::.ctor()
+// 0x0000010C System.Void SoundManager::.ctor()
 extern void SoundManager__ctor_m30D18BC25871BD3FF7FB195A1CAE50A2EE48FCAE ();
-// 0x000000FA System.Single TouchControls::get_horizontal()
+// 0x0000010D System.Single TouchControls::get_horizontal()
 extern void TouchControls_get_horizontal_mA5C989FDBC7FADE902C52368F5E7565F86269D14 ();
-// 0x000000FB System.Void TouchControls::set_horizontal(System.Single)
+// 0x0000010E System.Void TouchControls::set_horizontal(System.Single)
 extern void TouchControls_set_horizontal_mAB8DFE5441C7536F697B197806207566947CE730 ();
-// 0x000000FC System.Boolean TouchControls::get_jumpButtonDown()
+// 0x0000010F System.Boolean TouchControls::get_jumpButtonDown()
 extern void TouchControls_get_jumpButtonDown_m989237EEA32D87C285EB95808F4F1162C9175A41 ();
-// 0x000000FD System.Void TouchControls::set_jumpButtonDown(System.Boolean)
+// 0x00000110 System.Void TouchControls::set_jumpButtonDown(System.Boolean)
 extern void TouchControls_set_jumpButtonDown_m736A344A85CEAEB566B9BE489C3F49E8A7C9E268 ();
-// 0x000000FE System.Boolean TouchControls::get_jumpButtonUp()
+// 0x00000111 System.Boolean TouchControls::get_jumpButtonUp()
 extern void TouchControls_get_jumpButtonUp_mE60D1BC146CFE4F442251B44980EC4A637412CB9 ();
-// 0x000000FF System.Void TouchControls::set_jumpButtonUp(System.Boolean)
+// 0x00000112 System.Void TouchControls::set_jumpButtonUp(System.Boolean)
 extern void TouchControls_set_jumpButtonUp_m37F9EA6342E55ED2FB4E83586EC402D91BF1317B ();
-// 0x00000100 System.Void TouchControls::Update()
+// 0x00000113 System.Void TouchControls::Update()
 extern void TouchControls_Update_mCC7D2317256BEB091AE765A00681E7A59F47FFF4 ();
-// 0x00000101 System.Void TouchControls::HandleLeftTouch(UnityEngine.Touch)
+// 0x00000114 System.Void TouchControls::HandleLeftTouch(UnityEngine.Touch)
 extern void TouchControls_HandleLeftTouch_m4B0B4C8B6372111871E8A64CAE9A89215A5A08DD ();
-// 0x00000102 System.Void TouchControls::HandleRightTouch(UnityEngine.Touch)
+// 0x00000115 System.Void TouchControls::HandleRightTouch(UnityEngine.Touch)
 extern void TouchControls_HandleRightTouch_m8EE1A5108F8539A617A6F9499B6C747EB0543234 ();
-// 0x00000103 System.Boolean TouchControls::InsideTouchBounds(UnityEngine.Vector2)
+// 0x00000116 System.Boolean TouchControls::InsideTouchBounds(UnityEngine.Vector2)
 extern void TouchControls_InsideTouchBounds_m2038C72887B464827A176785EA7689B4284DAEFC ();
-// 0x00000104 System.Void TouchControls::.ctor()
+// 0x00000117 System.Void TouchControls::.ctor()
 extern void TouchControls__ctor_m03AAE449A7BD8791D5D86968B97949BFB327AF4A ();
-// 0x00000105 System.Void Trigger::Update()
+// 0x00000118 System.Void Trigger::Update()
 extern void Trigger_Update_m7EC1ED3BCCCAE0B3C50547D29AA6FD0938D402AB ();
-// 0x00000106 System.Void Trigger::OnTriggerEnter2D(UnityEngine.Collider2D)
+// 0x00000119 System.Void Trigger::OnTriggerEnter2D(UnityEngine.Collider2D)
 extern void Trigger_OnTriggerEnter2D_mCCA0D6D46365731C3771FFC18827548E7C7648F0 ();
-// 0x00000107 System.Void Trigger::OnTriggerExit2D(UnityEngine.Collider2D)
+// 0x0000011A System.Void Trigger::OnTriggerExit2D(UnityEngine.Collider2D)
 extern void Trigger_OnTriggerExit2D_m3E264D1C190AD35159FE64AF8909CE14CE1875A3 ();
-// 0x00000108 System.Void Trigger::.ctor()
+// 0x0000011B System.Void Trigger::.ctor()
 extern void Trigger__ctor_m42036DF1067B2973F4CF5F07DF83F4162A21081C ();
-static Il2CppMethodPointer s_methodPointers[264] = 
+static Il2CppMethodPointer s_methodPointers[283] = 
 {
 	Ally_Awake_m8C311DB208433D4FAF6A83986631BBC7D00091CD,
 	Ally_FixedUpdate_mAE4A6F9059B404649512CA74B0323CAD3A520C43,
@@ -786,6 +824,25 @@ static Il2CppMethodPointer s_methodPointers[264] =
 	Player_FixedUpdate_mD7447EDFC86F29A3E5FBDEF7E0139535BD4C5088,
 	Player_Die_m16A200929DBDF9FF88C8191A26327C2CCCC80C19,
 	Player__ctor_mDE8EB5B351975D4E7E24DE341B8B49B8A29CC2B7,
+	SceneLauncher_Start_m74B535A51D9E0A067BE60DC6B7CD18A8BC7F8BDC,
+	SceneLauncher_Update_mBB5A2FE46D01E70005082689F9B3A76FC0FECD1F,
+	SceneLauncher_GetRequestedBundleUrl_m0658948785F82172B2DA0BE640AD6EA1A1CE9947,
+	SceneLauncher_LoadSceneAsync_m7B31CBAF0C627FC32F22B671D8EAE6E6C841D2CA,
+	SceneLauncher_WaitMinTime_m82581EF5EDFD788FA3ACFB7187F88184AB51A73B,
+	SceneLauncher_GetFirstSceneInBundle_mADAA3A14111D680FAC507E0056EC534AC69EBE12,
+	SceneLauncher__ctor_mD6E9496F774DAB1B11BCC6764E5770D0A85FE250,
+	U3CLoadSceneAsyncU3Ed__4__ctor_mE13F5AD5F7BFA543E8434B0BE155525841EC3C94,
+	U3CLoadSceneAsyncU3Ed__4_System_IDisposable_Dispose_mBE5180492E2BD28FFFA38C5DAE588A407EE407AE,
+	U3CLoadSceneAsyncU3Ed__4_MoveNext_m7D8E359692B45593EFE66F5B0E29104BD3841370,
+	U3CLoadSceneAsyncU3Ed__4_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m769614DA895647D410EBF1E7F0CC59BB680B6765,
+	U3CLoadSceneAsyncU3Ed__4_System_Collections_IEnumerator_Reset_m60401D1F0F9316772C8866D962E0AAA18E8E2FD9,
+	U3CLoadSceneAsyncU3Ed__4_System_Collections_IEnumerator_get_Current_m04A7F4FD734EE2B09195632485FC44B01E1DFF9D,
+	U3CWaitMinTimeU3Ed__5__ctor_m0A1D56A7F2C4A790AF0C4A516EC31BE16526AA05,
+	U3CWaitMinTimeU3Ed__5_System_IDisposable_Dispose_m98384CDC5D774C445E7BFD271E02EC124CDF4E2A,
+	U3CWaitMinTimeU3Ed__5_MoveNext_m4A40C1EE85591968BA4D0B835DBBE315C937B6F7,
+	U3CWaitMinTimeU3Ed__5_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m384B9B158D2E8CE6F56759843864DEF3B76063D3,
+	U3CWaitMinTimeU3Ed__5_System_Collections_IEnumerator_Reset_m386DD1A3B51619EC86A2A32ED6494F8D23B1C9F8,
+	U3CWaitMinTimeU3Ed__5_System_Collections_IEnumerator_get_Current_mF7474F52B5B9DBB1982C6885BEED8E0D10384016,
 	SoundManager_get_inst_m22F564AEA6E92A072A019EF2C7171F995740DDF9,
 	SoundManager_set_inst_mB9BA8A2CAF8553E496ED742F2E0A3BEA4DA10A35,
 	SoundManager_Awake_m78F953F39CFB3F539240E1226D04270B793B1A76,
@@ -814,7 +871,7 @@ static Il2CppMethodPointer s_methodPointers[264] =
 	Trigger_OnTriggerExit2D_m3E264D1C190AD35159FE64AF8909CE14CE1875A3,
 	Trigger__ctor_m42036DF1067B2973F4CF5F07DF83F4162A21081C,
 };
-static const int32_t s_InvokerIndices[264] = 
+static const int32_t s_InvokerIndices[283] = 
 {
 	23,
 	23,
@@ -827,9 +884,9 @@ static const int32_t s_InvokerIndices[264] =
 	23,
 	23,
 	14,
-	1447,
+	1448,
 	14,
-	1447,
+	1448,
 	14,
 	23,
 	32,
@@ -914,14 +971,14 @@ static const int32_t s_InvokerIndices[264] =
 	23,
 	23,
 	23,
-	1656,
+	1658,
 	23,
-	1657,
+	1659,
 	14,
-	1447,
-	1447,
-	1447,
-	1447,
+	1448,
+	1448,
+	1448,
+	1448,
 	14,
 	14,
 	23,
@@ -1001,7 +1058,7 @@ static const int32_t s_InvokerIndices[264] =
 	23,
 	23,
 	23,
-	1658,
+	1660,
 	275,
 	23,
 	23,
@@ -1053,6 +1110,25 @@ static const int32_t s_InvokerIndices[264] =
 	23,
 	23,
 	23,
+	23,
+	23,
+	14,
+	14,
+	14,
+	28,
+	23,
+	32,
+	23,
+	102,
+	14,
+	23,
+	14,
+	32,
+	23,
+	102,
+	14,
+	23,
+	14,
 	4,
 	111,
 	23,
@@ -1072,8 +1148,8 @@ static const int32_t s_InvokerIndices[264] =
 	102,
 	31,
 	23,
-	1659,
-	1659,
+	1661,
+	1661,
 	1110,
 	23,
 	23,
@@ -1085,7 +1161,7 @@ extern const Il2CppCodeGenModule g_AssemblyU2DCSharpCodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharpCodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	264,
+	283,
 	s_methodPointers,
 	s_InvokerIndices,
 	0,
