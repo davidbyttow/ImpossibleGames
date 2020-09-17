@@ -18,19 +18,30 @@ public class FollowCamera : MonoBehaviour {
 	}
 
 	void Start() {
-		minBound = boundingBox.bounds.min;
-		maxBound = boundingBox.bounds.max;
+		if (boundingBox) {
+			minBound = boundingBox.bounds.min;
+			maxBound = boundingBox.bounds.max;
+		}
+		transform.position = RestrictToBounds(target.transform.position);
 	}
 
 	void LateUpdate() {
-		var targetPosition = new Vector3(target.transform.position.x, target.transform.position.y, transform.position.z);
-		var bounds = boundingBox.bounds;
-		var position = Vector3.Lerp(transform.position, targetPosition, smoothing);
+		var position = Vector3.Lerp(transform.position, target.transform.position, smoothing);
+		transform.position = RestrictToBounds(position);
+	}
+	
+	private Vector3 RestrictToBounds(Vector3 target) {
+		var x = target.x;
+		var y = target.y;
 
-		var halfHeight = mainCamera.orthographicSize;
-		var halfWidth = halfHeight * mainCamera.aspect;
-		var x = Mathf.Clamp(position.x, minBound.x + halfWidth, maxBound.x - halfWidth);
-		var y = Mathf.Clamp(position.y, minBound.y + halfHeight, maxBound.y - halfHeight);
-		transform.position = new Vector3(x, y, transform.position.z);
+		if (boundingBox) {		
+			var bounds = boundingBox.bounds;
+			var halfHeight = mainCamera.orthographicSize;
+			var halfWidth = halfHeight * mainCamera.aspect;
+			x = Mathf.Clamp(x, minBound.x + halfWidth, maxBound.x - halfWidth);
+			y = Mathf.Clamp(y, minBound.y + halfHeight, maxBound.y - halfHeight);
+		}
+
+		return new Vector3(x, y, transform.position.z);
 	}
 }
