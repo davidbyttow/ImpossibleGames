@@ -20,7 +20,7 @@ IL2CPP_EXTERN_C_END
 
 
 // 0x00000001 System.Void UnityEngine.GridLayout::DoNothing()
-extern void GridLayout_DoNothing_m36201F4787709460C994921B16CAC95CD490E0A1 ();
+extern void GridLayout_DoNothing_m36201F4787709460C994921B16CAC95CD490E0A1 (void);
 static Il2CppMethodPointer s_methodPointers[1] = 
 {
 	GridLayout_DoNothing_m36201F4787709460C994921B16CAC95CD490E0A1,

@@ -195,14 +195,14 @@ extern "C" void UnityCleanupTrampoline()
 
 - (NSUInteger)application:(UIApplication*)application supportedInterfaceOrientationsForWindow:(UIWindow*)window
 {
-    // Durring splash screen show phase only unity rootViewController orientations are allowed.
-    // This will prevent unwanted rotation while splash screen is on (Ex. Fogbugz case: 1190428).
-    if ([SplashScreenController Instance] != nil)
-        return [[_UnityAppController rootViewController] supportedInterfaceOrientations];
-
     // No rootViewController is set because we are switching from one view controller to another, all orientations should be enabled
     if ([window rootViewController] == nil)
         return UIInterfaceOrientationMaskAll;
+
+    // During splash screen show phase no forced orientations should be allowed.
+    // This will prevent unwanted rotation while splash screen is on and application is not yet ready to present (Ex. Fogbugz cases: 1190428, 1269547).
+    if (!_unityAppReady)
+        return [_rootController supportedInterfaceOrientations];
 
     // Some presentation controllers (e.g. UIImagePickerController) require portrait orientation and will throw exception if it is not supported.
     // At the same time enabling all orientations by returning UIInterfaceOrientationMaskAll might cause unwanted orientation change

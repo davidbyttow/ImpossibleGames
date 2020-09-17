@@ -51,7 +51,17 @@ class UnityPlayer : UIResponder, UnityFrameworkListener, NativeCallsProtocol {
     
   private func start() {
     if !started {
+      
+//      var args = CommandLine.arguments
+//      args.append("-buildUrl https://davidbyttow.com/impossiblegames/assetbundles/dlctest01")
+
+//      var cargs = args.map { strdup($0) }
+      print(">>>>>>>>" + CommandLine.arguments.joined())
       unity.runEmbedded(withArgc: CommandLine.argc, argv: CommandLine.unsafeArgv, appLaunchOpts: launchOptions)
+//      var newArgs = UnsafeMutablePointer(mutating: cargs)
+//      unity.runEmbedded(withArgc: CommandLine.argc + 1, argv: newArgs, appLaunchOpts: launchOptions)
+      //for ptr in cargs { free(ptr) }
+      
       started = true
     }
   }

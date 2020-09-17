@@ -20,9 +20,9 @@ IL2CPP_EXTERN_C_END
 
 
 // 0x00000001 System.Void UnityEngine.XR.XRDevice::InvokeDeviceLoaded(System.String)
-extern void XRDevice_InvokeDeviceLoaded_m3BDF6825A2A56E4923D4E6593C7BA2949B6A3581 ();
+extern void XRDevice_InvokeDeviceLoaded_m3BDF6825A2A56E4923D4E6593C7BA2949B6A3581 (void);
 // 0x00000002 System.Void UnityEngine.XR.XRDevice::.cctor()
-extern void XRDevice__cctor_mC83C1293819B81E68EC72D01A5CC107DFE29B98C ();
+extern void XRDevice__cctor_mC83C1293819B81E68EC72D01A5CC107DFE29B98C (void);
 static Il2CppMethodPointer s_methodPointers[2] = 
 {
 	XRDevice_InvokeDeviceLoaded_m3BDF6825A2A56E4923D4E6593C7BA2949B6A3581,

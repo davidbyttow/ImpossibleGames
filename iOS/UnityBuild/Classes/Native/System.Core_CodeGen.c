@@ -20,11 +20,11 @@ IL2CPP_EXTERN_C_END
 
 
 // 0x00000001 System.Exception System.Linq.Error::ArgumentNull(System.String)
-extern void Error_ArgumentNull_m0EDA0D46D72CA692518E3E2EB75B48044D8FD41E ();
+extern void Error_ArgumentNull_m0EDA0D46D72CA692518E3E2EB75B48044D8FD41E (void);
 // 0x00000002 System.Exception System.Linq.Error::MoreThanOneMatch()
-extern void Error_MoreThanOneMatch_m4C4756AF34A76EF12F3B2B6D8C78DE547F0FBCF8 ();
+extern void Error_MoreThanOneMatch_m4C4756AF34A76EF12F3B2B6D8C78DE547F0FBCF8 (void);
 // 0x00000003 System.Exception System.Linq.Error::NoElements()
-extern void Error_NoElements_mB89E91246572F009281D79730950808F17C3F353 ();
+extern void Error_NoElements_mB89E91246572F009281D79730950808F17C3F353 (void);
 // 0x00000004 System.Collections.Generic.IEnumerable`1<TSource> System.Linq.Enumerable::Where(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>)
 // 0x00000005 System.Func`2<TSource,System.Boolean> System.Linq.Enumerable::CombinePredicates(System.Func`2<TSource,System.Boolean>,System.Func`2<TSource,System.Boolean>)
 // 0x00000006 System.Linq.IOrderedEnumerable`1<TSource> System.Linq.Enumerable::OrderBy(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,TKey>)

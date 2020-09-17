@@ -3505,7 +3505,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HeightmapChangedCallback_Invoke_m24BDB8F
 		else if (___parameterCount != 3)
 		{
 			// open
-			if (il2cpp_codegen_method_is_virtual(targetMethod) && !il2cpp_codegen_object_is_of_sealed_type(targetThis) && il2cpp_codegen_delegate_has_invoker((Il2CppDelegate*)__this))
+			if (il2cpp_codegen_method_is_virtual(targetMethod) && il2cpp_codegen_delegate_has_invoker((Il2CppDelegate*)__this))
 			{
 				if (il2cpp_codegen_method_is_generic_instance(targetMethod))
 				{
@@ -3529,24 +3529,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HeightmapChangedCallback_Invoke_m24BDB8F
 					typedef void (*FunctionPointerType) (RuntimeObject*, bool, const RuntimeMethod*);
 					((FunctionPointerType)targetMethodPointer)((reinterpret_cast<RuntimeObject*>(&___heightRegion1) - 1), ___synched2, targetMethod);
 				}
-				else
-				{
-					typedef void (*FunctionPointerType) (Terrain_t2C0E3B3A2895E81446EFF4F5AFD601CF977D1836 *, RectInt_tE7B8105A280C1AC73A4157ED41F9B86C9BD91E49 , bool, const RuntimeMethod*);
-					((FunctionPointerType)targetMethodPointer)(___terrain0, ___heightRegion1, ___synched2, targetMethod);
-				}
+				typedef void (*FunctionPointerType) (Terrain_t2C0E3B3A2895E81446EFF4F5AFD601CF977D1836 *, RectInt_tE7B8105A280C1AC73A4157ED41F9B86C9BD91E49 , bool, const RuntimeMethod*);
+				((FunctionPointerType)targetMethodPointer)(___terrain0, ___heightRegion1, ___synched2, targetMethod);
 			}
 		}
 		else
 		{
 			// closed
-			if (il2cpp_codegen_method_is_virtual(targetMethod) && !il2cpp_codegen_object_is_of_sealed_type(targetThis) && il2cpp_codegen_delegate_has_invoker((Il2CppDelegate*)__this))
+			if (targetThis != NULL && il2cpp_codegen_method_is_virtual(targetMethod) && !il2cpp_codegen_object_is_of_sealed_type(targetThis) && il2cpp_codegen_delegate_has_invoker((Il2CppDelegate*)__this))
 			{
-				if (targetThis == NULL)
-				{
-					typedef void (*FunctionPointerType) (Terrain_t2C0E3B3A2895E81446EFF4F5AFD601CF977D1836 *, RectInt_tE7B8105A280C1AC73A4157ED41F9B86C9BD91E49 , bool, const RuntimeMethod*);
-					((FunctionPointerType)targetMethodPointer)(___terrain0, ___heightRegion1, ___synched2, targetMethod);
-				}
-				else if (il2cpp_codegen_method_is_generic_instance(targetMethod))
+				if (il2cpp_codegen_method_is_generic_instance(targetMethod))
 				{
 					if (il2cpp_codegen_method_is_interface_method(targetMethod))
 						GenericInterfaceActionInvoker3< Terrain_t2C0E3B3A2895E81446EFF4F5AFD601CF977D1836 *, RectInt_tE7B8105A280C1AC73A4157ED41F9B86C9BD91E49 , bool >::Invoke(targetMethod, targetThis, ___terrain0, ___heightRegion1, ___synched2);
@@ -3567,6 +3559,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HeightmapChangedCallback_Invoke_m24BDB8F
 				{
 					typedef void (*FunctionPointerType) (RuntimeObject*, RectInt_tE7B8105A280C1AC73A4157ED41F9B86C9BD91E49 , bool, const RuntimeMethod*);
 					((FunctionPointerType)targetMethodPointer)((reinterpret_cast<RuntimeObject*>(___terrain0) - 1), ___heightRegion1, ___synched2, targetMethod);
+				}
+				if (targetThis == NULL)
+				{
+					typedef void (*FunctionPointerType) (Terrain_t2C0E3B3A2895E81446EFF4F5AFD601CF977D1836 *, RectInt_tE7B8105A280C1AC73A4157ED41F9B86C9BD91E49 , bool, const RuntimeMethod*);
+					((FunctionPointerType)targetMethodPointer)(___terrain0, ___heightRegion1, ___synched2, targetMethod);
 				}
 				else
 				{
@@ -3659,7 +3656,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextureChangedCallback_Invoke_mC92D41CF0
 		else if (___parameterCount != 4)
 		{
 			// open
-			if (il2cpp_codegen_method_is_virtual(targetMethod) && !il2cpp_codegen_object_is_of_sealed_type(targetThis) && il2cpp_codegen_delegate_has_invoker((Il2CppDelegate*)__this))
+			if (il2cpp_codegen_method_is_virtual(targetMethod) && il2cpp_codegen_delegate_has_invoker((Il2CppDelegate*)__this))
 			{
 				if (il2cpp_codegen_method_is_generic_instance(targetMethod))
 				{
@@ -3683,24 +3680,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextureChangedCallback_Invoke_mC92D41CF0
 					typedef void (*FunctionPointerType) (RuntimeObject*, RectInt_tE7B8105A280C1AC73A4157ED41F9B86C9BD91E49 , bool, const RuntimeMethod*);
 					((FunctionPointerType)targetMethodPointer)((reinterpret_cast<RuntimeObject*>(___textureName1) - 1), ___texelRegion2, ___synched3, targetMethod);
 				}
-				else
-				{
-					typedef void (*FunctionPointerType) (Terrain_t2C0E3B3A2895E81446EFF4F5AFD601CF977D1836 *, String_t*, RectInt_tE7B8105A280C1AC73A4157ED41F9B86C9BD91E49 , bool, const RuntimeMethod*);
-					((FunctionPointerType)targetMethodPointer)(___terrain0, ___textureName1, ___texelRegion2, ___synched3, targetMethod);
-				}
+				typedef void (*FunctionPointerType) (Terrain_t2C0E3B3A2895E81446EFF4F5AFD601CF977D1836 *, String_t*, RectInt_tE7B8105A280C1AC73A4157ED41F9B86C9BD91E49 , bool, const RuntimeMethod*);
+				((FunctionPointerType)targetMethodPointer)(___terrain0, ___textureName1, ___texelRegion2, ___synched3, targetMethod);
 			}
 		}
 		else
 		{
 			// closed
-			if (il2cpp_codegen_method_is_virtual(targetMethod) && !il2cpp_codegen_object_is_of_sealed_type(targetThis) && il2cpp_codegen_delegate_has_invoker((Il2CppDelegate*)__this))
+			if (targetThis != NULL && il2cpp_codegen_method_is_virtual(targetMethod) && !il2cpp_codegen_object_is_of_sealed_type(targetThis) && il2cpp_codegen_delegate_has_invoker((Il2CppDelegate*)__this))
 			{
-				if (targetThis == NULL)
-				{
-					typedef void (*FunctionPointerType) (Terrain_t2C0E3B3A2895E81446EFF4F5AFD601CF977D1836 *, String_t*, RectInt_tE7B8105A280C1AC73A4157ED41F9B86C9BD91E49 , bool, const RuntimeMethod*);
-					((FunctionPointerType)targetMethodPointer)(___terrain0, ___textureName1, ___texelRegion2, ___synched3, targetMethod);
-				}
-				else if (il2cpp_codegen_method_is_generic_instance(targetMethod))
+				if (il2cpp_codegen_method_is_generic_instance(targetMethod))
 				{
 					if (il2cpp_codegen_method_is_interface_method(targetMethod))
 						GenericInterfaceActionInvoker4< Terrain_t2C0E3B3A2895E81446EFF4F5AFD601CF977D1836 *, String_t*, RectInt_tE7B8105A280C1AC73A4157ED41F9B86C9BD91E49 , bool >::Invoke(targetMethod, targetThis, ___terrain0, ___textureName1, ___texelRegion2, ___synched3);
@@ -3721,6 +3710,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextureChangedCallback_Invoke_mC92D41CF0
 				{
 					typedef void (*FunctionPointerType) (RuntimeObject*, String_t*, RectInt_tE7B8105A280C1AC73A4157ED41F9B86C9BD91E49 , bool, const RuntimeMethod*);
 					((FunctionPointerType)targetMethodPointer)((reinterpret_cast<RuntimeObject*>(___terrain0) - 1), ___textureName1, ___texelRegion2, ___synched3, targetMethod);
+				}
+				if (targetThis == NULL)
+				{
+					typedef void (*FunctionPointerType) (Terrain_t2C0E3B3A2895E81446EFF4F5AFD601CF977D1836 *, String_t*, RectInt_tE7B8105A280C1AC73A4157ED41F9B86C9BD91E49 , bool, const RuntimeMethod*);
+					((FunctionPointerType)targetMethodPointer)(___terrain0, ___textureName1, ___texelRegion2, ___synched3, targetMethod);
 				}
 				else
 				{
@@ -5056,7 +5050,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TerrainFilter_Invoke_m48E69E662BC21917E5
 		else if (___parameterCount != 1)
 		{
 			// open
-			if (il2cpp_codegen_method_is_virtual(targetMethod) && !il2cpp_codegen_object_is_of_sealed_type(targetThis) && il2cpp_codegen_delegate_has_invoker((Il2CppDelegate*)__this))
+			if (il2cpp_codegen_method_is_virtual(targetMethod) && il2cpp_codegen_delegate_has_invoker((Il2CppDelegate*)__this))
 			{
 				if (il2cpp_codegen_method_is_generic_instance(targetMethod))
 				{
@@ -5082,14 +5076,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TerrainFilter_Invoke_m48E69E662BC21917E5
 		else
 		{
 			// closed
-			if (il2cpp_codegen_method_is_virtual(targetMethod) && !il2cpp_codegen_object_is_of_sealed_type(targetThis) && il2cpp_codegen_delegate_has_invoker((Il2CppDelegate*)__this))
+			if (targetThis != NULL && il2cpp_codegen_method_is_virtual(targetMethod) && !il2cpp_codegen_object_is_of_sealed_type(targetThis) && il2cpp_codegen_delegate_has_invoker((Il2CppDelegate*)__this))
 			{
-				if (targetThis == NULL)
-				{
-					typedef bool (*FunctionPointerType) (Terrain_t2C0E3B3A2895E81446EFF4F5AFD601CF977D1836 *, const RuntimeMethod*);
-					result = ((FunctionPointerType)targetMethodPointer)(___terrain0, targetMethod);
-				}
-				else if (il2cpp_codegen_method_is_generic_instance(targetMethod))
+				if (il2cpp_codegen_method_is_generic_instance(targetMethod))
 				{
 					if (il2cpp_codegen_method_is_interface_method(targetMethod))
 						result = GenericInterfaceFuncInvoker1< bool, Terrain_t2C0E3B3A2895E81446EFF4F5AFD601CF977D1836 * >::Invoke(targetMethod, targetThis, ___terrain0);
@@ -5110,6 +5099,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TerrainFilter_Invoke_m48E69E662BC21917E5
 				{
 					typedef bool (*FunctionPointerType) (RuntimeObject*, const RuntimeMethod*);
 					result = ((FunctionPointerType)targetMethodPointer)((reinterpret_cast<RuntimeObject*>(___terrain0) - 1), targetMethod);
+				}
+				if (targetThis == NULL)
+				{
+					typedef bool (*FunctionPointerType) (Terrain_t2C0E3B3A2895E81446EFF4F5AFD601CF977D1836 *, const RuntimeMethod*);
+					result = ((FunctionPointerType)targetMethodPointer)(___terrain0, targetMethod);
 				}
 				else
 				{
