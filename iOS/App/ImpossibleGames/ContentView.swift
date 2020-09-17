@@ -21,25 +21,35 @@ struct ComingSoonOverlay: View {
 struct PlayView: View {
   @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
   var play: () -> Void
+  @State private var loaded = false
   
   let darkRed = Color(red: 168, green: 0, blue: 0)
   let green = Color(red: 51, green: 239, blue: 0)
   let gray = Color(red: 120, green: 120, blue: 120)
-
+  let brown = Color(red: 230, green: 152, blue: 54)
+  
   var body: some View {
     ZStack {
       Color.black.edgesIgnoringSafeArea(.all)
       VStack(alignment: .center) {
-        Text("IMPOSSIBLE")
-          .font(.custom("PressStart2P", size: 26))
-          .foregroundColor(darkRed)
+        Text("Today's Game")
+          .font(.custom("PressStart2P", size: 21))
+          .foregroundColor(Color.white)
           .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 0))
-        Button("PLAY", action: play)
-          .foregroundColor(green)
-          .font(.custom("PressStart2P", size: 42))
-        Button("BACK", action: { self.presentationMode.wrappedValue.dismiss() })
-          .foregroundColor(gray)
-          .font(.custom("PressStart2P", size: 42))
+        Image("unknown-game")
+          .padding(EdgeInsets(top: 35, leading: 0, bottom: 0, trailing: 0))
+        Text("???")
+          .font(.custom("PressStart2P", size: 16))
+          .foregroundColor(brown)
+          .padding(EdgeInsets(top: 13, leading: 0, bottom: 0, trailing: 0))
+        Button("START", action: play)
+          .foregroundColor(loaded ? green : gray)
+          .font(.custom("PressStart2P", size: 50))
+          .padding(EdgeInsets(top: 60, leading: 0, bottom: 0, trailing: 0))
+        Spacer()
+        Button("Load", action: { self.loaded = !self.loaded })
+          .foregroundColor(loaded ? green : gray)
+          .font(.custom("PressStart2P", size: 12))
       }.frame(
         minWidth: 0,
         maxWidth: .infinity,
@@ -120,7 +130,8 @@ struct ContentView: View {
 #if DEBUG
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    ContentView(play: { print("hi") })
+    //ContentView(play: { print("hi") })
+    PlayView(play: { print("hi") })
   }
 }
 #endif
