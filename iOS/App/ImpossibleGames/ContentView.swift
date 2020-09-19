@@ -18,6 +18,84 @@ struct ComingSoonOverlay: View {
   }
 }
 
+struct Score : Identifiable {
+  let id = UUID()
+  let name: String
+  let time: String
+}
+
+struct Leaderboard : View {
+  var ranks = [
+    "1ST",
+    "2ND",
+    "3RD",
+    "4TH",
+    "5TH",
+  ]
+  
+  var scores = [
+    Score(name: "jbyttow", time: "1:42"),
+    Score(name: "SirBenLee", time: "2:34"),
+    Score(name: "counterpoint0", time: "2:35"),
+    Score(name: "AbsoluteUnit", time: "3:01"),
+    Score(name: "RickyBobby", time: "4:55"),
+  ]
+  
+  let font = Font.custom("PressStart2P", size: 10)
+      
+  var body: some View {
+//    ZStack {
+//      HStack {
+//        List {
+//          Section(header: Text("").font(font)) {
+//            ForEach(ranks, id: \.self) { rank in
+//              Text(rank).font(font)
+//            }
+//          }
+//        }.background(Color.black)
+//        List {
+//          Section(header: Text("TIME").font(font)) {
+//            ForEach(scores, id: \.id) { score in
+//              Text(scores[0].time).font(font)
+//            }
+//          }
+//        }.background(Color.black)
+//        List {
+//          Section(header: Text("NAME").font(font)) {
+//            ForEach(scores, id: \.id) { score in
+//              Text(scores[0].name).font(font)
+//            }
+//          }
+//        }.background(Color.black)
+//      }
+//    }
+
+    VStack {
+      List(0 ..< min(scores.count, ranks.count) + 1) { i in
+        if i == 0 {
+          HStack {
+            Text("")
+              .font(font)
+            Text("TIME")
+              .font(font)
+            Text("NAME")
+              .font(font)
+          }
+        } else {
+          HStack {
+            Text(self.ranks[i])
+              .font(font)
+            Text(scores[i].time)
+              .font(font)
+            Text(scores[i].name)
+              .font(font)
+          }
+        }
+      }
+    }
+  }
+}
+
 struct PlayView: View {
   @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
   var play: () -> Void
@@ -44,8 +122,9 @@ struct PlayView: View {
           .padding(EdgeInsets(top: 13, leading: 0, bottom: 0, trailing: 0))
         Button("START", action: play)
           .foregroundColor(loaded ? green : gray)
-          .font(.custom("PressStart2P", size: 50))
-          .padding(EdgeInsets(top: 60, leading: 0, bottom: 0, trailing: 0))
+          .font(.custom("PressStart2P", size: 40))
+          .padding(EdgeInsets(top: 30, leading: 0, bottom: 30, trailing: 0))
+        Leaderboard()
         Spacer()
         Button("Load", action: { self.loaded = !self.loaded })
           .foregroundColor(loaded ? green : gray)
@@ -70,41 +149,44 @@ struct TitleView: View {
   var play: () -> Void
 
   var body: some View {
-    VStack(alignment: .center) {
-      Text("IMPOSSIBLE")
-        .font(.custom("PressStart2P", size: 26))
-        .foregroundColor(darkRed)
-        .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 0))
-      Text("GAMES")
-        .foregroundColor(.white)
-        .font(.custom("PressStart2P", size: 52))
-        .padding(EdgeInsets(top: 6, leading: 0, bottom: 0, trailing: 0))
-      Spacer()
-      NavigationLink(destination: PlayView(play: play)) {
-        Text("PLAY")
-          .foregroundColor(green)
+    ZStack {
+      Color.black.edgesIgnoringSafeArea(.all)
+      VStack(alignment: .center) {
+        Text("IMPOSSIBLE")
+          .font(.custom("PressStart2P", size: 26))
+          .foregroundColor(darkRed)
+          .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 0))
+        Text("GAMES")
+          .foregroundColor(.white)
+          .font(.custom("PressStart2P", size: 52))
+          .padding(EdgeInsets(top: 6, leading: 0, bottom: 0, trailing: 0))
+        Spacer()
+        NavigationLink(destination: PlayView(play: play)) {
+          Text("PLAY")
+            .foregroundColor(green)
+            .font(.custom("PressStart2P", size: 42))
+        }
+        Spacer().frame(height: 20)
+        Text("BUILD")
+          .foregroundColor(gray)
           .font(.custom("PressStart2P", size: 42))
-      }
-      Spacer().frame(height: 20)
-      Text("BUILD")
-        .foregroundColor(gray)
-        .font(.custom("PressStart2P", size: 42))
-        .frame(height: 68)
-        .overlay(ComingSoonOverlay(), alignment: .bottomTrailing)
-      Spacer()
-      Text("Code and Graphics")
-        .foregroundColor(darkRed)
-        .font(.custom("PressStart2P", size: 14))
-      Text("David Byttow")
-        .foregroundColor(gray)
-        .padding(EdgeInsets(top: 6, leading: 0, bottom: 20, trailing: 0))
-        .font(.custom("PressStart2P", size: 14))
-    }.frame(
-      minWidth: 0,
-      maxWidth: .infinity,
-      minHeight: 0,
-      maxHeight: .infinity
-    )
+          .frame(height: 68)
+          .overlay(ComingSoonOverlay(), alignment: .bottomTrailing)
+        Spacer()
+        Text("Code and Graphics")
+          .foregroundColor(darkRed)
+          .font(.custom("PressStart2P", size: 14))
+        Text("David Byttow")
+          .foregroundColor(gray)
+          .padding(EdgeInsets(top: 6, leading: 0, bottom: 20, trailing: 0))
+          .font(.custom("PressStart2P", size: 14))
+      }.frame(
+        minWidth: 0,
+        maxWidth: .infinity,
+        minHeight: 0,
+        maxHeight: .infinity
+      )
+    }.navigationBarHidden(true)
   }
 }
 
@@ -119,10 +201,7 @@ struct ContentView: View {
 
   var body: some View {
     NavigationView {
-      ZStack {
-        Color.black.edgesIgnoringSafeArea(.all)
-        TitleView(play: play)
-      }.navigationBarHidden(true)
+      TitleView(play: play)
     }
   }
 }

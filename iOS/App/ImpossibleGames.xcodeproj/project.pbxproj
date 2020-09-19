@@ -18,6 +18,7 @@
 		03069DF4250AFD4200B80CA2 /* PressStart-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03069DF0250AC79700B80CA2 /* PressStart-Regular.ttf */; };
 		03069DFE250C384B00B80CA2 /* UnityAPIBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 03069DFD250C384B00B80CA2 /* UnityAPIBridge.m */; };
 		03069E00250DAC0500B80CA2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03069DFF250DAC0500B80CA2 /* Extensions.swift */; };
+		03A2FC682515923600902C6E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03A2FC672515923600902C6E /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +49,7 @@
 		03069DFC250BFF0600B80CA2 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		03069DFD250C384B00B80CA2 /* UnityAPIBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnityAPIBridge.m; sourceTree = "<group>"; };
 		03069DFF250DAC0500B80CA2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		03A2FC672515923600902C6E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		03EA476325043B7F00922885 /* UnityFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UnityFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -82,6 +84,7 @@
 		030343AC250327F7004994B2 /* ImpossibleGames */ = {
 			isa = PBXGroup;
 			children = (
+				03A2FC672515923600902C6E /* GoogleService-Info.plist */,
 				03069DFC250BFF0600B80CA2 /* Bridging-Header.h */,
 				03069DEB250AC4B800B80CA2 /* Fonts */,
 				030343AD250327F7004994B2 /* AppDelegate.swift */,
@@ -184,6 +187,7 @@
 			files = (
 				03069DF4250AFD4200B80CA2 /* PressStart-Regular.ttf in Resources */,
 				030343BA250327F9004994B2 /* LaunchScreen.storyboard in Resources */,
+				03A2FC682515923600902C6E /* GoogleService-Info.plist in Resources */,
 				030343B7250327F9004994B2 /* Preview Assets.xcassets in Resources */,
 				030343B4250327F9004994B2 /* Assets.xcassets in Resources */,
 			);
