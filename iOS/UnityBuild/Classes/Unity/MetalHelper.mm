@@ -304,8 +304,8 @@ extern "C" void PresentMTL(UnityDisplaySurfaceMTL* surface)
     {
     #if PLATFORM_IOS || PLATFORM_TVOS
         const int targetFPS = UnityGetTargetFPS(); assert(targetFPS > 0);
-//        [UnityCurrentMTLCommandBuffer() presentDrawable: surface->drawable afterMinimumDuration: 1.0 / targetFPS];
-//        return;
+        [UnityCurrentMTLCommandBuffer() presentDrawable: surface->drawable afterMinimumDuration: 1.0 / targetFPS];
+        return;
     #endif
 
         // note that we end up here if presentDrawable: afterMinimumDuration: is not supported

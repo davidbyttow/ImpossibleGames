@@ -176,3 +176,17 @@ extern "C" void RegisterStaticallyLinkedModulesGranular()
 
 }
 
+template <typename T> void RegisterUnityClass(const char*);
+template <typename T> void RegisterStrippedType(int, const char*, const char*);
+
+void InvokeRegisterStaticallyLinkedModuleClasses()
+{
+	void RegisterStaticallyLinkedModuleClasses();
+	RegisterStaticallyLinkedModuleClasses();
+}
+
+void RegisterAllClasses()
+{
+	void RegisterAllClassesGranular();
+	RegisterAllClassesGranular();
+}
