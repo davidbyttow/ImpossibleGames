@@ -5,13 +5,6 @@ using System.Collections;
 using System.Runtime.InteropServices;
 using System.IO;
 
-#if UNITY_IOS
-public class HostAPI {
-  [DllImport("__Internal")]
-  public static extern void hostLeaveGame();
-}
-#endif
-
 public class GameManager : MonoBehaviour {
 
   public static GameManager global { get; private set; }
@@ -58,11 +51,7 @@ public class GameManager : MonoBehaviour {
   }
 
   public void LeaveGame() {
-#if UNITY_IOS
-    HostAPI.hostLeaveGame();
-#else
-    Application.Quit();
-#endif
+    HostApi.hostLeaveGame();
   }
 
   private void Restart() {

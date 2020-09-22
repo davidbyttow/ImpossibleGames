@@ -6,6 +6,8 @@
 @protocol NativeCallsProtocol
 @required
 - (void)unityLeaveGame;
+- (void)unityOnGameStart;
+- (NSString *)unityGetRequestedScene;
 @end
 
 __attribute__((visibility("default")))

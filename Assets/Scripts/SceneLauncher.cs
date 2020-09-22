@@ -22,12 +22,12 @@ public class SceneLauncher : MonoBehaviour {
   private string GetRequestedBundleUrl() {
     string[] args = System.Environment.GetCommandLineArgs();
     for (int i = 0; i < args.Length; i++) {
-      Debug.Log($"Arg: {args[i]}");
       if (args[i] == "-bundleUrl") {
         return args[i + 1];
       }
     }
-    return "";
+    Debug.Log("No bundle URL found, falling back to plugin");
+    return HostApi.hostGetRequestedScene();
   }
 
   IEnumerator LoadSceneAsync() {
