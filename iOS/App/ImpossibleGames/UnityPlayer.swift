@@ -33,7 +33,7 @@ class UnityPlayer : UIResponder, UnityFrameworkListener, NativeCallsProtocol {
 
     prevWindow = window;
     
-    let appController = unity.appController()!;
+    let appController = unity.appController()!
     appController.window.windowScene = window.windowScene!
   }
   
@@ -47,7 +47,7 @@ class UnityPlayer : UIResponder, UnityFrameworkListener, NativeCallsProtocol {
   }
   
   func unityGetRequestedScene() -> String! {
-    return "https://davidbyttow.com/impossiblegames/assetbundles/dlctest01"
+    return "https://davidbyttow.com/impossiblegames/assetbundles/dlc01_assets;https://davidbyttow.com/impossiblegames/assetbundles/dlc01_scene"
   }
   
   func stop() {

@@ -37,7 +37,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		030343AA250327F7004994B2 /* ImpossibleGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImpossibleGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		030343AA250327F7004994B2 /* Impossible Games.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Impossible Games.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		030343AD250327F7004994B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		030343AF250327F7004994B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		030343B1250327F7004994B2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 		030343AB250327F7004994B2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				030343AA250327F7004994B2 /* ImpossibleGames.app */,
+				030343AA250327F7004994B2 /* Impossible Games.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,7 +146,7 @@
 			);
 			name = ImpossibleGames;
 			productName = ImpossibleGames;
-			productReference = 030343AA250327F7004994B2 /* ImpossibleGames.app */;
+			productReference = 030343AA250327F7004994B2 /* Impossible Games.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -357,8 +357,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidbyttow.ImpossibleGames;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Impossible Games";
 				SWIFT_OBJC_BRIDGING_HEADER = "ImpossibleGames/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -380,8 +381,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidbyttow.ImpossibleGames;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Impossible Games";
 				SWIFT_OBJC_BRIDGING_HEADER = "ImpossibleGames/Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

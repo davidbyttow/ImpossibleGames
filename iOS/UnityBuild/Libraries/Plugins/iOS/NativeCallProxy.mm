@@ -22,7 +22,7 @@ extern "C" {
     return cString;
   }
 
-  void hostOnStartGame() {
+  void hostOnGameStart() {
     return [gApi unityOnGameStart];
   }
   void hostLeaveGame() {

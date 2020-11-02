@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "030343A9250327F7004994B2"
-               BuildableName = "ImpossibleGames.app"
+               BuildableName = "Impossible Games.app"
                BlueprintName = "ImpossibleGames"
                ReferencedContainer = "container:ImpossibleGames.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "030343A9250327F7004994B2"
-            BuildableName = "ImpossibleGames.app"
+            BuildableName = "Impossible Games.app"
             BlueprintName = "ImpossibleGames"
             ReferencedContainer = "container:ImpossibleGames.xcodeproj">
          </BuildableReference>
@@ -68,7 +68,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "030343A9250327F7004994B2"
-            BuildableName = "ImpossibleGames.app"
+            BuildableName = "Impossible Games.app"
             BlueprintName = "ImpossibleGames"
             ReferencedContainer = "container:ImpossibleGames.xcodeproj">
          </BuildableReference>

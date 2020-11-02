@@ -1,7 +1,11 @@
 ManifestFileVersion: 0
-CRC: 909908972
+CRC: 540812844
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
-      Name: dlctest01
+      Name: dlc01_assets
       Dependencies: {}
+    Info_1:
+      Name: dlc01_scene
+      Dependencies:
+        Dependency_0: dlc01_assets
