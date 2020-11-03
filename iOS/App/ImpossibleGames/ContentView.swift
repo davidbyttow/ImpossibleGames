@@ -20,7 +20,8 @@ struct ComingSoonOverlay: View {
 
 struct TitleView: View {
   
-  @ObservedObject private var styles = Styles.shared
+  @ObservedObject var styles = Styles.shared
+  @ObservedObject var levelModel: LevelModelController
 
   var play: () -> Void
 
@@ -37,7 +38,7 @@ struct TitleView: View {
           .font(.custom("PressStart2P", size: 52))
           .padding(EdgeInsets(top: 6, leading: 0, bottom: 0, trailing: 0))
         Spacer()
-        NavigationLink(destination: LevelView(play: play)) {
+        NavigationLink(destination: LevelView(play: play, levelData: self.$levelModel.level)) {
           Text("PLAY")
             .foregroundColor(styles.green)
             .font(.custom("PressStart2P", size: 42))
@@ -68,26 +69,27 @@ struct TitleView: View {
 
 struct ContentView: View {
 
-  init(play: @escaping () -> Void) {
-    self.play = play
-    UINavigationBar.setAnimationsEnabled(false)
-  }
-  
+  @ObservedObject var levelModel: LevelModelController
   var play: () -> Void
+
+//  init(play: @escaping () -> Void) {
+//    self.play = play
+//    UINavigationBar.setAnimationsEnabled(false)
+//  }
 
   var body: some View {
     NavigationView {
-      TitleView(play: play)
+      TitleView(levelModel: levelModel, play: play)
     }
   }
 }
 
-#if DEBUG
-struct ContentView_Previews: PreviewProvider {
-  static var previews: some View {
-    //ContentView(play: { print("hi") })
-    TitleView(play: { print("hi") })
-  }
-}
-#endif
+//#if DEBUG
+//struct ContentView_Previews: PreviewProvider {
+//  static var previews: some View {
+//    //ContentView(play: { print("hi") })
+//    TitleView(play: { print("hi") })
+//  }
+//}
+//#endif
 

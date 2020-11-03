@@ -9,21 +9,23 @@
 import UIKit
 import SwiftUI
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+class SceneDelegate: UIResponder, UIWindowSceneDelegate, GameHooks {
   
   var window: UIWindow?
   var windowScene: UIWindowScene?
   var unityPlayer: UnityPlayer?
+  var levelController = LevelModelController()
     
   func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
     windowScene = scene as? UIWindowScene
     
-    unityPlayer = UnityPlayer(withLaunchOptions: AppDelegate.appLaunchOptions)
+    unityPlayer = UnityPlayer(withLaunchOptions: AppDelegate.appLaunchOptions, gameHooks:self)
 
     if let windowScene = scene as? UIWindowScene {
       let window = UIWindow(windowScene: windowScene)
       
-      let contentView = ContentView(play: {
+      UINavigationBar.setAnimationsEnabled(false);
+      let contentView = ContentView(levelModel: levelController, play: {
         self.unityPlayer!.play(window)
       })
 
@@ -46,6 +48,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   }
   
   func sceneDidEnterBackground(_ scene: UIScene) {
+  }
+
+  func getRequestedScenes() -> String {
+    let level = levelController.level
+    var scenes = level.deps
+    scenes.append(level.scene)
+    for i in 0...scenes.count - 1 {
+      scenes[i] = "https://davidbyttow.com/" + scenes[i]
+    }
+    let sceneString = scenes.joined(separator: ";")
+    print("Sending requested scene: \(sceneString)")
+    return sceneString
   }
 }
 

@@ -9,14 +9,21 @@
 import Foundation
 import UnityFramework
 
+protocol GameHooks {
+  func getRequestedScenes() -> String
+}
+
+
 class UnityPlayer : UIResponder, UnityFrameworkListener, NativeCallsProtocol {
   private var unity: UnityFramework!
   private var started = false
   private var launchOptions: [UIApplication.LaunchOptionsKey: Any]?
-  private var prevWindow: UIWindow!;
+  private var prevWindow: UIWindow!
+  private var gameHooks: GameHooks!
   
-  init(withLaunchOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
+  init(withLaunchOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?, gameHooks: GameHooks) {
     super.init()
+    self.gameHooks = gameHooks
     self.launchOptions = launchOptions
     unity = UnityPlayer.loadFramework()
     unity.setDataBundleId("com.unity3d.framework")
@@ -47,7 +54,9 @@ class UnityPlayer : UIResponder, UnityFrameworkListener, NativeCallsProtocol {
   }
   
   func unityGetRequestedScene() -> String! {
-    return "https://davidbyttow.com/impossiblegames/assetbundles/dlc01_assets;https://davidbyttow.com/impossiblegames/assetbundles/dlc01_scene"
+    print("Getting scenes")
+    return gameHooks.getRequestedScenes()
+//    return "https://davidbyttow.com/impossiblegames/assetbundles/dlc01_assets;https://davidbyttow.com/impossiblegames/assetbundles/dlc01_scene"
   }
   
   func stop() {

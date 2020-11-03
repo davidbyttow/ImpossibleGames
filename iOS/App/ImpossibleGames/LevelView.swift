@@ -62,7 +62,10 @@ struct Leaderboard : View {
 
 struct LevelView: View {
   @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+
   var play: () -> Void
+  @Binding var levelData: LevelData
+
   @State private var loaded = false
     
   let darkRed = Color(red: 168, green: 0, blue: 0)
@@ -78,7 +81,7 @@ struct LevelView: View {
           .font(.custom("PressStart2P", size: 21))
           .foregroundColor(Color.white)
           .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 0))
-          //.onAppear(perform: delayLoad)
+          .onAppear(perform: loadLevelData)
         Image(loaded ? "level-thumbnail" : "unknown-game")
           .padding(EdgeInsets(top: 35, leading: 0, bottom: 0, trailing: 0))
           .onTapGesture(perform: {
@@ -86,7 +89,7 @@ struct LevelView: View {
               loaded = true
             }
           });
-        Text(loaded ? "Twisted Kingdom" : "???")
+        Text(levelData.title)
           .font(.custom("PressStart2P", size: 16))
           .foregroundColor(brown)
           .padding(EdgeInsets(top: 13, leading: 0, bottom: 0, trailing: 0))
@@ -117,13 +120,32 @@ struct LevelView: View {
       loaded = true
     }
   }
+  
+  private func loadLevelData() {
+    guard let url = URL(string: "https://www.davidbyttow.com/api/get-level") else {
+      return
+    }
+
+    let request = URLRequest(url: url)
+    URLSession.shared.dataTask(with: request) { data, response, error in
+      if let data = data {
+        if let responseObj = try? JSONDecoder().decode(LevelData.self, from: data) {
+          DispatchQueue.main.async {
+            loaded = true
+            print("Setting data \(responseObj)")
+            self.levelData = responseObj
+          }
+        }
+      }
+    }.resume()
+}
 }
 
-#if DEBUG
-struct LevelView_Previews: PreviewProvider {
-  static var previews: some View {
-    LevelView(play: { print("hi") })
-  }
-}
-#endif
-
+//#if DEBUG
+//struct LevelView_Previews: PreviewProvider {
+//  static var previews: some View {
+//    LevelView(play: { print("hi") })
+//  }
+//}
+//#endif
+//

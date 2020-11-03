@@ -20,6 +20,7 @@
 		03069E00250DAC0500B80CA2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03069DFF250DAC0500B80CA2 /* Extensions.swift */; };
 		03A2FC6A2516778800902C6E /* LevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A2FC692516778800902C6E /* LevelView.swift */; };
 		03A2FC6C2516781200902C6E /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A2FC6B2516781200902C6E /* Styles.swift */; };
+		03D5D4D82550E29F007B92EB /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D5D4D72550E29F007B92EB /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +53,7 @@
 		03069DFF250DAC0500B80CA2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		03A2FC692516778800902C6E /* LevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelView.swift; sourceTree = "<group>"; };
 		03A2FC6B2516781200902C6E /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		03D5D4D72550E29F007B92EB /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		03EA476325043B7F00922885 /* UnityFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UnityFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -100,6 +102,7 @@
 				03069DFD250C384B00B80CA2 /* UnityAPIBridge.m */,
 				03069DFF250DAC0500B80CA2 /* Extensions.swift */,
 				03A2FC692516778800902C6E /* LevelView.swift */,
+				03D5D4D72550E29F007B92EB /* Model.swift */,
 			);
 			path = ImpossibleGames;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03D5D4D82550E29F007B92EB /* Model.swift in Sources */,
 				03A2FC6A2516778800902C6E /* LevelView.swift in Sources */,
 				030343AE250327F7004994B2 /* AppDelegate.swift in Sources */,
 				03069E00250DAC0500B80CA2 /* Extensions.swift in Sources */,
