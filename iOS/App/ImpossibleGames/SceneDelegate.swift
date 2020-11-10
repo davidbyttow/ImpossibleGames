@@ -55,7 +55,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, GameHooks {
     var scenes = level.deps
     scenes.append(level.scene)
     for i in 0...scenes.count - 1 {
-      scenes[i] = "https://davidbyttow.com/" + scenes[i]
+      scenes[i] = "https://davidbyttow.com/impossiblegames/assetbundles/" + scenes[i]
     }
     let sceneString = scenes.joined(separator: ";")
     print("Sending requested scene: \(sceneString)")

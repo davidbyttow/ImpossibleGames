@@ -82,13 +82,8 @@ struct LevelView: View {
           .foregroundColor(Color.white)
           .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 0))
           .onAppear(perform: loadLevelData)
-        Image(loaded ? "level-thumbnail" : "unknown-game")
+        thumbnail
           .padding(EdgeInsets(top: 35, leading: 0, bottom: 0, trailing: 0))
-          .onTapGesture(perform: {
-            if !loaded {
-              loaded = true
-            }
-          });
         Text(levelData.title)
           .font(.custom("PressStart2P", size: 16))
           .foregroundColor(brown)
@@ -101,11 +96,7 @@ struct LevelView: View {
           .foregroundColor(loaded ? green : gray)
           .font(.custom("PressStart2P", size: 40))
           .padding(EdgeInsets(top: 30, leading: 0, bottom: 30, trailing: 0))
-//        Leaderboard()
         Spacer()
-//        Button("Load", action: { self.loaded = !self.loaded })
-//          .foregroundColor(loaded ? green : gray)
-//          .font(.custom("PressStart2P", size: 12))
       }.frame(
         minWidth: 0,
         maxWidth: .infinity,
@@ -114,13 +105,24 @@ struct LevelView: View {
       )
     }.navigationBarHidden(true)
   }
-
-  private func delayLoad() {
-    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-      loaded = true
+  
+  private var thumbnail: some View {
+    ZStack {
+      // TODO: Don't hardcode this?
+      let width: CGFloat = 300
+      let unknownGame = Image("unknown-game")
+        .resizable().aspectRatio(contentMode: .fit)
+        .frame(width: width)
+      if (loaded) {
+        let url = "https://davidbyttow.com/impossiblegames/assetbundles/" + levelData.thumbnailUrls[0]
+        AsyncImage(url: URL(string: url)!, placeholder: { unknownGame })
+          .frame(width: width)
+      } else {
+        unknownGame
+      }
     }
   }
-  
+    
   private func loadLevelData() {
     guard let url = URL(string: "https://www.davidbyttow.com/api/get-level") else {
       return
@@ -131,9 +133,8 @@ struct LevelView: View {
       if let data = data {
         if let responseObj = try? JSONDecoder().decode(LevelData.self, from: data) {
           DispatchQueue.main.async {
-            loaded = true
-            print("Setting data \(responseObj)")
             self.levelData = responseObj
+            self.loaded = true
           }
         }
       }

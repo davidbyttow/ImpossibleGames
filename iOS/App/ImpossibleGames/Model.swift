@@ -12,6 +12,7 @@ struct LevelData : Decodable {
   init() {}
   var title: String = "???"
   var scene: String = ""
+  var thumbnailUrls: [String] = []
   var deps: [String] = []
 }
 
