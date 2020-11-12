@@ -11314,7 +11314,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StringConverter__ctor_m078D8E99B4F9B0F2E
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 // System.Void Unity.ThrowStub::ThrowNotSupportedException()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ThrowStub_ThrowNotSupportedException_mA667A039AC2AB853687594A68EFA90A799028D4F ()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ThrowStub_ThrowNotSupportedException_mA667A039AC2AB853687594A68EFA90A799028D4F (const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -13746,8 +13746,8 @@ IL_0046:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(61)
 	{
-		IL2CPP_JUMP_TBL(0x47, IL_0047)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x47, IL_0047)
 	}
 
 IL_0047:
@@ -17270,8 +17270,8 @@ IL_0485:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(1146)
 	{
-		IL2CPP_JUMP_TBL(0x486, IL_0486)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x486, IL_0486)
 	}
 
 IL_0486:
@@ -17403,9 +17403,9 @@ IL_0068:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(95)
 	{
+		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
 		IL2CPP_JUMP_TBL(0x26A, IL_026a)
 		IL2CPP_JUMP_TBL(0x69, IL_0069)
-		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
 	}
 
 IL_0069:
@@ -17745,8 +17745,8 @@ IL_0269:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(608)
 	{
-		IL2CPP_JUMP_TBL(0x26A, IL_026a)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x26A, IL_026a)
 	}
 
 IL_026a:
@@ -22776,8 +22776,8 @@ IL_085a:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(2127)
 	{
-		IL2CPP_JUMP_TBL(0x85B, IL_085b)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x85B, IL_085b)
 	}
 
 IL_085b:
@@ -34149,10 +34149,10 @@ FINALLY_0396:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(918)
 	{
+		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
 		IL2CPP_JUMP_TBL(0x39C, IL_039c)
 		IL2CPP_JUMP_TBL(0x1D, IL_001d)
 		IL2CPP_JUMP_TBL(0x39A, IL_039a)
-		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
 	}
 
 IL_039a:
@@ -35939,8 +35939,8 @@ IL_007b:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(114)
 	{
-		IL2CPP_JUMP_TBL(0x7C, IL_007c)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x7C, IL_007c)
 	}
 
 IL_007c:
@@ -36399,8 +36399,8 @@ IL_0037:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(46)
 	{
-		IL2CPP_JUMP_TBL(0x38, IL_0038)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x38, IL_0038)
 	}
 
 IL_0038:

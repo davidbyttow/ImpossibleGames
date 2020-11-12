@@ -16,7 +16,7 @@ public class SoundManager : MonoBehaviour {
 	private AudioSource source;
 
 	void Awake() {
-		if (!inst) {
+		if (!inst) {    
 			inst = this;
 			DontDestroyOnLoad(gameObject);
 		} else {

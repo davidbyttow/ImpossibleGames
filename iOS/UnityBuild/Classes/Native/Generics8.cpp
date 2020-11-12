@@ -4809,8 +4809,8 @@ IL_008a:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(129)
 	{
-		IL2CPP_JUMP_TBL(0x8B, IL_008b)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x8B, IL_008b)
 	}
 
 IL_008b:
@@ -6068,8 +6068,8 @@ IL_00ee:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(229)
 	{
-		IL2CPP_JUMP_TBL(0xEF, IL_00ef)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0xEF, IL_00ef)
 	}
 
 IL_00ef:
@@ -6807,8 +6807,8 @@ IL_008a:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(129)
 	{
-		IL2CPP_JUMP_TBL(0x8B, IL_008b)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x8B, IL_008b)
 	}
 
 IL_008b:
@@ -8069,8 +8069,8 @@ IL_00ee:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(229)
 	{
-		IL2CPP_JUMP_TBL(0xEF, IL_00ef)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0xEF, IL_00ef)
 	}
 
 IL_00ef:
@@ -8808,8 +8808,8 @@ IL_008a:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(129)
 	{
-		IL2CPP_JUMP_TBL(0x8B, IL_008b)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x8B, IL_008b)
 	}
 
 IL_008b:
@@ -10069,8 +10069,8 @@ IL_00ee:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(229)
 	{
-		IL2CPP_JUMP_TBL(0xEF, IL_00ef)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0xEF, IL_00ef)
 	}
 
 IL_00ef:
@@ -10809,8 +10809,8 @@ IL_008a:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(129)
 	{
-		IL2CPP_JUMP_TBL(0x8B, IL_008b)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x8B, IL_008b)
 	}
 
 IL_008b:
@@ -12070,8 +12070,8 @@ IL_00ee:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(229)
 	{
-		IL2CPP_JUMP_TBL(0xEF, IL_00ef)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0xEF, IL_00ef)
 	}
 
 IL_00ef:
@@ -12810,8 +12810,8 @@ IL_008a:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(129)
 	{
-		IL2CPP_JUMP_TBL(0x8B, IL_008b)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x8B, IL_008b)
 	}
 
 IL_008b:
@@ -14071,8 +14071,8 @@ IL_00ee:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(229)
 	{
-		IL2CPP_JUMP_TBL(0xEF, IL_00ef)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0xEF, IL_00ef)
 	}
 
 IL_00ef:
@@ -14811,8 +14811,8 @@ IL_008a:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(129)
 	{
-		IL2CPP_JUMP_TBL(0x8B, IL_008b)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x8B, IL_008b)
 	}
 
 IL_008b:
@@ -16072,8 +16072,8 @@ IL_00ee:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(229)
 	{
-		IL2CPP_JUMP_TBL(0xEF, IL_00ef)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0xEF, IL_00ef)
 	}
 
 IL_00ef:
@@ -16812,8 +16812,8 @@ IL_008a:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(129)
 	{
-		IL2CPP_JUMP_TBL(0x8B, IL_008b)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x8B, IL_008b)
 	}
 
 IL_008b:
@@ -18073,8 +18073,8 @@ IL_00ee:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(229)
 	{
-		IL2CPP_JUMP_TBL(0xEF, IL_00ef)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0xEF, IL_00ef)
 	}
 
 IL_00ef:
@@ -18813,8 +18813,8 @@ IL_008a:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(129)
 	{
-		IL2CPP_JUMP_TBL(0x8B, IL_008b)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x8B, IL_008b)
 	}
 
 IL_008b:
@@ -20072,8 +20072,8 @@ IL_00ee:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(229)
 	{
-		IL2CPP_JUMP_TBL(0xEF, IL_00ef)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0xEF, IL_00ef)
 	}
 
 IL_00ef:
@@ -20811,8 +20811,8 @@ IL_008a:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(129)
 	{
-		IL2CPP_JUMP_TBL(0x8B, IL_008b)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x8B, IL_008b)
 	}
 
 IL_008b:
@@ -22072,8 +22072,8 @@ IL_00ee:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(229)
 	{
-		IL2CPP_JUMP_TBL(0xEF, IL_00ef)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0xEF, IL_00ef)
 	}
 
 IL_00ef:
@@ -22812,8 +22812,8 @@ IL_008a:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(129)
 	{
-		IL2CPP_JUMP_TBL(0x8B, IL_008b)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x8B, IL_008b)
 	}
 
 IL_008b:
@@ -24073,8 +24073,8 @@ IL_00ee:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(229)
 	{
-		IL2CPP_JUMP_TBL(0xEF, IL_00ef)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0xEF, IL_00ef)
 	}
 
 IL_00ef:
@@ -24813,8 +24813,8 @@ IL_008a:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(129)
 	{
-		IL2CPP_JUMP_TBL(0x8B, IL_008b)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x8B, IL_008b)
 	}
 
 IL_008b:
@@ -26074,8 +26074,8 @@ IL_00ee:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(229)
 	{
-		IL2CPP_JUMP_TBL(0xEF, IL_00ef)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0xEF, IL_00ef)
 	}
 
 IL_00ef:
@@ -26814,8 +26814,8 @@ IL_008a:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(129)
 	{
-		IL2CPP_JUMP_TBL(0x8B, IL_008b)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x8B, IL_008b)
 	}
 
 IL_008b:
@@ -28075,8 +28075,8 @@ IL_00ee:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(229)
 	{
-		IL2CPP_JUMP_TBL(0xEF, IL_00ef)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0xEF, IL_00ef)
 	}
 
 IL_00ef:

@@ -16,10 +16,20 @@ protocol GameHooks {
 
 class UnityPlayer : UIResponder, UnityFrameworkListener, NativeCallsProtocol {
   private var unity: UnityFramework!
-  private var started = false
   private var launchOptions: [UIApplication.LaunchOptionsKey: Any]?
   private var prevWindow: UIWindow!
   private var gameHooks: GameHooks!
+  private var starting = false;
+
+  enum GameMode {
+    case none
+    case inLauncher
+    case inGame
+  }
+  
+  private var unityRunning = false
+  private var gameMode = GameMode.none
+  private var visible = false
   
   init(withLaunchOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?, gameHooks: GameHooks) {
     super.init()
@@ -31,48 +41,71 @@ class UnityPlayer : UIResponder, UnityFrameworkListener, NativeCallsProtocol {
     UnityAPIBridge.registerAPIforNativeCalls(self)
   }
   
-  func play(_ window: UIWindow) {
-    start()
+  private func run() {
+    if !unityRunning {
+      unity.runEmbedded(withArgc: CommandLine.argc, argv: CommandLine.unsafeArgv, appLaunchOpts: launchOptions)
 
-    unity.appController().quitHandler = {
-      self.stop();
+      unity.appController().quitHandler = {
+        print("QUIT HANDLER")
+      }
+      
+      unityRunning = true
     }
+  }
+
+  func show(_ window: UIWindow) {
+    run()
 
     prevWindow = window;
     
     let appController = unity.appController()!
     appController.window.windowScene = window.windowScene!
+    appController.window.makeKeyAndVisible()
+
+    visible = true
+    starting = true;
+    
+    if (gameMode == .inLauncher) {
+      loadLevel()
+    }
   }
   
-  func unityOnGameStart() {
-    // TODO
+  func hide() {
+    prevWindow?.makeKeyAndVisible();
+    
+    let appController = unity.appController()!
+    appController.window.windowScene = nil
+
+    visible = false
+  }
+  
+  func unityOnLauncherStarted() {
+    gameMode = .inLauncher
+    if (starting) {
+      loadLevel()
+    } else {
+      hide()
+    }
+  }
+  
+  func unityOnGameStarted() {
+    gameMode = .inGame
+  }
+  
+  private func loadLevel() {
+    let requestedScenes = gameHooks.getRequestedScenes()
+    unity.sendMessageToGO(withName: "SceneLauncher", functionName: "LaunchGame", message: requestedScenes)
   }
   
   func unityLeaveGame() {
-    prevWindow?.makeKeyAndVisible();
-    stop();
+    starting = false
+    unity.sendMessageToGO(withName: "GameManager", functionName: "LoadLauncher", message: "")
   }
   
   func unityGetRequestedScene() -> String! {
-    print("Getting scenes")
     return gameHooks.getRequestedScenes()
-//    return "https://davidbyttow.com/impossiblegames/assetbundles/dlc01_assets;https://davidbyttow.com/impossiblegames/assetbundles/dlc01_scene"
   }
-  
-  func stop() {
-    if started {
-      unity.unloadApplication()
-      started = false;
-    }
-  }
-    
-  private func start() {
-    if !started {
-      unity.runEmbedded(withArgc: CommandLine.argc, argv: CommandLine.unsafeArgv, appLaunchOpts: launchOptions)
-      started = true
-    }
-  }
-  
+        
   private static func loadFramework() -> UnityFramework? {
     var unityFramework: UnityFramework?
     
@@ -94,4 +127,13 @@ class UnityPlayer : UIResponder, UnityFrameworkListener, NativeCallsProtocol {
     
     return unityFramework
   }
+
+  private func unityDidUnload(notification: NSNotification) {
+    print("DID UNLOAD")
+  }
+
+  private func unityDidQuit(notification: NSNotification) {
+    print("DID QUIT")
+  }
+
 }

@@ -1223,7 +1223,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* IgnoreSection_SerializeSection_mE22
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 // System.Void Unity.ThrowStub::ThrowNotSupportedException()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ThrowStub_ThrowNotSupportedException_m7D3AEF39540E1D8CFA631552E9D0116434E7A9ED ()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ThrowStub_ThrowNotSupportedException_m7D3AEF39540E1D8CFA631552E9D0116434E7A9ED (const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)

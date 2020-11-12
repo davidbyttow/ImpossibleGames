@@ -462,8 +462,6 @@ struct KeyCollection_tBAE0EBE1B8D4A3690FCB3ADC3EF79DF8654B6A36;
 struct KeyCollection_t16FDDD229F402DEF0A0B7629138ED4056009E52E;
 // System.Collections.Generic.Dictionary`2/KeyCollection<System.Object,System.Int32>
 struct KeyCollection_t0C2A6470B0D42D7A87AADBEADCF3DD1DDDD08956;
-// System.Collections.Generic.Dictionary`2/KeyCollection<System.Object,System.Object>
-struct KeyCollection_tCA4820F8266AF4059CC5A14888D8195F0D797499;
 // System.Collections.Generic.Dictionary`2/KeyCollection<System.Object,System.Resources.ResourceLocator>
 struct KeyCollection_tB86914AB06A108AEE25721CFAAAC460538F6DAE7;
 // System.Collections.Generic.Dictionary`2/KeyCollection<System.Int32,System.Boolean>
@@ -474,6 +472,8 @@ struct KeyCollection_tB6DA7BD3F3255AFC2FAD2CA9A291FBA43E5CD4B1;
 struct KeyCollection_tDB6919EBDF36E83E708A483A6C4CF8065F62D1E0;
 // System.Collections.Generic.Dictionary`2/KeyCollection<System.Int32,System.Int64>
 struct KeyCollection_t6C75FA39C169AFB913CD046927B28E95AA96C54A;
+// System.Collections.Generic.Dictionary`2/KeyCollection<System.Object,System.Object>
+struct KeyCollection_tCA4820F8266AF4059CC5A14888D8195F0D797499;
 // System.Collections.Generic.Dictionary`2/KeyCollection<System.UInt32,System.Int32>
 struct KeyCollection_t19748CBB6EA73F4F3CD39D92D3C0F67BDC5275E1;
 // System.Collections.Generic.List`1<UnityEngine.Events.BaseInvokableCall>

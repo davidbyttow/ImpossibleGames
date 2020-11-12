@@ -668,6 +668,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AssetBundle_get_isStreamedSceneAssetBund
 	bool retVal = _il2cpp_icall_func(__this);
 	return retVal;
 }
+// System.Void UnityEngine.AssetBundle::Unload(System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssetBundle_Unload_m0DEBACB284F6CECA8DF21486D1BBE1189F6A5D66 (AssetBundle_t4D34D7FDF0F230DC641DC1FCFA2C0E7E9E628FA4 * __this, bool ___unloadAllLoadedObjects0, const RuntimeMethod* method)
+{
+	typedef void (*AssetBundle_Unload_m0DEBACB284F6CECA8DF21486D1BBE1189F6A5D66_ftn) (AssetBundle_t4D34D7FDF0F230DC641DC1FCFA2C0E7E9E628FA4 *, bool);
+	static AssetBundle_Unload_m0DEBACB284F6CECA8DF21486D1BBE1189F6A5D66_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AssetBundle_Unload_m0DEBACB284F6CECA8DF21486D1BBE1189F6A5D66_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.AssetBundle::Unload(System.Boolean)");
+	_il2cpp_icall_func(__this, ___unloadAllLoadedObjects0);
+}
 // System.String[] UnityEngine.AssetBundle::GetAllAssetNames()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* AssetBundle_GetAllAssetNames_m7012B92C4E0BDF3975EBC22DE2515AFEB0E9D409 (AssetBundle_t4D34D7FDF0F230DC641DC1FCFA2C0E7E9E628FA4 * __this, const RuntimeMethod* method)
 {

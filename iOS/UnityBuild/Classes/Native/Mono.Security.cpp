@@ -1953,8 +1953,8 @@ IL_0069:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(85)
 	{
-		IL2CPP_JUMP_TBL(0x6A, IL_006a)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x6A, IL_006a)
 	}
 
 IL_006a:

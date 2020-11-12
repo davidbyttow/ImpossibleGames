@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, GameHooks {
       
       UINavigationBar.setAnimationsEnabled(false);
       let contentView = ContentView(levelModel: levelController, play: {
-        self.unityPlayer!.play(window)
+        self.unityPlayer!.show(window)
       })
 
       window.rootViewController = UIHostingController(rootView: contentView)

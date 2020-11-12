@@ -149,8 +149,6 @@ struct KeyCollection_tBAE0EBE1B8D4A3690FCB3ADC3EF79DF8654B6A36;
 struct KeyCollection_t16FDDD229F402DEF0A0B7629138ED4056009E52E;
 // System.Collections.Generic.Dictionary`2/KeyCollection<System.Object,System.Int32>
 struct KeyCollection_t0C2A6470B0D42D7A87AADBEADCF3DD1DDDD08956;
-// System.Collections.Generic.Dictionary`2/KeyCollection<System.Object,System.Object>
-struct KeyCollection_tCA4820F8266AF4059CC5A14888D8195F0D797499;
 // System.Collections.Generic.Dictionary`2/KeyCollection<System.Object,System.Resources.ResourceLocator>
 struct KeyCollection_tB86914AB06A108AEE25721CFAAAC460538F6DAE7;
 // System.Collections.Generic.Dictionary`2/KeyCollection<System.UInt32,System.Object>
@@ -165,6 +163,8 @@ struct KeyCollection_tB6DA7BD3F3255AFC2FAD2CA9A291FBA43E5CD4B1;
 struct KeyCollection_tDB6919EBDF36E83E708A483A6C4CF8065F62D1E0;
 // System.Collections.Generic.Dictionary`2/KeyCollection<System.Int32,System.Int64>
 struct KeyCollection_t6C75FA39C169AFB913CD046927B28E95AA96C54A;
+// System.Collections.Generic.Dictionary`2/KeyCollection<System.Object,System.Object>
+struct KeyCollection_tCA4820F8266AF4059CC5A14888D8195F0D797499;
 // System.Collections.Generic.Dictionary`2/KeyCollection<System.UInt32,System.Int32>
 struct KeyCollection_t19748CBB6EA73F4F3CD39D92D3C0F67BDC5275E1;
 // System.Collections.Generic.LinkedListNode`1<System.Object>
@@ -187,8 +187,6 @@ struct ValueCollection_tBBFF5FCCEA64DACDC4DFAB67787E57F5B92377EF;
 struct ValueCollection_tE16ED6DFB218FE1E5E8729436D481A5AD1D82C10;
 // System.Collections.Generic.Dictionary`2/ValueCollection<System.Object,System.Int32>
 struct ValueCollection_tC88EAA780CBFDC83B1E62A4418478872C1CAE848;
-// System.Collections.Generic.Dictionary`2/ValueCollection<System.Object,System.Object>
-struct ValueCollection_t0ACCC25930444F15B1857D00E9FB6021E5842852;
 // System.Collections.Generic.Dictionary`2/ValueCollection<System.Object,System.Resources.ResourceLocator>
 struct ValueCollection_t801673EF9238D6284F9D0027C8B1420DC72FFDAC;
 // System.Collections.Generic.Dictionary`2/ValueCollection<System.UInt32,System.Object>
@@ -203,6 +201,8 @@ struct ValueCollection_tDEA922C20FE7390F1063807C7F0EAE8B2C022A7B;
 struct ValueCollection_t8738745D8513A557A82E6E097DF4D4E70D5253C2;
 // System.Collections.Generic.Dictionary`2/ValueCollection<System.Int32,System.Int64>
 struct ValueCollection_tDD2C80682AF4CF18883668E136B1980110C79D95;
+// System.Collections.Generic.Dictionary`2/ValueCollection<System.Object,System.Object>
+struct ValueCollection_t0ACCC25930444F15B1857D00E9FB6021E5842852;
 // System.Collections.Generic.Dictionary`2/ValueCollection<System.UInt32,System.Int32>
 struct ValueCollection_t5021005DA85ABB38062E53F64AC0587152FDBBDB;
 // System.Boolean[]

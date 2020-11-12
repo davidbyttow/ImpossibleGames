@@ -10104,6 +10104,24 @@ public:
 };
 
 
+// UnityEngine.TextCore.LowLevel.FontFeatureLookupFlags
+struct  FontFeatureLookupFlags_t37E41419FC68819F0CA4BD748675CE571DEA2781 
+{
+public:
+	// System.Int32 UnityEngine.TextCore.LowLevel.FontFeatureLookupFlags::value__
+	int32_t ___value___2;
+
+public:
+	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(FontFeatureLookupFlags_t37E41419FC68819F0CA4BD748675CE571DEA2781, ___value___2)); }
+	inline int32_t get_value___2() const { return ___value___2; }
+	inline int32_t* get_address_of_value___2() { return &___value___2; }
+	inline void set_value___2(int32_t value)
+	{
+		___value___2 = value;
+	}
+};
+
+
 // UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord
 struct  GlyphAdjustmentRecord_tF7DD4F1F660B62990292705F25D43A7EF3ED35EA 
 {
@@ -12217,6 +12235,8 @@ public:
 	GlyphAdjustmentRecord_tF7DD4F1F660B62990292705F25D43A7EF3ED35EA  ___m_FirstAdjustmentRecord_0;
 	// UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord::m_SecondAdjustmentRecord
 	GlyphAdjustmentRecord_tF7DD4F1F660B62990292705F25D43A7EF3ED35EA  ___m_SecondAdjustmentRecord_1;
+	// UnityEngine.TextCore.LowLevel.FontFeatureLookupFlags UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord::m_FeatureLookupFlags
+	int32_t ___m_FeatureLookupFlags_2;
 
 public:
 	inline static int32_t get_offset_of_m_FirstAdjustmentRecord_0() { return static_cast<int32_t>(offsetof(GlyphPairAdjustmentRecord_tAD8F88FFC3A19DFDC31C2E0FA901E7CEAEE8A169, ___m_FirstAdjustmentRecord_0)); }
@@ -12233,6 +12253,14 @@ public:
 	inline void set_m_SecondAdjustmentRecord_1(GlyphAdjustmentRecord_tF7DD4F1F660B62990292705F25D43A7EF3ED35EA  value)
 	{
 		___m_SecondAdjustmentRecord_1 = value;
+	}
+
+	inline static int32_t get_offset_of_m_FeatureLookupFlags_2() { return static_cast<int32_t>(offsetof(GlyphPairAdjustmentRecord_tAD8F88FFC3A19DFDC31C2E0FA901E7CEAEE8A169, ___m_FeatureLookupFlags_2)); }
+	inline int32_t get_m_FeatureLookupFlags_2() const { return ___m_FeatureLookupFlags_2; }
+	inline int32_t* get_address_of_m_FeatureLookupFlags_2() { return &___m_FeatureLookupFlags_2; }
+	inline void set_m_FeatureLookupFlags_2(int32_t value)
+	{
+		___m_FeatureLookupFlags_2 = value;
 	}
 };
 
@@ -27348,7 +27376,7 @@ IL_011d:
 		float L_48 = V_4;
 		float L_49 = V_3;
 		V_11 = ((float)il2cpp_codegen_add((float)((float)il2cpp_codegen_add((float)L_47, (float)L_48)), (float)L_49));
-		// if (material.HasProperty(ID_GlowOffset) && shaderKeywords.Contains(Keyword_Glow)) // Generates GC
+		// if (material.HasProperty(ID_GlowOffset) && shaderKeywords.Contains(Keyword_Glow)) 
 		Material_t8927C00353A72755313F046D0CE85178AE8218EE * L_50 = ___material0;
 		IL2CPP_RUNTIME_CLASS_INIT(ShaderUtilities_t1F6A93635DB66FAB6A2DE3ABEA7DE635B7E34B14_il2cpp_TypeInfo_var);
 		int32_t L_51 = ((ShaderUtilities_t1F6A93635DB66FAB6A2DE3ABEA7DE635B7E34B14_StaticFields*)il2cpp_codegen_static_fields_for(ShaderUtilities_t1F6A93635DB66FAB6A2DE3ABEA7DE635B7E34B14_il2cpp_TypeInfo_var))->get_ID_GlowOffset_28();
@@ -27420,7 +27448,7 @@ IL_017b:
 		IL2CPP_RUNTIME_CLASS_INIT(Mathf_t4D4AC358D24F6DDC32EC291DDE1DF2C3B752A194_il2cpp_TypeInfo_var);
 		float L_74 = Mathf_Max_m4CE510E1F1013B33275F01543731A51A58BA0775(L_70, ((float)il2cpp_codegen_add((float)((float)il2cpp_codegen_add((float)L_71, (float)L_72)), (float)L_73)), /*hidden argument*/NULL);
 		V_11 = L_74;
-		// if (material.HasProperty(ID_UnderlaySoftness) && shaderKeywords.Contains(Keyword_Underlay)) // Generates GC
+		// if (material.HasProperty(ID_UnderlaySoftness) && shaderKeywords.Contains(Keyword_Underlay)) 
 		Material_t8927C00353A72755313F046D0CE85178AE8218EE * L_75 = ___material0;
 		IL2CPP_RUNTIME_CLASS_INIT(ShaderUtilities_t1F6A93635DB66FAB6A2DE3ABEA7DE635B7E34B14_il2cpp_TypeInfo_var);
 		int32_t L_76 = ((ShaderUtilities_t1F6A93635DB66FAB6A2DE3ABEA7DE635B7E34B14_StaticFields*)il2cpp_codegen_static_fields_for(ShaderUtilities_t1F6A93635DB66FAB6A2DE3ABEA7DE635B7E34B14_il2cpp_TypeInfo_var))->get_ID_UnderlaySoftness_9();

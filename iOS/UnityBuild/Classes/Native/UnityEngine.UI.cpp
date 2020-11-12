@@ -17666,8 +17666,8 @@ IL_0020:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(23)
 	{
-		IL2CPP_JUMP_TBL(0x21, IL_0021)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x21, IL_0021)
 	}
 
 IL_0021:
@@ -19052,7 +19052,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool CanvasUpdateRegistry_ObjectValidForUpdat
 		}
 	}
 	{
-		// valid = (element as Object) != null; //Here we make use of the overloaded UnityEngine.Object == null, that checks if the native object is alive.
+		// valid = (element as Object) != null; 
 		RuntimeObject* L_2 = ___element0;
 		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
 		bool L_3 = Object_op_Inequality_mE1F187520BD83FB7D86A6D850710C4D42B864E90(((Object_tF2F3778131EFF286AF62B7B013A170F95A91571A *)IsInstClass((RuntimeObject*)L_2, Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var)), (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A *)NULL, /*hidden argument*/NULL);
@@ -30247,8 +30247,8 @@ FINALLY_0032:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(50)
 	{
-		IL2CPP_JUMP_TBL(0x40, IL_0040)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x40, IL_0040)
 	}
 
 IL_0040:
@@ -31710,7 +31710,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Graphic_DoMeshGeneration_m753A422F3F1892
 
 IL_004f:
 	{
-		// s_VertexHelper.Clear(); // clear the vertex helper so invalid graphics dont draw.
+		// s_VertexHelper.Clear(); 
 		IL2CPP_RUNTIME_CLASS_INIT(Graphic_tF07D777035055CF93BA5F46F77ED5EDFEFF9AE24_il2cpp_TypeInfo_var);
 		VertexHelper_tDE8B67D3B076061C4F8DF325B0D63ED2E5367E55 * L_9 = ((Graphic_tF07D777035055CF93BA5F46F77ED5EDFEFF9AE24_StaticFields*)il2cpp_codegen_static_fields_for(Graphic_tF07D777035055CF93BA5F46F77ED5EDFEFF9AE24_il2cpp_TypeInfo_var))->get_s_VertexHelper_21();
 		NullCheck(L_9);
@@ -33092,7 +33092,7 @@ IL_0026:
 
 IL_0027:
 	{
-		// var currentEventCamera = eventCamera; // Property can call Camera.main, so cache the reference
+		// var currentEventCamera = eventCamera; 
 		Camera_tC44E094BAB53AFC8A014C6F9CFCE11F4FC38006C * L_7 = VirtFuncInvoker0< Camera_tC44E094BAB53AFC8A014C6F9CFCE11F4FC38006C * >::Invoke(18 /* UnityEngine.Camera UnityEngine.EventSystems.BaseRaycaster::get_eventCamera() */, __this);
 		V_2 = L_7;
 		// if (canvas.renderMode == RenderMode.ScreenSpaceOverlay || currentEventCamera == null)

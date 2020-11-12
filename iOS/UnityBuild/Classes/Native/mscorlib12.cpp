@@ -18039,8 +18039,8 @@ inline int32_t List_1_get_Count_m64EDE1B7CD96820C6D67BE9DDDBD54DDA17B8862_inline
 {
 	return ((  int32_t (*) (List_1_t2E1FC7879E18926B1538DD0D2EF267881194A7B9 *, const RuntimeMethod*))List_1_get_Count_m5D847939ABB9A78203B062CAFFE975792174D00F_gshared_inline)(__this, method);
 }
-// System.TimeZoneInfo System.TimeZoneInfo::get_Local()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TimeZoneInfo_t6988042963E068DC7DE283E2D0902C0B8A40C074 * TimeZoneInfo_get_Local_m2C2645D8BAB720A34942820DD3DC1A541BEC51C9 (const RuntimeMethod* method);
+// System.TimeZoneInfo System.TimeZoneInfo::GetLocalTimeZoneInfoWinRTFallback()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TimeZoneInfo_t6988042963E068DC7DE283E2D0902C0B8A40C074 * TimeZoneInfo_GetLocalTimeZoneInfoWinRTFallback_m92590D5E9A138A3887E6759C45BE062996CABD1E (const RuntimeMethod* method);
 // System.TimeZoneInfo System.TimeZoneInfo::CreateLocal()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TimeZoneInfo_t6988042963E068DC7DE283E2D0902C0B8A40C074 * TimeZoneInfo_CreateLocal_mD3D9431E8B195C7F509B23B864179888F59122C5 (const RuntimeMethod* method);
 // System.Int32 System.TimeZoneInfo::readlink(System.String,System.Byte[],System.Int32)
@@ -18077,8 +18077,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* TimeZoneInfo_TrimSpecial_mD20B89B2D
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* TimeZoneInfo_GetLocalTimeZoneKeyNameWin32Fallback_mC662B16788AA02463A16D38E34FCE3F0343C2A77 (const RuntimeMethod* method);
 // System.TimeZoneInfo System.TimeZoneInfo::FindSystemTimeZoneById(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TimeZoneInfo_t6988042963E068DC7DE283E2D0902C0B8A40C074 * TimeZoneInfo_FindSystemTimeZoneById_m1B3F91F805451B17B1D63EF30572A67768241987 (String_t* ___id0, const RuntimeMethod* method);
-// System.TimeZoneInfo System.TimeZoneInfo::GetLocalTimeZoneInfoWinRTFallback()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TimeZoneInfo_t6988042963E068DC7DE283E2D0902C0B8A40C074 * TimeZoneInfo_GetLocalTimeZoneInfoWinRTFallback_m92590D5E9A138A3887E6759C45BE062996CABD1E (const RuntimeMethod* method);
 // System.TimeZoneInfo System.TimeZoneInfo::CreateLocalUnity()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TimeZoneInfo_t6988042963E068DC7DE283E2D0902C0B8A40C074 * TimeZoneInfo_CreateLocalUnity_mFAA3244580776472BC45D7F1D52C9D066594CF49 (const RuntimeMethod* method);
 // System.TimeZoneInfo System.TimeZoneInfo::FindSystemTimeZoneByFileName(System.String,System.String)
@@ -18122,6 +18120,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_tEAF2CD16E071DF5441F40822E4CFE880E52
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DateTime__ctor_mD17BC147184B06220C3FD44EBF50238A3894ADD7 (DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405 * __this, int64_t ___ticks0, int32_t ___kind1, const RuntimeMethod* method);
 // System.DateTimeKind System.DateTime::get_Kind()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t DateTime_get_Kind_mC7EC1A788CC9A875094117214C5A0C153A39F496 (DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405 * __this, const RuntimeMethod* method);
+// System.TimeZoneInfo System.TimeZoneInfo::get_Local()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TimeZoneInfo_t6988042963E068DC7DE283E2D0902C0B8A40C074 * TimeZoneInfo_get_Local_m2C2645D8BAB720A34942820DD3DC1A541BEC51C9 (const RuntimeMethod* method);
 // System.Boolean System.TimeZoneInfo::IsInvalidTime(System.DateTime)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TimeZoneInfo_IsInvalidTime_mD053AD3F8E1EEAF96B077BA6D7DA8264DE3C27F6 (TimeZoneInfo_t6988042963E068DC7DE283E2D0902C0B8A40C074 * __this, DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405  ___dateTime0, const RuntimeMethod* method);
 // System.DateTime System.TimeZoneInfo::ConvertTimeToUtc(System.DateTime,System.TimeZoneInfo)
@@ -18608,8 +18608,8 @@ IL_002c:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(35)
 	{
-		IL2CPP_JUMP_TBL(0x2D, IL_002d)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x2D, IL_002d)
 	}
 
 IL_002d:
@@ -18683,8 +18683,8 @@ IL_0027:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(30)
 	{
-		IL2CPP_JUMP_TBL(0x28, IL_0028)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x28, IL_0028)
 	}
 
 IL_0028:
@@ -20754,8 +20754,8 @@ IL_0055:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(76)
 	{
-		IL2CPP_JUMP_TBL(0x56, IL_0056)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x56, IL_0056)
 	}
 
 IL_0056:
@@ -21203,8 +21203,8 @@ IL_0084:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(123)
 	{
-		IL2CPP_JUMP_TBL(0x85, IL_0085)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x85, IL_0085)
 	}
 
 IL_0085:
@@ -21525,8 +21525,8 @@ IL_005f:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(86)
 	{
-		IL2CPP_JUMP_TBL(0x60, IL_0060)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x60, IL_0060)
 	}
 
 IL_0060:
@@ -21700,8 +21700,8 @@ FINALLY_0078:
 		} // end finally (depth: 2)
 		IL2CPP_CLEANUP(120)
 		{
-			IL2CPP_END_CLEANUP(0x90, FINALLY_0086);
 			IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+			IL2CPP_END_CLEANUP(0x90, FINALLY_0086);
 		}
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
@@ -21733,8 +21733,8 @@ IL_008f:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(134)
 	{
-		IL2CPP_JUMP_TBL(0x90, IL_0090)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x90, IL_0090)
 	}
 
 IL_0090:
@@ -22255,8 +22255,8 @@ FINALLY_0070:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(112)
 	{
-		IL2CPP_JUMP_TBL(0x74, IL_0074)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x74, IL_0074)
 	}
 
 IL_0074:
@@ -22829,8 +22829,8 @@ IL_0068:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(89)
 	{
-		IL2CPP_JUMP_TBL(0x69, IL_0069)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x69, IL_0069)
 	}
 
 IL_0069:
@@ -23543,8 +23543,8 @@ IL_00f1:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(230)
 	{
-		IL2CPP_JUMP_TBL(0xF2, IL_00f2)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0xF2, IL_00f2)
 	}
 
 IL_00f2:
@@ -24197,9 +24197,9 @@ IL_00a0:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(150)
 	{
+		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
 		IL2CPP_JUMP_TBL(0xA3, IL_00a3)
 		IL2CPP_JUMP_TBL(0xA1, IL_00a1)
-		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
 	}
 
 IL_00a1:
@@ -24423,8 +24423,8 @@ IL_0083:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(122)
 	{
-		IL2CPP_JUMP_TBL(0x84, IL_0084)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x84, IL_0084)
 	}
 
 IL_0084:
@@ -25564,9 +25564,9 @@ IL_00a3:
 			} // end finally (depth: 3)
 			IL2CPP_CLEANUP(152)
 			{
+				IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
 				IL2CPP_END_CLEANUP(0x10C, FINALLY_00b9);
 				IL2CPP_JUMP_TBL(0xAE, IL_00ae)
-				IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
 			}
 
 IL_00a4:
@@ -25610,9 +25610,9 @@ FINALLY_00b9:
 		} // end finally (depth: 2)
 		IL2CPP_CLEANUP(185)
 		{
+			IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
 			IL2CPP_END_CLEANUP(0x10C, FINALLY_0105);
 			IL2CPP_JUMP_TBL(0xC7, IL_00c7)
-			IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
 		}
 
 IL_00c7:
@@ -25674,8 +25674,8 @@ FINALLY_0105:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(261)
 	{
-		IL2CPP_JUMP_TBL(0x10C, IL_010c)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x10C, IL_010c)
 	}
 
 IL_010c:
@@ -25920,8 +25920,8 @@ IL_0087:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(124)
 	{
-		IL2CPP_JUMP_TBL(0xB3, IL_00b3)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0xB3, IL_00b3)
 	}
 
 IL_0088:
@@ -26615,8 +26615,8 @@ FINALLY_0057:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(87)
 	{
-		IL2CPP_JUMP_TBL(0x5E, IL_005e)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x5E, IL_005e)
 	}
 
 IL_005e:
@@ -26945,8 +26945,8 @@ IL_002c:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(35)
 	{
-		IL2CPP_JUMP_TBL(0x2D, IL_002d)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x2D, IL_002d)
 	}
 
 IL_002d:
@@ -27983,8 +27983,8 @@ IL_030f:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(774)
 	{
-		IL2CPP_JUMP_TBL(0x310, IL_0310)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x310, IL_0310)
 	}
 
 IL_0310:
@@ -30952,8 +30952,8 @@ IL_008e:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(133)
 	{
-		IL2CPP_JUMP_TBL(0x8F, IL_008f)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x8F, IL_008f)
 	}
 
 IL_008f:
@@ -35520,8 +35520,8 @@ FINALLY_0002:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(2)
 	{
-		IL2CPP_JUMP_TBL(0x9, IL_0009)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x9, IL_0009)
 	}
 
 IL_0009:
@@ -36323,8 +36323,8 @@ FINALLY_000c:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(12)
 	{
-		IL2CPP_JUMP_TBL(0x30, IL_0030)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x30, IL_0030)
 	}
 
 IL_0025:
@@ -36383,8 +36383,8 @@ FINALLY_0007:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(7)
 	{
-		IL2CPP_JUMP_TBL(0x14, IL_0014)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x14, IL_0014)
 	}
 
 IL_0014:
@@ -36757,8 +36757,8 @@ IL_0022:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(25)
 	{
-		IL2CPP_JUMP_TBL(0x23, IL_0023)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x23, IL_0023)
 	}
 
 IL_0023:
@@ -37415,8 +37415,8 @@ IL_0040:
 			} // end finally (depth: 3)
 			IL2CPP_CLEANUP(35)
 			{
-				IL2CPP_JUMP_TBL(0x41, IL_0041)
 				IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+				IL2CPP_JUMP_TBL(0x41, IL_0041)
 			}
 
 IL_0041:
@@ -37470,8 +37470,8 @@ FINALLY_0055:
 				} // end finally (depth: 4)
 				IL2CPP_CLEANUP(85)
 				{
-					IL2CPP_JUMP_TBL(0x5F, IL_005f)
 					IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+					IL2CPP_JUMP_TBL(0x5F, IL_005f)
 				}
 
 IL_005f:
@@ -37511,8 +37511,8 @@ IL_0073:
 			} // end finally (depth: 3)
 			IL2CPP_CLEANUP(105)
 			{
-				IL2CPP_JUMP_TBL(0x7C, IL_007c)
 				IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+				IL2CPP_JUMP_TBL(0x7C, IL_007c)
 			}
 
 IL_0074:
@@ -37620,9 +37620,9 @@ IL_00b7:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(174)
 	{
+		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
 		IL2CPP_JUMP_TBL(0xBA, IL_00ba)
 		IL2CPP_JUMP_TBL(0xB8, IL_00b8)
-		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
 	}
 
 IL_00b8:
@@ -37776,8 +37776,8 @@ IL_0039:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(23)
 	{
-		IL2CPP_JUMP_TBL(0x3A, IL_003a)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x3A, IL_003a)
 	}
 
 IL_003a:
@@ -37859,8 +37859,8 @@ FINALLY_001b:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(27)
 	{
-		IL2CPP_JUMP_TBL(0x22, IL_0022)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x22, IL_0022)
 	}
 
 IL_0022:
@@ -38986,7 +38986,7 @@ IL_0295:
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 // System.Void Unity.ThrowStub::ThrowNotSupportedException()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ThrowStub_ThrowNotSupportedException_m444FE43EC18FD663FAA5357303625AEC9444F417 ()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ThrowStub_ThrowNotSupportedException_m444FE43EC18FD663FAA5357303625AEC9444F417 (const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -42888,9 +42888,9 @@ IL_003a:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(49)
 	{
+		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
 		IL2CPP_JUMP_TBL(0x41, IL_0041)
 		IL2CPP_JUMP_TBL(0x3B, IL_003b)
-		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
 	}
 
 IL_003b:
@@ -42920,6 +42920,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t2E1FC7879E18926B1538DD0D2EF267881194A
 	DYNAMIC_TIME_ZONE_INFORMATION_t2A935E4357B99965B322E468058134B139805895  V_2;
 	memset((&V_2), 0, sizeof(V_2));
 	TimeZoneInfo_t6988042963E068DC7DE283E2D0902C0B8A40C074 * V_3 = NULL;
+	TimeZoneInfo_t6988042963E068DC7DE283E2D0902C0B8A40C074 * V_4 = NULL;
 	Exception_t * __last_unhandled_exception = 0;
 	NO_UNUSED_WARNING (__last_unhandled_exception);
 	Exception_t * __exception_local = 0;
@@ -42967,51 +42968,67 @@ IL_001b:
 			uint32_t L_7 = L_6;
 			V_1 = ((int32_t)il2cpp_codegen_add((int32_t)L_7, (int32_t)1));
 			uint32_t L_8 = TimeZoneInfo_EnumDynamicTimeZoneInformation_m5BD6353BB87D591EC214D51E1BC2B4FE4BCAB78F(L_7, (DYNAMIC_TIME_ZONE_INFORMATION_t2A935E4357B99965B322E468058134B139805895 *)(&V_2), /*hidden argument*/NULL);
-			if ((!(((uint32_t)L_8) == ((uint32_t)((int32_t)259)))))
+			if (!L_8)
 			{
 				goto IL_000a;
 			}
 		}
 
-IL_002e:
+IL_0029:
 		{
-			goto IL_0033;
+			goto IL_002e;
 		}
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
 	{
 		__exception_local = (Exception_t *)e.ex;
 		if(il2cpp_codegen_class_is_assignable_from (RuntimeObject_il2cpp_TypeInfo_var, il2cpp_codegen_object_class(e.ex)))
-			goto CATCH_0030;
+			goto CATCH_002b;
 		throw e;
 	}
 
-CATCH_0030:
+CATCH_002b:
 	{ // begin catch(System.Object)
-		goto IL_0033;
+		goto IL_002e;
 	} // end catch (depth: 1)
 
-IL_0033:
+IL_002e:
 	{
 		List_1_t2E1FC7879E18926B1538DD0D2EF267881194A7B9 * L_9 = V_0;
 		NullCheck(L_9);
 		int32_t L_10 = List_1_get_Count_m64EDE1B7CD96820C6D67BE9DDDBD54DDA17B8862_inline(L_9, /*hidden argument*/List_1_get_Count_m64EDE1B7CD96820C6D67BE9DDDBD54DDA17B8862_RuntimeMethod_var);
 		if (L_10)
 		{
-			goto IL_0046;
+			goto IL_005b;
 		}
 	}
 	{
-		List_1_t2E1FC7879E18926B1538DD0D2EF267881194A7B9 * L_11 = V_0;
-		TimeZoneInfo_t6988042963E068DC7DE283E2D0902C0B8A40C074 * L_12 = TimeZoneInfo_get_Local_m2C2645D8BAB720A34942820DD3DC1A541BEC51C9(/*hidden argument*/NULL);
-		NullCheck(L_11);
-		List_1_Add_mD0E00420B796DFDBC6ED9055EC43BBE4A8004964(L_11, L_12, /*hidden argument*/List_1_Add_mD0E00420B796DFDBC6ED9055EC43BBE4A8004964_RuntimeMethod_var);
+		TimeZoneInfo_t6988042963E068DC7DE283E2D0902C0B8A40C074 * L_11 = TimeZoneInfo_GetLocalTimeZoneInfoWinRTFallback_m92590D5E9A138A3887E6759C45BE062996CABD1E(/*hidden argument*/NULL);
+		V_4 = L_11;
+		TimeZoneInfo_t6988042963E068DC7DE283E2D0902C0B8A40C074 * L_12 = V_4;
+		TimeZoneInfo_t6988042963E068DC7DE283E2D0902C0B8A40C074 * L_13 = InterlockedCompareExchangeImpl<TimeZoneInfo_t6988042963E068DC7DE283E2D0902C0B8A40C074 *>((TimeZoneInfo_t6988042963E068DC7DE283E2D0902C0B8A40C074 **)(((TimeZoneInfo_t6988042963E068DC7DE283E2D0902C0B8A40C074_StaticFields*)il2cpp_codegen_static_fields_for(TimeZoneInfo_t6988042963E068DC7DE283E2D0902C0B8A40C074_il2cpp_TypeInfo_var))->get_address_of_local_4()), L_12, (TimeZoneInfo_t6988042963E068DC7DE283E2D0902C0B8A40C074 *)NULL);
+		if (!L_13)
+		{
+			goto IL_0053;
+		}
+	}
+	{
+		TimeZoneInfo_t6988042963E068DC7DE283E2D0902C0B8A40C074 * L_14 = ((TimeZoneInfo_t6988042963E068DC7DE283E2D0902C0B8A40C074_StaticFields*)il2cpp_codegen_static_fields_for(TimeZoneInfo_t6988042963E068DC7DE283E2D0902C0B8A40C074_il2cpp_TypeInfo_var))->get_local_4();
+		V_4 = L_14;
 	}
 
-IL_0046:
+IL_0053:
 	{
-		List_1_t2E1FC7879E18926B1538DD0D2EF267881194A7B9 * L_13 = V_0;
-		return L_13;
+		List_1_t2E1FC7879E18926B1538DD0D2EF267881194A7B9 * L_15 = V_0;
+		TimeZoneInfo_t6988042963E068DC7DE283E2D0902C0B8A40C074 * L_16 = V_4;
+		NullCheck(L_15);
+		List_1_Add_mD0E00420B796DFDBC6ED9055EC43BBE4A8004964(L_15, L_16, /*hidden argument*/List_1_Add_mD0E00420B796DFDBC6ED9055EC43BBE4A8004964_RuntimeMethod_var);
+	}
+
+IL_005b:
+	{
+		List_1_t2E1FC7879E18926B1538DD0D2EF267881194A7B9 * L_17 = V_0;
+		return L_17;
 	}
 }
 // System.TimeSpan System.TimeZoneInfo::get_BaseUtcOffset()
@@ -43853,9 +43870,9 @@ IL_0043:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(58)
 	{
+		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
 		IL2CPP_JUMP_TBL(0x50, IL_0050)
 		IL2CPP_JUMP_TBL(0x44, IL_0044)
-		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
 	}
 
 IL_0044:
@@ -45290,8 +45307,8 @@ IL_0032:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(41)
 	{
-		IL2CPP_JUMP_TBL(0x33, IL_0033)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x33, IL_0033)
 	}
 
 IL_0033:

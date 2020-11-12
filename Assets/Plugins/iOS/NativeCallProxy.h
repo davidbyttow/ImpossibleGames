@@ -5,8 +5,9 @@
 
 @protocol NativeCallsProtocol
 @required
+- (void)unityOnLauncherStarted;
+- (void)unityOnGameStarted;
 - (void)unityLeaveGame;
-- (void)unityOnGameStart;
 - (NSString *)unityGetRequestedScene;
 @end
 

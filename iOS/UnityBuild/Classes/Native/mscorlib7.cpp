@@ -15117,8 +15117,8 @@ IL_00cc:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(188)
 	{
-		IL2CPP_JUMP_TBL(0xCD, IL_00cd)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0xCD, IL_00cd)
 	}
 
 IL_00cd:
@@ -17181,8 +17181,8 @@ IL_00e7:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(215)
 	{
-		IL2CPP_JUMP_TBL(0xE8, IL_00e8)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0xE8, IL_00e8)
 	}
 
 IL_00e8:
@@ -23379,8 +23379,8 @@ IL_0022:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(25)
 	{
-		IL2CPP_JUMP_TBL(0x23, IL_0023)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x23, IL_0023)
 	}
 
 IL_0023:
@@ -23769,8 +23769,8 @@ IL_0026:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(29)
 	{
-		IL2CPP_JUMP_TBL(0x27, IL_0027)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x27, IL_0027)
 	}
 
 IL_0027:
@@ -23856,8 +23856,8 @@ IL_0026:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(29)
 	{
-		IL2CPP_JUMP_TBL(0x27, IL_0027)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x27, IL_0027)
 	}
 
 IL_0027:
@@ -23942,8 +23942,8 @@ IL_0024:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(27)
 	{
-		IL2CPP_JUMP_TBL(0x25, IL_0025)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x25, IL_0025)
 	}
 
 IL_0025:
@@ -24026,8 +24026,8 @@ IL_0022:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(25)
 	{
-		IL2CPP_JUMP_TBL(0x23, IL_0023)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x23, IL_0023)
 	}
 
 IL_0023:
@@ -28739,8 +28739,8 @@ IL_0021:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(24)
 	{
-		IL2CPP_JUMP_TBL(0x22, IL_0022)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x22, IL_0022)
 	}
 
 IL_0022:
@@ -28815,8 +28815,8 @@ IL_0021:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(24)
 	{
-		IL2CPP_JUMP_TBL(0x22, IL_0022)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x22, IL_0022)
 	}
 
 IL_0022:
@@ -30995,8 +30995,8 @@ IL_007f:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(116)
 	{
-		IL2CPP_JUMP_TBL(0x80, IL_0080)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x80, IL_0080)
 	}
 
 IL_0080:

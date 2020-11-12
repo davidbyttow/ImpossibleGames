@@ -302,7 +302,8 @@ extern "C" void PresentMTL(UnityDisplaySurfaceMTL* surface)
 {
     if (surface->drawable)
     {
-    #if PLATFORM_IOS || PLATFORM_TVOS
+        // for some reason presentDrawable: afterMinimumDuration: is missing from simulator headers completely in xcode 12
+    #if (PLATFORM_IOS || PLATFORM_TVOS) && !(TARGET_IPHONE_SIMULATOR || TARGET_TVOS_SIMULATOR)
         const int targetFPS = UnityGetTargetFPS(); assert(targetFPS > 0);
         [UnityCurrentMTLCommandBuffer() presentDrawable: surface->drawable afterMinimumDuration: 1.0 / targetFPS];
         return;

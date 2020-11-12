@@ -16763,7 +16763,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Object_ToString_m6EEDE9678ACEB962C5
 	}
 }
 // System.Boolean System.Object::ReferenceEquals(System.Object,System.Object)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Object_ReferenceEquals_mA7C1CBF0A14206E38473230C8A96D23EFECE6A1F (RuntimeObject * ___objA0, RuntimeObject * ___objB1)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Object_ReferenceEquals_mA7C1CBF0A14206E38473230C8A96D23EFECE6A1F (RuntimeObject * ___objA0, RuntimeObject * ___objB1, const RuntimeMethod* method)
 {
 	{
 		RuntimeObject * L_0 = ___objA0;
@@ -39947,8 +39947,8 @@ FINALLY_0009:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(9)
 	{
-		IL2CPP_JUMP_TBL(0x10, IL_0010)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x10, IL_0010)
 	}
 
 IL_0010:
@@ -41452,8 +41452,8 @@ IL_009d:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(141)
 	{
-		IL2CPP_JUMP_TBL(0x9E, IL_009e)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x9E, IL_009e)
 	}
 
 IL_009e:
@@ -41556,8 +41556,8 @@ IL_00fc:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(236)
 	{
-		IL2CPP_JUMP_TBL(0xFD, IL_00fd)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0xFD, IL_00fd)
 	}
 
 IL_00fd:

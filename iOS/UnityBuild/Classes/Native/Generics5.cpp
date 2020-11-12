@@ -17140,8 +17140,8 @@ FINALLY_0015:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(21)
 	{
-		IL2CPP_JUMP_TBL(0x1D, IL_001d)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x1D, IL_001d)
 	}
 
 IL_001d:
@@ -17787,8 +17787,8 @@ IL_00dd:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(212)
 	{
-		IL2CPP_JUMP_TBL(0xDE, IL_00de)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0xDE, IL_00de)
 	}
 
 IL_00de:

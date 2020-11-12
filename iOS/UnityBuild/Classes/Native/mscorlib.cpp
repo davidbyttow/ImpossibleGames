@@ -22149,8 +22149,8 @@ IL_009f:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(139)
 	{
-		IL2CPP_JUMP_TBL(0xA0, IL_00a0)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0xA0, IL_00a0)
 	}
 
 IL_00a0:
@@ -22309,8 +22309,8 @@ IL_0135:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(289)
 	{
-		IL2CPP_JUMP_TBL(0x136, IL_0136)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x136, IL_0136)
 	}
 
 IL_0136:
@@ -23959,8 +23959,8 @@ IL_003d:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(46)
 	{
-		IL2CPP_JUMP_TBL(0x3E, IL_003e)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x3E, IL_003e)
 	}
 
 IL_003e:
@@ -24265,8 +24265,8 @@ FINALLY_009b:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(155)
 	{
-		IL2CPP_JUMP_TBL(0xA4, IL_00a4)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0xA4, IL_00a4)
 	}
 
 IL_00a4:
@@ -24430,8 +24430,8 @@ FINALLY_007e:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(126)
 	{
-		IL2CPP_JUMP_TBL(0x87, IL_0087)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x87, IL_0087)
 	}
 
 IL_0087:
@@ -32151,7 +32151,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ModuleU5BU5D_tAA28E913DE93D09F4F14AF37DFB1EF4
 	return  ((Assembly_GetModulesInternal_mE8EF45AB2C0C797342C6AAA23905A7CBA9C00FEE_ftn)mscorlib::System::Reflection::Assembly::GetModulesInternal) (__this);
 }
 // System.Reflection.Assembly System.Reflection.Assembly::GetExecutingAssembly()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Assembly_t * Assembly_GetExecutingAssembly_m990AB6145F5E80CC3CC8912043DC18497C2369EB ()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Assembly_t * Assembly_GetExecutingAssembly_m990AB6145F5E80CC3CC8912043DC18497C2369EB (const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -32892,8 +32892,8 @@ FINALLY_005f:
 		} // end finally (depth: 2)
 		IL2CPP_CLEANUP(95)
 		{
-			IL2CPP_END_CLEANUP(0x76, FINALLY_0068);
 			IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+			IL2CPP_END_CLEANUP(0x76, FINALLY_0068);
 		}
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
@@ -32909,8 +32909,8 @@ FINALLY_0068:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(104)
 	{
-		IL2CPP_JUMP_TBL(0x76, IL_0076)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x76, IL_0076)
 	}
 
 IL_0076:
@@ -35196,8 +35196,8 @@ IL_0037:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(46)
 	{
-		IL2CPP_JUMP_TBL(0x38, IL_0038)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x38, IL_0038)
 	}
 
 IL_0038:
@@ -35367,9 +35367,9 @@ IL_0028:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(31)
 	{
+		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
 		IL2CPP_JUMP_TBL(0x3C, IL_003c)
 		IL2CPP_JUMP_TBL(0x29, IL_0029)
-		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
 	}
 
 IL_0029:
@@ -35467,8 +35467,8 @@ IL_003e:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(53)
 	{
-		IL2CPP_JUMP_TBL(0x3F, IL_003f)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x3F, IL_003f)
 	}
 
 IL_003f:
@@ -36906,8 +36906,8 @@ FINALLY_002e:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(46)
 	{
-		IL2CPP_JUMP_TBL(0x3A, IL_003a)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x3A, IL_003a)
 	}
 
 IL_003a:
@@ -37130,8 +37130,8 @@ IL_004a:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(49)
 	{
-		IL2CPP_JUMP_TBL(0x4B, IL_004b)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x4B, IL_004b)
 	}
 
 IL_004b:
@@ -37260,8 +37260,8 @@ IL_0031:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(43)
 	{
-		IL2CPP_JUMP_TBL(0x32, IL_0032)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x32, IL_0032)
 	}
 
 IL_0032:
@@ -39761,8 +39761,8 @@ IL_0054:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(75)
 	{
-		IL2CPP_JUMP_TBL(0x55, IL_0055)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x55, IL_0055)
 	}
 
 IL_0055:

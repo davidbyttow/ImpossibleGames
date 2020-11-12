@@ -14563,7 +14563,7 @@ IL_017d:
 		}
 	}
 	{
-		// nVertices = (nTilesW + 2.0) * (nTilesH + 2.0) * 4.0; // 4 vertices per tile
+		// nVertices = (nTilesW + 2.0) * (nTilesH + 2.0) * 4.0; 
 		int64_t L_80 = V_15;
 		int64_t L_81 = V_16;
 		V_17 = ((double)il2cpp_codegen_multiply((double)((double)il2cpp_codegen_multiply((double)((double)il2cpp_codegen_add((double)(((double)((double)L_80))), (double)(2.0))), (double)((double)il2cpp_codegen_add((double)(((double)((double)L_81))), (double)(2.0))))), (double)(4.0)));
@@ -14573,7 +14573,7 @@ IL_017d:
 
 IL_01ee:
 	{
-		// nVertices = nTilesW * nTilesH * 4.0; // 4 vertices per tile
+		// nVertices = nTilesW * nTilesH * 4.0; 
 		int64_t L_82 = V_15;
 		int64_t L_83 = V_16;
 		V_17 = ((double)il2cpp_codegen_multiply((double)(((double)((double)((int64_t)il2cpp_codegen_multiply((int64_t)L_82, (int64_t)L_83))))), (double)(4.0)));
@@ -14594,7 +14594,7 @@ IL_0200:
 		String_t* L_86 = String_Concat_m89EAB4C6A96B0E5C3F87300D6BE78D386B9EFC44(_stringLiteral109026A74E40125B82680DF886A9C0EC889E8AF9, L_85, _stringLiteralA2173363298560C5C3C943D7C44C7048F4755B84, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
 		Debug_LogError_mEFF048E5541EE45362C0AAD829E3FA4C2CAB9199(L_86, __this, /*hidden argument*/NULL);
-		// double maxTiles = 65000.0 / 4.0; // Max number of vertices is 65000; 4 vertices per tile.
+		// double maxTiles = 65000.0 / 4.0; 
 		// if (hasBorder)
 		bool L_87 = Image_get_hasBorder_m444A40E69275ED3748079EBF6D6FD489FD17CA51(__this, /*hidden argument*/NULL);
 		G_B17_0 = (16250.0);
@@ -14713,7 +14713,7 @@ IL_02c8:
 		String_t* L_121 = String_Concat_m89EAB4C6A96B0E5C3F87300D6BE78D386B9EFC44(_stringLiteral109026A74E40125B82680DF886A9C0EC889E8AF9, L_120, _stringLiteralA2173363298560C5C3C943D7C44C7048F4755B84, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
 		Debug_LogError_mEFF048E5541EE45362C0AAD829E3FA4C2CAB9199(L_121, __this, /*hidden argument*/NULL);
-		// double maxTiles = 65000.0 / 4.0; // Max number of vertices is 65000; 4 vertices per tile.
+		// double maxTiles = 65000.0 / 4.0; 
 		// double imageRatio = (double)nTilesW / nTilesH;
 		int64_t L_122 = V_15;
 		int64_t L_123 = V_16;
@@ -18380,7 +18380,7 @@ IL_000f:
 
 IL_0019:
 	{
-		// value = value.Replace("\0", string.Empty); // remove embedded nulls
+		// value = value.Replace("\0", string.Empty); 
 		String_t* L_4 = ___value0;
 		String_t* L_5 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->get_Empty_5();
 		NullCheck(L_4);
@@ -24759,7 +24759,7 @@ IL_02bd:
 
 IL_02c6:
 	{
-		// ++m_DrawStart;  // move right one to the last character we could fit on the left
+		// ++m_DrawStart;  
 		int32_t L_142 = __this->get_m_DrawStart_59();
 		__this->set_m_DrawStart_59(((int32_t)il2cpp_codegen_add((int32_t)L_142, (int32_t)1)));
 		// }
@@ -25424,8 +25424,8 @@ IL_0054:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(75)
 	{
-		IL2CPP_JUMP_TBL(0x55, IL_0055)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x55, IL_0055)
 	}
 
 IL_0055:
@@ -26919,7 +26919,7 @@ IL_01d8:
 		}
 	}
 	{
-		// if (pos != 0) // Don't allow leading spaces
+		// if (pos != 0) 
 		int32_t L_91 = ___pos1;
 		if (!L_91)
 		{

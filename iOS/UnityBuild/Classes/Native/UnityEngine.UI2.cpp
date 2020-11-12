@@ -14499,19 +14499,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PointerEventData__ctor_m3A877590C20995B4
 		PointerEventData_set_eligibleForClick_m5CFAF671C2B33AF8E9153FA4826D93B9308C4C07_inline(__this, (bool)0, /*hidden argument*/NULL);
 		// pointerId = -1;
 		PointerEventData_set_pointerId_m7CD30C18A42AD6A99B435816B58F6CFDF42777D4_inline(__this, (-1), /*hidden argument*/NULL);
-		// position = Vector2.zero; // Current position of the mouse or touch event
+		// position = Vector2.zero; 
 		IL2CPP_RUNTIME_CLASS_INIT(Vector2_tBB32F2736AEC229A7BFBCE18197EC0F6AC7EC2D9_il2cpp_TypeInfo_var);
 		Vector2_tBB32F2736AEC229A7BFBCE18197EC0F6AC7EC2D9  L_2 = Vector2_get_zero_m621041B9DF5FAE86C1EF4CB28C224FEA089CB828(/*hidden argument*/NULL);
 		PointerEventData_set_position_m65960EBCA54317C91CEFFC4893466F87FB168BBF_inline(__this, L_2, /*hidden argument*/NULL);
-		// delta = Vector2.zero; // Delta since last update
+		// delta = Vector2.zero; 
 		Vector2_tBB32F2736AEC229A7BFBCE18197EC0F6AC7EC2D9  L_3 = Vector2_get_zero_m621041B9DF5FAE86C1EF4CB28C224FEA089CB828(/*hidden argument*/NULL);
 		PointerEventData_set_delta_m30E0BE702A57A13FEA52CA55D4B29DDE66931261_inline(__this, L_3, /*hidden argument*/NULL);
-		// pressPosition = Vector2.zero; // Delta since the event started being tracked
+		// pressPosition = Vector2.zero; 
 		Vector2_tBB32F2736AEC229A7BFBCE18197EC0F6AC7EC2D9  L_4 = Vector2_get_zero_m621041B9DF5FAE86C1EF4CB28C224FEA089CB828(/*hidden argument*/NULL);
 		PointerEventData_set_pressPosition_mE644EE1603DFF2087224FF6364EA0204D04D7939_inline(__this, L_4, /*hidden argument*/NULL);
-		// clickTime = 0.0f; // The last time a click event was sent out (used for double-clicks)
+		// clickTime = 0.0f; 
 		PointerEventData_set_clickTime_m215E254F8585FFC518E3161FAF9137388F64AC58_inline(__this, (0.0f), /*hidden argument*/NULL);
-		// clickCount = 0; // Number of clicks in a row. 2 for a double-click for example.
+		// clickCount = 0; 
 		PointerEventData_set_clickCount_m2EAAB7F43CE26BF505B7FCF7D509C988DCFD7F28_inline(__this, 0, /*hidden argument*/NULL);
 		// scrollDelta = Vector2.zero;
 		Vector2_tBB32F2736AEC229A7BFBCE18197EC0F6AC7EC2D9  L_5 = Vector2_get_zero_m621041B9DF5FAE86C1EF4CB28C224FEA089CB828(/*hidden argument*/NULL);
@@ -15688,8 +15688,8 @@ FINALLY_0035:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(53)
 	{
-		IL2CPP_JUMP_TBL(0x43, IL_0043)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x43, IL_0043)
 	}
 
 IL_0043:
@@ -15813,8 +15813,8 @@ FINALLY_0077:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(119)
 	{
-		IL2CPP_JUMP_TBL(0x85, IL_0085)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x85, IL_0085)
 	}
 
 IL_0085:
@@ -17417,8 +17417,8 @@ FINALLY_009f:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(159)
 	{
-		IL2CPP_JUMP_TBL(0xAD, IL_00ad)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0xAD, IL_00ad)
 	}
 
 IL_00ad:
@@ -17482,8 +17482,8 @@ FINALLY_00e0:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(224)
 	{
-		IL2CPP_JUMP_TBL(0x1B5, IL_01b5)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x1B5, IL_01b5)
 	}
 
 IL_00ee:
@@ -17549,8 +17549,8 @@ FINALLY_0120:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(288)
 	{
-		IL2CPP_JUMP_TBL(0x12E, IL_012e)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x12E, IL_012e)
 	}
 
 IL_012e:
@@ -17630,8 +17630,8 @@ FINALLY_0171:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(369)
 	{
-		IL2CPP_JUMP_TBL(0x1B5, IL_01b5)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x1B5, IL_01b5)
 	}
 
 IL_017f:
@@ -17689,8 +17689,8 @@ FINALLY_01a7:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(423)
 	{
-		IL2CPP_JUMP_TBL(0x1B5, IL_01b5)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x1B5, IL_01b5)
 	}
 
 IL_01b5:
@@ -17795,8 +17795,8 @@ FINALLY_0039:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(57)
 	{
-		IL2CPP_JUMP_TBL(0x47, IL_0047)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x47, IL_0047)
 	}
 
 IL_0047:
@@ -17855,8 +17855,8 @@ FINALLY_0077:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(119)
 	{
-		IL2CPP_JUMP_TBL(0x85, IL_0085)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x85, IL_0085)
 	}
 
 IL_0085:
@@ -19095,7 +19095,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScrollRect__ctor_mB4B056D158F001158736D4
 		__this->set_m_Elasticity_8((0.100000001f));
 		// private bool m_Inertia = true;
 		__this->set_m_Inertia_9((bool)1);
-		// private float m_DecelerationRate = 0.135f; // Only used when inertia is enabled
+		// private float m_DecelerationRate = 0.135f; 
 		__this->set_m_DecelerationRate_10((0.135000005f));
 		// private float m_ScrollSensitivity = 1.0f;
 		__this->set_m_ScrollSensitivity_11((1.0f));

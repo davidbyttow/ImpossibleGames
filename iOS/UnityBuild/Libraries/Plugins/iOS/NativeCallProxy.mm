@@ -22,8 +22,11 @@ extern "C" {
     return cString;
   }
 
-  void hostOnGameStart() {
-    return [gApi unityOnGameStart];
+  void hostOnLauncherStarted() {
+    return [gApi unityOnLauncherStarted];
+  }
+  void hostOnGameStarted() {
+    return [gApi unityOnGameStarted];
   }
   void hostLeaveGame() {
     return [gApi unityLeaveGame];

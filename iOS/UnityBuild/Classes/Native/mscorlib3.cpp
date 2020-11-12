@@ -33785,8 +33785,8 @@ IL_0039:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(48)
 	{
-		IL2CPP_JUMP_TBL(0x3A, IL_003a)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x3A, IL_003a)
 	}
 
 IL_003a:
@@ -33884,8 +33884,8 @@ IL_0039:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(48)
 	{
-		IL2CPP_JUMP_TBL(0x3A, IL_003a)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x3A, IL_003a)
 	}
 
 IL_003a:

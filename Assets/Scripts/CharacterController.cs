@@ -36,7 +36,6 @@ public class CharacterController : MonoBehaviour {
     rigidBody.gravityScale = gravityScale;
     rigidBody.isKinematic = false;
     rigidBody.freezeRotation = true;
-
     capsule = GetComponent<CapsuleCollider2D>();
     animator = GetComponent<Animator>();
   }

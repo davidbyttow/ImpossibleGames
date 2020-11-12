@@ -34,7 +34,6 @@
 		<type fullname="UnityEngine.RectTransform" preserve="nothing"/>
 		<type fullname="UnityEngine.CanvasRenderer" preserve="nothing"/>
 		<type fullname="UnityEngine.LightmapSettings" preserve="nothing"/>
-		<type fullname="UnityEngine.Grid" preserve="nothing"/>
 		<type fullname="UnityEngine.Rigidbody2D" preserve="nothing"/>
 		<type fullname="UnityEngine.CircleCollider2D" preserve="nothing"/>
 		<type fullname="UnityEngine.CapsuleCollider2D" preserve="nothing"/>
@@ -53,6 +52,7 @@
 		<type fullname="UnityEngine.Collider2D" preserve="nothing"/>
 		<type fullname="UnityEngine.Tilemaps.TilemapCollider2D" preserve="nothing"/>
 		<type fullname="UnityEngine.Tilemaps.TilemapRenderer" preserve="nothing"/>
+		<type fullname="UnityEngine.Grid" preserve="nothing"/>
 		<type fullname="UnityEngine.Motion" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Assembly-CSharp">

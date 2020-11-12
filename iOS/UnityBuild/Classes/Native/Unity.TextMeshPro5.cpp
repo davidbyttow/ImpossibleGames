@@ -206,8 +206,6 @@ struct VertexHelper_tDE8B67D3B076061C4F8DF325B0D63ED2E5367E55;
 struct Void_t700C6383A2A510C2CF4DD86DABD5CA9FF70ADAC5;
 // UnityEngine.Camera/CameraCallback
 struct CameraCallback_tD9E7B69E561CE2EFDEEDB0E7F1406AC52247160D;
-// TMPro.FloatTween/FloatTweenCallback
-struct FloatTweenCallback_tFA05DE1963C7BD69C06DEAD6FFA6C107A9E1D949;
 // TMPro.KerningTable/<>c
 struct U3CU3Ec_t703AFB8812FA710DAC810048091DD4D9E636B648;
 // TMPro.KerningTable/<>c__DisplayClass3_0
@@ -368,8 +366,6 @@ struct UnityEvent_1_tE94A30F9AFE4AA4FC678798F316885AAF982CE71;
 struct UnityEvent_1_tB235B5DAD099AC425DC059D10DEB8B97A35E2BBF;
 // UnityEngine.Events.UnityEvent`1<System.Object>
 struct UnityEvent_1_t32063FE815890FF672DF76288FAC4ABE089B899F;
-// UnityEngine.Events.UnityEvent`1<System.Single>
-struct UnityEvent_1_t84B4EA1A2A00DEAC63B85AFAA89EBF67CA749DBC;
 // UnityEngine.Events.UnityEvent`1<System.String>
 struct UnityEvent_1_t208A952325F66BFCB1EDEECEFEF5F1C7A16298A0;
 // UnityEngine.Events.UnityEvent`1<UnityEngine.TouchScreenKeyboard/Status>
@@ -558,7 +554,6 @@ IL2CPP_EXTERN_C const RuntimeMethod* U3CDelayedGraphicRebuildU3Ed__68_System_Col
 IL2CPP_EXTERN_C const RuntimeMethod* U3CDelayedMaterialRebuildU3Ed__69_System_Collections_IEnumerator_Reset_m0C4003960CC83A7C31D0B75B613F2D3E06DC9165_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CDoSpriteAnimationInternalU3Ed__7_System_Collections_IEnumerator_Reset_mF7642B8A220BF177AE66DB1DBC15777E278CAD4A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CMouseDragOutsideRectU3Ed__295_System_Collections_IEnumerator_Reset_m0A8B67F951F8FD3ADFC9BC61EB4BE9D0216F5655_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_1__ctor_m246DC0A35C4C4D26AD4DCE093E231B72C66C86ED_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_1__ctor_m30F443398054B5E3666B3C86E64A5C0FF97D93FF_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_1__ctor_m6BE511C6E228D223E41574F135EAC66A848F6E26_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_1__ctor_mD50FDA7FD92E5D18A75BF906A19D113AB769CDA8_RuntimeMethod_var;
@@ -566,7 +561,6 @@ IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_3__ctor_m0CD9C7A9A556BDC525BE6B4
 IL2CPP_EXTERN_C const uint32_t DropdownEvent__ctor_m41242E469297A3975AB11CB35B676913DD70057A_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t DropdownItem_OnCancel_m196D3679FC42B0CC8C86258952DD0CBF00F1DD21_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t DropdownItem_OnPointerEnter_m058BF6C85AD582E31D9658A9DA3ACE2FCB120E77_MetadataUsageId;
-IL2CPP_EXTERN_C const uint32_t FloatTweenCallback__ctor_m6BA05397B24B49801F5FBCE61C38FADCCFAA1368_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t OnChangeEvent__ctor_m0351D16DCB67E41A698902ECA7B0926B5FABF7D7_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t OnValidateInput_BeginInvoke_mE5AB68032F4BE249936D9C0283F1D34CDF83824D_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t OptionDataList__ctor_m9DBEB4F6E3CACDCC9030882A23254FBC581EB551_MetadataUsageId;
@@ -3356,25 +3350,6 @@ public:
 };
 
 
-// UnityEngine.Events.UnityEvent`1<System.Single>
-struct  UnityEvent_1_t84B4EA1A2A00DEAC63B85AFAA89EBF67CA749DBC  : public UnityEventBase_tBB43047292084BA63C5CBB1A379A8BB88611C6FB
-{
-public:
-	// System.Object[] UnityEngine.Events.UnityEvent`1::m_InvokeArray
-	ObjectU5BU5D_tC1F4EE0DB0B7300255F5FD4AF64FE4C585CF5ADE* ___m_InvokeArray_3;
-
-public:
-	inline static int32_t get_offset_of_m_InvokeArray_3() { return static_cast<int32_t>(offsetof(UnityEvent_1_t84B4EA1A2A00DEAC63B85AFAA89EBF67CA749DBC, ___m_InvokeArray_3)); }
-	inline ObjectU5BU5D_tC1F4EE0DB0B7300255F5FD4AF64FE4C585CF5ADE* get_m_InvokeArray_3() const { return ___m_InvokeArray_3; }
-	inline ObjectU5BU5D_tC1F4EE0DB0B7300255F5FD4AF64FE4C585CF5ADE** get_address_of_m_InvokeArray_3() { return &___m_InvokeArray_3; }
-	inline void set_m_InvokeArray_3(ObjectU5BU5D_tC1F4EE0DB0B7300255F5FD4AF64FE4C585CF5ADE* value)
-	{
-		___m_InvokeArray_3 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___m_InvokeArray_3), (void*)value);
-	}
-};
-
-
 // UnityEngine.Events.UnityEvent`1<System.String>
 struct  UnityEvent_1_t208A952325F66BFCB1EDEECEFEF5F1C7A16298A0  : public UnityEventBase_tBB43047292084BA63C5CBB1A379A8BB88611C6FB
 {
@@ -4904,24 +4879,6 @@ public:
 };
 
 
-// TMPro.ColorTween_ColorTweenMode
-struct  ColorTweenMode_t73D753514D6DF62D23C5E54E33F154B2D5984A14 
-{
-public:
-	// System.Int32 TMPro.ColorTween_ColorTweenMode::value__
-	int32_t ___value___2;
-
-public:
-	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(ColorTweenMode_t73D753514D6DF62D23C5E54E33F154B2D5984A14, ___value___2)); }
-	inline int32_t get_value___2() const { return ___value___2; }
-	inline int32_t* get_address_of_value___2() { return &___value___2; }
-	inline void set_value___2(int32_t value)
-	{
-		___value___2 = value;
-	}
-};
-
-
 // TMPro.Extents
 struct  Extents_tD663823B610620A001CCCCFF452C10403AF2A0FA 
 {
@@ -4973,15 +4930,6 @@ public:
 	{
 		___uninitialized_1 = value;
 	}
-};
-
-
-// TMPro.FloatTween_FloatTweenCallback
-struct  FloatTweenCallback_tFA05DE1963C7BD69C06DEAD6FFA6C107A9E1D949  : public UnityEvent_1_t84B4EA1A2A00DEAC63B85AFAA89EBF67CA749DBC
-{
-public:
-
-public:
 };
 
 
@@ -16269,8 +16217,6 @@ public:
 };
 
 
-// System.Void UnityEngine.Events.UnityEvent`1<System.Single>::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityEvent_1__ctor_m246DC0A35C4C4D26AD4DCE093E231B72C66C86ED_gshared (UnityEvent_1_t84B4EA1A2A00DEAC63B85AFAA89EBF67CA749DBC * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.Events.UnityEvent`1<System.Int32>::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityEvent_1__ctor_m30F443398054B5E3666B3C86E64A5C0FF97D93FF_gshared (UnityEvent_1_tB235B5DAD099AC425DC059D10DEB8B97A35E2BBF * __this, const RuntimeMethod* method);
 // !!0 UnityEngine.Component::GetComponentInParent<System.Object>()
@@ -16288,11 +16234,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m5D84793
 // !0 System.Collections.Generic.List`1<System.Object>::get_Item(System.Int32)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject * List_1_get_Item_mF00B574E58FB078BB753B05A3B86DD0A7A266B63_gshared_inline (List_1_t3F94120C77410A62EAE48421CF166B83AB95A2F5 * __this, int32_t ___index0, const RuntimeMethod* method);
 
-// System.Void UnityEngine.Events.UnityEvent`1<System.Single>::.ctor()
-inline void UnityEvent_1__ctor_m246DC0A35C4C4D26AD4DCE093E231B72C66C86ED (UnityEvent_1_t84B4EA1A2A00DEAC63B85AFAA89EBF67CA749DBC * __this, const RuntimeMethod* method)
-{
-	((  void (*) (UnityEvent_1_t84B4EA1A2A00DEAC63B85AFAA89EBF67CA749DBC *, const RuntimeMethod*))UnityEvent_1__ctor_m246DC0A35C4C4D26AD4DCE093E231B72C66C86ED_gshared)(__this, method);
-}
 // System.Void TMPro.KerningTable/<>c::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m2F626C2F629EDDCAC656E85630F764B0530A8C62 (U3CU3Ec_t703AFB8812FA710DAC810048091DD4D9E636B648 * __this, const RuntimeMethod* method);
 // System.Void System.Object::.ctor()
@@ -16499,36 +16440,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m37A5BF26F8F8F1892D60
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SpriteSize_ToString_m2F7E10FDEB62E277224D7C0BE6F2CA8284A5B5F8 (SpriteSize_t7D47B39A52139B8CD3CE7F233C48981F70275A3D * __this, const RuntimeMethod* method);
 // System.Void System.ThrowHelper::ThrowArgumentOutOfRangeException()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ThrowHelper_ThrowArgumentOutOfRangeException_m4841366ABC2B2AFA37C10900551D7E07522C0929 (const RuntimeMethod* method);
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// System.Void TMPro.FloatTween_FloatTweenCallback::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FloatTweenCallback__ctor_m6BA05397B24B49801F5FBCE61C38FADCCFAA1368 (FloatTweenCallback_tFA05DE1963C7BD69C06DEAD6FFA6C107A9E1D949 * __this, const RuntimeMethod* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (FloatTweenCallback__ctor_m6BA05397B24B49801F5FBCE61C38FADCCFAA1368_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		UnityEvent_1__ctor_m246DC0A35C4C4D26AD4DCE093E231B72C66C86ED(__this, /*hidden argument*/UnityEvent_1__ctor_m246DC0A35C4C4D26AD4DCE093E231B72C66C86ED_RuntimeMethod_var);
-		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"

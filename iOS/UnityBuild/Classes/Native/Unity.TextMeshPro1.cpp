@@ -9170,6 +9170,24 @@ public:
 };
 
 
+// UnityEngine.TextCore.LowLevel.FontFeatureLookupFlags
+struct  FontFeatureLookupFlags_t37E41419FC68819F0CA4BD748675CE571DEA2781 
+{
+public:
+	// System.Int32 UnityEngine.TextCore.LowLevel.FontFeatureLookupFlags::value__
+	int32_t ___value___2;
+
+public:
+	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(FontFeatureLookupFlags_t37E41419FC68819F0CA4BD748675CE571DEA2781, ___value___2)); }
+	inline int32_t get_value___2() const { return ___value___2; }
+	inline int32_t* get_address_of_value___2() { return &___value___2; }
+	inline void set_value___2(int32_t value)
+	{
+		___value___2 = value;
+	}
+};
+
+
 // UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord
 struct  GlyphAdjustmentRecord_tF7DD4F1F660B62990292705F25D43A7EF3ED35EA 
 {
@@ -11766,6 +11784,8 @@ public:
 	GlyphAdjustmentRecord_tF7DD4F1F660B62990292705F25D43A7EF3ED35EA  ___m_FirstAdjustmentRecord_0;
 	// UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord::m_SecondAdjustmentRecord
 	GlyphAdjustmentRecord_tF7DD4F1F660B62990292705F25D43A7EF3ED35EA  ___m_SecondAdjustmentRecord_1;
+	// UnityEngine.TextCore.LowLevel.FontFeatureLookupFlags UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord::m_FeatureLookupFlags
+	int32_t ___m_FeatureLookupFlags_2;
 
 public:
 	inline static int32_t get_offset_of_m_FirstAdjustmentRecord_0() { return static_cast<int32_t>(offsetof(GlyphPairAdjustmentRecord_tAD8F88FFC3A19DFDC31C2E0FA901E7CEAEE8A169, ___m_FirstAdjustmentRecord_0)); }
@@ -11782,6 +11802,14 @@ public:
 	inline void set_m_SecondAdjustmentRecord_1(GlyphAdjustmentRecord_tF7DD4F1F660B62990292705F25D43A7EF3ED35EA  value)
 	{
 		___m_SecondAdjustmentRecord_1 = value;
+	}
+
+	inline static int32_t get_offset_of_m_FeatureLookupFlags_2() { return static_cast<int32_t>(offsetof(GlyphPairAdjustmentRecord_tAD8F88FFC3A19DFDC31C2E0FA901E7CEAEE8A169, ___m_FeatureLookupFlags_2)); }
+	inline int32_t get_m_FeatureLookupFlags_2() const { return ___m_FeatureLookupFlags_2; }
+	inline int32_t* get_address_of_m_FeatureLookupFlags_2() { return &___m_FeatureLookupFlags_2; }
+	inline void set_m_FeatureLookupFlags_2(int32_t value)
+	{
+		___m_FeatureLookupFlags_2 = value;
 	}
 };
 
@@ -23493,7 +23521,7 @@ IL_000f:
 
 IL_0019:
 	{
-		// value = value.Replace("\0", string.Empty); // remove embedded nulls
+		// value = value.Replace("\0", string.Empty); 
 		String_t* L_4 = ___value0;
 		String_t* L_5 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->get_Empty_5();
 		NullCheck(L_4);
@@ -30083,7 +30111,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_LineDownCharacterPosit
 		}
 	}
 	{
-		// return m_TextComponent.textInfo.characterCount - 1; // text.Length;
+		// return m_TextComponent.textInfo.characterCount - 1; 
 		TMP_Text_t86179C97C713E1A6B3751B48DC7A16C874A7B262 * L_4 = __this->get_m_TextComponent_27();
 		NullCheck(L_4);
 		TMP_TextInfo_t33ACB74FB814F588497640C86976E5DB6DD7B547 * L_5 = TMP_Text_get_textInfo_mB006DF4283F14B0E49B9FCC0025D99C29FA534BF_inline(L_4, /*hidden argument*/NULL);
@@ -31016,7 +31044,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MoveDown_mB735ED1A4123820
 
 IL_002b:
 	{
-		// int position = multiLine ? LineDownCharacterPosition(caretSelectPositionInternal, goToLastChar) : m_TextComponent.textInfo.characterCount - 1; // text.Length;
+		// int position = multiLine ? LineDownCharacterPosition(caretSelectPositionInternal, goToLastChar) : m_TextComponent.textInfo.characterCount - 1; 
 		bool L_7 = TMP_InputField_get_multiLine_m271334A6FBA24221B9214DBCCD1AC548B50BC031(__this, /*hidden argument*/NULL);
 		if (L_7)
 		{
@@ -31332,7 +31360,7 @@ IL_008d:
 		}
 	}
 	{
-		// float offset = m_TextViewport.rect.height; // m_TextViewport.rect.yMax - (m_TextComponent.rectTransform.anchoredPosition.y + lineAscender);
+		// float offset = m_TextViewport.rect.height; 
 		RectTransform_t8A6A306FB29A6C8C22010CF9040E319753571072 * L_23 = __this->get_m_TextViewport_23();
 		NullCheck(L_23);
 		Rect_t7D9187DB6339DBA5741C09B6CCEF2F54F1966878  L_24 = RectTransform_get_rect_m7B24A1D6E0CB87F3481DDD2584C82C97025404E2(L_23, /*hidden argument*/NULL);
@@ -31553,7 +31581,7 @@ IL_009e:
 		}
 	}
 	{
-		// float offset = m_TextViewport.rect.height; // m_TextViewport.rect.yMax - (m_TextComponent.rectTransform.anchoredPosition.y + lineAscender);
+		// float offset = m_TextViewport.rect.height; 
 		RectTransform_t8A6A306FB29A6C8C22010CF9040E319753571072 * L_26 = __this->get_m_TextViewport_23();
 		NullCheck(L_26);
 		Rect_t7D9187DB6339DBA5741C09B6CCEF2F54F1966878  L_27 = RectTransform_get_rect_m7B24A1D6E0CB87F3481DDD2584C82C97025404E2(L_26, /*hidden argument*/NULL);
@@ -33123,7 +33151,7 @@ IL_013b:
 
 IL_014c:
 	{
-		// m_TextComponent.text = processed + "\u200B"; // Extra space is added for Caret tracking.
+		// m_TextComponent.text = processed + "\u200B"; 
 		TMP_Text_t86179C97C713E1A6B3751B48DC7A16C874A7B262 * L_46 = __this->get_m_TextComponent_27();
 		String_t* L_47 = V_1;
 		String_t* L_48 = String_Concat_m4B4AB72618348C5DFBFBA8DED84B9E2EBDB55E1B(L_47, _stringLiteral22BE618ADF9DAFBF84F27DD4CA2D8D34F67B1103, /*hidden argument*/NULL);
@@ -34263,8 +34291,8 @@ IL_00d0:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(199)
 	{
-		IL2CPP_JUMP_TBL(0xD1, IL_00d1)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0xD1, IL_00d1)
 	}
 
 IL_00d1:
@@ -37878,7 +37906,7 @@ IL_003a:
 
 IL_006c:
 	{
-		// return m_TextComponent.preferredWidth + horizontalPadding; // Should add some extra padding for caret
+		// return m_TextComponent.preferredWidth + horizontalPadding; 
 		TMP_Text_t86179C97C713E1A6B3751B48DC7A16C874A7B262 * L_16 = __this->get_m_TextComponent_27();
 		NullCheck(L_16);
 		float L_17 = VirtFuncInvoker0< float >::Invoke(84 /* System.Single TMPro.TMP_Text::get_preferredWidth() */, L_16);
@@ -42674,10 +42702,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_MeshInfo_SwapVertexData_m41F1814B2CB
 	Color32_tDB54A78627878A7D2DE42BB028D64306A18E858D  V_4;
 	memset((&V_4), 0, sizeof(V_4));
 	{
-		// int src_Index = src; //  * 4;
+		// int src_Index = src; 
 		int32_t L_0 = ___src0;
 		V_0 = L_0;
-		// int dst_Index = dst; // * 4;
+		// int dst_Index = dst; 
 		int32_t L_1 = ___dst1;
 		V_1 = L_1;
 		// vertex = vertices[dst_Index + 0];
@@ -43613,7 +43641,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TMP_Settings_t303C8601BE4E1717C9662D23032D21E
 		}
 	}
 	{
-		// s_TextSettings = Resources.Load<TMP_Settings>("TextSettings"); // ?? ScriptableObject.CreateInstance<TMP_Settings>();
+		// s_TextSettings = Resources.Load<TMP_Settings>("TextSettings"); 
 		TMP_Settings_t303C8601BE4E1717C9662D23032D21EC531797F7 * L_2 = Resources_Load_TisTMP_Settings_t303C8601BE4E1717C9662D23032D21EC531797F7_mB74B416BD8765D91A9B5376B7DACF233799A3E8F(_stringLiteral3DF4CA9FAE86BE163351DF7271E2950E3D3F77C2, /*hidden argument*/Resources_Load_TisTMP_Settings_t303C8601BE4E1717C9662D23032D21EC531797F7_mB74B416BD8765D91A9B5376B7DACF233799A3E8F_RuntimeMethod_var);
 		IL2CPP_RUNTIME_CLASS_INIT(TMP_ResourceManager_t4433212C7BA80649F2A08C6B4D3F43BD0D035489_il2cpp_TypeInfo_var);
 		((TMP_ResourceManager_t4433212C7BA80649F2A08C6B4D3F43BD0D035489_StaticFields*)il2cpp_codegen_static_fields_for(TMP_ResourceManager_t4433212C7BA80649F2A08C6B4D3F43BD0D035489_il2cpp_TypeInfo_var))->set_s_TextSettings_1(L_2);

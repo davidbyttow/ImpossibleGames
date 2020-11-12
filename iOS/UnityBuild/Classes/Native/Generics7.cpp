@@ -370,8 +370,6 @@ struct ValueCollection_tBBFF5FCCEA64DACDC4DFAB67787E57F5B92377EF;
 struct ValueCollection_tE16ED6DFB218FE1E5E8729436D481A5AD1D82C10;
 // System.Collections.Generic.Dictionary`2/ValueCollection<System.Object,System.Int32>
 struct ValueCollection_tC88EAA780CBFDC83B1E62A4418478872C1CAE848;
-// System.Collections.Generic.Dictionary`2/ValueCollection<System.Object,System.Object>
-struct ValueCollection_t0ACCC25930444F15B1857D00E9FB6021E5842852;
 // System.Collections.Generic.Dictionary`2/ValueCollection<System.Object,System.Resources.ResourceLocator>
 struct ValueCollection_t801673EF9238D6284F9D0027C8B1420DC72FFDAC;
 // System.Collections.Generic.Dictionary`2/ValueCollection<System.UInt32,System.Object>
@@ -386,6 +384,8 @@ struct ValueCollection_tDEA922C20FE7390F1063807C7F0EAE8B2C022A7B;
 struct ValueCollection_t8738745D8513A557A82E6E097DF4D4E70D5253C2;
 // System.Collections.Generic.Dictionary`2/ValueCollection<System.Int32,System.Int64>
 struct ValueCollection_tDD2C80682AF4CF18883668E136B1980110C79D95;
+// System.Collections.Generic.Dictionary`2/ValueCollection<System.Object,System.Object>
+struct ValueCollection_t0ACCC25930444F15B1857D00E9FB6021E5842852;
 // System.Collections.Generic.Dictionary`2/ValueCollection<System.UInt32,System.Int32>
 struct ValueCollection_t5021005DA85ABB38062E53F64AC0587152FDBBDB;
 // System.ArgumentException
@@ -22901,8 +22901,8 @@ IL_008a:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(129)
 	{
-		IL2CPP_JUMP_TBL(0x8B, IL_008b)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x8B, IL_008b)
 	}
 
 IL_008b:
@@ -24160,8 +24160,8 @@ IL_00ee:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(229)
 	{
-		IL2CPP_JUMP_TBL(0xEF, IL_00ef)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0xEF, IL_00ef)
 	}
 
 IL_00ef:
@@ -24899,8 +24899,8 @@ IL_008a:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(129)
 	{
-		IL2CPP_JUMP_TBL(0x8B, IL_008b)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x8B, IL_008b)
 	}
 
 IL_008b:
@@ -26160,8 +26160,8 @@ IL_00ee:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(229)
 	{
-		IL2CPP_JUMP_TBL(0xEF, IL_00ef)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0xEF, IL_00ef)
 	}
 
 IL_00ef:
@@ -26900,8 +26900,8 @@ IL_008a:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(129)
 	{
-		IL2CPP_JUMP_TBL(0x8B, IL_008b)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x8B, IL_008b)
 	}
 
 IL_008b:
@@ -28161,8 +28161,8 @@ IL_00ee:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(229)
 	{
-		IL2CPP_JUMP_TBL(0xEF, IL_00ef)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0xEF, IL_00ef)
 	}
 
 IL_00ef:
@@ -28901,8 +28901,8 @@ IL_008a:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(129)
 	{
-		IL2CPP_JUMP_TBL(0x8B, IL_008b)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x8B, IL_008b)
 	}
 
 IL_008b:
@@ -30160,8 +30160,8 @@ IL_00ee:
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(229)
 	{
-		IL2CPP_JUMP_TBL(0xEF, IL_00ef)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0xEF, IL_00ef)
 	}
 
 IL_00ef:

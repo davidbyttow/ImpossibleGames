@@ -1,9 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Networking;
-using System.Collections;
-using System.Runtime.InteropServices;
-using System.IO;
 
 public class GameManager : MonoBehaviour {
 
@@ -13,17 +10,13 @@ public class GameManager : MonoBehaviour {
   private float restartDelay = 0;
 
   void Awake() {
-    if (global != null) {
-      throw new System.Exception("More than one GameManager present in scene");
-    }
-    global = this;
-
 #if UNITY_IOS
     Application.targetFrameRate = 60;
 #endif
   }
 
   void Start() {
+    HostApi.hostOnGameStarted();
     StartMusic();
     Debug.Log("Starting game manager");
   }
@@ -51,7 +44,15 @@ public class GameManager : MonoBehaviour {
   }
 
   public void LeaveGame() {
-    HostApi.hostLeaveGame();
+    try {
+      HostApi.hostLeaveGame();
+    } catch (EntryPointNotFoundException e) {
+      // Nothing to do
+    }
+  }
+
+  public void LoadLauncher(string message) {
+    SceneManager.LoadScene(0);
   }
 
   private void Restart() {

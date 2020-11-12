@@ -1,4 +1,5 @@
 {
+    "serializedTypes": [],
     "typesInScenes": [
         {
             "managedAssemblyName": "",
@@ -413,15 +414,6 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "Grid",
-            "fullManagedTypeName": "UnityEngine.Grid",
-            "moduleName": "Grid",
-            "usedInScenes": [
-                "Assets/Scenes/Level01.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "Rigidbody2D",
             "fullManagedTypeName": "UnityEngine.Rigidbody2D",
             "moduleName": "Physics2D",
@@ -578,6 +570,15 @@
             "nativeClass": "TilemapRenderer",
             "fullManagedTypeName": "UnityEngine.Tilemaps.TilemapRenderer",
             "moduleName": "Tilemap",
+            "usedInScenes": [
+                "Assets/Scenes/Level01.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "Grid",
+            "fullManagedTypeName": "UnityEngine.Grid",
+            "moduleName": "Grid",
             "usedInScenes": [
                 "Assets/Scenes/Level01.unity"
             ]
