@@ -18,12 +18,11 @@ struct ComingSoonOverlay: View {
   }
 }
 
-struct TitleView: View {
+struct HomeView: View {
   
   @ObservedObject var styles = Styles.shared
-  @ObservedObject var levelModel: LevelModelController
-
-  var play: () -> Void
+  @EnvironmentObject var model: GameModel
+  var delegate: GameDelegate
 
   var body: some View {
     ZStack {
@@ -32,16 +31,16 @@ struct TitleView: View {
         Text("IMPOSSIBLE")
           .modifier(RetroText(size: 26))
           .foregroundColor(styles.darkRed)
-          .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 0))
+          .padding(EdgeInsets(top: 64, leading: 0, bottom: 0, trailing: 0))
         Text("GAMES")
           .foregroundColor(.white)
           .font(.custom("PressStart2P", size: 52))
           .padding(EdgeInsets(top: 6, leading: 0, bottom: 0, trailing: 0))
         Spacer()
-        NavigationLink(destination: LevelView(play: play, levelData: self.$levelModel.level)) {
+        NavigationLink(destination: LevelView(onStartGame: { delegate.gameDidRequestStart() }, levelData: $model.level)) {
           Text("PLAY")
             .foregroundColor(styles.green)
-            .font(.custom("PressStart2P", size: 42))
+            .font(.custom("PressStart2P", size: 52))
         }
         Spacer().frame(height: 40)
         Text("BUILD")
@@ -67,29 +66,12 @@ struct TitleView: View {
   }
 }
 
-struct ContentView: View {
-
-  @ObservedObject var levelModel: LevelModelController
-  var play: () -> Void
-
-//  init(play: @escaping () -> Void) {
-//    self.play = play
-//    UINavigationBar.setAnimationsEnabled(false)
-//  }
-
-  var body: some View {
-    NavigationView {
-      TitleView(levelModel: levelModel, play: play)
-    }
+#if DEBUG
+struct HomeView_Previews: PreviewProvider {
+  static var previews: some View {
+    HomeView(delegate: FakeGameDelegate())
+      .environmentObject(GameModel())
   }
 }
-
-//#if DEBUG
-//struct ContentView_Previews: PreviewProvider {
-//  static var previews: some View {
-//    //ContentView(play: { print("hi") })
-//    TitleView(play: { print("hi") })
-//  }
-//}
-//#endif
+#endif
 

@@ -61,9 +61,7 @@ struct Leaderboard : View {
 }
 
 struct LevelView: View {
-  @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-
-  var play: () -> Void
+  var onStartGame: () -> Void
   @Binding var levelData: LevelData
 
   @State private var loaded = false
@@ -90,7 +88,7 @@ struct LevelView: View {
           .padding(EdgeInsets(top: 13, leading: 0, bottom: 0, trailing: 0))
         Button("START", action: {
           if loaded {
-            play()
+            onStartGame()
           }
         })
           .foregroundColor(loaded ? green : gray)
@@ -142,11 +140,13 @@ struct LevelView: View {
 }
 }
 
-//#if DEBUG
-//struct LevelView_Previews: PreviewProvider {
-//  static var previews: some View {
-//    LevelView(play: { print("hi") })
-//  }
-//}
-//#endif
-//
+#if DEBUG
+struct LevelView_Previews: PreviewProvider {
+  @ObservedObject static var model = GameModel()
+  
+  static var previews: some View {
+    LevelView(onStartGame: {}, levelData: $model.level)
+  }
+}
+#endif
+

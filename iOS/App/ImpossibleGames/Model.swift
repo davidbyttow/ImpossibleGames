@@ -16,6 +16,6 @@ struct LevelData : Decodable {
   var deps: [String] = []
 }
 
-class LevelModelController : ObservableObject {
+class GameModel : ObservableObject {
   @Published var level = LevelData()
 }

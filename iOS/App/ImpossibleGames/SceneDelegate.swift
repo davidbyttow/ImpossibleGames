@@ -9,12 +9,12 @@
 import UIKit
 import SwiftUI
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate, GameHooks {
+class SceneDelegate: UIResponder, UIWindowSceneDelegate, GameHooks, GameDelegate {
   
   var window: UIWindow?
   var windowScene: UIWindowScene?
   var unityPlayer: UnityPlayer?
-  var levelController = LevelModelController()
+  var model = GameModel()
     
   func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
     windowScene = scene as? UIWindowScene
@@ -25,14 +25,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, GameHooks {
       let window = UIWindow(windowScene: windowScene)
       
       UINavigationBar.setAnimationsEnabled(false);
-      let contentView = ContentView(levelModel: levelController, play: {
-        self.unityPlayer!.show(window)
-      })
+      let contentView = AppView(model: self.model, delegate: self)
 
       window.rootViewController = UIHostingController(rootView: contentView)
       window.makeKeyAndVisible()
       self.window = window
     }
+  }
+  
+  func gameDidRequestStart() {
+    self.unityPlayer!.show(window!)
   }
       
   func sceneDidDisconnect(_ scene: UIScene) {
@@ -51,7 +53,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, GameHooks {
   }
 
   func getRequestedScenes() -> String {
-    let level = levelController.level
+    let level = model.level
     var scenes = level.deps
     scenes.append(level.scene)
     for i in 0...scenes.count - 1 {
