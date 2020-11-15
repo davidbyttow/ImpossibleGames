@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour {
   public void LeaveGame() {
     try {
       HostApi.hostLeaveGame();
-    } catch (EntryPointNotFoundException e) {
+    } catch (EntryPointNotFoundException) {
       // Nothing to do
     }
   }

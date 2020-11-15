@@ -23,19 +23,19 @@ public class SceneLauncher : MonoBehaviour {
     HostApi.hostOnLauncherStarted();
   }
 
-  void LaunchGame(string bundle) {
-    Debug.Log("Launching bundle: " + bundle);
+  void LaunchGame(string encodedBundles) {
+    Debug.Log("Launching bundle: " + encodedBundles);
     startLoadTime = Time.time;
-    StartCoroutine(LoadSceneAsync());
+    StartCoroutine(LoadSceneAsync(encodedBundles));
   }
 
-  IEnumerator LoadSceneAsync() {
+  IEnumerator LoadSceneAsync(string encodedBundles) {
     UnloadBundles();
 
     Debug.Log("Loading requested scene");
     yield return StartCoroutine(UnloadAllScenes());
 
-    var bundleLocations = GetRequestedBundleUrls();
+    var bundleLocations = GetBundleUrls(encodedBundles);
 
     if (bundleLocations.Length == 0) {
       // Just load the next scene
@@ -135,20 +135,13 @@ public class SceneLauncher : MonoBehaviour {
     yield return null;
   }
 
-  private string[] GetRequestedBundleUrls() {
-    string[] args = System.Environment.GetCommandLineArgs();
-    for (int i = 0; i < args.Length; i++) {
-      if (args[i] == "-bundleUrl") {
-        return SplitString(args[i + 1]);
-      }
+  private string[] GetBundleUrls(string encodedBundles) {
+    var bundles = SplitString(encodedBundles);
+    if (bundles.Length != 0) {
+      return bundles;
     }
-    Debug.Log("No bundle URL found, falling back to plugin");
-    try {
-      return SplitString(HostApi.hostGetRequestedScene());
-    } catch (EntryPointNotFoundException e) {
-      Debug.Log("No entry found, falling back");
-      return SplitString(testBundle);
-    }
+    Debug.Log("No bundles given, using test bundle");
+    return SplitString(testBundle);
   }
 
   private string[] SplitString(string s) {

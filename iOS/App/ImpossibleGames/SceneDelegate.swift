@@ -9,7 +9,7 @@
 import UIKit
 import SwiftUI
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate, GameHooks, GameDelegate {
+class SceneDelegate: UIResponder, UIWindowSceneDelegate, GameDelegate {
   
   var window: UIWindow?
   var windowScene: UIWindowScene?
@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, GameHooks, GameDelegate
   func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
     windowScene = scene as? UIWindowScene
     
-    unityPlayer = UnityPlayer(withLaunchOptions: AppDelegate.appLaunchOptions, gameHooks:self)
+    unityPlayer = UnityPlayer(withLaunchOptions: AppDelegate.appLaunchOptions, gameModel:model)
 
     if let windowScene = scene as? UIWindowScene {
       let window = UIWindow(windowScene: windowScene)
@@ -34,7 +34,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, GameHooks, GameDelegate
   }
   
   func gameDidRequestStart() {
-    self.unityPlayer!.show(window!)
+    self.unityPlayer!.start(window!, level: model.level)
   }
       
   func sceneDidDisconnect(_ scene: UIScene) {
@@ -51,34 +51,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, GameHooks, GameDelegate
   
   func sceneDidEnterBackground(_ scene: UIScene) {
   }
-
-  func getRequestedScenes() -> String {
-    let level = model.level
-    var scenes = level.deps
-    scenes.append(level.scene)
-    for i in 0...scenes.count - 1 {
-      scenes[i] = "https://davidbyttow.com/impossiblegames/assetbundles/" + scenes[i]
-    }
-    let sceneString = scenes.joined(separator: ";")
-    print("Sending requested scene: \(sceneString)")
-    return sceneString
-  }
 }
-
-//#if DEBUG
-//struct SceneDelegate_Previews: PreviewProvider {
-//  static var previews: some View {
-//    /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
-//  }
-//}
-//#endif
-
-    // Attach content view to unity window view
-//    let contentView = ContentView()
-//    let childView = UIHostingController(rootView: contentView)
-//    let unityViewController = unity.viewController!
-//    unityViewController.addChild(childView)
-//    childView.viewIfLoaded?.frame = unityViewController.view.frame
-//    let view = unityViewController.viewIfLoaded
-//    view?.addSubview(childView.view)
-//    childView.didMove(toParent: unityViewController)

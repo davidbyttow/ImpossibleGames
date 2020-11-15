@@ -9,16 +9,12 @@
 import Foundation
 import UnityFramework
 
-protocol GameHooks {
-  func getRequestedScenes() -> String
-}
-
 
 class UnityPlayer : UIResponder, UnityFrameworkListener, NativeCallsProtocol {
   private var unity: UnityFramework!
   private var launchOptions: [UIApplication.LaunchOptionsKey: Any]?
   private var prevWindow: UIWindow!
-  private var gameHooks: GameHooks!
+  private var gameModel: GameModel!
   private var starting = false;
 
   enum GameMode {
@@ -31,9 +27,9 @@ class UnityPlayer : UIResponder, UnityFrameworkListener, NativeCallsProtocol {
   private var gameMode = GameMode.none
   private var visible = false
   
-  init(withLaunchOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?, gameHooks: GameHooks) {
+  init(withLaunchOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?, gameModel: GameModel) {
     super.init()
-    self.gameHooks = gameHooks
+    self.gameModel = gameModel
     self.launchOptions = launchOptions
     unity = UnityPlayer.loadFramework()
     unity.setDataBundleId("com.unity3d.framework")
@@ -53,7 +49,7 @@ class UnityPlayer : UIResponder, UnityFrameworkListener, NativeCallsProtocol {
     }
   }
 
-  func show(_ window: UIWindow) {
+  func start(_ window: UIWindow, level: LevelData) {
     run()
 
     prevWindow = window;
@@ -70,7 +66,7 @@ class UnityPlayer : UIResponder, UnityFrameworkListener, NativeCallsProtocol {
     }
   }
   
-  func hide() {
+  private func hide() {
     prevWindow?.makeKeyAndVisible();
     
     let appController = unity.appController()!
@@ -93,19 +89,15 @@ class UnityPlayer : UIResponder, UnityFrameworkListener, NativeCallsProtocol {
   }
   
   private func loadLevel() {
-    let requestedScenes = gameHooks.getRequestedScenes()
-    unity.sendMessageToGO(withName: "SceneLauncher", functionName: "LaunchGame", message: requestedScenes)
+    let bundleUrls = encodeBundles(sceneUrl: gameModel.level.scene, dependencyUrls: gameModel.level.deps)
+    unity.sendMessageToGO(withName: "SceneLauncher", functionName: "LaunchGame", message: bundleUrls)
   }
   
   func unityLeaveGame() {
     starting = false
     unity.sendMessageToGO(withName: "GameManager", functionName: "LoadLauncher", message: "")
   }
-  
-  func unityGetRequestedScene() -> String! {
-    return gameHooks.getRequestedScenes()
-  }
-        
+          
   private static func loadFramework() -> UnityFramework? {
     var unityFramework: UnityFramework?
     
@@ -136,4 +128,12 @@ class UnityPlayer : UIResponder, UnityFrameworkListener, NativeCallsProtocol {
     print("DID QUIT")
   }
 
+  private func encodeBundles(sceneUrl: String, dependencyUrls: [String]) -> String {
+    var urls = dependencyUrls
+    urls.append(sceneUrl)
+    for i in 0...urls.count - 1 {
+      urls[i] = GameModel.baseUrl + urls[i]
+    }
+    return urls.joined(separator: ";")
+  }
 }

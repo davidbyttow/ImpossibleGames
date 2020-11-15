@@ -8,7 +8,6 @@
 - (void)unityOnLauncherStarted;
 - (void)unityOnGameStarted;
 - (void)unityLeaveGame;
-- (NSString *)unityGetRequestedScene;
 @end
 
 __attribute__((visibility("default")))

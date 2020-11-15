@@ -31,7 +31,4 @@ extern "C" {
   void hostLeaveGame() {
     return [gApi unityLeaveGame];
   }
-  char* hostGetRequestedScene() {
-    return toCString([gApi unityGetRequestedScene]);
-  }
 }

@@ -30145,13 +30145,6 @@ IL_0128:
 		return L_71;
 	}
 }
-// System.String[] System.Environment::GetCommandLineArgs()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* Environment_GetCommandLineArgs_m12F7E5CE17BB9D41283D95ADF989C4F75463C329 (const RuntimeMethod* method)
-{
-	typedef StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* (*Environment_GetCommandLineArgs_m12F7E5CE17BB9D41283D95ADF989C4F75463C329_ftn) ();
-	using namespace il2cpp::icalls;
-	return  ((Environment_GetCommandLineArgs_m12F7E5CE17BB9D41283D95ADF989C4F75463C329_ftn)mscorlib::System::Environment::GetCommandLineArgs) ();
-}
 // System.String System.Environment::internalGetEnvironmentVariable_native(System.IntPtr)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Environment_internalGetEnvironmentVariable_native_mBB2E4EB749DC6FFD395F36847C953BE685E141C0 (intptr_t ___variable0, const RuntimeMethod* method)
 {
