@@ -31,4 +31,7 @@ extern "C" {
   void hostLeaveGame() {
     return [gApi unityLeaveGame];
   }
+  void hostWinGame() {
+    return [gApi unityWinGame];
+  }
 }

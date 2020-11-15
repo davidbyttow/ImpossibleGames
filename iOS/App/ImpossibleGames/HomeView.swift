@@ -37,7 +37,9 @@ struct HomeView: View {
           .font(.custom("PressStart2P", size: 52))
           .padding(EdgeInsets(top: 6, leading: 0, bottom: 0, trailing: 0))
         Spacer()
-        NavigationLink(destination: LevelView(onStartGame: { delegate.gameDidRequestStart() }, levelData: $model.level)) {
+        NavigationLink(destination: LevelStartView(onStartGame: { delegate.gameDidRequestStart() },
+                                                   levelData: $model.level,
+                                                   levelCompleted: $model.levelCompleted)) {
           Text("PLAY")
             .foregroundColor(styles.green)
             .font(.custom("PressStart2P", size: 52))

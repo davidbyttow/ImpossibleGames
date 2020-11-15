@@ -42,7 +42,7 @@ class UnityPlayer : UIResponder, UnityFrameworkListener, NativeCallsProtocol {
       unity.runEmbedded(withArgc: CommandLine.argc, argv: CommandLine.unsafeArgv, appLaunchOpts: launchOptions)
 
       unity.appController().quitHandler = {
-        print("QUIT HANDLER")
+        print("Triggered quit handler")
       }
       
       unityRunning = true
@@ -89,11 +89,21 @@ class UnityPlayer : UIResponder, UnityFrameworkListener, NativeCallsProtocol {
   }
   
   private func loadLevel() {
+    gameModel.levelCompleted = false
     let bundleUrls = encodeBundles(sceneUrl: gameModel.level.scene, dependencyUrls: gameModel.level.deps)
     unity.sendMessageToGO(withName: "SceneLauncher", functionName: "LaunchGame", message: bundleUrls)
   }
   
   func unityLeaveGame() {
+    hideGameWindow()
+  }
+  
+  func unityWinGame() {
+    hideGameWindow()
+    gameModel.levelCompleted = true
+  }
+  
+  private func hideGameWindow() {
     starting = false
     unity.sendMessageToGO(withName: "GameManager", functionName: "LoadLauncher", message: "")
   }
@@ -121,11 +131,11 @@ class UnityPlayer : UIResponder, UnityFrameworkListener, NativeCallsProtocol {
   }
 
   private func unityDidUnload(notification: NSNotification) {
-    print("DID UNLOAD")
+    print("unityDidUnload")
   }
 
   private func unityDidQuit(notification: NSNotification) {
-    print("DID QUIT")
+    print("unityDidQuit")
   }
 
   private func encodeBundles(sceneUrl: String, dependencyUrls: [String]) -> String {

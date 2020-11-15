@@ -8,6 +8,7 @@
 - (void)unityOnLauncherStarted;
 - (void)unityOnGameStarted;
 - (void)unityLeaveGame;
+- (void)unityWinGame;
 @end
 
 __attribute__((visibility("default")))

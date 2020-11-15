@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 3407945419
+CRC: 118933375
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 35ef02a1832e47dc6ed18f2e3c0b9e78
+    Hash: b781699bc6c121f7be08cc47c423a51a
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 7c0aa906efd030462ff700f2a21e43fd
+    Hash: 9ea2353761548492d2db0b56287e7537
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -64,6 +64,8 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 57bf48e592f935c4baec65d931a6d1e8, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: d3721a86caa2cdb469f488818011e570, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 3ebf4d993a2dede4a9472125b405d141, type: 3}
@@ -115,5 +117,4 @@ ClassTypes:
   Script: {instanceID: 0}
 Assets:
 - Assets/DLC/DLC01.unity
-Dependencies:
-- /Users/d/dev/src/github.com/davidbyttow/ImpossibleGames/Assets/AssetBundles/dlc01_assets
+Dependencies: []

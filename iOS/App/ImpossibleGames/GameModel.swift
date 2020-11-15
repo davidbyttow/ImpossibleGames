@@ -20,4 +20,5 @@ class GameModel : ObservableObject {
   static let baseUrl = "https://davidbyttow.com/impossiblegames/assetbundles/"
   
   @Published var level = LevelData()
+  @Published var levelCompleted = false
 }

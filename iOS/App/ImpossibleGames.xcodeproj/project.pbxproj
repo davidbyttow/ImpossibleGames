@@ -19,7 +19,8 @@
 		03069DFE250C384B00B80CA2 /* UnityAPIBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 03069DFD250C384B00B80CA2 /* UnityAPIBridge.m */; };
 		035620242560920A00EFD4E0 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035620232560920A00EFD4E0 /* AppView.swift */; };
 		0356202A25616A8C00EFD4E0 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356202925616A8C00EFD4E0 /* GameModel.swift */; };
-		03A2FC6A2516778800902C6E /* LevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A2FC692516778800902C6E /* LevelView.swift */; };
+		0356202C25617C0000EFD4E0 /* LevelCompletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356202B25617C0000EFD4E0 /* LevelCompletedView.swift */; };
+		03A2FC6A2516778800902C6E /* LevelStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A2FC692516778800902C6E /* LevelStartView.swift */; };
 		03A2FC6C2516781200902C6E /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A2FC6B2516781200902C6E /* Styles.swift */; };
 		03AB132E25583AF6004CE536 /* ImageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AB132D25583AF6004CE536 /* ImageContainer.swift */; };
 /* End PBXBuildFile section */
@@ -53,7 +54,8 @@
 		03069DFD250C384B00B80CA2 /* UnityAPIBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnityAPIBridge.m; sourceTree = "<group>"; };
 		035620232560920A00EFD4E0 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		0356202925616A8C00EFD4E0 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
-		03A2FC692516778800902C6E /* LevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelView.swift; sourceTree = "<group>"; };
+		0356202B25617C0000EFD4E0 /* LevelCompletedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCompletedView.swift; sourceTree = "<group>"; };
+		03A2FC692516778800902C6E /* LevelStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelStartView.swift; sourceTree = "<group>"; };
 		03A2FC6B2516781200902C6E /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		03AB132D25583AF6004CE536 /* ImageContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageContainer.swift; sourceTree = "<group>"; };
 		03EA476325043B7F00922885 /* UnityFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UnityFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,8 +130,9 @@
 				035620232560920A00EFD4E0 /* AppView.swift */,
 				030343B1250327F7004994B2 /* HomeView.swift */,
 				03AB132D25583AF6004CE536 /* ImageContainer.swift */,
-				03A2FC692516778800902C6E /* LevelView.swift */,
+				03A2FC692516778800902C6E /* LevelStartView.swift */,
 				03A2FC6B2516781200902C6E /* Styles.swift */,
+				0356202B25617C0000EFD4E0 /* LevelCompletedView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -224,9 +227,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03A2FC6A2516778800902C6E /* LevelView.swift in Sources */,
+				03A2FC6A2516778800902C6E /* LevelStartView.swift in Sources */,
 				030343AE250327F7004994B2 /* AppDelegate.swift in Sources */,
 				03069DE8250A781C00B80CA2 /* UnityPlayer.swift in Sources */,
+				0356202C25617C0000EFD4E0 /* LevelCompletedView.swift in Sources */,
 				030343B0250327F7004994B2 /* SceneDelegate.swift in Sources */,
 				03069DFE250C384B00B80CA2 /* UnityAPIBridge.m in Sources */,
 				03AB132E25583AF6004CE536 /* ImageContainer.swift in Sources */,
