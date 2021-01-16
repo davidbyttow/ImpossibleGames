@@ -14,6 +14,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, GameDelegate {
   var window: UIWindow?
   var windowScene: UIWindowScene?
   var unityPlayer: UnityPlayer?
+  
+  var router = ViewRouter()
   var model = GameModel()
     
   func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -25,7 +27,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, GameDelegate {
       let window = UIWindow(windowScene: windowScene)
       
       UINavigationBar.setAnimationsEnabled(false);
-      let contentView = AppView(model: self.model, delegate: self)
+      let contentView = ContentView(delegate: self)
+        .environmentObject(router)
+        .environmentObject(model)
 
       window.rootViewController = UIHostingController(rootView: contentView)
       window.makeKeyAndVisible()

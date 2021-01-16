@@ -20,9 +20,10 @@ struct ComingSoonOverlay: View {
 
 struct HomeView: View {
   
-  @ObservedObject var styles = Styles.shared
-  @EnvironmentObject var model: GameModel
+  @EnvironmentObject var router: ViewRouter
   var delegate: GameDelegate
+
+  @ObservedObject var styles = Styles.shared
 
   var body: some View {
     ZStack {
@@ -37,9 +38,7 @@ struct HomeView: View {
           .font(.custom("PressStart2P", size: 52))
           .padding(EdgeInsets(top: 6, leading: 0, bottom: 0, trailing: 0))
         Spacer()
-        NavigationLink(destination: LevelStartView(onStartGame: { delegate.gameDidRequestStart() },
-                                                   levelData: $model.level,
-                                                   levelCompleted: $model.levelCompleted)) {
+        Button(action: { router.currentPage = .startGame }) {
           Text("PLAY")
             .foregroundColor(styles.green)
             .font(.custom("PressStart2P", size: 52))
@@ -72,7 +71,7 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
   static var previews: some View {
     HomeView(delegate: FakeGameDelegate())
-      .environmentObject(GameModel())
+      .environmentObject(ViewRouter())
   }
 }
 #endif

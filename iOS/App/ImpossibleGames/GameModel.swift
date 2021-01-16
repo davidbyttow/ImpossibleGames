@@ -16,9 +16,16 @@ struct LevelData : Decodable {
   var deps: [String] = []
 }
 
+enum GameState {
+  case none
+  case lost
+  case won
+}
+
 class GameModel : ObservableObject {
-  static let baseUrl = "https://davidbyttow.com/impossiblegames/assetbundles/"
+  static let baseApiUrl = "https://davidbyttow.com/api"
+  static let baseAssetBundlesUrl = "https://davidbyttow.com/impossiblegames/assetbundles"
   
   @Published var level = LevelData()
-  @Published var levelCompleted = false
+  @Published var state: GameState = .none
 }

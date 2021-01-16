@@ -53,14 +53,14 @@ class UnityPlayer : UIResponder, UnityFrameworkListener, NativeCallsProtocol {
     run()
 
     prevWindow = window;
-    
+
     let appController = unity.appController()!
     appController.window.windowScene = window.windowScene!
-    appController.window.makeKeyAndVisible()
-
+    unity.showUnityWindow()
+    
     visible = true
     starting = true;
-    
+
     if (gameMode == .inLauncher) {
       loadLevel()
     }
@@ -89,18 +89,19 @@ class UnityPlayer : UIResponder, UnityFrameworkListener, NativeCallsProtocol {
   }
   
   private func loadLevel() {
-    gameModel.levelCompleted = false
+    gameModel.state = .none
     let bundleUrls = encodeBundles(sceneUrl: gameModel.level.scene, dependencyUrls: gameModel.level.deps)
     unity.sendMessageToGO(withName: "SceneLauncher", functionName: "LaunchGame", message: bundleUrls)
   }
   
   func unityLeaveGame() {
     hideGameWindow()
+    gameModel.state = .lost
   }
   
   func unityWinGame() {
     hideGameWindow()
-    gameModel.levelCompleted = true
+    gameModel.state = .won
   }
   
   private func hideGameWindow() {
@@ -142,7 +143,7 @@ class UnityPlayer : UIResponder, UnityFrameworkListener, NativeCallsProtocol {
     var urls = dependencyUrls
     urls.append(sceneUrl)
     for i in 0...urls.count - 1 {
-      urls[i] = GameModel.baseUrl + urls[i]
+      urls[i] = GameModel.baseAssetBundlesUrl + "/" + urls[i]
     }
     return urls.joined(separator: ";")
   }

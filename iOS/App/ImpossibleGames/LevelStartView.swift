@@ -63,7 +63,7 @@ struct Leaderboard : View {
 struct LevelStartView: View {
   var onStartGame: () -> Void
   @Binding var levelData: LevelData
-  @Binding var levelCompleted: Bool
+  @Binding var gameState: GameState
   @State private var loaded = false
     
   let darkRed = Color(red: 168, green: 0, blue: 0)
@@ -95,7 +95,9 @@ struct LevelStartView: View {
           .font(.custom("PressStart2P", size: 40))
           .padding(EdgeInsets(top: 30, leading: 0, bottom: 30, trailing: 0))
         Spacer()
-        NavigationLink(destination: LevelCompletedView(), isActive: self.$levelCompleted) {
+
+        let completed = self.gameState != .none
+        NavigationLink(destination: LevelCompletedView(state: self.$gameState), isActive: Binding.constant(completed)) {
           Text("")
         }.hidden()
       }.frame(
@@ -115,7 +117,7 @@ struct LevelStartView: View {
         .resizable().aspectRatio(contentMode: .fit)
         .frame(width: width)
       if (loaded) {
-        let url = "https://davidbyttow.com/impossiblegames/assetbundles/" + levelData.thumbnailUrls[0]
+        let url = GameModel.baseApiUrl + "/" + levelData.thumbnailUrls[0]
         AsyncImage(url: URL(string: url)!, placeholder: { unknownGame })
           .frame(width: width)
       } else {
@@ -125,7 +127,7 @@ struct LevelStartView: View {
   }
     
   private func loadLevelData() {
-    guard let url = URL(string: "https://www.davidbyttow.com/api/get-level") else {
+    guard let url = URL(string: GameModel.baseApiUrl + "/get-level") else {
       return
     }
 
@@ -149,7 +151,7 @@ struct LevelStartView_Previews: PreviewProvider {
   private var levelCompleted = false
   
   static var previews: some View {
-    LevelStartView(onStartGame: {}, levelData: $model.level, levelCompleted: Binding.constant(false))
+    LevelStartView(onStartGame: {}, levelData: $model.level, gameState: Binding.constant(.none))
   }
 }
 #endif

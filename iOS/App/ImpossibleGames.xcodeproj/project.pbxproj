@@ -17,12 +17,13 @@
 		03069DE8250A781C00B80CA2 /* UnityPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03069DE7250A781C00B80CA2 /* UnityPlayer.swift */; };
 		03069DF4250AFD4200B80CA2 /* PressStart-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03069DF0250AC79700B80CA2 /* PressStart-Regular.ttf */; };
 		03069DFE250C384B00B80CA2 /* UnityAPIBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 03069DFD250C384B00B80CA2 /* UnityAPIBridge.m */; };
-		035620242560920A00EFD4E0 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035620232560920A00EFD4E0 /* AppView.swift */; };
+		035620242560920A00EFD4E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035620232560920A00EFD4E0 /* ContentView.swift */; };
 		0356202A25616A8C00EFD4E0 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356202925616A8C00EFD4E0 /* GameModel.swift */; };
-		0356202C25617C0000EFD4E0 /* LevelCompletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356202B25617C0000EFD4E0 /* LevelCompletedView.swift */; };
+		0356202C25617C0000EFD4E0 /* InGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356202B25617C0000EFD4E0 /* InGameView.swift */; };
+		0356202E2561FBC100EFD4E0 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356202D2561FBC100EFD4E0 /* ViewRouter.swift */; };
 		03A2FC6A2516778800902C6E /* LevelStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A2FC692516778800902C6E /* LevelStartView.swift */; };
 		03A2FC6C2516781200902C6E /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A2FC6B2516781200902C6E /* Styles.swift */; };
-		03AB132E25583AF6004CE536 /* ImageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AB132D25583AF6004CE536 /* ImageContainer.swift */; };
+		03AB132E25583AF6004CE536 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AB132D25583AF6004CE536 /* AsyncImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,12 +53,13 @@
 		03069DF0250AC79700B80CA2 /* PressStart-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PressStart-Regular.ttf"; sourceTree = "<group>"; };
 		03069DFC250BFF0600B80CA2 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		03069DFD250C384B00B80CA2 /* UnityAPIBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnityAPIBridge.m; sourceTree = "<group>"; };
-		035620232560920A00EFD4E0 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		035620232560920A00EFD4E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0356202925616A8C00EFD4E0 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
-		0356202B25617C0000EFD4E0 /* LevelCompletedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCompletedView.swift; sourceTree = "<group>"; };
+		0356202B25617C0000EFD4E0 /* InGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InGameView.swift; sourceTree = "<group>"; };
+		0356202D2561FBC100EFD4E0 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		03A2FC692516778800902C6E /* LevelStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelStartView.swift; sourceTree = "<group>"; };
 		03A2FC6B2516781200902C6E /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
-		03AB132D25583AF6004CE536 /* ImageContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageContainer.swift; sourceTree = "<group>"; };
+		03AB132D25583AF6004CE536 /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
 		03EA476325043B7F00922885 /* UnityFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UnityFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -127,12 +129,13 @@
 		0356202725616A5F00EFD4E0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				035620232560920A00EFD4E0 /* AppView.swift */,
+				035620232560920A00EFD4E0 /* ContentView.swift */,
 				030343B1250327F7004994B2 /* HomeView.swift */,
-				03AB132D25583AF6004CE536 /* ImageContainer.swift */,
+				03AB132D25583AF6004CE536 /* AsyncImage.swift */,
 				03A2FC692516778800902C6E /* LevelStartView.swift */,
 				03A2FC6B2516781200902C6E /* Styles.swift */,
-				0356202B25617C0000EFD4E0 /* LevelCompletedView.swift */,
+				0356202B25617C0000EFD4E0 /* InGameView.swift */,
+				0356202D2561FBC100EFD4E0 /* ViewRouter.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -230,12 +233,13 @@
 				03A2FC6A2516778800902C6E /* LevelStartView.swift in Sources */,
 				030343AE250327F7004994B2 /* AppDelegate.swift in Sources */,
 				03069DE8250A781C00B80CA2 /* UnityPlayer.swift in Sources */,
-				0356202C25617C0000EFD4E0 /* LevelCompletedView.swift in Sources */,
+				0356202E2561FBC100EFD4E0 /* ViewRouter.swift in Sources */,
+				0356202C25617C0000EFD4E0 /* InGameView.swift in Sources */,
 				030343B0250327F7004994B2 /* SceneDelegate.swift in Sources */,
 				03069DFE250C384B00B80CA2 /* UnityAPIBridge.m in Sources */,
-				03AB132E25583AF6004CE536 /* ImageContainer.swift in Sources */,
+				03AB132E25583AF6004CE536 /* AsyncImage.swift in Sources */,
 				030343B2250327F7004994B2 /* HomeView.swift in Sources */,
-				035620242560920A00EFD4E0 /* AppView.swift in Sources */,
+				035620242560920A00EFD4E0 /* ContentView.swift in Sources */,
 				03A2FC6C2516781200902C6E /* Styles.swift in Sources */,
 				0356202A25616A8C00EFD4E0 /* GameModel.swift in Sources */,
 			);
