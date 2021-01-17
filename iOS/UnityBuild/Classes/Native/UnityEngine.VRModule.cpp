@@ -12,6 +12,12 @@
 
 
 
+// System.Action`1<System.Object>
+struct Action_1_tD9663D9715FAA4E62035CFCF1AD4D094EE7872DC;
+// System.Action`1<System.String>
+struct Action_1_tC0D73E03177C82525D78670CDC2165F7CBF0A9C3;
+// System.Delegate[]
+struct DelegateU5BU5D_t677D8FE08A5F99E8EE49150B73966CD6E9BF7DB8;
 // System.AsyncCallback
 struct AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA;
 // System.DelegateData
@@ -20,21 +26,13 @@ struct DelegateData_t17DD30660E330C49381DAA99F934BE75CB11F288;
 struct IAsyncResult_tC9F97BF36FCF122D29D3101D80642278297BF370;
 // System.Reflection.MethodInfo
 struct MethodInfo_t;
-// System.Void
-struct Void_t700C6383A2A510C2CF4DD86DABD5CA9FF70ADAC5;
-// System.Action`1<System.Object>
-struct Action_1_tD9663D9715FAA4E62035CFCF1AD4D094EE7872DC;
-// System.Action`1<System.String>
-struct Action_1_tC0D73E03177C82525D78670CDC2165F7CBF0A9C3;
-// System.Delegate[]
-struct DelegateU5BU5D_t677D8FE08A5F99E8EE49150B73966CD6E9BF7DB8;
 // System.String
 struct String_t;
+// System.Void
+struct Void_t700C6383A2A510C2CF4DD86DABD5CA9FF70ADAC5;
 
 IL2CPP_EXTERN_C RuntimeClass* XRDevice_t2C2B952750A66CA935A8A94FD6B022F629D0B9CA_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Action_1_Invoke_m6E81F94353B45920E7018D209DCF4B63DBE8D8B6_RuntimeMethod_var;
-IL2CPP_EXTERN_C const uint32_t XRDevice_InvokeDeviceLoaded_m3BDF6825A2A56E4923D4E6593C7BA2949B6A3581_MetadataUsageId;
-IL2CPP_EXTERN_C const uint32_t XRDevice__cctor_mC83C1293819B81E68EC72D01A5CC107DFE29B98C_MetadataUsageId;
 struct Delegate_t_marshaled_com;
 struct Delegate_t_marshaled_pinvoke;
 
@@ -469,7 +467,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDevice_InvokeDeviceLoaded_m3BDF6825A2A
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_method (XRDevice_InvokeDeviceLoaded_m3BDF6825A2A56E4923D4E6593C7BA2949B6A3581_MetadataUsageId);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_Invoke_m6E81F94353B45920E7018D209DCF4B63DBE8D8B6_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRDevice_t2C2B952750A66CA935A8A94FD6B022F629D0B9CA_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;
@@ -502,7 +501,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDevice__cctor_mC83C1293819B81E68EC72D0
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_method (XRDevice__cctor_mC83C1293819B81E68EC72D01A5CC107DFE29B98C_MetadataUsageId);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRDevice_t2C2B952750A66CA935A8A94FD6B022F629D0B9CA_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	{

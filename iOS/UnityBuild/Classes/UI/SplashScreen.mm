@@ -26,7 +26,6 @@ static SplashScreenController*  _controller  = nil;
 - (void)createUI
 {
     NSString* launchScreen = [[NSBundle mainBundle].infoDictionary[@"UILaunchStoryboardName"] stringByDeletingPathExtension];
-
     const bool hasXIB = [[NSBundle mainBundle] pathForResource: launchScreen ofType: @"nib"] != nil;
 
     if (hasXIB)

@@ -76,14 +76,14 @@ struct LevelStartView: View {
       Color.black.edgesIgnoringSafeArea(.all)
       VStack(alignment: .center) {
         Text("Today's Game")
-          .font(.custom("PressStart2P", size: 21))
+          .font(.custom("PressStart2P-Regular", size: 21))
           .foregroundColor(Color.white)
           .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 0))
           .onAppear(perform: loadLevelData)
         thumbnail
           .padding(EdgeInsets(top: 35, leading: 0, bottom: 0, trailing: 0))
         Text(levelData.title)
-          .font(.custom("PressStart2P", size: 16))
+          .font(.custom("PressStart2P-Regular", size: 16))
           .foregroundColor(brown)
           .padding(EdgeInsets(top: 13, leading: 0, bottom: 0, trailing: 0))
         Button("START", action: {
@@ -92,7 +92,7 @@ struct LevelStartView: View {
           }
         })
           .foregroundColor(loaded ? green : gray)
-          .font(.custom("PressStart2P", size: 40))
+          .font(.custom("PressStart2P-Regular", size: 40))
           .padding(EdgeInsets(top: 30, leading: 0, bottom: 30, trailing: 0))
         Spacer()
 

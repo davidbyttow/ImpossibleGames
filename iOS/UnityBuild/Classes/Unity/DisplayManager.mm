@@ -1,6 +1,4 @@
 #include "DisplayManager.h"
-#include "EAGLContextHelper.h"
-#include "GlesHelper.h"
 #include "UI/UnityView.h"
 
 #include "UnityAppController.h"
@@ -8,15 +6,11 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import <CoreGraphics/CoreGraphics.h>
-
-#include <OpenGLES/ES2/gl.h>
-#include <OpenGLES/ES2/glext.h>
 #include "UnityMetalSupport.h"
 
 static DisplayManager* _DisplayManager = nil;
 
 @interface DisplayConnection ()
-@property (readonly, nonatomic) UnityDisplaySurfaceGLES*    surfaceGLES;
 @property (readonly, nonatomic) UnityDisplaySurfaceMTL*     surfaceMTL;
 @end
 
@@ -40,11 +34,12 @@ static DisplayManager* _DisplayManager = nil;
 @synthesize screenSize  = _screenSize;
 @synthesize surface     = _surface;
 
-@synthesize surfaceGLES;
-- (UnityDisplaySurfaceGLES*)surfaceGLES { assert(_surface->api != apiMetal); return (UnityDisplaySurfaceGLES*)_surface; }
 @synthesize surfaceMTL;
-- (UnityDisplaySurfaceMTL*)surfaceMTL   { assert(_surface->api == apiMetal); return (UnityDisplaySurfaceMTL*)_surface; }
-
+- (UnityDisplaySurfaceMTL*)surfaceMTL
+{
+    assert(_surface->api == apiMetal);
+    return (UnityDisplaySurfaceMTL*)_surface;
+}
 
 - (id)init:(UIScreen*)targetScreen
 {
@@ -125,13 +120,7 @@ static DisplayManager* _DisplayManager = nil;
         ret = surf;
     }
     else
-    {
-        UnityDisplaySurfaceGLES* surf = new UnityDisplaySurfaceGLES();
-        surf->layer     = (CAEAGLLayer*)_view.layer;
-        surf->context   = UnityCreateContextEAGL(UnityGetDataContextGLES(), 0);
-        _surface = surf; // gles needs this set here, it doesn't go through recreateSurface on initialization
-        ret = surf;
-    }
+        ret = new UnityDisplaySurfaceBase();
 
     ret->api = api;
     return ret;
@@ -155,7 +144,7 @@ static DisplayManager* _DisplayManager = nil;
         _screenSize = screenSize;
 
     bool systemSizeChanged  = surface->systemW != _screenSize.width || surface->systemH != _screenSize.height;
-    bool msaaChanged        = _supportsMSAA && (surface->msaaSamples != params.msaaSampleCount);
+    bool msaaChanged        = surface->msaaSamples != params.msaaSampleCount;
     bool depthFmtChanged    = surface->disableDepthAndStencil != params.disableDepthAndStencil;
     bool cvCacheChanged     = surface->useCVTextureCache != params.useCVTextureCache;
     bool memorylessChanged  = surface->memorylessDepth != params.metalMemorylessDepth;
@@ -182,21 +171,20 @@ static DisplayManager* _DisplayManager = nil;
     surface->targetW = params.renderW > 0 ? params.renderW : surface->systemW;
     surface->targetH = params.renderH > 0 ? params.renderH : surface->systemH;
 
-    surface->msaaSamples = _supportsMSAA ? params.msaaSampleCount : 0;
+    surface->msaaSamples = params.msaaSampleCount;
     surface->srgb = params.srgb;
     surface->wideColor = params.wideColor;
     surface->hdr = params.hdr;
     surface->useCVTextureCache = params.useCVTextureCache;
     surface->memorylessDepth = params.metalMemorylessDepth;
 
-    if (UnitySelectedRenderingAPI() == apiMetal)
+    const int api = UnitySelectedRenderingAPI();
+    if (api == apiMetal)
     {
         UnityDisplaySurfaceMTL* mtlSurf = (UnityDisplaySurfaceMTL*)surface;
         recreateSystemSurface = recreateSystemSurface || mtlSurf->systemColorRB == 0;
         mtlSurf->framebufferOnly = params.metalFramebufferOnly;
     }
-    else
-        recreateSystemSurface = recreateSystemSurface || ((UnityDisplaySurfaceGLES*)surface)->systemFB == 0;
 
     if (recreateSystemSurface)
         CreateSystemRenderingSurface(surface);
@@ -220,15 +208,11 @@ static DisplayManager* _DisplayManager = nil;
         DestroySharedDepthbuffer(_surface);
         DestroyUnityRenderBuffers(_surface);
 
-        if (UnitySelectedRenderingAPI() == apiMetal)
+        const int api = UnitySelectedRenderingAPI();
+        if (api == apiMetal)
         {
             self.surfaceMTL->device = nil;
             self.surfaceMTL->layer  = nil;
-        }
-        else
-        {
-            self.surfaceGLES->context   = nil;
-            self.surfaceGLES->layer     = nil;
         }
     }
 
@@ -476,14 +460,12 @@ static void EnsureDisplayIsInited(DisplayConnection* conn)
         needRecreate = true;
     else if (api == apiMetal)
         needRecreate = conn.surfaceMTL->layer == nil;
-    else
-        needRecreate = conn.surfaceGLES->systemFB == 0;
 
     if (needRecreate)
     {
         RenderingSurfaceParams params =
         {
-            .msaaSampleCount        = UnityGetDesiredMSAASampleCount(MSAA_DEFAULT_SAMPLE_COUNT),
+            .msaaSampleCount        = UnityGetDesiredMSAASampleCount(1),
             .renderW                = -1,   // native resolution at first (can be changed later)
             .renderH                = -1,   // native resolution at first (can be changed later)
             .srgb                   = UnityGetSRGBRequested(),
@@ -498,12 +480,6 @@ static void EnsureDisplayIsInited(DisplayConnection* conn)
         [conn recreateSurface: params];
         {
             DisplayConnection* main = [DisplayManager Instance].mainDisplay;
-
-        #if UNITY_USES_GLES
-            if (api != apiMetal)
-                [EAGLContext setCurrentContext: UnityGetMainScreenContextGLES()];
-        #endif
-
             StartFrameRendering(main.surface);
         }
     }
@@ -525,9 +501,6 @@ extern "C" bool UnityDisplayManager_DisplayAvailable(void* nativeDisplay)
 
 extern "C" bool UnityDisplayManager_DisplayActive(void* nativeDisplay)
 {
-    if (nativeDisplay == NULL)
-        return false;
-
     return UnityDisplayManager_DisplayAvailable(nativeDisplay);
 }
 
@@ -584,19 +557,6 @@ extern "C" void UnityDisplayManager_SetRenderingResolution(void* nativeDisplay, 
         [conn requestRenderingResolution: CGSizeMake(w, h)];
 }
 
-extern "C" void UnityDisplayManager_ShouldShowWindowOnDisplay(void* nativeDisplay, bool show)
-{
-    if (nativeDisplay == NULL)
-        return;
-
-    UIScreen*           screen  = (__bridge UIScreen*)nativeDisplay;
-    DisplayConnection*  conn    = [DisplayManager Instance][screen];
-    EnsureDisplayIsInited(conn);
-
-    if (screen != [UIScreen mainScreen])
-        [conn shouldShowWindow: show];
-}
-
 extern "C" int UnityDisplayManager_PrimaryDisplayIndex()
 {
     return 0;
@@ -604,14 +564,15 @@ extern "C" int UnityDisplayManager_PrimaryDisplayIndex()
 
 #endif
 
-extern "C" EAGLContext* UnityGetMainScreenContextGLES()
+extern "C" void UnityActivateScreenForRendering(void* nativeDisplay)
 {
-    return GetMainDisplay().surfaceGLES->context;
-}
+    if (nativeDisplay == NULL)
+        return;
 
-extern "C" EAGLContext* UnityGetContextEAGL()
-{
-    return GetMainDisplay().surfaceGLES->context;
+    DisplayConnection* conn = [DisplayManager Instance][(__bridge UIScreen*)nativeDisplay];
+
+    EnsureDisplayIsInited(conn);
+    [conn shouldShowWindow: YES];
 }
 
 extern "C" float UnityScreenScaleFactor(UIScreen* screen)
@@ -659,11 +620,11 @@ extern "C" void UnityDestroyUnityRenderSurfaces()
 
 extern "C" void UnitySetBrightness(float brightness)
 {
-    #if !PLATFORM_TVOS
+#if !PLATFORM_TVOS
     brightness = (brightness > 1.0 ? 1.0 : brightness) < 0 ? 0.0 : brightness;
     UIScreen* screen  = [UIScreen mainScreen];
     screen.brightness = brightness;
-    #endif
+#endif
 }
 
 extern "C" float UnityGetBrightness()

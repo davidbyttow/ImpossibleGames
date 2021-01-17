@@ -6,15 +6,8 @@
 #endif
 
 
-
 #include "codegen/il2cpp-codegen-metadata.h"
 
-
-
-
-
-IL2CPP_EXTERN_C_BEGIN
-IL2CPP_EXTERN_C_END
 
 
 
@@ -45,9 +38,9 @@ extern void Tile_set_gameObject_mB450C0800EDB44EDB8E8F56DAFF75B7C13FC6420 (void)
 extern void Tile_get_flags_m10DF194D35F7B96B52795369365B332F1432143C (void);
 // 0x0000000D System.Void UnityEngine.Tilemaps.Tile::set_flags(UnityEngine.Tilemaps.TileFlags)
 extern void Tile_set_flags_mAF0336180878A6D396DFFE4B9D3C188F6D6010CB (void);
-// 0x0000000E UnityEngine.Tilemaps.Tile_ColliderType UnityEngine.Tilemaps.Tile::get_colliderType()
+// 0x0000000E UnityEngine.Tilemaps.Tile/ColliderType UnityEngine.Tilemaps.Tile::get_colliderType()
 extern void Tile_get_colliderType_m978D12FD1D9210E990576B0515A6296B0566025E (void);
-// 0x0000000F System.Void UnityEngine.Tilemaps.Tile::set_colliderType(UnityEngine.Tilemaps.Tile_ColliderType)
+// 0x0000000F System.Void UnityEngine.Tilemaps.Tile::set_colliderType(UnityEngine.Tilemaps.Tile/ColliderType)
 extern void Tile_set_colliderType_m0D7FFF0A6A80C2C026030149CF924E9FB8A852C1 (void);
 // 0x00000010 System.Void UnityEngine.Tilemaps.Tile::GetTileData(UnityEngine.Vector3Int,UnityEngine.Tilemaps.ITilemap,UnityEngine.Tilemaps.TileData&)
 extern void Tile_GetTileData_m6BDFA53AD74BF38AAD340203F43D1C796BAB8F9A (void);
@@ -87,7 +80,7 @@ extern void TileData_set_transform_m39FBC6A129739589B8993B4185DFF72B0B472E2C_Adj
 extern void TileData_set_gameObject_m02BDDD787C6E5AD0DFA29E510E4FFD101090D685_AdjustorThunk (void);
 // 0x00000022 System.Void UnityEngine.Tilemaps.TileData::set_flags(UnityEngine.Tilemaps.TileFlags)
 extern void TileData_set_flags_m1AC7BA3912E9B4B85F4F0B322FE2361AE475B0E4_AdjustorThunk (void);
-// 0x00000023 System.Void UnityEngine.Tilemaps.TileData::set_colliderType(UnityEngine.Tilemaps.Tile_ColliderType)
+// 0x00000023 System.Void UnityEngine.Tilemaps.TileData::set_colliderType(UnityEngine.Tilemaps.Tile/ColliderType)
 extern void TileData_set_colliderType_mEF741658774E43C8AB0986EEA9FBDA1838BF34A3_AdjustorThunk (void);
 static Il2CppMethodPointer s_methodPointers[35] = 
 {
@@ -129,44 +122,45 @@ static Il2CppMethodPointer s_methodPointers[35] =
 };
 static const int32_t s_InvokerIndices[35] = 
 {
-	23,
-	1336,
-	4,
-	14,
-	26,
-	1035,
-	1332,
-	1148,
-	1337,
-	14,
-	26,
-	10,
-	32,
-	10,
-	32,
-	1338,
-	23,
-	1339,
-	1338,
-	1340,
-	1341,
-	1342,
-	1343,
-	23,
-	1336,
-	6,
-	23,
-	23,
-	26,
-	26,
-	1332,
-	1337,
-	26,
-	32,
-	32,
+	1601,
+	1371,
+	2519,
+	1558,
+	1330,
+	1517,
+	1284,
+	1555,
+	1327,
+	1558,
+	1330,
+	1545,
+	1318,
+	1545,
+	1318,
+	539,
+	1601,
+	835,
+	539,
+	670,
+	461,
+	669,
+	462,
+	1601,
+	1371,
+	1278,
+	1601,
+	1601,
+	1330,
+	1330,
+	1284,
+	1327,
+	1330,
+	1318,
+	1318,
 };
-extern const Il2CppCodeGenModule g_UnityEngine_TilemapModuleCodeGenModule;
-const Il2CppCodeGenModule g_UnityEngine_TilemapModuleCodeGenModule = 
+extern const CustomAttributesCacheGenerator g_UnityEngine_TilemapModule_AttributeGenerators[];
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_TilemapModule_CodeGenModule;
+const Il2CppCodeGenModule g_UnityEngine_TilemapModule_CodeGenModule = 
 {
 	"UnityEngine.TilemapModule.dll",
 	35,
@@ -177,6 +171,11 @@ const Il2CppCodeGenModule g_UnityEngine_TilemapModuleCodeGenModule =
 	0,
 	NULL,
 	0,
+	NULL,
+	NULL,
+	g_UnityEngine_TilemapModule_AttributeGenerators,
+	NULL, // module initializer,
+	NULL,
 	NULL,
 	NULL,
 };

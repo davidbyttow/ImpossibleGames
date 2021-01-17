@@ -1,7 +1,6 @@
 #pragma once
 
 #include "UnityRendering.h"
-#include "GlesHelper.h"
 #include <UIKit/UIKit.h>
 
 @class EAGLContext;

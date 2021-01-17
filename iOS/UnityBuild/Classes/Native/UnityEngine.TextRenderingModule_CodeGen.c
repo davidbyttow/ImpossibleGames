@@ -6,15 +6,8 @@
 #endif
 
 
-
 #include "codegen/il2cpp-codegen-metadata.h"
 
-
-
-
-
-IL2CPP_EXTERN_C_BEGIN
-IL2CPP_EXTERN_C_END
 
 
 
@@ -105,13 +98,13 @@ extern void Font_InvokeTextureRebuilt_Internal_m35C57E19A7E53A2F2A94DF909E6903DF
 extern void Font_HasCharacter_m91E1618BC3221EBB83518E5B85D5CA3996FAD10C (void);
 // 0x0000002B System.Boolean UnityEngine.Font::HasCharacter(System.Int32)
 extern void Font_HasCharacter_mEC8A3BB085240EC6B44999C19588319DB644B2AC (void);
-// 0x0000002C System.Void UnityEngine.Font_FontTextureRebuildCallback::.ctor(System.Object,System.IntPtr)
+// 0x0000002C System.Void UnityEngine.Font/FontTextureRebuildCallback::.ctor(System.Object,System.IntPtr)
 extern void FontTextureRebuildCallback__ctor_m58D67535ED1CC9895AB016CBB713A730A73480E0 (void);
-// 0x0000002D System.Void UnityEngine.Font_FontTextureRebuildCallback::Invoke()
+// 0x0000002D System.Void UnityEngine.Font/FontTextureRebuildCallback::Invoke()
 extern void FontTextureRebuildCallback_Invoke_m7F5D9CAA51DC8C9779104ACF46F668654B35EA1F (void);
-// 0x0000002E System.IAsyncResult UnityEngine.Font_FontTextureRebuildCallback::BeginInvoke(System.AsyncCallback,System.Object)
+// 0x0000002E System.IAsyncResult UnityEngine.Font/FontTextureRebuildCallback::BeginInvoke(System.AsyncCallback,System.Object)
 extern void FontTextureRebuildCallback_BeginInvoke_m3F36739573BA8EE2C6C3BF90DC37E9D78AD7365F (void);
-// 0x0000002F System.Void UnityEngine.Font_FontTextureRebuildCallback::EndInvoke(System.IAsyncResult)
+// 0x0000002F System.Void UnityEngine.Font/FontTextureRebuildCallback::EndInvoke(System.IAsyncResult)
 extern void FontTextureRebuildCallback_EndInvoke_m3FDA95B07122814A8E63A8B7FFB5BCA7EC157B2C (void);
 static Il2CppMethodPointer s_methodPointers[47] = 
 {
@@ -165,56 +158,57 @@ static Il2CppMethodPointer s_methodPointers[47] =
 };
 static const int32_t s_InvokerIndices[47] = 
 {
-	1297,
-	1298,
-	1299,
-	23,
-	32,
-	23,
-	23,
-	10,
-	1300,
-	23,
-	26,
-	26,
-	26,
-	1301,
-	1301,
-	1302,
-	1303,
-	1304,
-	1304,
-	14,
-	14,
-	14,
-	994,
-	10,
-	10,
-	686,
-	25,
-	1305,
-	1306,
-	26,
-	26,
-	26,
-	6,
-	1307,
-	3,
-	111,
-	111,
-	14,
-	102,
-	10,
-	111,
-	193,
-	30,
-	163,
-	23,
-	101,
-	26,
+	614,
+	654,
+	1183,
+	1601,
+	1318,
+	1601,
+	1601,
+	1545,
+	1223,
+	1601,
+	1330,
+	1330,
+	1330,
+	666,
+	666,
+	459,
+	639,
+	563,
+	563,
+	1558,
+	1558,
+	1558,
+	1571,
+	1545,
+	1545,
+	2515,
+	2493,
+	1,
+	2,
+	1330,
+	1330,
+	1330,
+	1278,
+	0,
+	2536,
+	2494,
+	2494,
+	1558,
+	1579,
+	1545,
+	2494,
+	1135,
+	1136,
+	809,
+	1601,
+	599,
+	1330,
 };
-extern const Il2CppCodeGenModule g_UnityEngine_TextRenderingModuleCodeGenModule;
-const Il2CppCodeGenModule g_UnityEngine_TextRenderingModuleCodeGenModule = 
+extern const CustomAttributesCacheGenerator g_UnityEngine_TextRenderingModule_AttributeGenerators[];
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_TextRenderingModule_CodeGenModule;
+const Il2CppCodeGenModule g_UnityEngine_TextRenderingModule_CodeGenModule = 
 {
 	"UnityEngine.TextRenderingModule.dll",
 	47,
@@ -225,6 +219,11 @@ const Il2CppCodeGenModule g_UnityEngine_TextRenderingModuleCodeGenModule =
 	0,
 	NULL,
 	0,
+	NULL,
+	NULL,
+	g_UnityEngine_TextRenderingModule_AttributeGenerators,
+	NULL, // module initializer,
+	NULL,
 	NULL,
 	NULL,
 };

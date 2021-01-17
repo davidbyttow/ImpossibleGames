@@ -102,7 +102,7 @@ public:
 extern "C" void DEFAULT_CALL ReversePInvokeWrapper_OSSpecificSynchronizationContext_InvocationEntry_m0045E44F7E960D6B4A864D5206D4116249C09BB0(intptr_t ___arg0);
 
 
-extern const Il2CppMethodPointer g_ReversePInvokeWrapperPointers[];
+IL2CPP_EXTERN_C const Il2CppMethodPointer g_ReversePInvokeWrapperPointers[];
 const Il2CppMethodPointer g_ReversePInvokeWrapperPointers[1] = 
 {
 	reinterpret_cast<Il2CppMethodPointer>(ReversePInvokeWrapper_OSSpecificSynchronizationContext_InvocationEntry_m0045E44F7E960D6B4A864D5206D4116249C09BB0),

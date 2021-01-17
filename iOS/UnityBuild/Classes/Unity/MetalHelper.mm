@@ -23,9 +23,6 @@ extern Class MTLTextureDescriptorClass;
 extern "C" void InitRenderingMTL()
 {
 #if UNITY_TRAMPOLINE_IN_USE
-    extern bool _supportsMSAA;
-    _supportsMSAA = true;
-
     MTLTextureDescriptorClass = NSClassFromString(@"MTLTextureDescriptor");
 #endif
 }
@@ -96,7 +93,7 @@ extern "C" void CreateSystemRenderingSurfaceMTL(UnityDisplaySurfaceMTL* surface)
     surface->layer.device = surface->device;
     surface->layer.pixelFormat = colorFormat;
     surface->layer.framebufferOnly = (surface->framebufferOnly != 0);
-    surface->colorFormat = colorFormat;
+    surface->colorFormat = (unsigned)colorFormat;
 
     MTLTextureDescriptor* txDesc = [MTLTextureDescriptorClass texture2DDescriptorWithPixelFormat: colorFormat width: surface->systemW height: surface->systemH mipmapped: NO];
 #if PLATFORM_OSX

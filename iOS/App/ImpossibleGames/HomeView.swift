@@ -14,7 +14,7 @@ struct ComingSoonOverlay: View {
   var body: some View {
     Text("Coming Soon")
       .foregroundColor(purple)
-      .font(.custom("PressStart2P", size: 14))
+      .font(.custom("PressStart2P-Regular", size: 14))
   }
 }
 
@@ -35,28 +35,28 @@ struct HomeView: View {
           .padding(EdgeInsets(top: 64, leading: 0, bottom: 0, trailing: 0))
         Text("GAMES")
           .foregroundColor(.white)
-          .font(.custom("PressStart2P", size: 52))
+          .font(.custom("PressStart2P-Regular", size: 52))
           .padding(EdgeInsets(top: 6, leading: 0, bottom: 0, trailing: 0))
         Spacer()
         Button(action: { router.currentPage = .startGame }) {
           Text("PLAY")
             .foregroundColor(styles.green)
-            .font(.custom("PressStart2P", size: 52))
+            .font(.custom("PressStart2P-Regular", size: 52))
         }
         Spacer().frame(height: 40)
         Text("BUILD")
           .foregroundColor(styles.gray)
-          .font(.custom("PressStart2P", size: 42))
+          .font(.custom("PressStart2P-Regular", size: 42))
           .frame(height: 68)
 //          .overlay(ComingSoonOverlay(), alignment: .bottomTrailing)
         Spacer()
         Text("Code and Graphics")
           .foregroundColor(styles.darkRed)
-          .font(.custom("PressStart2P", size: 14))
+          .font(.custom("PressStart2P-Regular", size: 14))
         Text("David Byttow")
           .foregroundColor(styles.gray)
           .padding(EdgeInsets(top: 6, leading: 0, bottom: 20, trailing: 0))
-          .font(.custom("PressStart2P", size: 14))
+          .font(.custom("PressStart2P-Regular", size: 14))
       }.frame(
         minWidth: 0,
         maxWidth: .infinity,

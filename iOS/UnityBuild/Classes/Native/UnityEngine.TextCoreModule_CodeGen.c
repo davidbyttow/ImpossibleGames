@@ -6,15 +6,8 @@
 #endif
 
 
-
 #include "codegen/il2cpp-codegen-metadata.h"
 
-
-
-
-
-IL2CPP_EXTERN_C_BEGIN
-IL2CPP_EXTERN_C_END
 
 
 
@@ -173,62 +166,52 @@ extern void GlyphAdjustmentRecord_get_glyphIndex_mCD420C739E19E446152534AFA80A61
 extern void GlyphAdjustmentRecord_get_glyphValueRecord_mAC27920271FB7166EE305BACE1D595CAA57872EE_AdjustorThunk (void);
 // 0x0000004D UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord::get_firstAdjustmentRecord()
 extern void GlyphPairAdjustmentRecord_get_firstAdjustmentRecord_m92BC7561227D482635EF8AB93B8F20808017FBF8_AdjustorThunk (void);
-// 0x0000004E System.Void UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord::set_firstAdjustmentRecord(UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord)
-extern void GlyphPairAdjustmentRecord_set_firstAdjustmentRecord_m780CD1495A667852B44DA8EF210172484F917C77_AdjustorThunk (void);
-// 0x0000004F UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord::get_secondAdjustmentRecord()
+// 0x0000004E UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord::get_secondAdjustmentRecord()
 extern void GlyphPairAdjustmentRecord_get_secondAdjustmentRecord_m488CCBCB6802727334E2135E65EBB027A0A01EAD_AdjustorThunk (void);
-// 0x00000050 System.Void UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord::set_secondAdjustmentRecord(UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord)
-extern void GlyphPairAdjustmentRecord_set_secondAdjustmentRecord_mE8AFF0F392DE4B0590C0F7F2AF3D2D85AD756EFE_AdjustorThunk (void);
-// 0x00000051 UnityEngine.TextCore.LowLevel.FontFeatureLookupFlags UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord::get_featureLookupFlags()
-extern void GlyphPairAdjustmentRecord_get_featureLookupFlags_m3BBC32A004335C153CABFFA25F02164DEF20AE58_AdjustorThunk (void);
-// 0x00000052 System.Void UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord::set_featureLookupFlags(UnityEngine.TextCore.LowLevel.FontFeatureLookupFlags)
-extern void GlyphPairAdjustmentRecord_set_featureLookupFlags_m6F0E8C3CBE5A06B42E8EE4EC0B91028EBE731834_AdjustorThunk (void);
-// 0x00000053 System.Void UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord::.ctor(UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord,UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord)
-extern void GlyphPairAdjustmentRecord__ctor_mA474AC63D0E4A5B8127FC38A7CC74DC1817BB264_AdjustorThunk (void);
-// 0x00000054 UnityEngine.TextCore.LowLevel.FontEngineError UnityEngine.TextCore.LowLevel.FontEngine::InitializeFontEngine()
+// 0x0000004F UnityEngine.TextCore.LowLevel.FontEngineError UnityEngine.TextCore.LowLevel.FontEngine::InitializeFontEngine()
 extern void FontEngine_InitializeFontEngine_m85697221DC9ED18EC8356014293D423347054C43 (void);
-// 0x00000055 System.Int32 UnityEngine.TextCore.LowLevel.FontEngine::InitializeFontEngine_Internal()
+// 0x00000050 System.Int32 UnityEngine.TextCore.LowLevel.FontEngine::InitializeFontEngine_Internal()
 extern void FontEngine_InitializeFontEngine_Internal_m50E925BB9BE850ADB0611C2707FCECF3FB728C71 (void);
-// 0x00000056 UnityEngine.TextCore.LowLevel.FontEngineError UnityEngine.TextCore.LowLevel.FontEngine::LoadFontFace(UnityEngine.Font,System.Int32)
+// 0x00000051 UnityEngine.TextCore.LowLevel.FontEngineError UnityEngine.TextCore.LowLevel.FontEngine::LoadFontFace(UnityEngine.Font,System.Int32)
 extern void FontEngine_LoadFontFace_m85674659FD8AA761C771CA869FC345B1555EDD5D (void);
-// 0x00000057 System.Int32 UnityEngine.TextCore.LowLevel.FontEngine::LoadFontFace_With_Size_FromFont_Internal(UnityEngine.Font,System.Int32)
+// 0x00000052 System.Int32 UnityEngine.TextCore.LowLevel.FontEngine::LoadFontFace_With_Size_FromFont_Internal(UnityEngine.Font,System.Int32)
 extern void FontEngine_LoadFontFace_With_Size_FromFont_Internal_m2904823B237D890C9AC817A13098274D7DEC4FA7 (void);
-// 0x00000058 UnityEngine.TextCore.FaceInfo UnityEngine.TextCore.LowLevel.FontEngine::GetFaceInfo()
+// 0x00000053 UnityEngine.TextCore.FaceInfo UnityEngine.TextCore.LowLevel.FontEngine::GetFaceInfo()
 extern void FontEngine_GetFaceInfo_m76A5E8DEE1846A7D56BC72D8FE177CA6656F8385 (void);
-// 0x00000059 System.Int32 UnityEngine.TextCore.LowLevel.FontEngine::GetFaceInfo_Internal(UnityEngine.TextCore.FaceInfo&)
+// 0x00000054 System.Int32 UnityEngine.TextCore.LowLevel.FontEngine::GetFaceInfo_Internal(UnityEngine.TextCore.FaceInfo&)
 extern void FontEngine_GetFaceInfo_Internal_m86BF1FCC26761DEB15EBC252943F10690612F6CA (void);
-// 0x0000005A System.UInt32 UnityEngine.TextCore.LowLevel.FontEngine::GetGlyphIndex(System.UInt32)
+// 0x00000055 System.UInt32 UnityEngine.TextCore.LowLevel.FontEngine::GetGlyphIndex(System.UInt32)
 extern void FontEngine_GetGlyphIndex_mFA9D09AB6E5FC7234F0154D9BF53923762EE1947 (void);
-// 0x0000005B System.Boolean UnityEngine.TextCore.LowLevel.FontEngine::TryGetGlyphWithUnicodeValue(System.UInt32,UnityEngine.TextCore.LowLevel.GlyphLoadFlags,UnityEngine.TextCore.Glyph&)
+// 0x00000056 System.Boolean UnityEngine.TextCore.LowLevel.FontEngine::TryGetGlyphWithUnicodeValue(System.UInt32,UnityEngine.TextCore.LowLevel.GlyphLoadFlags,UnityEngine.TextCore.Glyph&)
 extern void FontEngine_TryGetGlyphWithUnicodeValue_m2C8B5D37D097FB1C75846E431D29AC15349CBA3B (void);
-// 0x0000005C System.Boolean UnityEngine.TextCore.LowLevel.FontEngine::TryGetGlyphWithUnicodeValue_Internal(System.UInt32,UnityEngine.TextCore.LowLevel.GlyphLoadFlags,UnityEngine.TextCore.LowLevel.GlyphMarshallingStruct&)
+// 0x00000057 System.Boolean UnityEngine.TextCore.LowLevel.FontEngine::TryGetGlyphWithUnicodeValue_Internal(System.UInt32,UnityEngine.TextCore.LowLevel.GlyphLoadFlags,UnityEngine.TextCore.LowLevel.GlyphMarshallingStruct&)
 extern void FontEngine_TryGetGlyphWithUnicodeValue_Internal_m4DDE3BF8F78CEDB763D821454B89997BB9BA276C (void);
-// 0x0000005D System.Boolean UnityEngine.TextCore.LowLevel.FontEngine::TryGetGlyphWithIndexValue(System.UInt32,UnityEngine.TextCore.LowLevel.GlyphLoadFlags,UnityEngine.TextCore.Glyph&)
+// 0x00000058 System.Boolean UnityEngine.TextCore.LowLevel.FontEngine::TryGetGlyphWithIndexValue(System.UInt32,UnityEngine.TextCore.LowLevel.GlyphLoadFlags,UnityEngine.TextCore.Glyph&)
 extern void FontEngine_TryGetGlyphWithIndexValue_m775B743546174CA10A01141847225874AC3EE7D9 (void);
-// 0x0000005E System.Boolean UnityEngine.TextCore.LowLevel.FontEngine::TryGetGlyphWithIndexValue_Internal(System.UInt32,UnityEngine.TextCore.LowLevel.GlyphLoadFlags,UnityEngine.TextCore.LowLevel.GlyphMarshallingStruct&)
+// 0x00000059 System.Boolean UnityEngine.TextCore.LowLevel.FontEngine::TryGetGlyphWithIndexValue_Internal(System.UInt32,UnityEngine.TextCore.LowLevel.GlyphLoadFlags,UnityEngine.TextCore.LowLevel.GlyphMarshallingStruct&)
 extern void FontEngine_TryGetGlyphWithIndexValue_Internal_mF1CB9EABC97E1A1372A23297EAFBE7EAB5A6313A (void);
-// 0x0000005F System.Boolean UnityEngine.TextCore.LowLevel.FontEngine::TryAddGlyphToTexture(System.UInt32,System.Int32,UnityEngine.TextCore.LowLevel.GlyphPackingMode,System.Collections.Generic.List`1<UnityEngine.TextCore.GlyphRect>,System.Collections.Generic.List`1<UnityEngine.TextCore.GlyphRect>,UnityEngine.TextCore.LowLevel.GlyphRenderMode,UnityEngine.Texture2D,UnityEngine.TextCore.Glyph&)
+// 0x0000005A System.Boolean UnityEngine.TextCore.LowLevel.FontEngine::TryAddGlyphToTexture(System.UInt32,System.Int32,UnityEngine.TextCore.LowLevel.GlyphPackingMode,System.Collections.Generic.List`1<UnityEngine.TextCore.GlyphRect>,System.Collections.Generic.List`1<UnityEngine.TextCore.GlyphRect>,UnityEngine.TextCore.LowLevel.GlyphRenderMode,UnityEngine.Texture2D,UnityEngine.TextCore.Glyph&)
 extern void FontEngine_TryAddGlyphToTexture_mF2513F6DE362FCB9609BE09CC1EFB6D851922200 (void);
-// 0x00000060 System.Boolean UnityEngine.TextCore.LowLevel.FontEngine::TryAddGlyphToTexture_Internal(System.UInt32,System.Int32,UnityEngine.TextCore.LowLevel.GlyphPackingMode,UnityEngine.TextCore.GlyphRect[],System.Int32&,UnityEngine.TextCore.GlyphRect[],System.Int32&,UnityEngine.TextCore.LowLevel.GlyphRenderMode,UnityEngine.Texture2D,UnityEngine.TextCore.LowLevel.GlyphMarshallingStruct&)
+// 0x0000005B System.Boolean UnityEngine.TextCore.LowLevel.FontEngine::TryAddGlyphToTexture_Internal(System.UInt32,System.Int32,UnityEngine.TextCore.LowLevel.GlyphPackingMode,UnityEngine.TextCore.GlyphRect[],System.Int32&,UnityEngine.TextCore.GlyphRect[],System.Int32&,UnityEngine.TextCore.LowLevel.GlyphRenderMode,UnityEngine.Texture2D,UnityEngine.TextCore.LowLevel.GlyphMarshallingStruct&)
 extern void FontEngine_TryAddGlyphToTexture_Internal_m1A0E3323EADB617657BF97F660649C6FDD1B14B7 (void);
-// 0x00000061 System.Boolean UnityEngine.TextCore.LowLevel.FontEngine::TryAddGlyphsToTexture(System.Collections.Generic.List`1<System.UInt32>,System.Int32,UnityEngine.TextCore.LowLevel.GlyphPackingMode,System.Collections.Generic.List`1<UnityEngine.TextCore.GlyphRect>,System.Collections.Generic.List`1<UnityEngine.TextCore.GlyphRect>,UnityEngine.TextCore.LowLevel.GlyphRenderMode,UnityEngine.Texture2D,UnityEngine.TextCore.Glyph[]&)
+// 0x0000005C System.Boolean UnityEngine.TextCore.LowLevel.FontEngine::TryAddGlyphsToTexture(System.Collections.Generic.List`1<System.UInt32>,System.Int32,UnityEngine.TextCore.LowLevel.GlyphPackingMode,System.Collections.Generic.List`1<UnityEngine.TextCore.GlyphRect>,System.Collections.Generic.List`1<UnityEngine.TextCore.GlyphRect>,UnityEngine.TextCore.LowLevel.GlyphRenderMode,UnityEngine.Texture2D,UnityEngine.TextCore.Glyph[]&)
 extern void FontEngine_TryAddGlyphsToTexture_m61337C5A18F0229A85A6203976715D70F3362655 (void);
-// 0x00000062 System.Boolean UnityEngine.TextCore.LowLevel.FontEngine::TryAddGlyphsToTexture_Internal(System.UInt32[],System.Int32,UnityEngine.TextCore.LowLevel.GlyphPackingMode,UnityEngine.TextCore.GlyphRect[],System.Int32&,UnityEngine.TextCore.GlyphRect[],System.Int32&,UnityEngine.TextCore.LowLevel.GlyphRenderMode,UnityEngine.Texture2D,UnityEngine.TextCore.LowLevel.GlyphMarshallingStruct[],System.Int32&)
+// 0x0000005D System.Boolean UnityEngine.TextCore.LowLevel.FontEngine::TryAddGlyphsToTexture_Internal(System.UInt32[],System.Int32,UnityEngine.TextCore.LowLevel.GlyphPackingMode,UnityEngine.TextCore.GlyphRect[],System.Int32&,UnityEngine.TextCore.GlyphRect[],System.Int32&,UnityEngine.TextCore.LowLevel.GlyphRenderMode,UnityEngine.Texture2D,UnityEngine.TextCore.LowLevel.GlyphMarshallingStruct[],System.Int32&)
 extern void FontEngine_TryAddGlyphsToTexture_Internal_mB0FE279387211C00BF9E5891C39462CD6F159CE8 (void);
-// 0x00000063 UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord[] UnityEngine.TextCore.LowLevel.FontEngine::GetGlyphPairAdjustmentTable(System.UInt32[])
+// 0x0000005E UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord[] UnityEngine.TextCore.LowLevel.FontEngine::GetGlyphPairAdjustmentTable(System.UInt32[])
 extern void FontEngine_GetGlyphPairAdjustmentTable_mE93C9A8673C34CAE740DEB22328F2A961DB76014 (void);
-// 0x00000064 System.Int32 UnityEngine.TextCore.LowLevel.FontEngine::PopulatePairAdjustmentRecordMarshallingArray_from_GlyphIndexes(System.UInt32[],System.Int32&)
+// 0x0000005F System.Int32 UnityEngine.TextCore.LowLevel.FontEngine::PopulatePairAdjustmentRecordMarshallingArray_from_GlyphIndexes(System.UInt32[],System.Int32&)
 extern void FontEngine_PopulatePairAdjustmentRecordMarshallingArray_from_GlyphIndexes_m209060A34247119B382FE9327CDDC85B8A04DEDF (void);
-// 0x00000065 System.Int32 UnityEngine.TextCore.LowLevel.FontEngine::GetGlyphPairAdjustmentRecordsFromMarshallingArray(UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord[])
+// 0x00000060 System.Int32 UnityEngine.TextCore.LowLevel.FontEngine::GetGlyphPairAdjustmentRecordsFromMarshallingArray(UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord[])
 extern void FontEngine_GetGlyphPairAdjustmentRecordsFromMarshallingArray_m0B720E99C766368DA85190A049A4F70C5805DFD4 (void);
-// 0x00000066 System.Void UnityEngine.TextCore.LowLevel.FontEngine::SetMarshallingArraySize(T[]&,System.Int32)
-// 0x00000067 System.Void UnityEngine.TextCore.LowLevel.FontEngine::ResetAtlasTexture(UnityEngine.Texture2D)
+// 0x00000061 System.Void UnityEngine.TextCore.LowLevel.FontEngine::SetMarshallingArraySize(T[]&,System.Int32)
+// 0x00000062 System.Void UnityEngine.TextCore.LowLevel.FontEngine::ResetAtlasTexture(UnityEngine.Texture2D)
 extern void FontEngine_ResetAtlasTexture_m34415B1BC955B68AC8BFE1F339BA74E4B81C160B (void);
-// 0x00000068 System.Void UnityEngine.TextCore.LowLevel.FontEngine::.cctor()
+// 0x00000063 System.Void UnityEngine.TextCore.LowLevel.FontEngine::.cctor()
 extern void FontEngine__cctor_mACF18DD12F81B34818DC5508BC4EF347445F7FE3 (void);
-// 0x00000069 System.Int32 UnityEngine.TextCore.LowLevel.FontEngineUtilities::MaxValue(System.Int32,System.Int32,System.Int32)
+// 0x00000064 System.Int32 UnityEngine.TextCore.LowLevel.FontEngineUtilities::MaxValue(System.Int32,System.Int32,System.Int32)
 extern void FontEngineUtilities_MaxValue_m2EF659954522080160961E35BE6FDF1DD5C98FB7 (void);
-static Il2CppMethodPointer s_methodPointers[105] = 
+static Il2CppMethodPointer s_methodPointers[100] = 
 {
 	FaceInfo_set_familyName_mF2284C683441750136664CE2F54A6A1B8D025BCF_AdjustorThunk,
 	FaceInfo_set_styleName_m2EA494E818600812D1EF63E1B861D930D72DDB2F_AdjustorThunk,
@@ -307,12 +290,7 @@ static Il2CppMethodPointer s_methodPointers[105] =
 	GlyphAdjustmentRecord_get_glyphIndex_mCD420C739E19E446152534AFA80A6113C0DBCC55_AdjustorThunk,
 	GlyphAdjustmentRecord_get_glyphValueRecord_mAC27920271FB7166EE305BACE1D595CAA57872EE_AdjustorThunk,
 	GlyphPairAdjustmentRecord_get_firstAdjustmentRecord_m92BC7561227D482635EF8AB93B8F20808017FBF8_AdjustorThunk,
-	GlyphPairAdjustmentRecord_set_firstAdjustmentRecord_m780CD1495A667852B44DA8EF210172484F917C77_AdjustorThunk,
 	GlyphPairAdjustmentRecord_get_secondAdjustmentRecord_m488CCBCB6802727334E2135E65EBB027A0A01EAD_AdjustorThunk,
-	GlyphPairAdjustmentRecord_set_secondAdjustmentRecord_mE8AFF0F392DE4B0590C0F7F2AF3D2D85AD756EFE_AdjustorThunk,
-	GlyphPairAdjustmentRecord_get_featureLookupFlags_m3BBC32A004335C153CABFFA25F02164DEF20AE58_AdjustorThunk,
-	GlyphPairAdjustmentRecord_set_featureLookupFlags_m6F0E8C3CBE5A06B42E8EE4EC0B91028EBE731834_AdjustorThunk,
-	GlyphPairAdjustmentRecord__ctor_mA474AC63D0E4A5B8127FC38A7CC74DC1817BB264_AdjustorThunk,
 	FontEngine_InitializeFontEngine_m85697221DC9ED18EC8356014293D423347054C43,
 	FontEngine_InitializeFontEngine_Internal_m50E925BB9BE850ADB0611C2707FCECF3FB728C71,
 	FontEngine_LoadFontFace_m85674659FD8AA761C771CA869FC345B1555EDD5D,
@@ -336,128 +314,124 @@ static Il2CppMethodPointer s_methodPointers[105] =
 	FontEngine__cctor_mACF18DD12F81B34818DC5508BC4EF347445F7FE3,
 	FontEngineUtilities_MaxValue_m2EF659954522080160961E35BE6FDF1DD5C98FB7,
 };
-static const int32_t s_InvokerIndices[105] = 
+static const int32_t s_InvokerIndices[100] = 
 {
-	26,
-	26,
-	10,
-	32,
-	655,
-	275,
-	655,
-	275,
-	655,
-	275,
-	655,
-	275,
-	655,
-	275,
-	655,
-	275,
-	655,
-	275,
-	655,
-	275,
-	655,
-	275,
-	655,
-	275,
-	655,
-	275,
-	655,
-	275,
-	655,
-	275,
-	655,
-	275,
-	275,
-	655,
-	275,
-	10,
-	10,
-	10,
-	10,
-	1421,
-	279,
-	10,
-	9,
-	1422,
-	3,
-	655,
-	655,
-	655,
-	655,
-	655,
-	1423,
-	10,
-	9,
-	1424,
-	10,
-	32,
-	1425,
-	1426,
-	1427,
-	1428,
-	655,
-	275,
-	10,
-	32,
-	23,
-	1429,
-	1430,
-	655,
-	655,
-	655,
-	655,
-	10,
-	9,
-	1431,
-	10,
-	1432,
-	1433,
-	1434,
-	1433,
-	1434,
-	10,
-	32,
-	1435,
-	515,
-	515,
-	171,
-	171,
-	1436,
-	427,
-	21,
-	1437,
-	1437,
-	1437,
-	1437,
-	1438,
-	1439,
-	1440,
-	1441,
-	0,
-	572,
-	186,
+	1330,
+	1330,
+	1545,
+	1318,
+	1581,
+	1350,
+	1581,
+	1350,
+	1581,
+	1350,
+	1581,
+	1350,
+	1581,
+	1350,
+	1581,
+	1350,
+	1581,
+	1350,
+	1581,
+	1350,
+	1581,
+	1350,
+	1581,
+	1350,
+	1581,
+	1350,
+	1581,
+	1350,
+	1581,
+	1350,
+	1581,
+	1350,
+	1350,
+	1581,
+	1350,
+	1545,
+	1545,
+	1545,
+	1545,
+	2510,
+	294,
+	1545,
+	1150,
+	1128,
+	2536,
+	1581,
+	1581,
+	1581,
+	1581,
+	1581,
+	177,
+	1545,
+	1150,
+	1126,
+	1545,
+	1318,
+	1537,
+	1309,
+	1539,
+	1311,
+	1581,
+	1350,
+	1545,
+	1318,
+	1601,
+	1308,
+	149,
+	1581,
+	1581,
+	1581,
+	1581,
+	1545,
+	1150,
+	1129,
+	1545,
+	1540,
+	1535,
+	1535,
+	2513,
+	2513,
+	2173,
+	2173,
+	2509,
+	2389,
+	2393,
+	2053,
+	2053,
+	2053,
+	2053,
+	1638,
+	1625,
+	1641,
+	1624,
+	2433,
+	2172,
+	2397,
 	-1,
-	111,
-	3,
-	158,
+	2494,
+	2536,
+	1975,
 };
 static const Il2CppTokenRangePair s_rgctxIndices[1] = 
 {
-	{ 0x06000066, { 0, 2 } },
+	{ 0x06000061, { 0, 2 } },
 };
 static const Il2CppRGCTXDefinition s_rgctxValues[2] = 
 {
-	{ (Il2CppRGCTXDataType)2, 7578 },
-	{ (Il2CppRGCTXDataType)3, 9071 },
+	{ (Il2CppRGCTXDataType)2, 2015 },
+	{ (Il2CppRGCTXDataType)3, 8581 },
 };
-extern const Il2CppCodeGenModule g_UnityEngine_TextCoreModuleCodeGenModule;
-const Il2CppCodeGenModule g_UnityEngine_TextCoreModuleCodeGenModule = 
+extern const CustomAttributesCacheGenerator g_UnityEngine_TextCoreModule_AttributeGenerators[];
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_TextCoreModule_CodeGenModule;
+const Il2CppCodeGenModule g_UnityEngine_TextCoreModule_CodeGenModule = 
 {
 	"UnityEngine.TextCoreModule.dll",
-	105,
+	100,
 	s_methodPointers,
 	s_InvokerIndices,
 	0,
@@ -466,5 +440,10 @@ const Il2CppCodeGenModule g_UnityEngine_TextCoreModuleCodeGenModule =
 	s_rgctxIndices,
 	2,
 	s_rgctxValues,
+	NULL,
+	g_UnityEngine_TextCoreModule_AttributeGenerators,
+	NULL, // module initializer,
+	NULL,
+	NULL,
 	NULL,
 };

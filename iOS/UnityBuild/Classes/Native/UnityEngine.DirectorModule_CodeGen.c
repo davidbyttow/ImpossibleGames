@@ -6,15 +6,8 @@
 #endif
 
 
-
 #include "codegen/il2cpp-codegen-metadata.h"
 
-
-
-
-
-IL2CPP_EXTERN_C_BEGIN
-IL2CPP_EXTERN_C_END
 
 
 
@@ -33,12 +26,13 @@ static Il2CppMethodPointer s_methodPointers[3] =
 };
 static const int32_t s_InvokerIndices[3] = 
 {
-	23,
-	23,
-	23,
+	1601,
+	1601,
+	1601,
 };
-extern const Il2CppCodeGenModule g_UnityEngine_DirectorModuleCodeGenModule;
-const Il2CppCodeGenModule g_UnityEngine_DirectorModuleCodeGenModule = 
+extern const CustomAttributesCacheGenerator g_UnityEngine_DirectorModule_AttributeGenerators[];
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_DirectorModule_CodeGenModule;
+const Il2CppCodeGenModule g_UnityEngine_DirectorModule_CodeGenModule = 
 {
 	"UnityEngine.DirectorModule.dll",
 	3,
@@ -49,6 +43,11 @@ const Il2CppCodeGenModule g_UnityEngine_DirectorModuleCodeGenModule =
 	0,
 	NULL,
 	0,
+	NULL,
+	NULL,
+	g_UnityEngine_DirectorModule_AttributeGenerators,
+	NULL, // module initializer,
+	NULL,
 	NULL,
 	NULL,
 };

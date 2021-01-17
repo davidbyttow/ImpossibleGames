@@ -21,13 +21,13 @@ struct LevelCompletedView: View {
         Spacer()
         Text(state == .won ? "YOU WIN" : "YOU LOST")
           .foregroundColor(styles.green)
-          .font(.custom("PressStart2P", size: 48))
+          .font(.custom("PressStart2P-Regular", size: 48))
           .padding(EdgeInsets(top: 6, leading: 0, bottom: 0, trailing: 0))
         Spacer()
         Button(action: { self.state = .none }) {
           Text("Back")
             .foregroundColor(styles.darkRed)
-            .font(.custom("PressStart2P", size: 36))
+            .font(.custom("PressStart2P-Regular", size: 36))
         }
         Spacer()
       }.frame(

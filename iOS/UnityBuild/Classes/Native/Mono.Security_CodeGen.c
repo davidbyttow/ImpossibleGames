@@ -6,15 +6,8 @@
 #endif
 
 
-
 #include "codegen/il2cpp-codegen-metadata.h"
 
-
-
-
-
-IL2CPP_EXTERN_C_BEGIN
-IL2CPP_EXTERN_C_END
 
 
 
@@ -81,28 +74,29 @@ static Il2CppMethodPointer s_methodPointers[19] =
 };
 static const int32_t s_InvokerIndices[19] = 
 {
-	31,
-	908,
-	26,
-	10,
-	102,
-	14,
-	26,
-	28,
-	14,
-	909,
-	910,
-	34,
-	14,
-	43,
-	186,
-	0,
-	88,
-	43,
-	0,
+	1348,
+	819,
+	1330,
+	1545,
+	1579,
+	1558,
+	1330,
+	1033,
+	1558,
+	496,
+	159,
+	1030,
+	1558,
+	2430,
+	2397,
+	2433,
+	2422,
+	2430,
+	2433,
 };
-extern const Il2CppCodeGenModule g_Mono_SecurityCodeGenModule;
-const Il2CppCodeGenModule g_Mono_SecurityCodeGenModule = 
+extern const CustomAttributesCacheGenerator g_Mono_Security_AttributeGenerators[];
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Mono_Security_CodeGenModule;
+const Il2CppCodeGenModule g_Mono_Security_CodeGenModule = 
 {
 	"Mono.Security.dll",
 	19,
@@ -113,6 +107,11 @@ const Il2CppCodeGenModule g_Mono_SecurityCodeGenModule =
 	0,
 	NULL,
 	0,
+	NULL,
+	NULL,
+	g_Mono_Security_AttributeGenerators,
+	NULL, // module initializer,
+	NULL,
 	NULL,
 	NULL,
 };

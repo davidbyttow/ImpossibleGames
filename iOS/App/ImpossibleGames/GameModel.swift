@@ -23,8 +23,8 @@ enum GameState {
 }
 
 class GameModel : ObservableObject {
-  static let baseApiUrl = "https://davidbyttow.com/api"
-  static let baseAssetBundlesUrl = "https://davidbyttow.com/impossiblegames/assetbundles"
+  static let baseApiUrl = "https://impossible-arcade.vercel.app/api"
+  static let baseAssetBundlesUrl = "https://impossible-arcade.vercel.app/static/assets/bundles"
   
   @Published var level = LevelData()
   @Published var state: GameState = .none

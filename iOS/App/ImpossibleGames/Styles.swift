@@ -14,7 +14,7 @@ struct RetroText : ViewModifier {
   
   func body(content: Content) -> some View {
     content
-      .font(.custom("PressStart2P", size: size))
+      .font(.custom("PressStart2P-Regular", size: size))
   }
 }
 
@@ -22,7 +22,7 @@ class Styles : ObservableObject {
   static let shared = Styles()
   private init() {}
   
-  @Published var retro = Font.custom("PressStart2P", size: 12)
+  @Published var retro = Font.custom("PressStart2P-Regular", size: 12)
   @Published var darkRed = Color(red: 168, green: 0, blue: 0)
   @Published var green = Color(red: 51, green: 239, blue: 0)
   @Published var gray = Color(red: 120, green: 120, blue: 120)

@@ -8,11 +8,11 @@ public class HostApi {
   [DllImport("__Internal")] public static extern void hostLeaveGame();
   [DllImport("__Internal")] public static extern void hostWinGame();
 #else
-  public static extern void hostOnLauncherStarted() {}
-  public static extern void hostOnGameStarted() {}
-  public static extern void hostLeaveGame() {
-    Application.Quit();
+  public static void hostOnLauncherStarted() {}
+  public static void hostOnGameStarted() {}
+  public static void hostLeaveGame() {
+    //Application.Quit();
   }
-  public static extern void hostWinGame() {}
+  public static void hostWinGame() {}
 #endif
 }

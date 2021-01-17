@@ -12,6 +12,12 @@
 
 
 
+// System.Action`1<System.Object>
+struct Action_1_tD9663D9715FAA4E62035CFCF1AD4D094EE7872DC;
+// System.Action`1<UnityEngine.Playables.PlayableDirector>
+struct Action_1_tEFFD33105460921F68C4261E79791D397C76CB1B;
+// System.Delegate[]
+struct DelegateU5BU5D_t677D8FE08A5F99E8EE49150B73966CD6E9BF7DB8;
 // System.AsyncCallback
 struct AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA;
 // System.DelegateData
@@ -26,17 +32,8 @@ struct PlayableDirector_t63912C98A4EC9D4701E88B633E27E0D97209BA38;
 struct String_t;
 // System.Void
 struct Void_t700C6383A2A510C2CF4DD86DABD5CA9FF70ADAC5;
-// System.Action`1<UnityEngine.Playables.PlayableDirector>
-struct Action_1_tEFFD33105460921F68C4261E79791D397C76CB1B;
-// System.Action`1<System.Object>
-struct Action_1_tD9663D9715FAA4E62035CFCF1AD4D094EE7872DC;
-// System.Delegate[]
-struct DelegateU5BU5D_t677D8FE08A5F99E8EE49150B73966CD6E9BF7DB8;
 
 IL2CPP_EXTERN_C const RuntimeMethod* Action_1_Invoke_mDC4EA7BB7E1D881A06381E333FC42B50ECE17F2A_RuntimeMethod_var;
-IL2CPP_EXTERN_C const uint32_t PlayableDirector_SendOnPlayableDirectorPause_m6F06A18921F0F68BAE114F5DAF032CEAA77EDBC7_MetadataUsageId;
-IL2CPP_EXTERN_C const uint32_t PlayableDirector_SendOnPlayableDirectorPlay_mB5DE72647457F7E3757EAD2A39859BD835DE83FE_MetadataUsageId;
-IL2CPP_EXTERN_C const uint32_t PlayableDirector_SendOnPlayableDirectorStop_m60479449EA74C565E5D7B34E15CA60030C216D08_MetadataUsageId;
 struct Delegate_t_marshaled_com;
 struct Delegate_t_marshaled_pinvoke;
 
@@ -375,6 +372,15 @@ struct Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_marshaled_com
 	intptr_t ___m_CachedPtr_0;
 };
 
+// UnityEngine.Component
+struct  Component_t62FBC8D2420DA4BE9037AFE430740F6B3EECA684  : public Object_tF2F3778131EFF286AF62B7B013A170F95A91571A
+{
+public:
+
+public:
+};
+
+
 // System.MulticastDelegate
 struct  MulticastDelegate_t  : public Delegate_t
 {
@@ -403,15 +409,6 @@ struct MulticastDelegate_t_marshaled_com : public Delegate_t_marshaled_com
 {
 	Delegate_t_marshaled_com** ___delegates_11;
 };
-
-// UnityEngine.Component
-struct  Component_t62FBC8D2420DA4BE9037AFE430740F6B3EECA684  : public Object_tF2F3778131EFF286AF62B7B013A170F95A91571A
-{
-public:
-
-public:
-};
-
 
 // System.Action`1<UnityEngine.Playables.PlayableDirector>
 struct  Action_1_tEFFD33105460921F68C4261E79791D397C76CB1B  : public MulticastDelegate_t
@@ -503,7 +500,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayableDirector_SendOnPlayableDirectorP
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_method (PlayableDirector_SendOnPlayableDirectorPlay_mB5DE72647457F7E3757EAD2A39859BD835DE83FE_MetadataUsageId);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_Invoke_mDC4EA7BB7E1D881A06381E333FC42B50ECE17F2A_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;
@@ -533,7 +530,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayableDirector_SendOnPlayableDirectorP
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_method (PlayableDirector_SendOnPlayableDirectorPause_m6F06A18921F0F68BAE114F5DAF032CEAA77EDBC7_MetadataUsageId);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_Invoke_mDC4EA7BB7E1D881A06381E333FC42B50ECE17F2A_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;
@@ -563,7 +560,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayableDirector_SendOnPlayableDirectorS
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_method (PlayableDirector_SendOnPlayableDirectorStop_m60479449EA74C565E5D7B34E15CA60030C216D08_MetadataUsageId);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_Invoke_mDC4EA7BB7E1D881A06381E333FC42B50ECE17F2A_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;

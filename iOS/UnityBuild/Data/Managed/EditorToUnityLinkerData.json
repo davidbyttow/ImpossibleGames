@@ -115,14 +115,14 @@
         },
         {
             "managedAssemblyName": "",
-            "nativeClass": "ResourceManager",
+            "nativeClass": "RuntimeInitializeOnLoadManager",
             "fullManagedTypeName": "",
             "moduleName": "Core",
             "usedInScenes": []
         },
         {
             "managedAssemblyName": "",
-            "nativeClass": "RuntimeInitializeOnLoadManager",
+            "nativeClass": "ResourceManager",
             "fullManagedTypeName": "",
             "moduleName": "Core",
             "usedInScenes": []
@@ -459,24 +459,6 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "Animator",
-            "fullManagedTypeName": "UnityEngine.Animator",
-            "moduleName": "Animation",
-            "usedInScenes": [
-                "Assets/Scenes/Level01.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "RuntimeAnimatorController",
-            "fullManagedTypeName": "UnityEngine.RuntimeAnimatorController",
-            "moduleName": "Animation",
-            "usedInScenes": [
-                "Assets/Scenes/Level01.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "AnimationClip",
             "fullManagedTypeName": "UnityEngine.AnimationClip",
             "moduleName": "Animation",
@@ -486,8 +468,26 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "Animator",
+            "fullManagedTypeName": "UnityEngine.Animator",
+            "moduleName": "Animation",
+            "usedInScenes": [
+                "Assets/Scenes/Level01.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "AnimatorController",
             "fullManagedTypeName": "UnityEditor.Animations.AnimatorController",
+            "moduleName": "Animation",
+            "usedInScenes": [
+                "Assets/Scenes/Level01.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "RuntimeAnimatorController",
+            "fullManagedTypeName": "UnityEngine.RuntimeAnimatorController",
             "moduleName": "Animation",
             "usedInScenes": [
                 "Assets/Scenes/Level01.unity"
@@ -684,6 +684,13 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "Unity.2D.IK.Runtime.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEditor.U2D.IK.IKEditorManagerHelper",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "Unity.TextMeshPro.dll",
             "nativeClass": "",
             "fullManagedTypeName": "TMPro.TMP_FontAsset",
@@ -771,12 +778,6 @@
         {
             "name": "AnnotationManager",
             "module": "Core",
-            "baseName": "Object",
-            "baseModule": "Core"
-        },
-        {
-            "name": "AssetDatabaseV1",
-            "module": "AssetDatabase",
             "baseName": "Object",
             "baseModule": "Core"
         },
@@ -1543,12 +1544,6 @@
             "baseModule": "Core"
         },
         {
-            "name": "WorldAnchor",
-            "module": "VR",
-            "baseName": "Component",
-            "baseModule": "Core"
-        },
-        {
             "name": "GameObject",
             "module": "Core",
             "baseName": "EditorExtension",
@@ -1634,7 +1629,7 @@
         },
         {
             "name": "ComputeShaderImporter",
-            "module": "Core",
+            "module": "Editor",
             "baseName": "AssetImporter",
             "baseModule": "Editor"
         },
@@ -1706,7 +1701,7 @@
         },
         {
             "name": "PackageManifestImporter",
-            "module": "Editor",
+            "module": "PackageManagerUI",
             "baseName": "AssetImporter",
             "baseModule": "Editor"
         },
@@ -1723,6 +1718,12 @@
             "baseModule": "Editor"
         },
         {
+            "name": "PreviewImporter",
+            "module": "Editor",
+            "baseName": "AssetImporter",
+            "baseModule": "Editor"
+        },
+        {
             "name": "RayTracingShaderImporter",
             "module": "Core",
             "baseName": "AssetImporter",
@@ -1731,6 +1732,12 @@
         {
             "name": "ReferencesArtifactGenerator",
             "module": "Editor",
+            "baseName": "AssetImporter",
+            "baseModule": "Editor"
+        },
+        {
+            "name": "RuleSetFileImporter",
+            "module": "Core",
             "baseName": "AssetImporter",
             "baseModule": "Editor"
         },
@@ -2174,7 +2181,13 @@
         },
         {
             "name": "PackageManifest",
-            "module": "Editor",
+            "module": "PackageManagerUI",
+            "baseName": "TextAsset",
+            "baseModule": "Core"
+        },
+        {
+            "name": "RuleSetFileAsset",
+            "module": "Core",
             "baseName": "TextAsset",
             "baseModule": "Core"
         },

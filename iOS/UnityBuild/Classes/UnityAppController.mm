@@ -9,14 +9,9 @@
 #import <Availability.h>
 #import <AVFoundation/AVFoundation.h>
 
-#import <OpenGLES/EAGL.h>
-#import <OpenGLES/EAGLDrawable.h>
-#import <OpenGLES/ES2/gl.h>
-#import <OpenGLES/ES2/glext.h>
-
 #include <mach/mach_time.h>
 
-// MSAA_DEFAULT_SAMPLE_COUNT was moved to iPhone_GlesSupport.h
+// MSAA_DEFAULT_SAMPLE_COUNT was removed
 // ENABLE_INTERNAL_PROFILER and related defines were moved to iPhone_Profiler.h
 // kFPS define for removed: you can use Application.targetFrameRate (30 fps by default)
 // DisplayLink is the only run loop mode now - all others were removed
@@ -29,8 +24,6 @@
 #include "UI/SplashScreen.h"
 #include "Unity/InternalProfiler.h"
 #include "Unity/DisplayManager.h"
-#include "Unity/EAGLContextHelper.h"
-#include "Unity/GlesHelper.h"
 #include "Unity/ObjCRuntime.h"
 #include "PluginBase/AppDelegateListener.h"
 
@@ -72,8 +65,6 @@ bool    _didResignActive        = false;
 
 // was startUnity scheduled: used to make startup robust in case of locking device
 static bool _startUnityScheduled    = false;
-
-bool    _supportsMSAA           = false;
 
 #if UNITY_SUPPORT_ROTATION
 // Required to enable specific orientation for some presentation controllers: see supportedInterfaceOrientationsForWindow below for details
@@ -455,6 +446,10 @@ extern "C" void UnityCleanupTrampoline()
     if (_unityAppReady)
     {
         UnitySetPlayerFocus(0);
+
+        // signal unity that the frame rendering have ended
+        // as we will not get the callback from the display link current frame
+        UnityDisplayLinkCallback(0);
 
         _wasPausedExternal = UnityIsPaused();
         if (_wasPausedExternal == false)

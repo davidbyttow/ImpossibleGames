@@ -13,10 +13,11 @@
 		030343B4250327F9004994B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030343B3250327F9004994B2 /* Assets.xcassets */; };
 		030343B7250327F9004994B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030343B6250327F9004994B2 /* Preview Assets.xcassets */; };
 		030343BA250327F9004994B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030343B8250327F9004994B2 /* LaunchScreen.storyboard */; };
-		03069DE52509B34600B80CA2 /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03EA476325043B7F00922885 /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		03069DE8250A781C00B80CA2 /* UnityPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03069DE7250A781C00B80CA2 /* UnityPlayer.swift */; };
-		03069DF4250AFD4200B80CA2 /* PressStart-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03069DF0250AC79700B80CA2 /* PressStart-Regular.ttf */; };
 		03069DFE250C384B00B80CA2 /* UnityAPIBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 03069DFD250C384B00B80CA2 /* UnityAPIBridge.m */; };
+		0348522825B3CD9A00EDC844 /* UnityFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0348522725B3CD9A00EDC844 /* UnityFramework.framework */; };
+		0348522925B3CD9A00EDC844 /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0348522725B3CD9A00EDC844 /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0348524625B3D21C00EDC844 /* PressStart2P-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0348524525B3D21C00EDC844 /* PressStart2P-Regular.ttf */; };
 		035620242560920A00EFD4E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035620232560920A00EFD4E0 /* ContentView.swift */; };
 		0356202A25616A8C00EFD4E0 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356202925616A8C00EFD4E0 /* GameModel.swift */; };
 		0356202C25617C0000EFD4E0 /* InGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356202B25617C0000EFD4E0 /* InGameView.swift */; };
@@ -27,13 +28,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		03069DE62509B34600B80CA2 /* Embed Frameworks */ = {
+		0348520B25B3C69E00EDC844 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				03069DE52509B34600B80CA2 /* UnityFramework.framework in Embed Frameworks */,
+				0348522925B3CD9A00EDC844 /* UnityFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,9 +51,10 @@
 		030343B9250327F9004994B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		030343BB250327F9004994B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03069DE7250A781C00B80CA2 /* UnityPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnityPlayer.swift; sourceTree = "<group>"; };
-		03069DF0250AC79700B80CA2 /* PressStart-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PressStart-Regular.ttf"; sourceTree = "<group>"; };
 		03069DFC250BFF0600B80CA2 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		03069DFD250C384B00B80CA2 /* UnityAPIBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnityAPIBridge.m; sourceTree = "<group>"; };
+		0348522725B3CD9A00EDC844 /* UnityFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UnityFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0348524525B3D21C00EDC844 /* PressStart2P-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PressStart2P-Regular.ttf"; sourceTree = "<group>"; };
 		035620232560920A00EFD4E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0356202925616A8C00EFD4E0 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		0356202B25617C0000EFD4E0 /* InGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InGameView.swift; sourceTree = "<group>"; };
@@ -60,7 +62,6 @@
 		03A2FC692516778800902C6E /* LevelStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelStartView.swift; sourceTree = "<group>"; };
 		03A2FC6B2516781200902C6E /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		03AB132D25583AF6004CE536 /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
-		03EA476325043B7F00922885 /* UnityFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UnityFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0348522825B3CD9A00EDC844 /* UnityFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,7 +123,7 @@
 		03069DEB250AC4B800B80CA2 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				03069DF0250AC79700B80CA2 /* PressStart-Regular.ttf */,
+				0348524525B3D21C00EDC844 /* PressStart2P-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -151,7 +153,7 @@
 		03EA476225043B7F00922885 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				03EA476325043B7F00922885 /* UnityFramework.framework */,
+				0348522725B3CD9A00EDC844 /* UnityFramework.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -166,7 +168,7 @@
 				030343A6250327F7004994B2 /* Sources */,
 				030343A7250327F7004994B2 /* Frameworks */,
 				030343A8250327F7004994B2 /* Resources */,
-				03069DE62509B34600B80CA2 /* Embed Frameworks */,
+				0348520B25B3C69E00EDC844 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -216,7 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03069DF4250AFD4200B80CA2 /* PressStart-Regular.ttf in Resources */,
+				0348524625B3D21C00EDC844 /* PressStart2P-Regular.ttf in Resources */,
 				030343BA250327F9004994B2 /* LaunchScreen.storyboard in Resources */,
 				030343B7250327F9004994B2 /* Preview Assets.xcassets in Resources */,
 				030343B4250327F9004994B2 /* Assets.xcassets in Resources */,
@@ -296,6 +298,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -357,6 +360,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

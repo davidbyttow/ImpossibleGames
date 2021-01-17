@@ -6,15 +6,8 @@
 #endif
 
 
-
 #include "codegen/il2cpp-codegen-metadata.h"
 
-
-
-
-
-IL2CPP_EXTERN_C_BEGIN
-IL2CPP_EXTERN_C_END
 
 
 
@@ -79,13 +72,13 @@ extern void Animator_SetTriggerString_m38F66A49276BCED56B89BB6AF8A36183BE4285F0 
 extern void Animator_ResetTriggerString_m6FC21A6B7732A31338EE22E78F3D6220903EDBB2 (void);
 // 0x0000001E System.Void UnityEngine.AnimatorOverrideController::OnInvalidateOverrideController(UnityEngine.AnimatorOverrideController)
 extern void AnimatorOverrideController_OnInvalidateOverrideController_m579571520B7C607B6983D4973EBAE982EAC9AA40 (void);
-// 0x0000001F System.Void UnityEngine.AnimatorOverrideController_OnOverrideControllerDirtyCallback::.ctor(System.Object,System.IntPtr)
+// 0x0000001F System.Void UnityEngine.AnimatorOverrideController/OnOverrideControllerDirtyCallback::.ctor(System.Object,System.IntPtr)
 extern void OnOverrideControllerDirtyCallback__ctor_mA35F55BEB8A4BD57D109684E857F85C1F0A6C1B5 (void);
-// 0x00000020 System.Void UnityEngine.AnimatorOverrideController_OnOverrideControllerDirtyCallback::Invoke()
+// 0x00000020 System.Void UnityEngine.AnimatorOverrideController/OnOverrideControllerDirtyCallback::Invoke()
 extern void OnOverrideControllerDirtyCallback_Invoke_m21DB79300E852ED93F2521FFC03EC4D858F6B330 (void);
-// 0x00000021 System.IAsyncResult UnityEngine.AnimatorOverrideController_OnOverrideControllerDirtyCallback::BeginInvoke(System.AsyncCallback,System.Object)
+// 0x00000021 System.IAsyncResult UnityEngine.AnimatorOverrideController/OnOverrideControllerDirtyCallback::BeginInvoke(System.AsyncCallback,System.Object)
 extern void OnOverrideControllerDirtyCallback_BeginInvoke_m40D5810BF8C5066DB2C7987E7C76FD23D2AC47E3 (void);
-// 0x00000022 System.Void UnityEngine.AnimatorOverrideController_OnOverrideControllerDirtyCallback::EndInvoke(System.IAsyncResult)
+// 0x00000022 System.Void UnityEngine.AnimatorOverrideController/OnOverrideControllerDirtyCallback::EndInvoke(System.IAsyncResult)
 extern void OnOverrideControllerDirtyCallback_EndInvoke_mAF3C7805FADE63999DC2121032B11DF86668E9F4 (void);
 // 0x00000023 UnityEngine.Playables.PlayableHandle UnityEngine.Animations.AnimationClipPlayable::GetHandle()
 extern void AnimationClipPlayable_GetHandle_m93C27911A3C7107750C2A6BE529C58FB2FDB1122_AdjustorThunk (void);
@@ -231,78 +224,79 @@ static Il2CppMethodPointer s_methodPointers[69] =
 };
 static const int32_t s_InvokerIndices[69] = 
 {
-	1308,
-	1308,
-	1308,
-	1308,
-	1308,
-	124,
-	124,
-	1309,
-	1309,
-	1309,
-	1309,
-	1309,
-	1310,
-	1310,
-	23,
-	23,
-	831,
-	384,
-	26,
-	26,
-	26,
-	1311,
-	1312,
-	102,
-	186,
-	831,
-	384,
-	26,
-	26,
-	111,
-	163,
-	23,
-	101,
-	26,
-	1188,
-	1313,
-	1187,
-	1188,
-	1314,
-	3,
-	1187,
-	1188,
-	1315,
-	3,
-	1187,
-	1188,
-	1316,
-	3,
-	1187,
-	1188,
-	1317,
-	3,
-	1187,
-	1188,
-	1318,
-	3,
-	1187,
-	1188,
-	1319,
-	3,
-	1187,
-	1188,
-	1320,
-	3,
-	1187,
-	1188,
-	1187,
-	1321,
-	3,
+	497,
+	497,
+	497,
+	497,
+	497,
+	807,
+	807,
+	310,
+	310,
+	310,
+	310,
+	310,
+	501,
+	501,
+	1601,
+	1601,
+	813,
+	812,
+	1330,
+	1330,
+	1330,
+	506,
+	482,
+	1579,
+	2397,
+	813,
+	812,
+	1330,
+	1330,
+	2494,
+	809,
+	1601,
+	599,
+	1330,
+	1562,
+	1091,
+	1335,
+	1562,
+	1092,
+	2536,
+	1335,
+	1562,
+	1093,
+	2536,
+	1335,
+	1562,
+	1094,
+	2536,
+	1335,
+	1562,
+	1095,
+	2536,
+	1335,
+	1562,
+	1096,
+	2536,
+	1335,
+	1562,
+	1097,
+	2536,
+	1335,
+	1562,
+	1098,
+	2536,
+	1335,
+	1562,
+	1335,
+	1099,
+	2536,
 };
-extern const Il2CppCodeGenModule g_UnityEngine_AnimationModuleCodeGenModule;
-const Il2CppCodeGenModule g_UnityEngine_AnimationModuleCodeGenModule = 
+extern const CustomAttributesCacheGenerator g_UnityEngine_AnimationModule_AttributeGenerators[];
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_AnimationModule_CodeGenModule;
+const Il2CppCodeGenModule g_UnityEngine_AnimationModule_CodeGenModule = 
 {
 	"UnityEngine.AnimationModule.dll",
 	69,
@@ -313,6 +307,11 @@ const Il2CppCodeGenModule g_UnityEngine_AnimationModuleCodeGenModule =
 	0,
 	NULL,
 	0,
+	NULL,
+	NULL,
+	g_UnityEngine_AnimationModule_AttributeGenerators,
+	NULL, // module initializer,
+	NULL,
 	NULL,
 	NULL,
 };

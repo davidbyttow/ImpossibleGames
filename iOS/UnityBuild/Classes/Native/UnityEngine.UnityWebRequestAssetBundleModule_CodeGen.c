@@ -6,15 +6,8 @@
 #endif
 
 
-
 #include "codegen/il2cpp-codegen-metadata.h"
 
-
-
-
-
-IL2CPP_EXTERN_C_BEGIN
-IL2CPP_EXTERN_C_END
 
 
 
@@ -45,16 +38,17 @@ static Il2CppMethodPointer s_methodPointers[7] =
 };
 static const int32_t s_InvokerIndices[7] = 
 {
-	0,
-	152,
-	1550,
-	124,
-	124,
-	14,
-	0,
+	2433,
+	2204,
+	2001,
+	807,
+	807,
+	1558,
+	2433,
 };
-extern const Il2CppCodeGenModule g_UnityEngine_UnityWebRequestAssetBundleModuleCodeGenModule;
-const Il2CppCodeGenModule g_UnityEngine_UnityWebRequestAssetBundleModuleCodeGenModule = 
+extern const CustomAttributesCacheGenerator g_UnityEngine_UnityWebRequestAssetBundleModule_AttributeGenerators[];
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_UnityWebRequestAssetBundleModule_CodeGenModule;
+const Il2CppCodeGenModule g_UnityEngine_UnityWebRequestAssetBundleModule_CodeGenModule = 
 {
 	"UnityEngine.UnityWebRequestAssetBundleModule.dll",
 	7,
@@ -65,6 +59,11 @@ const Il2CppCodeGenModule g_UnityEngine_UnityWebRequestAssetBundleModuleCodeGenM
 	0,
 	NULL,
 	0,
+	NULL,
+	NULL,
+	g_UnityEngine_UnityWebRequestAssetBundleModule_AttributeGenerators,
+	NULL, // module initializer,
+	NULL,
 	NULL,
 	NULL,
 };

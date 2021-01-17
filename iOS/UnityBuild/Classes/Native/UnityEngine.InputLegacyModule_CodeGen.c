@@ -6,15 +6,8 @@
 #endif
 
 
-
 #include "codegen/il2cpp-codegen-metadata.h"
 
-
-
-
-
-IL2CPP_EXTERN_C_BEGIN
-IL2CPP_EXTERN_C_END
 
 
 
@@ -93,15 +86,15 @@ extern void Input_set_compositionCursorPos_Injected_m4B961AC7900B41DDBFBA03BE2F6
 extern void SendMouseEvents_SetMouseMoved_mEC659144183FB490A2E1F12112C8F08569A511CD (void);
 // 0x00000025 System.Void UnityEngine.SendMouseEvents::DoSendMouseEvents(System.Int32)
 extern void SendMouseEvents_DoSendMouseEvents_m21561D473C27F19BA9CDBC53B4A13D40DDFBE785 (void);
-// 0x00000026 System.Void UnityEngine.SendMouseEvents::SendEvents(System.Int32,UnityEngine.SendMouseEvents_HitInfo)
+// 0x00000026 System.Void UnityEngine.SendMouseEvents::SendEvents(System.Int32,UnityEngine.SendMouseEvents/HitInfo)
 extern void SendMouseEvents_SendEvents_m7A59BBFBB15C1BF3E47D56CDD4921599A686F9C7 (void);
 // 0x00000027 System.Void UnityEngine.SendMouseEvents::.cctor()
 extern void SendMouseEvents__cctor_m6B63654E024F338414361C995EAFEC615743A0E0 (void);
-// 0x00000028 System.Void UnityEngine.SendMouseEvents_HitInfo::SendMessage(System.String)
+// 0x00000028 System.Void UnityEngine.SendMouseEvents/HitInfo::SendMessage(System.String)
 extern void HitInfo_SendMessage_m2D813691948EAB9CDA487A3B8668678EABFCFA62_AdjustorThunk (void);
-// 0x00000029 System.Boolean UnityEngine.SendMouseEvents_HitInfo::op_Implicit(UnityEngine.SendMouseEvents_HitInfo)
+// 0x00000029 System.Boolean UnityEngine.SendMouseEvents/HitInfo::op_Implicit(UnityEngine.SendMouseEvents/HitInfo)
 extern void HitInfo_op_Implicit_m8332A3930623A2248D797F3A8020FFF4E05A9420 (void);
-// 0x0000002A System.Boolean UnityEngine.SendMouseEvents_HitInfo::Compare(UnityEngine.SendMouseEvents_HitInfo,UnityEngine.SendMouseEvents_HitInfo)
+// 0x0000002A System.Boolean UnityEngine.SendMouseEvents/HitInfo::Compare(UnityEngine.SendMouseEvents/HitInfo,UnityEngine.SendMouseEvents/HitInfo)
 extern void HitInfo_Compare_m3AD170E7A52826C73DEF8C3C8F6507C9EAB28363 (void);
 static Il2CppMethodPointer s_methodPointers[42] = 
 {
@@ -150,51 +143,52 @@ static Il2CppMethodPointer s_methodPointers[42] =
 };
 static const int32_t s_InvokerIndices[42] = 
 {
-	10,
-	1015,
-	10,
-	10,
-	1215,
-	1215,
-	1216,
-	1216,
-	46,
-	46,
-	1207,
-	1207,
-	109,
-	109,
-	46,
-	46,
-	46,
-	1217,
-	46,
-	46,
-	1092,
-	1116,
-	515,
-	121,
-	4,
-	1116,
-	1218,
-	49,
-	515,
-	49,
-	1166,
-	17,
-	17,
-	17,
-	17,
-	3,
-	121,
-	1219,
-	3,
-	26,
-	1220,
-	1221,
+	1545,
+	1596,
+	1545,
+	1545,
+	1878,
+	1878,
+	1864,
+	1864,
+	2453,
+	2453,
+	2470,
+	2470,
+	2456,
+	2456,
+	2453,
+	2453,
+	2453,
+	2476,
+	2453,
+	2453,
+	2534,
+	2533,
+	2513,
+	2492,
+	2519,
+	2533,
+	2500,
+	2527,
+	2513,
+	2527,
+	2321,
+	2489,
+	2489,
+	2489,
+	2489,
+	2536,
+	2492,
+	2326,
+	2536,
+	1330,
+	2461,
+	2277,
 };
-extern const Il2CppCodeGenModule g_UnityEngine_InputLegacyModuleCodeGenModule;
-const Il2CppCodeGenModule g_UnityEngine_InputLegacyModuleCodeGenModule = 
+extern const CustomAttributesCacheGenerator g_UnityEngine_InputLegacyModule_AttributeGenerators[];
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_InputLegacyModule_CodeGenModule;
+const Il2CppCodeGenModule g_UnityEngine_InputLegacyModule_CodeGenModule = 
 {
 	"UnityEngine.InputLegacyModule.dll",
 	42,
@@ -205,6 +199,11 @@ const Il2CppCodeGenModule g_UnityEngine_InputLegacyModuleCodeGenModule =
 	0,
 	NULL,
 	0,
+	NULL,
+	NULL,
+	g_UnityEngine_InputLegacyModule_AttributeGenerators,
+	NULL, // module initializer,
+	NULL,
 	NULL,
 	NULL,
 };

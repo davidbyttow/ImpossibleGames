@@ -6,15 +6,8 @@
 #endif
 
 
-
 #include "codegen/il2cpp-codegen-metadata.h"
 
-
-
-
-
-IL2CPP_EXTERN_C_BEGIN
-IL2CPP_EXTERN_C_END
 
 
 
@@ -30,11 +23,12 @@ static Il2CppMethodPointer s_methodPointers[2] =
 };
 static const int32_t s_InvokerIndices[2] = 
 {
-	111,
-	3,
+	2494,
+	2536,
 };
-extern const Il2CppCodeGenModule g_UnityEngine_VRModuleCodeGenModule;
-const Il2CppCodeGenModule g_UnityEngine_VRModuleCodeGenModule = 
+extern const CustomAttributesCacheGenerator g_UnityEngine_VRModule_AttributeGenerators[];
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_VRModule_CodeGenModule;
+const Il2CppCodeGenModule g_UnityEngine_VRModule_CodeGenModule = 
 {
 	"UnityEngine.VRModule.dll",
 	2,
@@ -45,6 +39,11 @@ const Il2CppCodeGenModule g_UnityEngine_VRModuleCodeGenModule =
 	0,
 	NULL,
 	0,
+	NULL,
+	NULL,
+	g_UnityEngine_VRModule_AttributeGenerators,
+	NULL, // module initializer,
+	NULL,
 	NULL,
 	NULL,
 };

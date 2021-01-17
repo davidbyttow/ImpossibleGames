@@ -6,15 +6,8 @@
 #endif
 
 
-
 #include "codegen/il2cpp-codegen-metadata.h"
 
-
-
-
-
-IL2CPP_EXTERN_C_BEGIN
-IL2CPP_EXTERN_C_END
 
 
 
@@ -90,31 +83,32 @@ static Il2CppMethodPointer s_methodPointers[22] =
 };
 static const int32_t s_InvokerIndices[22] = 
 {
-	163,
-	1537,
-	1538,
-	181,
-	163,
-	1539,
-	1540,
-	1541,
-	1542,
-	1543,
-	1544,
-	1545,
-	3,
-	3,
-	768,
-	3,
-	3,
-	111,
-	25,
-	25,
-	25,
-	3,
+	809,
+	465,
+	140,
+	1211,
+	809,
+	179,
+	43,
+	1393,
+	1712,
+	1951,
+	1802,
+	2079,
+	2536,
+	2536,
+	2496,
+	2536,
+	2536,
+	2494,
+	2493,
+	2493,
+	2493,
+	2536,
 };
-extern const Il2CppCodeGenModule g_UnityEngine_UIElementsNativeModuleCodeGenModule;
-const Il2CppCodeGenModule g_UnityEngine_UIElementsNativeModuleCodeGenModule = 
+extern const CustomAttributesCacheGenerator g_UnityEngine_UIElementsNativeModule_AttributeGenerators[];
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_UIElementsNativeModule_CodeGenModule;
+const Il2CppCodeGenModule g_UnityEngine_UIElementsNativeModule_CodeGenModule = 
 {
 	"UnityEngine.UIElementsNativeModule.dll",
 	22,
@@ -125,6 +119,11 @@ const Il2CppCodeGenModule g_UnityEngine_UIElementsNativeModuleCodeGenModule =
 	0,
 	NULL,
 	0,
+	NULL,
+	NULL,
+	g_UnityEngine_UIElementsNativeModule_AttributeGenerators,
+	NULL, // module initializer,
+	NULL,
 	NULL,
 	NULL,
 };

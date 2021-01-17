@@ -6,15 +6,8 @@
 #endif
 
 
-
 #include "codegen/il2cpp-codegen-metadata.h"
 
-
-
-
-
-IL2CPP_EXTERN_C_BEGIN
-IL2CPP_EXTERN_C_END
 
 
 
@@ -183,62 +176,63 @@ static Il2CppMethodPointer s_methodPointers[53] =
 };
 static const int32_t s_InvokerIndices[53] = 
 {
-	14,
-	1007,
-	1007,
-	655,
-	14,
-	10,
-	9,
-	1258,
-	1259,
-	1260,
-	1261,
-	1262,
-	1263,
-	1264,
-	1265,
-	1266,
-	1267,
-	1268,
-	1269,
-	1270,
-	1271,
-	1095,
-	1272,
-	1273,
-	1274,
-	1275,
-	1276,
-	1277,
-	1278,
-	1279,
-	1280,
-	1281,
-	1282,
-	1283,
-	1284,
-	1285,
-	1286,
-	1287,
-	1288,
-	1289,
-	1246,
-	1245,
-	1244,
-	1290,
-	1250,
-	1249,
-	1248,
-	1291,
-	1292,
-	1293,
-	1294,
-	17,
-	1295,
+	1558,
+	1598,
+	1598,
+	1581,
+	1558,
+	1545,
+	1150,
+	1152,
+	145,
+	1777,
+	85,
+	1695,
+	68,
+	1672,
+	1765,
+	1688,
+	1665,
+	2520,
+	1781,
+	1919,
+	2072,
+	2274,
+	1696,
+	1780,
+	1918,
+	2070,
+	1914,
+	2068,
+	2268,
+	2457,
+	1778,
+	1913,
+	2067,
+	2267,
+	1760,
+	1762,
+	1885,
+	2041,
+	2217,
+	1882,
+	2037,
+	2211,
+	2434,
+	1743,
+	1840,
+	1988,
+	2176,
+	1675,
+	1745,
+	1842,
+	1990,
+	2489,
+	1747,
 };
-extern const Il2CppCodeGenModule g_UnityEngine_PhysicsModuleCodeGenModule;
-const Il2CppCodeGenModule g_UnityEngine_PhysicsModuleCodeGenModule = 
+extern const CustomAttributesCacheGenerator g_UnityEngine_PhysicsModule_AttributeGenerators[];
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_PhysicsModule_CodeGenModule;
+const Il2CppCodeGenModule g_UnityEngine_PhysicsModule_CodeGenModule = 
 {
 	"UnityEngine.PhysicsModule.dll",
 	53,
@@ -249,6 +243,11 @@ const Il2CppCodeGenModule g_UnityEngine_PhysicsModuleCodeGenModule =
 	0,
 	NULL,
 	0,
+	NULL,
+	NULL,
+	g_UnityEngine_PhysicsModule_AttributeGenerators,
+	NULL, // module initializer,
+	NULL,
 	NULL,
 	NULL,
 };

@@ -14,10 +14,10 @@
 
 // UnityEngine.GridLayout
 struct GridLayout_t7BA9C388D3466CA1F18CAD50848F670F670D5D29;
-// System.Void
-struct Void_t700C6383A2A510C2CF4DD86DABD5CA9FF70ADAC5;
 // System.String
 struct String_t;
+// System.Void
+struct Void_t700C6383A2A510C2CF4DD86DABD5CA9FF70ADAC5;
 
 
 
