@@ -5,7 +5,7 @@ public class TouchControls : MonoBehaviour {
 
   private const float leftControlMaxDist = 140f;
 
-  [SerializeField] private RectTransform bounds;
+  private RectTransform bounds;
 
   public float horizontal { get; private set; } = 0;
   public bool jumpButtonDown { get; private set; } = false;
@@ -14,6 +14,10 @@ public class TouchControls : MonoBehaviour {
   private Vector2 leftTouchOrigin;
   private int leftTouchFinger = -1;
   private int rightTouchFinger = -1;
+
+  private void Start() {
+    bounds = GameObject.Find("ControlPlane").GetComponent<RectTransform>();
+  }
 
   void Update() {
     var camera = Camera.main;
@@ -28,7 +32,8 @@ public class TouchControls : MonoBehaviour {
         var touch = Input.GetTouch(i);
         if (touch.position.x < screenHalf) {
           HandleLeftTouch(touch);
-        } else if (touch.position.x > screenHalf) {
+        }
+        else if (touch.position.x > screenHalf) {
           HandleRightTouch(touch);
         }
       }
@@ -50,7 +55,8 @@ public class TouchControls : MonoBehaviour {
       if (touch.phase == TouchPhase.Moved) {
         var dist = touch.position.x - leftTouchOrigin.x;
         horizontal = Mathf.Clamp(dist / leftControlMaxDist, -1f, 1f);
-      } else if (touch.phase == TouchPhase.Ended) {
+      }
+      else if (touch.phase == TouchPhase.Ended) {
         leftTouchFinger = -1;
         horizontal = 0;
       }

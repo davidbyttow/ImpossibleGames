@@ -5,22 +5,33 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 
-public class SceneLauncher : MonoBehaviour {
+public class GameLoader : MonoBehaviour {
 
-  private static SceneLauncher global;
+  public GameObject loadingScreen;
+
+  private static GameLoader global;
+
   private bool launched = false;
 
   // TODO: Probably move this to a bundle manager
   private static Dictionary<String, AssetBundle> downloadedBundles = new Dictionary<String, AssetBundle>();
 
-  // Test bundle: https://davidbyttow.com/impossiblegames/assetbundles/dlctest01
+  private string localTestBundle = "local-test-bundle";
+
+  // Test bundle: https://impossible-arcade.vercel.app/static/assets/bundles/dlctest01
   private string testBundle =
-    "https://davidbyttow.com/impossiblegames/assetbundles/dlc01_assets;https://davidbyttow.com/impossiblegames/assetbundles/dlc01_scene";
+    "https://impossible-arcade.vercel.app/static/assets/bundles/dlc01_assets;https://impossible-arcade.vercel.app/static/assets/bundles/dlc01_scene";
 
   private float startLoadTime = 0;
 
   void Start() {
-    HostApi.hostOnLauncherStarted();
+    Debug.Log("STARTING");
+    try {
+      HostApi.hostOnLauncherStarted();
+    }
+    catch (EntryPointNotFoundException) {
+      LaunchGame(localTestBundle);
+    }
   }
 
   void LaunchGame(string encodedBundles) {
@@ -35,15 +46,16 @@ public class SceneLauncher : MonoBehaviour {
     Debug.Log("Loading requested scene");
     yield return StartCoroutine(UnloadAllScenes());
 
-    var bundleLocations = GetBundleUrls(encodedBundles);
-
-    if (bundleLocations.Length == 0) {
+    if (encodedBundles == localTestBundle) {
       // Just load the next scene
       Debug.Log("No bundle URL provided, loading the next scene");
       yield return StartCoroutine(WaitMinTime());
-      SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+      TeardownLoadingScreen();
+      SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1, LoadSceneMode.Additive);
       yield return null;
     }
+
+    var bundleLocations = GetBundleUrls(encodedBundles);
 
     // First load assets
     if (bundleLocations.Length > 1) {
@@ -74,8 +86,16 @@ public class SceneLauncher : MonoBehaviour {
 
     yield return StartCoroutine(WaitMinTime());
 
+    TeardownLoadingScreen();
     SceneManager.LoadScene(sceneName);
     yield return null;
+  }
+
+  private void TeardownLoadingScreen() {
+    if (loadingScreen) {
+      Debug.Log("TEARING DOWN");
+      loadingScreen.SetActive(false);
+    }
   }
 
   private IEnumerator LoadBundle(string bundleLocation) {

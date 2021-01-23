@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour {
 
   public static GameManager global { get; private set; }
 
-  [SerializeField] private AudioClip music;
   private float restartDelay = 0;
 
   void Awake() {
@@ -19,14 +18,7 @@ public class GameManager : MonoBehaviour {
 
   void Start() {
     HostApi.hostOnGameStarted();
-    StartMusic();
     Debug.Log("Starting game manager");
-  }
-
-  void StartMusic() {
-    if (music && Music.inst) {
-      Music.inst.MaybePlay(music);
-    }
   }
 
   void Update() {
@@ -48,7 +40,8 @@ public class GameManager : MonoBehaviour {
   public void WinGame() {
     try {
       HostApi.hostWinGame();
-    } catch (EntryPointNotFoundException) {
+    }
+    catch (EntryPointNotFoundException) {
       Debug.Log("Game won, but no host found so moving to next level");
       SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
@@ -57,7 +50,8 @@ public class GameManager : MonoBehaviour {
   public void LeaveGame() {
     try {
       HostApi.hostLeaveGame();
-    } catch (EntryPointNotFoundException) {
+    }
+    catch (EntryPointNotFoundException) {
       // Nothing to do
       Debug.Log("Game quit, but no host found");
     }
