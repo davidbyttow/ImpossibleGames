@@ -9,11 +9,11 @@
 import SwiftUI
 
 protocol GameDelegate {
-  func gameDidRequestStart()
+  func gameDidRequestStart(gameType: GameType)
 }
 
 struct FakeGameDelegate: GameDelegate {
-  func gameDidRequestStart() {}
+  func gameDidRequestStart(gameType: GameType) {}
 }
 
 struct ContentView: View {
@@ -27,7 +27,7 @@ struct ContentView: View {
       case .home:
         HomeView(delegate: delegate)
       case .startGame:
-        LevelStartView(onStartGame: { delegate.gameDidRequestStart() },
+        LevelStartView(onStartGame: { delegate.gameDidRequestStart(gameType: .recent) },
                        levelData: $model.level,
                        gameState: $model.state)
     }

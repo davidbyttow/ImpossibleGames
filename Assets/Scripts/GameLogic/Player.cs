@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(PlayerController))]
 public class Player : MonoBehaviour {
 
   [SerializeField] private ParticleSystem deathEffect;
@@ -10,7 +10,7 @@ public class Player : MonoBehaviour {
 
   private Rigidbody2D rigidBody;
   private SpriteRenderer sprite;
-  private CharacterController controller;
+  private PlayerController controller;
   private TouchControls touchControls;
   public bool isDead { get; private set; } = false;
   public bool isJumping { get; private set; } = false;
@@ -22,12 +22,12 @@ public class Player : MonoBehaviour {
   void Awake() {
     rigidBody = GetComponent<Rigidbody2D>();
     sprite = GetComponent<SpriteRenderer>();
-    controller = GetComponent<CharacterController>();
+    controller = GetComponent<PlayerController>();
     touchControls = GetComponent<TouchControls>();
   }
 
   void Start() {
-    SoundManager.inst.PlayDoorClose();
+    SoundManager.global.PlayDoorClose();
   }
 
   void Update() {
@@ -85,7 +85,7 @@ public class Player : MonoBehaviour {
     }
 
     isDead = true;
-    SoundManager.inst.PlayDeath();
+    SoundManager.global.PlayDeath();
 
     gameObject.SetActive(false);
     GameManager.global.QueueRestart();

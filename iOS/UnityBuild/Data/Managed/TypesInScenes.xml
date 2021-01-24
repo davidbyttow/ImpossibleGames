@@ -19,7 +19,6 @@
 		<type fullname="UnityEditor.Physics2DSettings" preserve="nothing"/>
 		<type fullname="UnityEditor.PlayerSettings" preserve="nothing"/>
 		<type fullname="UnityEngine.QualitySettings" preserve="nothing"/>
-		<type fullname="UnityEngine.AudioSource" preserve="nothing"/>
 		<type fullname="UnityEngine.AudioBehaviour" preserve="nothing"/>
 		<type fullname="UnityEngine.AudioListener" preserve="nothing"/>
 		<type fullname="UnityEngine.Canvas" preserve="nothing"/>
@@ -38,7 +37,6 @@
 		<type fullname="UnityEngine.CircleCollider2D" preserve="nothing"/>
 		<type fullname="UnityEngine.CapsuleCollider2D" preserve="nothing"/>
 		<type fullname="UnityEngine.BoxCollider2D" preserve="nothing"/>
-		<type fullname="UnityEngine.PolygonCollider2D" preserve="nothing"/>
 		<type fullname="UnityEngine.AnimationClip" preserve="nothing"/>
 		<type fullname="UnityEngine.Animator" preserve="nothing"/>
 		<type fullname="UnityEditor.Animations.AnimatorController" preserve="nothing"/>
@@ -54,21 +52,19 @@
 		<type fullname="UnityEngine.Tilemaps.TilemapRenderer" preserve="nothing"/>
 		<type fullname="UnityEngine.Grid" preserve="nothing"/>
 		<type fullname="UnityEngine.Motion" preserve="nothing"/>
+		<type fullname="UnityEngine.AudioSource" preserve="nothing"/>
+		<type fullname="UnityEngine.PolygonCollider2D" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Assembly-CSharp">
-		<type fullname="BreakableBlock" preserve="nothing"/>
-		<type fullname="BumperBlock" preserve="nothing"/>
-		<type fullname="CameraShake" preserve="nothing"/>
-		<type fullname="CharacterController" preserve="nothing"/>
-		<type fullname="FollowCamera" preserve="nothing"/>
+		<type fullname="GameHUD" preserve="nothing"/>
+		<type fullname="GameLoader" preserve="nothing"/>
 		<type fullname="GameManager" preserve="nothing"/>
-		<type fullname="InstantDeath" preserve="nothing"/>
-		<type fullname="Mover" preserve="nothing"/>
+		<type fullname="GameStart" preserve="nothing"/>
+		<type fullname="HostBridge" preserve="nothing"/>
 		<type fullname="Player" preserve="nothing"/>
-		<type fullname="SceneLauncher" preserve="nothing"/>
+		<type fullname="PlayerController" preserve="nothing"/>
 		<type fullname="SoundManager" preserve="nothing"/>
 		<type fullname="TouchControls" preserve="nothing"/>
-		<type fullname="Trigger" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.2D.IK.Runtime">
 		<type fullname="UnityEditor.U2D.IK.IKEditorManagerHelper" preserve="nothing"/>

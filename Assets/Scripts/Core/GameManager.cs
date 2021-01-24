@@ -9,15 +9,17 @@ public class GameManager : MonoBehaviour {
   private float restartDelay = 0;
 
   void Awake() {
-    global = this;
-
-#if UNITY_IOS
-    Application.targetFrameRate = 60;
-#endif
+    if (!global) {
+      global = this;
+      DontDestroyOnLoad(gameObject);
+    }
+    else {
+      Destroy(gameObject);
+    }
   }
 
   void Start() {
-    HostApi.hostOnGameStarted();
+    HostBridge.hostOnGameStarted();
     Debug.Log("Starting game manager");
   }
 
@@ -39,7 +41,7 @@ public class GameManager : MonoBehaviour {
 
   public void WinGame() {
     try {
-      HostApi.hostWinGame();
+      HostBridge.hostWinGame();
     }
     catch (EntryPointNotFoundException) {
       Debug.Log("Game won, but no host found so moving to next level");
@@ -49,16 +51,13 @@ public class GameManager : MonoBehaviour {
 
   public void LeaveGame() {
     try {
-      HostApi.hostLeaveGame();
+      HostBridge.hostLeaveGame();
     }
     catch (EntryPointNotFoundException) {
       // Nothing to do
       Debug.Log("Game quit, but no host found");
+      GameLoader.global.UnloadGame();
     }
-  }
-
-  public void LoadLauncher(string message) {
-    SceneManager.LoadScene(0);
   }
 
   private void Restart() {

@@ -9,14 +9,13 @@ public class GameLoader : MonoBehaviour {
 
   public GameObject loadingScreen;
 
-  private static GameLoader global;
-
-  private bool launched = false;
+  public static GameLoader global { get; private set; }
 
   // TODO: Probably move this to a bundle manager
   private static Dictionary<String, AssetBundle> downloadedBundles = new Dictionary<String, AssetBundle>();
 
-  private string localTestBundle = "local-test-bundle";
+  private string scenePrefix = "scene:";
+  private string testLoadParams = "scene:Tutorial01";
 
   // Test bundle: https://impossible-arcade.vercel.app/static/assets/bundles/dlctest01
   private string testBundle =
@@ -24,78 +23,94 @@ public class GameLoader : MonoBehaviour {
 
   private float startLoadTime = 0;
 
+  void Awake() {
+    if (!global) {
+      global = this;
+      DontDestroyOnLoad(gameObject);
+    } else {
+      Destroy(gameObject);
+    }
+#if UNITY_IOS
+    Application.targetFrameRate = 60;
+#endif
+    loadingScreen.SetActive(false);
+  }
+
   void Start() {
-    Debug.Log("STARTING");
     try {
-      HostApi.hostOnLauncherStarted();
-    }
-    catch (EntryPointNotFoundException) {
-      LaunchGame(localTestBundle);
+      HostBridge.hostOnLauncherStarted();
+    } catch (EntryPointNotFoundException) {
+      LaunchGame(testLoadParams);
     }
   }
 
-  void LaunchGame(string encodedBundles) {
-    Debug.Log("Launching bundle: " + encodedBundles);
+  public void LaunchGame(string encodedLoadParams) {
+    loadingScreen.SetActive(true);
+    Debug.Log("Launching game: " + encodedLoadParams);
     startLoadTime = Time.time;
-    StartCoroutine(LoadSceneAsync(encodedBundles));
+    StartCoroutine(LoadSceneAsync(encodedLoadParams));
   }
 
-  IEnumerator LoadSceneAsync(string encodedBundles) {
+  IEnumerator LoadSceneAsync(string encodedLoadParams) {
     UnloadBundles();
 
-    Debug.Log("Loading requested scene");
     yield return StartCoroutine(UnloadAllScenes());
 
-    if (encodedBundles == localTestBundle) {
-      // Just load the next scene
-      Debug.Log("No bundle URL provided, loading the next scene");
+    if (encodedLoadParams.StartsWith(scenePrefix)) {
+      var sceneName = encodedLoadParams.Substring(scenePrefix.Length);
+      Debug.Log("Scene provided: " + sceneName);
       yield return StartCoroutine(WaitMinTime());
-      TeardownLoadingScreen();
-      SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1, LoadSceneMode.Additive);
+      SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
+      OnGameLoaded();
       yield return null;
-    }
+    } else {
+      Debug.Log("Bundles provided: " + encodedLoadParams);
+      var bundleLocations = GetBundleUrls(encodedLoadParams);
 
-    var bundleLocations = GetBundleUrls(encodedBundles);
-
-    // First load assets
-    if (bundleLocations.Length > 1) {
-      for (var i = 0; i < bundleLocations.Length - 1; i++) {
-        Coroutine2<AssetBundle> futureAssetBundle = new Coroutine2<AssetBundle>(this, LoadBundle(bundleLocations[i]));
-        yield return futureAssetBundle.coroutine;
+      // First load assets
+      if (bundleLocations.Length > 1) {
+        for (var i = 0; i < bundleLocations.Length - 1; i++) {
+          Coroutine2<AssetBundle> futureAssetBundle = new Coroutine2<AssetBundle>(this, LoadBundle(bundleLocations[i]));
+          yield return futureAssetBundle.coroutine;
+        }
       }
-    }
 
-    // Next load the scene
-    var sceneBundle = bundleLocations[bundleLocations.Length - 1];
-    var bundleLocation = sceneBundle;
+      // Next load the scene
+      var sceneBundle = bundleLocations[bundleLocations.Length - 1];
+      var bundleLocation = sceneBundle;
 
-    Coroutine2<AssetBundle> futureSceneBundle = new Coroutine2<AssetBundle>(this, LoadBundle(bundleLocation));
-    yield return futureSceneBundle.coroutine;
-    var bundle = futureSceneBundle.result;
+      Coroutine2<AssetBundle> futureSceneBundle = new Coroutine2<AssetBundle>(this, LoadBundle(bundleLocation));
+      yield return futureSceneBundle.coroutine;
+      var bundle = futureSceneBundle.result;
 
-    if (!bundle.isStreamedSceneAssetBundle) {
-      Debug.LogError("Bundle is not a streamed scene asset bundle");
+      if (!bundle.isStreamedSceneAssetBundle) {
+        Debug.LogError("Bundle is not a streamed scene asset bundle");
+        yield return null;
+      }
+
+      var sceneName = GetFirstSceneInBundle(bundle);
+      if (sceneName == "") {
+        Debug.LogError("No scene found in bundle");
+        yield return null;
+      }
+
+      yield return StartCoroutine(WaitMinTime());
+
+      SceneManager.LoadScene(sceneName);
+      OnGameLoaded();
       yield return null;
     }
-
-    var sceneName = GetFirstSceneInBundle(bundle);
-    if (sceneName == "") {
-      Debug.LogError("No scene found in bundle");
-      yield return null;
-    }
-
-    yield return StartCoroutine(WaitMinTime());
-
-    TeardownLoadingScreen();
-    SceneManager.LoadScene(sceneName);
-    yield return null;
   }
 
-  private void TeardownLoadingScreen() {
+  private void OnGameLoaded() {
     if (loadingScreen) {
-      Debug.Log("TEARING DOWN");
       loadingScreen.SetActive(false);
     }
+  }
+
+  public void UnloadGame() {
+    StartCoroutine(UnloadAllScenes());
+    loadingScreen.SetActive(true);
   }
 
   private IEnumerator LoadBundle(string bundleLocation) {
@@ -140,6 +155,7 @@ public class GameLoader : MonoBehaviour {
   }
 
   private IEnumerator UnloadAllScenes() {
+    Debug.Log("Unloading scenes");
     var thisScene = SceneManager.GetActiveScene();
     List<String> scenesToUnload = new List<String>();
     for (var i = 0; i < SceneManager.sceneCount; i++) {

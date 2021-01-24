@@ -49,7 +49,7 @@ class UnityPlayer : UIResponder, UnityFrameworkListener, NativeCallsProtocol {
     }
   }
 
-  func start(_ window: UIWindow, level: LevelData) {
+  func start(_ window: UIWindow, gameType: GameType) {
     run()
 
     prevWindow = window;
@@ -62,7 +62,12 @@ class UnityPlayer : UIResponder, UnityFrameworkListener, NativeCallsProtocol {
     starting = true;
 
     if (gameMode == .inLauncher) {
-      loadLevel()
+      switch (gameType) {
+      case .recent:
+        loadLevel()
+      case .tutorial:
+        loadTutorial()
+      }
     }
   }
   
@@ -91,7 +96,12 @@ class UnityPlayer : UIResponder, UnityFrameworkListener, NativeCallsProtocol {
   private func loadLevel() {
     gameModel.state = .none
     let bundleUrls = encodeBundles(sceneUrl: gameModel.level.scene, dependencyUrls: gameModel.level.deps)
-    unity.sendMessageToGO(withName: "SceneLauncher", functionName: "LaunchGame", message: bundleUrls)
+    unity.sendMessageToGO(withName: "HostBridge", functionName: "LaunchGame", message: bundleUrls)
+  }
+  
+  private func loadTutorial() {
+    gameModel.state = .none
+    unity.sendMessageToGO(withName: "HostBridge", functionName: "LaunchGame", message: "scene:Tutorial01")
   }
   
   func unityLeaveGame() {
@@ -106,7 +116,7 @@ class UnityPlayer : UIResponder, UnityFrameworkListener, NativeCallsProtocol {
   
   private func hideGameWindow() {
     starting = false
-    unity.sendMessageToGO(withName: "GameManager", functionName: "LoadLauncher", message: "")
+    unity.sendMessageToGO(withName: "HostBridge", functionName: "LoadLauncher", message: "")
   }
           
   private static func loadFramework() -> UnityFramework? {
