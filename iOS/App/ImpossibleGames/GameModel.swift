@@ -16,6 +16,11 @@ struct LevelData : Decodable {
   var deps: [String] = []
 }
 
+enum GameType {
+  case recent
+  case tutorial
+}
+
 enum GameState {
   case none
   case lost

@@ -37,8 +37,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, GameDelegate {
     }
   }
   
-  func gameDidRequestStart() {
-    self.unityPlayer!.start(window!, level: model.level)
+  func gameDidRequestStart(gameType: GameType) {
+    self.unityPlayer!.start(window!, gameType:gameType)
   }
       
   func sceneDidDisconnect(_ scene: UIScene) {

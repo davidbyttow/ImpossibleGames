@@ -44,6 +44,11 @@ struct HomeView: View {
             .font(.custom("PressStart2P-Regular", size: 52))
         }
         Spacer().frame(height: 40)
+        Button(action: { delegate.gameDidRequestStart(gameType: .tutorial) }) {
+          Text("TUTORIAL")
+            .foregroundColor(.white)
+            .font(.custom("PressStart2P-Regular", size: 42))
+        }
         Text("BUILD")
           .foregroundColor(styles.gray)
           .font(.custom("PressStart2P-Regular", size: 42))
