@@ -12,8 +12,7 @@ public class GameManager : MonoBehaviour {
     if (!global) {
       global = this;
       DontDestroyOnLoad(gameObject);
-    }
-    else {
+    } else {
       Destroy(gameObject);
     }
   }
@@ -39,11 +38,10 @@ public class GameManager : MonoBehaviour {
     restartDelay = 1.5f;
   }
 
-  public void WinGame() {
+  public void OnGameCompleted() {
     try {
       HostBridge.hostWinGame();
-    }
-    catch (EntryPointNotFoundException) {
+    } catch (EntryPointNotFoundException) {
       Debug.Log("Game won, but no host found so moving to next level");
       SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
@@ -52,8 +50,7 @@ public class GameManager : MonoBehaviour {
   public void LeaveGame() {
     try {
       HostBridge.hostLeaveGame();
-    }
-    catch (EntryPointNotFoundException) {
+    } catch (EntryPointNotFoundException) {
       // Nothing to do
       Debug.Log("Game quit, but no host found");
       GameLoader.global.UnloadGame();

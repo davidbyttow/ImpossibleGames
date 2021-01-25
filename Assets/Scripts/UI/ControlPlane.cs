@@ -5,11 +5,31 @@ using UnityEngine.UI;
 [RequireComponent(typeof(RectTransform))]
 public class ControlPlane : MonoBehaviour {
 
-  private RectTransform rectTransform;
+  public RectTransform leftControlGuide;
+  public RectTransform rightControl;
 
-  void Awake() {
-    rectTransform = GetComponent<RectTransform>();
-    var pixelRect = Camera.main.pixelRect;
+  private TouchControls touchControls;
+  private RectTransform bounds;
+
+  void Start() {
+    bounds = GetComponent<RectTransform>();
+    touchControls = GetComponent<TouchControls>();
+    if (leftControlGuide) {
+      leftControlGuide.gameObject.SetActive(false);
+    }
+  }
+
+  private void Update() {
+    if (touchControls) {
+      var leftActive = touchControls.leftControlActive;
+      leftControlGuide.gameObject.SetActive(leftActive);
+      if (leftActive) {
+        // NOTE: This is brittle and assumes anchoed position is lower left screen location
+        leftControlGuide.anchoredPosition = touchControls.leftControlPosition;
+      }
+
+      //touchControls.jumpButtonDown
+    }
   }
 
 }

@@ -23,11 +23,14 @@ public class Player : MonoBehaviour {
     rigidBody = GetComponent<Rigidbody2D>();
     sprite = GetComponent<SpriteRenderer>();
     controller = GetComponent<PlayerController>();
-    touchControls = GetComponent<TouchControls>();
   }
+
 
   void Start() {
     SoundManager.global.PlayDoorClose();
+
+    // TODO: Can move this to a script object
+    touchControls = FindObjectOfType<TouchControls>();
   }
 
   void Update() {

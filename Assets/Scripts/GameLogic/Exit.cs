@@ -10,6 +10,6 @@ public class Exit : MonoBehaviour {
   }
 
   public void ExitLevel() {
-    GameManager.global.WinGame();
+    GameManager.global.OnGameCompleted();
   }
 }

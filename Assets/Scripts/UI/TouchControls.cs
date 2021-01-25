@@ -7,11 +7,26 @@ public class TouchControls : MonoBehaviour {
 
   private RectTransform bounds;
 
-  public float horizontal { get; private set; } = 0;
+  public bool leftControlActive {
+    get {
+      return mouseDown || leftTouchFinger >= 0;
+    }
+  }
+
+  public Vector2 leftControlPosition {
+    get {
+      return leftTouchOrigin + leftControl * leftControlMaxDist;
+    }
+  }
+
+  public float horizontal { get { return leftControl.x; } }
+  public float vertical { get { return leftControl.y; } }
   public bool jumpButtonDown { get; private set; } = false;
   public bool jumpButtonUp { get; private set; } = false;
 
-  private Vector2 leftTouchOrigin;
+  private bool mouseDown;
+  private Vector2 leftControl = Vector2.zero;
+  private Vector2 leftTouchOrigin = Vector2.zero;
   private int leftTouchFinger = -1;
   private int rightTouchFinger = -1;
 
@@ -27,16 +42,33 @@ public class TouchControls : MonoBehaviour {
     jumpButtonUp = false;
     jumpButtonDown = false;
 
+    HandleLeftMouse();
+
     if (Input.touchCount > 0) {
       for (var i = 0; i < Input.touchCount; ++i) {
         var touch = Input.GetTouch(i);
         if (touch.position.x < screenHalf) {
           HandleLeftTouch(touch);
-        }
-        else if (touch.position.x > screenHalf) {
+        } else if (touch.position.x > screenHalf) {
           HandleRightTouch(touch);
         }
       }
+    }
+  }
+
+  private void HandleLeftMouse() {
+    var pos = Input.mousePosition;
+
+    if (Input.GetMouseButtonDown(0) && InsideTouchBounds(pos)) {
+      mouseDown = true;
+      leftTouchOrigin = pos;
+      leftControl = Vector2.zero;
+    } else if (mouseDown && Input.GetMouseButtonUp(0)) {
+      mouseDown = false;
+      leftControl = Vector2.zero;
+    } else if (mouseDown) {
+      leftControl.x = Mathf.Clamp((pos.x - leftTouchOrigin.x) / leftControlMaxDist, -1f, 1f);
+      leftControl.y = Mathf.Clamp((pos.y - leftTouchOrigin.y) / leftControlMaxDist, -1f, 1f);
     }
   }
 
@@ -48,17 +80,16 @@ public class TouchControls : MonoBehaviour {
     if (touch.phase == TouchPhase.Began && InsideTouchBounds(touch.position)) {
       leftTouchFinger = touch.fingerId;
       leftTouchOrigin = touch.position;
-      horizontal = 0;
+      leftControl = Vector2.zero;
     }
 
     if (leftTouchFinger >= 0) {
       if (touch.phase == TouchPhase.Moved) {
-        var dist = touch.position.x - leftTouchOrigin.x;
-        horizontal = Mathf.Clamp(dist / leftControlMaxDist, -1f, 1f);
-      }
-      else if (touch.phase == TouchPhase.Ended) {
+        leftControl.x = Mathf.Clamp((touch.position.x - leftTouchOrigin.x) / leftControlMaxDist, -1f, 1f);
+        leftControl.y = Mathf.Clamp((touch.position.y - leftTouchOrigin.y) / leftControlMaxDist, -1f, 1f);
+      } else if (touch.phase == TouchPhase.Ended) {
         leftTouchFinger = -1;
-        horizontal = 0;
+        leftControl = Vector2.zero;
       }
     }
   }
@@ -69,7 +100,6 @@ public class TouchControls : MonoBehaviour {
     }
 
     if (touch.phase == TouchPhase.Began && InsideTouchBounds(touch.position)) {
-      Debug.Log($"Touch right: {touch.fingerId}");
       rightTouchFinger = touch.fingerId;
       jumpButtonDown = true;
     }
