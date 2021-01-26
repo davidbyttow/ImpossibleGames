@@ -33,4 +33,5 @@ class GameModel : ObservableObject {
   
   @Published var level = LevelData()
   @Published var state: GameState = .none
+  @Published var gameType: GameType = .recent
 }

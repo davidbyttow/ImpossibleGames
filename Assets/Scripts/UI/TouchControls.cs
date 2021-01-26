@@ -36,6 +36,9 @@ public class TouchControls : MonoBehaviour {
 
   void Update() {
     var camera = Camera.main;
+    if (!camera) {
+      return;
+    }
 
     var screenHalf = camera.pixelWidth * 0.5f;
 

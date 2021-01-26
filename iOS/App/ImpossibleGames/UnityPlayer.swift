@@ -26,6 +26,8 @@ class UnityPlayer : UIResponder, UnityFrameworkListener, NativeCallsProtocol {
   private var unityRunning = false
   private var gameMode = GameMode.none
   private var visible = false
+
+  private let jsonDecoder = JSONDecoder()
   
   init(withLaunchOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?, gameModel: GameModel) {
     super.init()
@@ -51,7 +53,9 @@ class UnityPlayer : UIResponder, UnityFrameworkListener, NativeCallsProtocol {
 
   func start(_ window: UIWindow, gameType: GameType) {
     run()
-
+    
+    gameModel.gameType = gameType;
+    
     prevWindow = window;
 
     let appController = unity.appController()!
@@ -62,12 +66,7 @@ class UnityPlayer : UIResponder, UnityFrameworkListener, NativeCallsProtocol {
     starting = true;
 
     if (gameMode == .inLauncher) {
-      switch (gameType) {
-      case .recent:
-        loadLevel()
-      case .tutorial:
-        loadTutorial()
-      }
+      loadLevel()
     }
   }
   
@@ -93,17 +92,31 @@ class UnityPlayer : UIResponder, UnityFrameworkListener, NativeCallsProtocol {
     gameMode = .inGame
   }
   
+  struct Dog: Decodable {
+    var name: String
+    var owner: String
+  }
+  
+  func unityInvokeMethod(_ method: String!, withMessage messageJson: String!) {
+    let jsonData = messageJson.data(using: .utf8)!
+    let dog = try! jsonDecoder.decode(Dog.self, from: jsonData)
+    print(">>>>>>>>>" + method + ": " + dog.name + "/" + dog.owner)
+  }
+  
+  func callGameMethod(_ method: String!, message: String!) {
+    unity.sendMessageToGO(withName: "HostBridge", functionName: method, message: message)
+  }
+    
   private func loadLevel() {
     gameModel.state = .none
-    let bundleUrls = encodeBundles(sceneUrl: gameModel.level.scene, dependencyUrls: gameModel.level.deps)
-    unity.sendMessageToGO(withName: "HostBridge", functionName: "LaunchGame", message: bundleUrls)
+    if (gameModel.gameType == .tutorial) {
+      callGameMethod("LaunchGame", message: "scene:Tutorial01")
+    } else {
+      let bundleUrls = encodeBundles(sceneUrl: gameModel.level.scene, dependencyUrls: gameModel.level.deps)
+      callGameMethod("LaunchGame", message: bundleUrls)
+    }
   }
-  
-  private func loadTutorial() {
-    gameModel.state = .none
-    unity.sendMessageToGO(withName: "HostBridge", functionName: "LaunchGame", message: "scene:Tutorial01")
-  }
-  
+    
   func unityLeaveGame() {
     hideGameWindow()
     gameModel.state = .lost
@@ -116,7 +129,7 @@ class UnityPlayer : UIResponder, UnityFrameworkListener, NativeCallsProtocol {
   
   private func hideGameWindow() {
     starting = false
-    unity.sendMessageToGO(withName: "HostBridge", functionName: "LoadLauncher", message: "")
+    callGameMethod("LoadLauncher", message: "")
   }
           
   private static func loadFramework() -> UnityFramework? {

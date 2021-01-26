@@ -17,9 +17,25 @@ public class GameManager : MonoBehaviour {
     }
   }
 
+  [Serializable]
+  public class Dog {
+    public string name;
+    public string owner;
+  }
+
   void Start() {
-    HostBridge.hostOnGameStarted();
+
+    var dog = new Dog();
+    dog.name = "Indy";
+    dog.owner = "Mark";
+    string json = JsonUtility.ToJson(dog);
+    Debug.Log(json);
+
+    HostBridge.hostCallMethod("TestMethod", json);
+
     Debug.Log("Starting game manager");
+
+    HostBridge.hostOnGameStarted();
   }
 
   void Update() {

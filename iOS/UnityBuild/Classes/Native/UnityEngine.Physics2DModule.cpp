@@ -1766,15 +1766,6 @@ public:
 public:
 };
 
-
-// UnityEngine.PolygonCollider2D
-struct  PolygonCollider2D_t0DE3E0562D6B75598DFDB71D7605BD8A1761835D  : public Collider2D_tDDBF081328B83D21D0BA3B5036D77B32528BA722
-{
-public:
-
-public:
-};
-
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
@@ -4017,14 +4008,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Collider2D_tDDBF081328B83D21D0BA3B5036D77B325
 	Collider2D_tDDBF081328B83D21D0BA3B5036D77B32528BA722 * icallRetVal = _il2cpp_icall_func(___physicsScene0, ___point1, ___radius2, ___contactFilter3);
 	return icallRetVal;
 }
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

@@ -33,6 +33,7 @@
 		<type fullname="UnityEngine.RectTransform" preserve="nothing"/>
 		<type fullname="UnityEngine.CanvasRenderer" preserve="nothing"/>
 		<type fullname="UnityEngine.LightmapSettings" preserve="nothing"/>
+		<type fullname="UnityEngine.AudioSource" preserve="nothing"/>
 		<type fullname="UnityEngine.Rigidbody2D" preserve="nothing"/>
 		<type fullname="UnityEngine.CircleCollider2D" preserve="nothing"/>
 		<type fullname="UnityEngine.CapsuleCollider2D" preserve="nothing"/>
@@ -52,10 +53,11 @@
 		<type fullname="UnityEngine.Tilemaps.TilemapRenderer" preserve="nothing"/>
 		<type fullname="UnityEngine.Grid" preserve="nothing"/>
 		<type fullname="UnityEngine.Motion" preserve="nothing"/>
-		<type fullname="UnityEngine.AudioSource" preserve="nothing"/>
-		<type fullname="UnityEngine.PolygonCollider2D" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Assembly-CSharp">
+		<type fullname="CameraShake" preserve="nothing"/>
+		<type fullname="ControlPlane" preserve="nothing"/>
+		<type fullname="Exit" preserve="nothing"/>
 		<type fullname="GameHUD" preserve="nothing"/>
 		<type fullname="GameLoader" preserve="nothing"/>
 		<type fullname="GameManager" preserve="nothing"/>

@@ -9,6 +9,7 @@
 - (void)unityOnGameStarted;
 - (void)unityLeaveGame;
 - (void)unityWinGame;
+- (void)unityInvokeMethod:(NSString *)method withMessage:(NSString *)messageJson;
 @end
 
 __attribute__((visibility("default")))

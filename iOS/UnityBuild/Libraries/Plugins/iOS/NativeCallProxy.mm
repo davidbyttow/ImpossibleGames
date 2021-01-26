@@ -34,4 +34,9 @@ extern "C" {
   void hostWinGame() {
     return [gApi unityWinGame];
   }
+  void hostCallMethod(const char *method, const char *messageJson) {
+    NSString *methodName = [[NSString alloc] initWithCString:method encoding:NSUTF8StringEncoding];
+    NSString *jsonString = [[NSString alloc] initWithCString:messageJson encoding:NSUTF8StringEncoding];
+    return [gApi unityInvokeMethod:methodName withMessage:jsonString];
+  }
 }
