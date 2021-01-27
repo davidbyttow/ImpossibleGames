@@ -29,14 +29,16 @@ struct HomeView: View {
     ZStack {
       Color.black.edgesIgnoringSafeArea(.all)
       VStack(alignment: .center) {
-        Text("IMPOSSIBLE")
-          .modifier(RetroText(size: 26))
-          .foregroundColor(styles.darkRed)
-          .padding(EdgeInsets(top: 64, leading: 0, bottom: 0, trailing: 0))
-        Text("GAMES")
-          .foregroundColor(.white)
-          .font(.custom("PressStart2P-Regular", size: 52))
-          .padding(EdgeInsets(top: 6, leading: 0, bottom: 0, trailing: 0))
+        Group {
+          Text("IMPOSSIBLE")
+            .modifier(RetroText(size: 26))
+            .foregroundColor(styles.darkRed)
+            .padding(EdgeInsets(top: 64, leading: 0, bottom: 0, trailing: 0))
+          Text("GAMES")
+            .foregroundColor(.white)
+            .font(.custom("PressStart2P-Regular", size: 52))
+            .padding(EdgeInsets(top: 6, leading: 0, bottom: 0, trailing: 0))
+        }
         Spacer()
         Button(action: { router.currentPage = .startGame }) {
           Text("PLAY")
@@ -45,14 +47,14 @@ struct HomeView: View {
         }
         Spacer().frame(height: 40)
         Button(action: { delegate.gameDidRequestStart(gameType: .tutorial) }) {
-          Text("TUTORIAL")
-            .foregroundColor(.white)
+          Text("PRACTICE")
+            .foregroundColor(styles.lightBlue)
             .font(.custom("PressStart2P-Regular", size: 42))
         }
-        Text("BUILD")
-          .foregroundColor(styles.gray)
-          .font(.custom("PressStart2P-Regular", size: 42))
-          .frame(height: 68)
+//        Text("BUILD")
+//          .foregroundColor(styles.gray)
+//          .font(.custom("PressStart2P-Regular", size: 42))
+//          .frame(height: 68)
 //          .overlay(ComingSoonOverlay(), alignment: .bottomTrailing)
         Spacer()
         Text("Code and Graphics")

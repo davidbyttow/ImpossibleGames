@@ -22,10 +22,11 @@ class Styles : ObservableObject {
   static let shared = Styles()
   private init() {}
   
-  @Published var retro = Font.custom("PressStart2P-Regular", size: 12)
-  @Published var darkRed = Color(red: 168, green: 0, blue: 0)
-  @Published var green = Color(red: 51, green: 239, blue: 0)
-  @Published var gray = Color(red: 120, green: 120, blue: 120)
+  var retro = Font.custom("PressStart2P-Regular", size: 12)
+  var darkRed = Color(red: 168, green: 0, blue: 0)
+  var green = Color(red: 51, green: 239, blue: 0)
+  var gray = Color(red: 120, green: 120, blue: 120)
+  var lightBlue = Color(red: 47, green: 100, blue: 214)
 }
 
 extension Color {

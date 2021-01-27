@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
@@ -24,6 +23,17 @@ public class HostBridge : MonoBehaviour {
     GameLoader.global.UnloadGame();
   }
 
+  public static void Call(HostRequest req) {
+    var method = req.GetType().Name;
+    string messageJson = JsonUtility.ToJson(req);
+    Debug.Log("Call: " + method + ": " + messageJson);
+
+    try {
+      hostCallMethod(method, messageJson);
+    } catch (EntryPointNotFoundException) {
+      Debug.Log("hostCallMethod not found");
+    }
+  }
 
 #if UNITY_IOS
   [DllImport("__Internal")] public static extern void hostOnLauncherStarted();

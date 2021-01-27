@@ -25,16 +25,17 @@ public class GameManager : MonoBehaviour {
 
   void Start() {
 
-    var dog = new Dog();
-    dog.name = "Indy";
-    dog.owner = "Mark";
-    string json = JsonUtility.ToJson(dog);
-    Debug.Log(json);
+    //var dog = new Dog();
+    //dog.name = "Indy";
+    //dog.owner = "Mark";
+    //string json = JsonUtility.ToJson(dog);
+    //Debug.Log(json);
 
-    HostBridge.hostCallMethod("TestMethod", json);
+    //HostBridge.hostCallMethod("TestMethod", json);
 
     Debug.Log("Starting game manager");
 
+    HostBridge.Call(new OnGameStarted());
     HostBridge.hostOnGameStarted();
   }
 
@@ -56,6 +57,7 @@ public class GameManager : MonoBehaviour {
 
   public void OnGameCompleted() {
     try {
+      HostBridge.Call(new WinGame());
       HostBridge.hostWinGame();
     } catch (EntryPointNotFoundException) {
       Debug.Log("Game won, but no host found so moving to next level");
@@ -65,6 +67,7 @@ public class GameManager : MonoBehaviour {
 
   public void LeaveGame() {
     try {
+      HostBridge.Call(new LeaveGame());
       HostBridge.hostLeaveGame();
     } catch (EntryPointNotFoundException) {
       // Nothing to do
